@@ -1,2 +1,10 @@
 .sass-cache
 *.css.map
+
+._*
+.DS_Store
+.vagrant
+.tmp
+
+node_modules
+*/node_modules
