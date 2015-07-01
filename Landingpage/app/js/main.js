@@ -315,13 +315,13 @@ function random(max, min) {
     }
 
     function mouseMove(e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+        mouseX = e.offsetX;
+        mouseY = e.offsetY;
     }
 
     function mouseDown(e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+        mouseX = e.offsetX;
+        mouseY = e.offsetY;
         if (control.isRandomColor) {
             brush.color = randomColor();
             guiColorCtr.updateDisplay();
