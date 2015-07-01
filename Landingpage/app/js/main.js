@@ -370,17 +370,17 @@ function random(max, min) {
     // GUI
   
     gui = new dat.GUI();
-    guiColorCtr = gui.addColor(brush, 'color').name('Couleur').onChange(function() {
+    guiColorCtr = gui.addColor(brush, 'color').name('Color').onChange(function() {
         control.isRandomColor = false;
         guiIsRandColorCtr.updateDisplay();
     });
-    guiSizeCtr = gui.add(brush, 'size', 5, 50).name('Taille');
-    gui.add(brush, 'inkAmount', 1, 30).name('Intensité de l\'encre');
-    gui.add(brush, 'splashing').name('Eclaboussure');
-    gui.add(brush, 'dripping').name('Egouttement');
-    guiIsRandColorCtr = gui.add(control, 'isRandomColor').name('Couleur Aléatoire');
-    gui.add(control, 'isRandomSize').name('Taille Aléatoire');
-    gui.add(control, 'clear').name('Effacer');
+    guiSizeCtr = gui.add(brush, 'size', 5, 50).name('Size');
+    gui.add(brush, 'inkAmount', 1, 30).name('Ink Amount');
+    gui.add(brush, 'splashing').name('Splashing');
+    gui.add(brush, 'dripping').name('Dripping');
+    guiIsRandColorCtr = gui.add(control, 'isRandomColor').name('Random Color');
+    gui.add(control, 'isRandomSize').name('Random Size');
+    gui.add(control, 'clear').name('Clear');
     gui.close();
 
 
