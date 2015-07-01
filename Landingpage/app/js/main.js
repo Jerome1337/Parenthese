@@ -303,8 +303,10 @@ function random(max, min) {
 
     // Event Listeners
 
+    drawer = document.getElementById('drawerContainer').offsetWidth;
+
     function resize(e) {
-        canvas.width  = window.innerWidth;
+        canvas.width  = drawer;
         canvas.height = window.innerHeight;
         centerX = canvas.width * 0.5;
         centerY = canvas.height * 0.5;
