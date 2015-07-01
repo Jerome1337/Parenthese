@@ -13,3 +13,4 @@ dist/**/**
 
 app/css/styles.css
 app/css/style.min.css
+*.css
