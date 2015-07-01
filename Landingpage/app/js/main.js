@@ -320,6 +320,7 @@ function random(max, min) {
     }
 
     function mouseDown(e) {
+        drawer = document.getElementById('message').style.display = 'none'; 
         mouseX = e.offsetX;
         mouseY = e.offsetY;
         if (control.isRandomColor) {
@@ -336,7 +337,6 @@ function random(max, min) {
     function mouseUp(e) {
         brush.endStroke();
     }
-
 
     // GUI Control
 
@@ -394,15 +394,15 @@ function random(max, min) {
 
 })();
 
-//Compteur 
+// COUNTDOWN
 
 function compte_a_rebours()
 {
     var compte_a_rebours = document.getElementById("p");
 
     var date_actuelle = new Date();
-    var date_evenement = new Date("July 24 00:00:00 2015");
-    var date_lancement = new Date("May 10 00:00:00 2015");
+    var date_evenement = new Date("July 17 10:00:00 2015");
+    var date_lancement = new Date("May 3 12:00:00 2015");
     var total_secondes = (date_evenement - date_actuelle) / 1000;
   
   
@@ -425,14 +425,11 @@ function compte_a_rebours()
     return Math.ceil((Diff/div))
   }
   var total_jours = diffdate(date_lancement,date_evenement,'d');
-  
-  
-  
-  
+    
     var prefixe = "";
     if (total_secondes < 0)
     {
-    //cas ou il est fini et on affiche depuis combien de temps il est fini
+    // If it's done, we write the time
     }
     if (total_secondes > 0)
     {
@@ -445,17 +442,6 @@ function compte_a_rebours()
       var deg = (360/60)*(60-_elem);
       if(_class == "heures") {deg = (360/24)*(24-_elem);}
       if(_class == "jours") {deg = (360/total_jours)*(total_jours-_elem);}
-      if(deg<180) {
-        $("."+_class+" #portion2").css("transform", "rotate("+0+"deg)");
-        $("."+_class+" #portion1 .embed").css("transform", "rotate("+deg+"deg)");
-        $("."+_class+" #portion2 .embed").css("transform", "rotate("+deg+"deg)");
-      }else{
-        $("."+_class+" #portion1 .embed").css("transform", "rotate(180deg)");
-        $("."+_class+" #portion2 .embed").css("transform", "rotate(180deg)");
-        deg = deg-180;
-        if(deg >= 180 ) deg = 178
-        $("."+_class+" #portion2").css("transform", "rotate("+deg+"deg)");
-      }
       $("."+_class+" #time").html(_elem);
     }
     timeInDeg(secondes, "secondes");
@@ -466,9 +452,16 @@ function compte_a_rebours()
     }
     else
     {
-    //Compte à rebours terminé
+    // COUNTDOWN DONE
     
     }
     var actualisation = setTimeout("compte_a_rebours();", 1000);
 }
 compte_a_rebours();
+
+
+// INSERT EMAIL
+nom = 'contact';
+domaine = 'bicravart.com';
+
+document.getElementById("mail").innerHTML = '<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + '</a>';

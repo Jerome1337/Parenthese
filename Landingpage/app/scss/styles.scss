@@ -1,9 +1,29 @@
-body,html{height:100%;}
+/* COMMON */
+@charset "UTF-8";
+
+@font-face {
+    font-family: "social";
+    src:url("font/social.eot");
+    src:url("font/social.eot?#iefix") format("embedded-opentype"),
+    url("../font/social.woff") format("woff"),
+    url("../font/social.ttf") format("truetype"),
+    url("../font/social.svg#social") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  box-sizing: border-box;  
+}
+
+body, html{
+    height:100%;
+}
 
 body {
     padding: 0;
     margin: 0;
-    background: black;
+    background: darken(#353E42, 10%);
     overflow: hidden;
     user-select: none;
 }
@@ -15,169 +35,189 @@ body {
    margin-right: auto;
 }
 
+/* LEFT BAR*/
 .leftBar {
 	min-width: 25%;
 	width: 25%;
 	min-height: 100%;
 	background: #ccc;
+    div{
+        margin: auto;
+        width: 100%;
+        padding: 20px;
+        img{
+            margin:0 auto;
+            width: 60%;
+            height: 60%;
+            display: block;
+        }
+    }
 	h1{
-		margin: 0;
-		padding-top: 10px;
+		margin: 0 20px;
+		padding: 20px 0;
+        text-align: center;
+        font-size: 18px;
 	}
+
+    /* COUNTDOWN */
+
+    .container-compteur{
+      text-align: center;
+      padding: 0;
+      .center{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+      }
+    }
+    .unite{
+        position: relative;
+        width: 100px;
+        height: 80px;
+        margin: 0 auto 15px;
+        border-radius: 100%;
+        display: inline-block;
+        .center-time {
+            position: absolute;
+            text-align: center;
+            font-size: 28px;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            width: 40px;
+            height: 40px;
+            margin: auto;
+            border-radius: 50%;
+            line-height: 40px;
+            color: #fff;
+        }
+        .center-unit {
+            position: absolute;
+            text-align: center;
+            font-size: 14px;
+            top:0;
+            left:0;
+            bottom:-70px;
+            right:0;
+            height: 40px;
+            margin: auto;
+            border-radius: 50%;
+            line-height: 40px;
+            color: #fff;
+        }
+    }
+    .jours{
+        width: 100%;
+    }
+    .minutes{
+        border-left: 1px solid #888;
+        border-right: 1px solid #888;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 0;
+    }
+
+    /* SOCIAL BUTTONS */
+    .socialButtons{
+        margin-top: 30px;
+        text-align: center;
+        .fbLink, 
+        .twitterLink, 
+        .instagramLink{
+            color: #888;
+            text-decoration: none;
+            &:before{
+                font-family: "social";
+                font-size: 2em;
+            }
+            &:hover{
+                color: #000;
+                transition: ease-in-out all .5s;
+            }
+        }
+        .fbLink{
+            &:before{
+                content:'\e000';
+            }
+        }
+        .twitterLink{
+            margin: 0 30px;
+            &:before{
+                content:'\e001';
+            }
+        }
+        .instagramLink{
+            &:before{
+                content:'\e002';
+            }
+        }
+    }
+    .contact{
+        text-align: center;
+        color: #888;
+        text-decoration: none;
+        #mail{
+            a{
+                color: #888;
+                text-decoration: none;
+                &:hover{
+                    color: #000;
+                    transition: ease-in-out all .5s;
+                }
+            }
+        }
+    }
 }
 
+/* ESPACE GRAFF */
 .rightBar {
 	width: 75%;
 	min-height: 100%;
 	float: right;
-}
-
-canvas {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-#message {
-    color: #e2e2de;
-    font-size: 32px;
-    text-align: center;
-    letter-spacing: 2px;
-    position: fixed;
-    top: 50%;
-    width: 75%;
-    margin-top: -0.5em;
-    text-shadow: 0 -1px 0 #d3d3d1;
-}
-
-//Compteur
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;  
-}
-
-.center{
-  // position: absolute !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto !important;
-}
-
-.container-compteur{
-  width: 30%;
-  text-align: center;
-  height: 110px;
-}
-
-section,
-.donut-chart {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 2rem;
-  border-radius: 100%;
-}
-
-.jours, .heures, .minutes, .secondes{
-  display: inline-block;
-}
-
-section{
-  width: 120px;  
-}
-
-p.center-time {
-  position: absolute;
-  text-align: center;
-  font-size: 28px;
-  top:0;left:0;bottom:0;right:0;
-  width: 40px;
-  height: 40px;
-  margin: auto;
-  border-radius: 50%;
-  line-height: 40px;
-  color: #fff;
-}
-
-p.center-unit {
-  position: absolute;
-  text-align: center;
-  font-size: 16px;
-  top:0;left:0;bottom:-110px;right:0;
-  width: 110px;
-  height: 40px;
-  margin: auto;
-  border-radius: 50%;
-  line-height: 40px;
-  color: #fff;
-}
-
-.trim {
-  border-radius: 50%;
-  clip: rect(0px, 80px, 80px, 40px);
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  transform: rotate(0deg);
-  transition: all .3s;
-}
-
-.embed {
-  border-radius: 50%;
-  clip: rect(0px, 40px, 80px, 0px);
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  font-family: monospace;
-  font-size: 1.5rem;
-  transition: all .3s;
-}
-
-#portion-back-1 {
-  transform: rotate(0deg);
-}
-
-#portion-back-1 .embed {
-  border: 5px solid #fff;
-  opacity: .3;
-  transform: rotate(180deg);
-}
-
-#portion-back-2 {
-  transform: rotate(180deg);
-}
-
-#portion-back-2 .embed {
-  border: 5px solid #fff;
-  opacity: .3;
-  transform: rotate(180deg);
-}
-
-#portion1 {
-  transform: rotate(0deg);
-}
-
-#portion1 .embed {
-  border: 5px solid #fff;
-  transform: rotate(0deg);
-}
-
-#portion2 {
-  transform: rotate(0deg);
-}
-
-#portion2 .embed {
-  border: 5px solid #fff;
-  transform: rotate(0deg);
+    #message {
+        width: 75%;
+        color: #e2e2de;
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: 2px;
+        position: fixed;
+        top: 50%;
+        margin-top: -0.5em;
+        text-shadow: 0 -1px 0 #d3d3d1;
+    }
+    .shareButton{
+        text-align: center;
+        position: fixed;
+        right: 0%;
+        bottom: 0%;
+        font-size: 1.2em;
+        background: #ccc;
+        text-decoration: none;
+        color: #888;
+        padding: 15px 30px;
+        z-index: 100;
+        &:hover{
+            background: darken(#ccc, 20%);
+            color: darken(#888, 20%);
+            transition: ease-in-out all .5s;
+        }   
+    }
+    canvas {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
 
 @media screen and (max-width: 1000px) {
   .rightBar {
     width: 50%;
+    #message {
+        width: 50%;
+    }
   }
 
   .leftBar{
