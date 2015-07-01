@@ -44,3 +44,27 @@ canvas {
    margin-right: auto;
    max-width: initial;
 }
+
+@media screen and (max-width: 1000px) {
+  .rightBar {
+    width: 50%;
+  }
+
+  .leftBar{
+    width: 50%
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .rightBar {
+    display: none;
+  }
+
+  .leftBar{
+    width: 100%
+  }
+
+  .close-button{
+    display: none;
+  }
+}
