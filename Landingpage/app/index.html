@@ -25,6 +25,7 @@
         <title>Bicrav'art arrive bientôt !</title>
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/vendor/modernizr.js"></script>
+        <link rel="stylesheet" href="scss/style.scss">
     </head>
     <body>
         <div class="row fullWidth">
@@ -34,10 +35,18 @@
             </div>
         </div>
         
+        <div class="row">
+            <div id="message">Cliquez pour graffer ! AIIIIGHT</div>
+            <canvas id='c'></canvas>
+        </div>
+
         <script src="js/vendor/jquery.js"></script>
         <script src="js/foundation.min.js"></script>
+        <script src="http://dat-gui.googlecode.com/git/build/dat.gui.min.js"></script>
+        <script src="js/main.js"></script>
         <script>
-        $(document).foundation();
-    </script>
+            $(document).foundation();
+        </script>
+
     </body>
 </html>
