@@ -45,6 +45,7 @@
         <title>Bicrav'art arrive bientôt !</title>
         <script src="js/modernizr.js"></script>
         <script src="js/html2canvas.js"></script>
+        <script src="js/compteur.js"></script>
         <link rel="stylesheet" href="css/styles.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     </head>
@@ -52,8 +53,7 @@
         <section class="fullWidth">
             <div class="leftBar">
                 <div>
-                    <img src="img/bicrav-art-logo-noir.png" alt="Logo bicrav'art">
-                    <!-- <img class="colorbar" src="img/barre.png" alt="barre coloré"> -->
+                    <img src="img/bicrav-art.png" title="logo Bicrav'art" alt="Logo bicrav'art">
                 </div>
                 <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h1>
@@ -76,17 +76,19 @@
                     </section>
                 </div> -->
                 <div class="socialButtons">
-                    <a href="#" target="_blank" class="fbLink"></a>
+                    <a href="#" target="_blank" onclick="compteur()" title="Logo Facebook" class="fbLink"></a>
                     <!-- <a href="#" target="_blank" class="twitterLink"></a> -->
-                    <a href="#" target="_blank" class="instagramLink"></a>
+                    <a href="#" target="_blank" onclick="compteur()" title="Logo Instagram" class="instagramLink"></a>
                 </div>
 
                 <div class="share">
-                    <a href="#" target="_blank" class="partage"></a>
+                    <a href="#" onclick="compteur()" title="Partager" target="_blank" class="partage"></a>
                 </div>
                 <!-- <div class="contact">
                     <p>Contact : <span id="mail"></span></p>
                 </div> -->
+                <div class="colorbar-left"></div>
+                <div class="colorbar-right"></div>
             </div>
             <div class="rightBar" id="drawerContainer">
                 <p id="message">Cliquez pour graffer !</p>

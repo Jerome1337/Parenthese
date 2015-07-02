@@ -61,6 +61,23 @@ body {
         color: black;
         font-family: 'Lato';
 	}
+    .colorbar-right{
+        top: 0;
+        left: 25%;
+        width: 5px;
+        height: 100%;
+        background-image: url('../img/mosaic.png');
+        position: absolute; 
+    }
+
+    .colorbar-left{
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background-image: url('../img/mosaic.png');
+        position: absolute;
+    }
 
     /* COUNTDOWN */
 
@@ -128,11 +145,26 @@ body {
     .socialButtons{
         margin-top: 30px;
         text-align: center;
-        .fbLink, 
-        .twitterLink, 
-        .instagramLink{
-            color: #888;
+        margin-bottom: 80px;
+        width: 30%;
+        .fbLink{
+            color: #45619D;
             text-decoration: none;
+            float: left;
+            &:before{
+                font-family: "social";
+                font-size: 2em;
+            }
+            &:hover{
+                color: #000;
+                transition: ease-in-out all .5s;
+            }
+        }
+        
+        .instagramLink{
+            color: #246087;
+            text-decoration: none;
+            float: right;
             &:before{
                 font-family: "social";
                 font-size: 2em;
@@ -181,17 +213,26 @@ body {
     .partage{
         text-align: center;
         background:url("../img/PARTAGER.png") 0 0 no-repeat;
-        background-position: 0 50px;
+        background-position: 0 -50px;
         text-decoration: none;
         display:block;
         width:150px;
-        height:100px;
+        height:50px;
         margin-right: auto;
         margin-left: auto;
     }
 
     .partage:hover{
-        background-position: 0 100px;
+        background-position: 50 0px;
+        height: 50px;
+        text-align: center;
+        background:url("../img/PARTAGER.png") 0 0 no-repeat;
+        text-decoration: none;
+        display:block;
+        width:150px;
+        height:50px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
