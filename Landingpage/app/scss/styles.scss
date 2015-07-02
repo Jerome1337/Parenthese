@@ -69,7 +69,8 @@ body {
         width: 5px;
         height: 100%;
         background-image: url('../img/mosaic.png');
-        position: absolute; 
+        position: absolute;
+        z-index: 100;
     }
 
     .colorbar-left{
@@ -253,6 +254,7 @@ body {
         top: 50%;
         margin-top: -0.5em;
         text-shadow: 0 -1px 0 #d3d3d1;
+        z-index: 100;
     }
     .shareButton{
         text-align: center;
@@ -264,7 +266,6 @@ body {
         text-decoration: none;
         color: #fff;
         padding: 10px 30px;
-        z-index: 100;
         &:hover{
             background: #252C2E;
             transition: ease-in-out all .5s;

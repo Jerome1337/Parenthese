@@ -517,7 +517,19 @@ $(document).ready(function() {
     $('.fbLink').click(function(){
         nbfbclic++;
         console.log(nbfbclic);
-        
+        data = 'nbfbclic='+nbfbclic+'';
+            var xhr;
+            if (window.XMLHttpRequest) xhr = new XMLHttpRequest();
+            else if (window.ActiveXObject) xhr = new ActiveXObject('Microsoft.XMLHTTP');
+            else
+            {
+              alert('Ce navigateur ne supporte pas XMLHttpRequest');
+              return;
+            }
+
+            xhr.open('POST','nbclic.php',true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send(data);
     });
     $('.instagramLink').click(function(){
         nbinstaclic++;
