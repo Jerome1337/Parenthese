@@ -57,13 +57,16 @@
                 <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h1>
                 <div class="socialButtons">
-                    <a href="#" target="_blank" class="fbLink"></a>
+                    <a href="https://www.facebook.com/pages/Bicravart/1669532299949727" target="_blank" class="fbLink"></a>
                     <!-- <a href="#" target="_blank" class="twitterLink"></a> -->
-                    <a href="#" target="_blank" class="instagramLink"></a>
+                    <a href="https://instagram.com/bicravart" target="_blank" class="instagramLink"></a>
                 </div>
 
                 <div class="share">
                     <button class="partage" id="share_button"></button>
+                </div>
+                <div class="colorbar-left"></div>
+                    <div class="colorbar-right">
                 </div>
             </div>
             <div class="rightBar" id="drawerContainer">

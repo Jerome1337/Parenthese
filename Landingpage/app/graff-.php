@@ -64,8 +64,7 @@
                     <button class="testButton">Toi aussi essayes !</button>
                 </div>
             </div>
-            <div class="rightBar" id="drawerContainer">
-                <img src="img/graff/graff-" alt="Image du graff">
+            <div class="rightBar" id="drawerContainer" style="background: url('img/graff/graff-494593695.png') no-repeat top left;">
             </div>
         </section>
         <script src="js/jquery.js"></script>

@@ -459,7 +459,7 @@ function compte_a_rebours()
 }
 compte_a_rebours();
 
-// FB SHARE
+// FSCREENSHOT GRAFF
 $(document).ready(function() {
     var capture = {};
     var target = $('#c');
@@ -482,6 +482,7 @@ $(document).ready(function() {
             }
         });
     });
+    //FB SHARE
     function changeName(image) {
         $('#share_button').click(function(e) {
             e.preventDefault();
@@ -505,6 +506,31 @@ $(document).ready(function() {
             console.log('Status updated!');
         });
     });
+});
+
+// CONTEUR DE CLIQUES SORTANTS
+$(document).ready(function() {
+    var nbfbclic = 0;
+    var nbinstaclic = 0;
+    var nbshareclic = 0;
+
+    $('.fbLink').click(function(){
+        nbfbclic++;
+        console.log(nbfbclic);
+        
+    });
+    $('.instagramLink').click(function(){
+        nbinstaclic++;
+        console.log(nbinstaclic);
+    });
+    $('.partage').click(function(){
+        nbshareclic++;
+        console.log(nbshareclic);
+    });
+
+    console.log(nbshareclic);
+    console.log(nbfbclic);
+    console.log(nbinstaclic);
 });
 
 // ANALITYCS
