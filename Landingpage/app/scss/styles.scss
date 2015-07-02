@@ -284,28 +284,38 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-  .rightBar {
-    width: 50%;
-    #message {
+    .rightBar {
         width: 50%;
+        #message {
+        width: 50%;
+        }
     }
-  }
 
-  .leftBar{
+    .leftBar{
     width: 50%;
-  }
+    }
+
+    .colorbar-right{
+        top: 0;
+        left: 50%!important;
+    }
 }
 
 @media screen and (max-width: 600px) {
-  .rightBar {
+    .rightBar {
     display: none;
-  }
+    }
 
-  .leftBar{
+    .leftBar{
     width: 100%;
-  }
+    }
 
-  .close-button{
+    .close-button{
     display: none;
-  }
+    }
+
+    .colorbar-right{
+        top: 0;
+        left: 99%!important;
+    }
 }

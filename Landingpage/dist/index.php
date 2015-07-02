@@ -45,7 +45,6 @@
         <title>Bicrav'art arrive bientôt !</title>
         <script src="js/modernizr.js"></script>
         <script src="js/html2canvas.js"></script>
-        <script src="js/compteur.js"></script>
         <link rel="stylesheet" href="css/styles.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     </head>
