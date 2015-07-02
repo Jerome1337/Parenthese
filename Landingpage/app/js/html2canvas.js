@@ -1,26 +1,6 @@
-$(document).ready(function() {
-  var capture = {};
-  var target = $('canvas');
-  html2canvas(target, {
-    onrendered: function(canvas) {
-      capture.img = canvas.toDataURL( "image/png" );
-      capture.data = { 'image' : capture.img };
-      $.ajax({
-      url: "/ajax.php",
-      data: capture.data,
-      type: 'post',
-      success: function( result ) {
-        console.log( result );
-      }
-      });
-    }
-  });
-});
-
 /*
   html2canvas 0.4.1 <http://html2canvas.hertzen.com>
   Copyright (c) 2013 Niklas von Hertzen
-
   Released under MIT License
 */
 
@@ -2885,5 +2865,3 @@ _html2canvas.Renderer.Canvas = function(options) {
   };
 };
 })(window,document);
-
-

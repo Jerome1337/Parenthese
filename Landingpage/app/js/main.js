@@ -459,9 +459,60 @@ function compte_a_rebours()
 }
 compte_a_rebours();
 
+// FB SHARE
+$(document).ready(function() {
+    var capture = {};
+    var target = $('#c');
+    $('#share_button').click(function(){
+        html2canvas(target, {
+            onrendered: function(canvas) {
+                setTimeout(function(){
+                            document.body.appendChild(canvas);
+                }, 5000);
+                capture.img = canvas.toDataURL( "image/png" );
+                capture.data = { 'image' : capture.img };
+                $.ajax({
+                url: "/ajax.php",
+                data: capture.data,
+                type: 'post',
+                success: function(result) {
+                    console.log("Saved");
+                }
+                });
+            }
+        });
+    });
+    function changeName(image) {
+        $('#share_button').click(function(e) {
+            e.preventDefault();
+            FB.ui({
+                method: 'share',
+                display: 'popup',
+                href: 'http://bicravart.com/fbshare/'+image+''
+            });
+        });
+    };
 
-// INSERT EMAIL
-nom = 'contact';
-domaine = 'bicravart.com';
+    $.ajaxSetup({
+        cache: true
+    });
+    $.getScript('//connect.facebook.net/fr_FR/all.js', function() {
+        FB.init({
+            appId: '696716717101760',
+        });
+        $('#loginbutton,#feedbutton').removeAttr('disabled');
+        FB.getLoginStatus(function() {
+            console.log('Status updated!');
+        });
+    });
+});
 
-document.getElementById("mail").innerHTML = '<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + '</a>';
+// ANALITYCS
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-64742742-1', 'auto');
+ga('send', 'pageview');
+

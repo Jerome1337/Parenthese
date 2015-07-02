@@ -44,7 +44,6 @@
         <meta name="theme-color" content="#ffffff">
         <title>Bicrav'art arrive bientôt !</title>
         <script src="js/modernizr.js"></script>
-        <script src="js/html2canvas.js"></script>
         <link rel="stylesheet" href="css/styles.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     </head>
@@ -53,48 +52,24 @@
             <div class="leftBar">
                 <div>
                     <img src="img/bicrav-art-logo-noir.png" alt="Logo bicrav'art">
-                    <!-- <img class="colorbar" src="img/barre.png" alt="barre coloré"> -->
                 </div>
                 <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h1>
-                <!-- <div class="container-compteur center">
-                    <section class="unite jours">
-                        <p class="center-time" id="time">00</p>
-                        <p class="center-unit">JOURS</p>
-                    </section>
-                    <section class="unite heures">
-                        <p class="center-time" id="time">00</p>
-                        <p class="center-unit">HEURES</p>
-                    </section>
-                    <section class="unite minutes">
-                        <p class="center-time" id="time">00</p>
-                        <p class="center-unit">MINUTES</p>
-                    </section>
-                    <section class="unite secondes">
-                        <p class="center-time" id="time">00</p>
-                        <p class="center-unit">SECONDES</p>
-                    </section>
-                </div> -->
                 <div class="socialButtons">
                     <a href="#" target="_blank" class="fbLink"></a>
-                    <!-- <a href="#" target="_blank" class="twitterLink"></a> -->
                     <a href="#" target="_blank" class="instagramLink"></a>
                 </div>
 
-                <div class="share">
-                    <a href="#" target="_blank" class="partage"></a>
+                <div class="testContainer">
+                    <button class="testButton">Toi aussi essayes !</button>
                 </div>
-                <!-- <div class="contact">
-                    <p>Contact : <span id="mail"></span></p>
-                </div> -->
             </div>
             <div class="rightBar" id="drawerContainer">
-                <p id="message">Cliquez pour graffer !</p>
-                <!-- <a href="#" class="shareButton">Partage le site !</a> -->
-                <canvas id="c"></canvas>
+                <img src="img/graff/graff-" alt="Image du graff">
             </div>
         </section>
         <script src="js/jquery.js"></script>
+        <script src="js/html2canvas.js"></script>
         <script src="js/datgui.js"></script>
         <script src="js/main.js"></script>
     </body>
