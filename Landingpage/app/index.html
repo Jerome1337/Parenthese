@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="description" content="Bicrav'art est un système permetant la mise en relation des graffeurs et clients.">
         <meta name="keywords" content="bicravart, bricrav'art, graffeur, bicrave, art, graff, decoration, agence, artiste, artistes">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=yes">
+        <meta name="HandheldFriendly" content="true">
         <meta property="og:title" content="Bicrav'Art">
         <meta property="og:site_name" content="Bicrav'Art">
         <meta property="og:url" content="http://bicravart.com/">
@@ -43,17 +44,20 @@
         <meta name="theme-color" content="#ffffff">
         <title>Bicrav'art arrive bientôt !</title>
         <script src="js/modernizr.js"></script>
+        <script src="js/html2canvas.js"></script>
         <link rel="stylesheet" href="css/styles.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <section class="fullWidth">
             <div class="leftBar">
                 <div>
-                    <img src="img/BICRAVARTLOGO.png" alt="Logo bicrav'art">
+                    <img src="img/bicrav-art-logo-noir.png" alt="Logo bicrav'art">
+                    <!-- <img class="colorbar" src="img/barre.png" alt="barre coloré"> -->
                 </div>
                 <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h1>
-                <div class="container-compteur center">
+                <!-- <div class="container-compteur center">
                     <section class="unite jours">
                         <p class="center-time" id="time">00</p>
                         <p class="center-unit">JOURS</p>
@@ -70,19 +74,23 @@
                         <p class="center-time" id="time">00</p>
                         <p class="center-unit">SECONDES</p>
                     </section>
-                </div>
+                </div> -->
                 <div class="socialButtons">
                     <a href="#" target="_blank" class="fbLink"></a>
-                    <a href="#" target="_blank" class="twitterLink"></a>
+                    <!-- <a href="#" target="_blank" class="twitterLink"></a> -->
                     <a href="#" target="_blank" class="instagramLink"></a>
                 </div>
-                <div class="contact">
-                    <p>Contact : <span id="mail"></span></p>
+
+                <div class="share">
+                    <a href="#" target="_blank" class="partage"></a>
                 </div>
+                <!-- <div class="contact">
+                    <p>Contact : <span id="mail"></span></p>
+                </div> -->
             </div>
             <div class="rightBar" id="drawerContainer">
                 <p id="message">Cliquez pour graffer !</p>
-                <a href="#" class="shareButton">Partage le site !</a>
+                <!-- <a href="#" class="shareButton">Partage le site !</a> -->
                 <canvas id="c"></canvas>
             </div>
         </section>
