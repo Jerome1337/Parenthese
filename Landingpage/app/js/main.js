@@ -311,6 +311,7 @@ function random(max, min) {
         centerX = canvas.width * 0.5;
         centerY = canvas.height * 0.5;
         context = canvas.getContext('2d');
+        context.fillStyle = "#9ea7b8";
         control.clear();
     }
 
@@ -459,7 +460,7 @@ function compte_a_rebours()
 }
 compte_a_rebours();
 
-// FSCREENSHOT GRAFF
+// SCREENSHOT GRAFF
 $(document).ready(function() {
     var capture = {};
     var target = $('#c');
@@ -472,77 +473,70 @@ $(document).ready(function() {
                 capture.img = canvas.toDataURL( "image/png" );
                 capture.data = { 'image' : capture.img };
                 $.ajax({
-                url: "/ajax.php",
+                url: "/ajax",
                 data: capture.data,
                 type: 'post',
-                success: function(result) {
-                    console.log("Saved");
+                success: function(imgNumb) {
+                    // console.log("Saved");
+                    // console.log(imgNumb);
+                    // console.log(cree);
+                    window.location.href = 'http://bicravart.com/fbshare/graff-'+imgNumb+'';
+                    // nameUrl(imgNumb);
                 }
                 });
             }
         });
     });
     //FB SHARE
-    function changeName(image) {
-        $('#share_button').click(function(e) {
-            e.preventDefault();
-            FB.ui({
-                method: 'share',
-                display: 'popup',
-                href: 'http://bicravart.com/fbshare/'+image+''
-            });
-        });
-    };
+    // function nameUrl(imgNumb) {
+    // // $('#share_button').click(function(){
 
-    $.ajaxSetup({
-        cache: true
-    });
-    $.getScript('//connect.facebook.net/fr_FR/all.js', function() {
-        FB.init({
-            appId: '696716717101760',
-        });
-        $('#loginbutton,#feedbutton').removeAttr('disabled');
-        FB.getLoginStatus(function() {
-            console.log('Status updated!');
-        });
-    });
+    //     // console.log(imgNumb);
+    //     // e.preventDefault();
+    //     var lien = 'http://bicravart.com/fbshare/graff-'+imgNumb+'';
+    //     FB.ui({
+    //         method: 'share',
+    //         display: 'popup',
+    //         href: lien
+    //     }, function(response){});
+    //     console.log(lien);
+    // };
+
+    // $.ajaxSetup({
+    //     cache: true
+    // });
+    // $.getScript('//connect.facebook.net/fr_FR/all.js', function() {
+    //     FB.init({
+    //         appId: '696716717101760',
+    //     });
+    //     $('#loginbutton,#feedbutton').removeAttr('disabled');
+    //     FB.getLoginStatus(function() {
+    //         console.log('Status updated!');
+    //     });
+    // });
 });
 
 // CONTEUR DE CLIQUES SORTANTS
 $(document).ready(function() {
-    var nbfbclic = 0;
-    var nbinstaclic = 0;
-    var nbshareclic = 0;
-
     $('.fbLink').click(function(){
-        nbfbclic++;
-        console.log(nbfbclic);
-        data = 'nbfbclic='+nbfbclic+'';
-            var xhr;
-            if (window.XMLHttpRequest) xhr = new XMLHttpRequest();
-            else if (window.ActiveXObject) xhr = new ActiveXObject('Microsoft.XMLHTTP');
-            else
+        $.ajax({
+            type: "POST",
+            url: "compteur.php",
+            data: clicks,
+            success: function(clicks)
             {
-              alert('Ce navigateur ne supporte pas XMLHttpRequest');
-              return;
-            }
-
-            xhr.open('POST','nbclic.php',true);
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhr.send(data);
+                console.log('Il y à eu '+clicks+'');
+            }                 
+        });
     });
     $('.instagramLink').click(function(){
         nbinstaclic++;
-        console.log(nbinstaclic);
+        console.log('Nombre clicks Instagram : '+nbinstaclic);
     });
     $('.partage').click(function(){
         nbshareclic++;
-        console.log(nbshareclic);
+        console.log('Nombre clicks partage : '+nbshareclic);
     });
-
-    console.log(nbshareclic);
-    console.log(nbfbclic);
-    console.log(nbinstaclic);
 });
 
 // ANALITYCS

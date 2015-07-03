@@ -1,27 +1,32 @@
 <!doctype html>
-<html class="no-js" lang="fr-FR">
+<html lang="fr-FR" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <?php
+        /* Connexion à une base ODBC avec l'invocation de pilote */
+        $dsn = 'mysql:dbname=doyouclixubicrav;host=doyouclixubicrav.mysql.db';
+        $user = 'doyouclixubicrav';
+        $password = '5aGHC6aRJNbe';
+
+        try {
+            $dbh = new PDO($dsn, $user, $password);
+        } catch (PDOException $e) {
+            echo 'Connexion échouée : ' . $e->getMessage();
+        }
+    ?>
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Bicrav'art est un système permetant la mise en relation des graffeurs et clients.">
-        <meta name="keywords" content="bicravart, bricrav'art, graffeur, bicrave, art, graff, decoration, agence, artiste, artistes">
+        <meta name="keywords" content="bicravart, bricrav'art, graffeur, galerie, bicrave, art, graff, decoration, agence, artiste, artistes">
         <meta name="viewport" content="width=device-width, initial-scale=yes">
         <meta name="HandheldFriendly" content="true">
         <meta property="og:title" content="Bicrav'Art">
         <meta property="og:site_name" content="Bicrav'Art">
         <meta property="og:url" content="http://bicravart.com/">
         <meta property="og:description" content="Bicrav'art est un système permetant la mise en relation des graffeurs et clients.">
-        <meta property="fb:app_id" content="790279547711669">
+        <meta property="fb:app_id" content="696716717101760">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="http://www.sheguey.land/img/fbshare/fbshare.jpg">
+        <meta property="og:image" content="http://www.bicravart.com/img/ImgShare.png">
         <meta property="og:image:width" content="1280">
-        <meta property="og:image:height" content="720">
-        <meta name="twitter:card" content="Description">
-        <meta name="twitter:site" content="@bicravart">
-        <meta name="twitter:title" content="bicrav'art Community">
-        <meta name="twitter:description" content="Bicrav'art est un système permetant la mise en relation des graffeurs et clients.">
-        <meta name="twitter:creator" content="ShegueyLand">
-        <meta name="twitter:image:src" content="http://www.sheguey.land/img/favicons/android-chrome-192x192.png">
-        <meta name="twitter:domain" content="bicravart.com">
+        <meta property="og:image:height" content="673">
         <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
@@ -43,59 +48,44 @@
         <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <title>Bicrav'art arrive bientôt !</title>
-        <script src="js/modernizr.js"></script>
-        <script src="js/html2canvas.js"></script>
-        <link rel="stylesheet" href="css/styles.css">
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <section class="fullWidth">
             <div class="leftBar">
                 <div>
-                    <img src="img/bicrav-art.png" title="logo Bicrav'art" alt="Logo bicrav'art">
+                    <img src="img/BICRAVART.png" alt="Logo bicrav'art">
+                    <!-- <img class="colorbar" src="img/barre.png" alt="barre coloré"> -->
                 </div>
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h1>
-                <!-- <div class="container-compteur center">
-                    <section class="unite jours">
-                        <p class="center-time" id="time">00</p>
-                        <p class="center-unit">JOURS</p>
-                    </section>
-                    <section class="unite heures">
-                        <p class="center-time" id="time">00</p>
-                        <p class="center-unit">HEURES</p>
-                    </section>
-                    <section class="unite minutes">
-                        <p class="center-time" id="time">00</p>
-                        <p class="center-unit">MINUTES</p>
-                    </section>
-                    <section class="unite secondes">
-                        <p class="center-time" id="time">00</p>
-                        <p class="center-unit">SECONDES</p>
-                    </section>
-                </div> -->
-                <div class="socialButtons">
-                    <a href="#" target="_blank" onclick="compteur()" title="Logo Facebook" class="fbLink"></a>
-                    <!-- <a href="#" target="_blank" class="twitterLink"></a> -->
-                    <a href="#" target="_blank" onclick="compteur()" title="Logo Instagram" class="instagramLink"></a>
+                <h1>Vernissage de rue</h1>
+                <h2>Monnayez votre art,<br> tout en gardant votre anonymat.</h2>
+                <p class="line"></p>
+                <h3>Retrouvez-nous bientôt !</h3>
+                <div class="blocBas">
+                    <div class="socialButtons">
+                        <p>Suivez-nous</p>
+                        <a href="https://www.facebook.com/pages/Bicravart/1669532299949727" target="_blank" class="fbLink"></a>
+                        <a href="https://instagram.com/bicravart" target="_blank" class="instagramLink"></a>
+                    </div>
+                    <div class="shareContainer">
+                        <button class="button" id="share_button">PARTAGES TON GRAFF !</button>
+                    </div>
                 </div>
+                
 
-                <div class="share">
-                    <a href="#" onclick="compteur()" title="Partager" target="_blank" class="partage"></a>
-                </div>
-                <!-- <div class="contact">
-                    <p>Contact : <span id="mail"></span></p>
-                </div> -->
                 <div class="colorbar-left"></div>
-                <div class="colorbar-right"></div>
+                    <div class="colorbar-right">
+                </div>
             </div>
             <div class="rightBar" id="drawerContainer">
                 <p id="message">Cliquez pour graffer !</p>
-                <!-- <a href="#" class="shareButton">Partage le site !</a> -->
                 <canvas id="c"></canvas>
             </div>
         </section>
+        <link rel="stylesheet" href="css/style.min.css">
+        <script src="js/modernizr.js"></script>
         <script src="js/jquery.js"></script>
+        <script src="js/html2canvas.js"></script>
         <script src="js/datgui.js"></script>
         <script src="js/main.js"></script>
     </body>
