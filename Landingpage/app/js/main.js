@@ -297,7 +297,7 @@ function random(max, min) {
 
     var canvas, context,
         centerX, centerY,
-        mouseX = 0, mouseY = 0, isMouseDown = false,
+        mouseX = 0, mouseY = 0, isMouseDown = false, clientX = 0, clientY = 0,
         brush,
         gui, control, guiColorCtr, guiSizeCtr, guiIsRandColorCtr;
 
@@ -339,6 +339,44 @@ function random(max, min) {
         brush.endStroke();
     }
 
+    // function touchMove(e){
+    //     clientX = e.offsetX;
+    //     clientY = e.offsetY;
+    // }
+
+    // function touchDown(e){
+    //     drawer = document.getElementById('message').style.display = 'none'; 
+    //     clientX = e.offsetX;
+    //     clientY = e.offsetY;
+    //     if (control.isRandomColor) {
+    //         brush.color = randomColor();
+    //         guiColorCtr.updateDisplay();
+    //     }
+    //     if (control.isRandomSize) {
+    //         brush.size = random(51, 5) | 0;
+    //         guiSizeCtr.updateDisplay();
+    //     }
+    //     brush.startStroke(clientX, clientY);
+    // }
+
+    // function touchUp(e){
+    //     brush.endStroke();
+    // }
+
+    var start = function(e) {
+        ctx.beginPath();
+        x = e.changedTouches[0].pageX;
+        y = e.changedTouches[0].pageY-44;
+        ctx.moveTo(x,y);
+    };
+    var move = function(e) {
+        e.preventDefault();
+        x = e.changedTouches[0].pageX;
+        y = e.changedTouches[0].pageY-44;
+        ctx.lineTo(x,y);
+        ctx.stroke();
+    };
+
     // GUI Control
 
     control = {
@@ -366,6 +404,14 @@ function random(max, min) {
     canvas.addEventListener('mousedown', mouseDown, false);
     canvas.addEventListener('mouseout', mouseUp, false);
     canvas.addEventListener('mouseup', mouseUp, false);
+
+    // canvas.addEventListener("touchstart", touchMove, false);
+    // canvas.addEventListener("touchdown", touchDown, false);
+    // canvas.addEventListener("touchout", touchUp, false);
+    // canvas.addEventListener("touchup", touchUp, false);
+
+    canvas.addEventListener('touchstart', start, false);
+    canvas.addEventListener('touchmove', move, false);
     
     
     // GUI
@@ -394,71 +440,6 @@ function random(max, min) {
     loop();
 
 })();
-
-// COUNTDOWN
-
-function compte_a_rebours()
-{
-    var compte_a_rebours = document.getElementById("p");
-
-    var date_actuelle = new Date();
-    var date_evenement = new Date("July 17 10:00:00 2015");
-    var date_lancement = new Date("May 3 12:00:00 2015");
-    var total_secondes = (date_evenement - date_actuelle) / 1000;
-  
-  
-  
-  
-  function diffdate(d1,d2,u){
-    div=1
-    switch(u){
-      case 's': div=1000;
-        break;
-      case 'm': div=1000*60
-      break;
-      case 'h': div=1000*60*60
-      break;
-      case 'd': div=1000*60*60*24
-      break;
-    }
-
-    var Diff = d2.getTime() - d1.getTime();
-    return Math.ceil((Diff/div))
-  }
-  var total_jours = diffdate(date_lancement,date_evenement,'d');
-    
-    var prefixe = "";
-    if (total_secondes < 0)
-    {
-    // If it's done, we write the time
-    }
-    if (total_secondes > 0)
-    {
-        var jours = Math.floor(total_secondes / (60 * 60 * 24));
-        var heures = Math.floor((total_secondes - (jours * 60 * 60 * 24)) / (60 * 60));
-        minutes = Math.floor((total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60))) / 60);
-        secondes = Math.floor(total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60 + minutes * 60)));
-    
-    function timeInDeg(_elem, _class) {
-      var deg = (360/60)*(60-_elem);
-      if(_class == "heures") {deg = (360/24)*(24-_elem);}
-      if(_class == "jours") {deg = (360/total_jours)*(total_jours-_elem);}
-      $("."+_class+" #time").html(_elem);
-    }
-    timeInDeg(secondes, "secondes");
-    timeInDeg(minutes, "minutes");
-    timeInDeg(heures, "heures");
-    timeInDeg(jours, "jours");
-    
-    }
-    else
-    {
-    // COUNTDOWN DONE
-    
-    }
-    var actualisation = setTimeout("compte_a_rebours();", 1000);
-}
-compte_a_rebours();
 
 // SCREENSHOT GRAFF
 $(document).ready(function() {
@@ -525,7 +506,7 @@ $(document).ready(function() {
             data: clicks,
             success: function(clicks)
             {
-                console.log('Il y à eu '+clicks+'');
+                console.log('Il y à eu '+clicks+' clicks.');
             }                 
         });
     });

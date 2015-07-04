@@ -76,7 +76,7 @@
                         <a href="https://instagram.com/bicravart" target="_blank" class="instagramLink"></a>
                     </div>
                     <div class="shareContainer">
-                        <a href="../index.php" title="Liens de la palette de graff" class="button" >Toi aussi viens graffer !</a>
+                        <a href="http://bicravart.com" title="Liens de la palette de graff" class="button" >Toi aussi viens graffer !</a>
                     </div>
                 </div>
                 <div class="colorbar-left"></div>
