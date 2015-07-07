@@ -30,9 +30,10 @@ var concatCss = require('gulp-concat-css');
 gulp.task('script', function() {
     return gulp.src([
         appSrc + '/js/modernizr.js',
-        appSrc + '/js/jquery-2.1.3.js',
-        appSrc + '/js/foundation.min.js',
-        appSrc + '/js/script.js'])
+        appSrc + '/js/jquery.js',
+        appSrc + '/js/html2canvas.js',
+        appSrc + '/js/datgui.js',
+        appSrc + '/js/main.js'])
         .pipe(reload({
             stream: true,
             once: true
@@ -194,7 +195,7 @@ gulp.task('serve', ['build'], function() {
         // Note: this uses an unsigned certificate which on first access
         //       will present a certificate warning in the browser.
         // https: true,
-        proxy: "http://parenthese:8888/"
+        proxy: "http://127.0.0.1/Parenthese/Landingpage/app/"
         //server: [ appTemp, appSrc]
     });
     gulp.watch( appSrc + '/**/*.php', reload);

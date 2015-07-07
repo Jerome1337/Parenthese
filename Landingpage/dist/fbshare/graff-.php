@@ -62,7 +62,7 @@
         <section class="fullWidth">
             <div class="leftBar">
                 <div>
-                    <img src="../img/BICRAVART.png" alt="Logo bicrav'art">
+                    <img src="../img/bicravart_logo.png" alt="Logo bicrav'art">
                     <!-- <img class="colorbar" src="img/barre.png" alt="barre coloré"> -->
                 </div>
                 <h1>Vernissage de rue</h1>
@@ -76,7 +76,7 @@
                         <a href="https://instagram.com/bicravart" target="_blank" class="instagramLink"></a>
                     </div>
                     <div class="shareContainer">
-                        <a href="http://bicravart.com" title="Liens de la palette de graff" class="button" >Toi aussi viens graffer !</a>
+                        <a href="http://bicravart.com" title="Liens de la palette de graff" class="button" >Venez graffez !</a>
                     </div>
                 </div>
                 <div class="colorbar-left"></div>
@@ -89,9 +89,6 @@
         <link rel="stylesheet" href="../css/style.min.css">
         <script src="../js/modernizr.js"></script>
         <script src="../js/jquery.js"></script>
-        <!--<script src="../js/html2canvas.js"></script>
-        <script src="../js/datgui.js"></script>
-        <script src="../js/main.js"></script>-->
         <script>
             function launchShare() {
                 var lien = 'http://bicravart.com/fbshare/graff-<?php echo $graffNumb ?>';

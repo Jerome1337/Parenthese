@@ -48,14 +48,13 @@
         <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <title>Bicrav'art arrive bientôt !</title>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/style.min.css" title="Style de base" media="all">
     </head>
     <body>
         <section class="fullWidth">
             <div class="leftBar">
                 <div>
-                    <img src="img/BICRAVART.png" alt="Logo bicrav'art">
-                    <!-- <img class="colorbar" src="img/barre.png" alt="barre coloré"> -->
+                    <img src="img/bicravart_logo.png" alt="Logo bicrav'art">
                 </div>
                 <h1>Vernissage de rue</h1>
                 <h2>Monnayez votre art,<br> tout en gardant votre anonymat.</h2>
@@ -64,15 +63,13 @@
                 <div class="blocBas">
                     <div class="socialButtons">
                         <p>Suivez-nous</p>
-                        <a href="https://www.facebook.com/pages/Bicravart/1669532299949727" target="_blank" class="fbLink"></a>
-                        <a href="https://instagram.com/bicravart" target="_blank" class="instagramLink"></a>
+                        <a href="https://www.facebook.com/pages/Bicravart/1669532299949727" target="_blank" class="fbLink" title="Lien de la page Facebook de Bicrav'art"></a>
+                        <a href="https://instagram.com/bicravart" target="_blank" class="instagramLink" title="Lien de la page Intagram de Bicrav'art"></a>
                     </div>
                     <div class="shareContainer">
-                        <button class="button" id="share_button">PARTAGEZ VOTRE GRAFF</button>
+                        <button class="button" id="share_button" onclick="ga('send', 'event', 'Clics', 'Partage', 'Bouton_Partage_Graff');">PARTAGEZ VOTRE GRAFF</button>
                     </div>
                 </div>
-                
-
                 <div class="colorbar-left"></div>
                     <div class="colorbar-right">
                 </div>
@@ -82,11 +79,6 @@
                 <canvas id="c"></canvas>
             </div>
         </section>
-        <link rel="stylesheet" href="css/style.min.css">
-        <script src="js/modernizr.js"></script>
-        <script src="js/jquery.js"></script>
-        <script src="js/html2canvas.js"></script>
-        <script src="js/datgui.js"></script>
-        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/script.min.js"></script>
     </body>
 </html>

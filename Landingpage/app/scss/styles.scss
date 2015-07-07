@@ -19,6 +19,19 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src:url("../font/open300.woff") format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src:url("../font/open600.woff") format('woff');
+}
+
 
 body, html{
     height:100%;
@@ -258,6 +271,6 @@ body {
     }
     .colorbar-right{
         top: 0;
-        left: 99%!important;
+        left: 98.6%!important;
     }
 }
