@@ -63,17 +63,17 @@
             <div class="leftBar">
                 <div>
                     <img src="../img/bicravart_logo.png" alt="Logo bicrav'art">
-                    <!-- <img class="colorbar" src="img/barre.png" alt="barre coloré"> -->
                 </div>
-                <h1>Vernissage de rue</h1>
-                <h2>Monnayez votre art,<br> tout en gardant votre anonymat.</h2>
+                <h1>Monnayez votre art,<br> tout en gardant votre anonymat.</h1>
+                <h2 class="descText">Pour vous, un graff est une véritable oeuvre d'art et doit se vendre comme telle.</h2>
+                <h2 class="descText">Avec Bicrav'art, nous vous offrons la possibilité de vous faire rémunérer pour des prestations de graff.</h2>
+                <h2 class="descText">Retrouvez-nous très bientôt et venez connaître nos opportunités pour faire de vous un véritable professionnel.</h2>
                 <p class="line"></p>
-                <h3>Retrouvez-nous bientôt !</h3>
                 <div class="blocBas">
                     <div class="socialButtons">
                         <p>Suivez-nous</p>
-                        <a href="https://www.facebook.com/pages/Bicravart/1669532299949727" target="_blank" class="fbLink" title="Lien de la page Facebook de Bicrav'art"></a>
-                        <a href="https://instagram.com/bicravart" target="_blank" class="instagramLink" title="Lien de la page Intagram de Bicrav'art"></a>
+                        <a href="https://www.facebook.com/pages/Bicravart/1669532299949727" target="_blank" class="fbLink" title="Lien de la page Facebook de Bicrav'art" onclick="ga('send', 'event', 'Clics', 'Facebook', 'Bouton_Page_Facebook');"></a>
+                        <a href="https://instagram.com/bicravart" target="_blank" class="instagramLink" title="Lien de la page Intagram de Bicrav'art" onclick="ga('send', 'event', 'Clics', 'Instagram', 'Bouton_Page_Instagram');"></a>
                     </div>
                     <div class="shareContainer">
                         <a href="http://bicravart.com" title="Lien de la palette de graff" class="button" >Venez graffez !</a>
