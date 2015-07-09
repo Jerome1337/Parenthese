@@ -19,6 +19,19 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src:url("../font/open300.woff") format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src:url("../font/open600.woff") format('woff');
+}
+
 
 body, html{
     height:100%;
@@ -60,21 +73,30 @@ body {
             margin:0 auto;
             width: 70%;
             display: block;
-            padding: 30px 0 50px 0;
+            padding: 30px 0 25px 0;
         }
     }
-	h1, h3{
+	h1{
         margin: 0 20px;
-        padding: 0px 0;
+        padding-bottom: 40px;
         text-align: center;
         font-size: 22px;
         color: black;
         font-family: 'Open Sans';
         font-weight: 600;
     }
-    h2{
+/*     h2{
+    margin: 0 20px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    font-family: 'Open Sans';
+    font-weight: 300;
+} */
+    .descText{
         margin: 0 20px;
-        padding: 20px 0;
+        padding: 0 0 10px 0;
         text-align: center;
         font-size: 18px;
         color: black;
@@ -87,6 +109,7 @@ body {
         margin:0 auto;
         display: block;
         margin-bottom: 20px;
+        margin-top: 20px;
     }
     .colorbar-right{
         top: 0;
@@ -132,9 +155,9 @@ body {
                 width: 61%;
                 line-height: 1em;
                 letter-spacing: 1px;
+                transition: ease-in-out all .5s;
                 &:hover{
                     filter: grayscale(40%);
-                    transition: ease-in-out all .5s;
                 }
             }
         }
@@ -150,26 +173,26 @@ body {
             color: darken(#e9e9ea, 20%);
             text-decoration: none;
             float: left;
+            transition: ease-in-out all .5s;
             &:before{
                 font-family: "social";
                 font-size: 2em;
             }
             &:hover{
                 color: #45619D;
-                transition: ease-in-out all .5s;
             }
         }
         .instagramLink{
             color: darken(#e9e9ea, 20%);
             text-decoration: none;
             float: right;
+            transition: ease-in-out all .5s;
             &:before{
                 font-family: "social";
                 font-size: 2em;
             }
             &:hover{
                 color: #246087;
-                transition: ease-in-out all .5s;
             }
         }
         .fbLink{
@@ -202,21 +225,6 @@ body {
         margin-top: -0.5em;
         text-shadow: 0 -1px 0 #d3d3d1;
         z-index: 100;
-    }
-    .shareButton{
-        text-align: center;
-        position: fixed;
-        right: 15px;
-        bottom: 0%;
-        font-size: 0.8em;
-        background: #353E42;
-        text-decoration: none;
-        color: #fff;
-        padding: 10px 30px;
-        &:hover{
-            background: #252C2E;
-            transition: ease-in-out all .5s;
-        }   
     }
     canvas {
         position: absolute;
@@ -261,6 +269,6 @@ body {
     }
     .colorbar-right{
         top: 0;
-        left: 99%!important;
+        left: 98.6%!important;
     }
 }

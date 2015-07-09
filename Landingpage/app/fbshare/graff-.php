@@ -22,14 +22,14 @@
     ?>
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="Bicrav'art est un système permetant la mise en relation des graffeurs et clients.">
+        <meta name="description" content="Bicrav'art est un système permettant la mise en relation des graffeurs et clients.">
         <meta name="keywords" content="bicravart, bricrav'art, graffeur, galerie, bicrave, art, graff, decoration, agence, artiste, artistes">
         <meta name="viewport" content="width=device-width, initial-scale=yes">
         <meta name="HandheldFriendly" content="true">
         <meta property="og:title" content="Bicrav'Art">
         <meta property="og:site_name" content="Bicrav'Art">
         <meta property="og:url" content="http://bicravart.com/fbshare/graff-<?php echo $graffNumb ?>">
-        <meta property="og:description" content="Bicrav'art est un système permetant la mise en relation des graffeurs et clients.">
+        <meta property="og:description" content="Bicrav'art est un système permettant la mise en relation des graffeurs et clients.">
         <meta property="fb:app_id" content="696716717101760">
         <meta property="og:type" content="website">
         <meta property="og:image" content="http://www.bicravart.com/img/ImgShare.png">
@@ -56,27 +56,27 @@
         <meta name="msapplication-config" content="../img/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <title>Bicrav'art arrive bientôt !</title>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="../css/style.min.css" title="Style de base" media="all">
     </head>
     <body>
         <section class="fullWidth">
             <div class="leftBar">
                 <div>
-                    <img src="../img/BICRAVART.png" alt="Logo bicrav'art">
-                    <!-- <img class="colorbar" src="img/barre.png" alt="barre coloré"> -->
+                    <img src="../img/bicravart_logo.png" alt="Logo bicrav'art">
                 </div>
-                <h1>Vernissage de rue</h1>
-                <h2>Monnayez votre art,<br> tout en gardant votre anonymat.</h2>
+                <h1>Monnayez votre art,<br> tout en gardant votre anonymat.</h1>
+                <h2 class="descText">Pour vous, un graff est une véritable oeuvre d'art et doit se vendre comme telle.</h2>
+                <h2 class="descText">Avec Bicrav'art, nous vous offrons la possibilité de vous faire rémunérer pour des prestations de graff.</h2>
+                <h2 class="descText">Retrouvez-nous très bientôt et venez connaître nos opportunités pour faire de vous un véritable professionnel.</h2>
                 <p class="line"></p>
-                <h3>Retrouvez-nous bientôt !</h3>
                 <div class="blocBas">
                     <div class="socialButtons">
                         <p>Suivez-nous</p>
-                        <a href="https://www.facebook.com/pages/Bicravart/1669532299949727" target="_blank" class="fbLink"></a>
-                        <a href="https://instagram.com/bicravart" target="_blank" class="instagramLink"></a>
+                        <a href="https://www.facebook.com/pages/Bicravart/1669532299949727" target="_blank" class="fbLink" title="Lien de la page Facebook de Bicrav'art" onclick="ga('send', 'event', 'Clics', 'Facebook', 'Bouton_Page_Facebook');"></a>
+                        <a href="https://instagram.com/bicravart" target="_blank" class="instagramLink" title="Lien de la page Intagram de Bicrav'art" onclick="ga('send', 'event', 'Clics', 'Instagram', 'Bouton_Page_Instagram');"></a>
                     </div>
                     <div class="shareContainer">
-                        <a href="http://bicravart.com" title="Liens de la palette de graff" class="button" >Venez graffez !</a>
+                        <a href="http://bicravart.com" title="Lien de la palette de graff" class="button" >Venez graffez !</a>
                     </div>
                 </div>
                 <div class="colorbar-left"></div>
@@ -86,10 +86,9 @@
                 <img src="../img/graff/graff-<?php echo $graffNumb ?>.png" alt="Graff numéro <?php echo $graffNumb ?>" id="graffScreen">
             </div>
         </section>
-        <link rel="stylesheet" href="../css/style.min.css">
-        <script src="../js/modernizr.js"></script>
-        <script src="../js/jquery.js"></script>
-        <script>
+        <script  type="text/javascript" src="../js/modernizr.js"></script>
+        <script  type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript">
             function launchShare() {
                 var lien = 'http://bicravart.com/fbshare/graff-<?php echo $graffNumb ?>';
                 FB.ui({
