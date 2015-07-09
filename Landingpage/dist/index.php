@@ -68,7 +68,7 @@
                         <a href="https://instagram.com/bicravart" target="_blank" class="instagramLink"></a>
                     </div>
                     <div class="shareContainer">
-                        <button class="button" id="share_button">PARTAGES TON GRAFF !</button>
+                        <button class="button" id="share_button">PARTAGEZ VOTRE GRAFF</button>
                     </div>
                 </div>
                 
