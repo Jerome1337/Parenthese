@@ -1,16 +1,15 @@
 <!doctype html>
 <html lang="fr-FR" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
     <?php
-        /* Connexion à une base ODBC avec l'invocation de pilote */
-        $dsn = 'mysql:dbname=doyouclixubicrav;host=doyouclixubicrav.mysql.db';
-        $user = 'doyouclixubicrav';
-        $password = '5aGHC6aRJNbe';
-
-        try {
-            $dbh = new PDO($dsn, $user, $password);
-        } catch (PDOException $e) {
-            echo 'Connexion échouée : ' . $e->getMessage();
-        }
+    /* Connexion à une base ODBC avec l'invocation de pilote */
+    // $dsn = 'mysql:dbname=doyouclixubicrav;host=doyouclixubicrav.mysql.db';
+    // $user = 'doyouclixubicrav';
+    // $password = '5aGHC6aRJNbe';
+    // try {
+    //     $dbh = new PDO($dsn, $user, $password);
+    // } catch (PDOException $e) {
+    //     echo 'Connexion échouée : ' . $e->getMessage();
+    // }
     ?>
     <head>
         <meta charset="utf-8">
@@ -50,36 +49,67 @@
         <title>Bicrav'art arrive bientôt !</title>
         <link rel="stylesheet" type="text/css" href="css/style.min.css" title="Style de base" media="all">
     </head>
-    <body>
-        <section class="fullWidth">
-            <div class="leftBar">
-                <div>
-                    <img src="img/bicravart_logo.png" alt="Logo bicrav'art">
-                </div>
-                <h1>Monnayez votre art,<br> tout en gardant votre anonymat.</h1>
-                <h2 class="descText">Pour vous, un graff est une véritable oeuvre d'art et doit se vendre comme telle.</h2>
-                <h2 class="descText">Avec Bicrav'art, nous vous offrons la possibilité de vous faire rémunérer pour des prestations de graff.</h2>
-                <h2 class="descText">Retrouvez-nous très bientôt et venez connaître nos opportunités pour faire de vous un véritable professionnel.</h2>
-                <p class="line"></p>
-                <div class="blocBas">
-                    <div class="socialButtons">
-                        <p>Suivez-nous</p>
-                        <a href="https://www.facebook.com/pages/Bicravart/1669532299949727" target="_blank" class="fbLink" title="Lien de la page Facebook de Bicrav'art" onclick="ga('send', 'event', 'Clics', 'Facebook', 'Bouton_Page_Facebook');"></a>
-                        <a href="https://instagram.com/bicravart" target="_blank" class="instagramLink" title="Lien de la page Intagram de Bicrav'art" onclick="ga('send', 'event', 'Clics', 'Instagram', 'Bouton_Page_Instagram');"></a>
-                    </div>
-                    <div class="shareContainer">
-                        <button class="button" id="share_button" onclick="ga('send', 'event', 'Clics', 'Partage', 'Bouton_Partage_Graff');">PARTAGEZ VOTRE GRAFF</button>
-                    </div>
-                </div>
-                <div class="colorbar-left"></div>
-                    <div class="colorbar-right">
-                </div>
+<body></body>
+<section class="row fullWidth">
+    <div class="js-video widescreen">
+        <div id="player1" class="youtube-player"></div>
+        <div id="player2" class="youtube-player"></div>
+        <div class="contain-to-grid sticky">
+            <nav class="top-bar navBar" data-topbar role="navigation">
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="#">My Site</a></h1>
+                    </li>
+                </ul>
+                <section class="top-bar-section">
+                    <ul class="right">
+                      <li><a href="#">Accueil</a></li>
+                      <li><a href="#">Artistes</a></li>
+                      <li><a href="#">Entreprises</a></li>
+                      <li><a href="#">Références</a></li>
+                      <li><a href="#">Contacts</a></li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
+        <div class="large-12 columns baseline">
+            <h2>"Monnayez votre art, tout en gardant votre annonymat"</h2>
+        </div>
+    </div>
+</section>
+<section class="descContainer">
+    <section class="row fullWidth whoAre">
+            <div class="large-12 columns descPart">
+                <h3>Qui sommes-nous ?</h3>
+                <p>BicravArt est un service de mise en relation entre les graffeurs<br> et les entreprises pour des projets de graffes dans différents environnements.</p>
             </div>
-            <div class="rightBar" id="drawerContainer">
-                <p id="message">Cliquez pour graffer !</p>
-                <canvas id="c"></canvas>
+            <div class="large-6 medium-6 small-12 columns linkPart">
+                <p>Les graffeurs nous vous proposons de vous inscrire sur le site BicravArt dans la rubrique “Artistes”. Ainsi, nous récupérons des informations essentielles sur vous afin de mieux répondre aux demandes de votre futur employeur et de respecter au mieux votre univers.</p>
+                <a href="#">Inscrivez-vous</a>
             </div>
-        </section>
-        <script type="text/javascript" src="js/script.min.js"></script>
-    </body>
+            <div class="large-6 medium-6 small-12 columns linkPart">
+                <p>Les entreprises sont invitées à remplir des informations pour la création de devis dans la rubrique “Entreprises”. Ces informations nous permettrons de comprendre votre projet et de cibler au mieux nos graffeurs pour un service de qualité.</p>
+                <a href="#">Demander un devis</a>
+            </div>
+    </section>
+</section>
+<footer>
+    <section class="row fullWidth footerContainer">
+            <div class="large-4 small-12 columns copyright">
+                <p>Copyright 2015 &#169; Bicravart</p>
+            </div>
+            <div class="large-4 small-12 columns socialPart">
+                <a href="#" title="" class="fbLink"></a>
+                <a href="#" title="" class="instagramLink"></a>
+                <a href="#" title="" class="pinterestLink"></a>
+            </div>
+            <div class="large-4 small-12 columns linkPark">
+                <a href="#" title="">F.A.Q</a>
+                <a href="#" title="">À Propos</a>
+                <a href="#" title="">Mentions légales</a>
+            </div>
+    </section>
+</footer>
+<script type="text/javascript" src="js/script.min.js"></script>
+</body>
 </html>

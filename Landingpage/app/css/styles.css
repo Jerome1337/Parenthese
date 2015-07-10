@@ -528,14 +528,14 @@ body {
   margin: 0 auto;
   width: 70%;
   display: block;
-  padding: 30px 0 25px 0;
+  padding: 20px 0 25px 0;
 }
 
 .leftBar h1 {
   margin: 0 20px;
   padding-bottom: 40px;
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
   color: black;
   font-family: 'Open Sans';
   font-weight: 600;
@@ -545,7 +545,7 @@ body {
   margin: 0 20px;
   padding: 0 0 10px 0;
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
   color: black;
   font-family: 'Open Sans';
   font-weight: 300;
@@ -593,29 +593,31 @@ body {
 }
 
 .leftBar .blocBas .shareContainer .button {
-  background: url("../img/button.png") no-repeat top left;
-  padding: 20px 30px 15px;
+  background: url("../img/mosaic.png") no-repeat top left;
+  background-size: 250%;
+  padding: 10px 20px 5px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   color: #fff;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-family: "Bebas";
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
   margin: 0px auto;
   display: block;
   text-align: center;
-  width: 61%;
+  width: 45%;
   line-height: 1em;
   letter-spacing: 1px;
   -webkit-transition: ease-in-out all 0.5s;
   transition: ease-in-out all 0.5s;
+  margin-bottom: 30px;
 }
 
 .leftBar .blocBas .shareContainer .button:hover {
-  -webkit-filter: grayscale(40%);
-  filter: grayscale(40%);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .leftBar .socialButtons {
@@ -727,6 +729,10 @@ body {
 
   .leftBar {
     width: 100%;
+  }
+
+  .leftBar .shareContainer {
+    display: none;
   }
 
   .close-button {

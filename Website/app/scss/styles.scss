@@ -13,13 +13,6 @@
 }
 
 @font-face {
-    font-family: "Bebas";
-    src:url("../font/BebasNeue.otf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
@@ -32,7 +25,6 @@
   src:url("../font/open600.woff") format('woff');
 }
 
-
 body, html{
     height:100%;
 }
@@ -44,137 +36,85 @@ button{
 body {
     padding: 0;
     margin: 0;
-    background: darken(#353E42, 10%);
     overflow: auto;
     user-select: none;
 }
 
 .fullWidth {
    width: 100%;
-   height: 100%;
    margin-left: auto;
    margin-right: auto;
+   max-width: initial;
 }
 
-.colorbar{
-        position: absolute;
-    }
-
-/* LEFT BAR*/
-.leftBar {
-	min-width: 25%;
-	width: 25%;
-	min-height: 100%;
-	background: #e9e9ea;
-    display: inline-block;
-    div{
-        margin: auto;
-        img{
-            margin:0 auto;
-            width: 70%;
-            display: block;
-            padding: 20px 0 25px 0;
-        }
-    }
-	h1{
-        margin: 0 20px;
-        padding-bottom: 40px;
-        text-align: center;
-        font-size: 18px;
-        color: black;
-        font-family: 'Open Sans';
-        font-weight: 600;
-    }
-/*     h2{
-    margin: 0 20px;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 18px;
-    color: black;
-    font-family: 'Open Sans';
-    font-weight: 300;
-} */
-    .descText{
-        margin: 0 20px;
-        padding: 0 0 10px 0;
-        text-align: center;
-        font-size: 14px;
-        color: black;
-        font-family: 'Open Sans';
-        font-weight: 300;
-    }
-    .line{
-        border-bottom: 1px solid #000;
-        width: 50%;
-        margin:0 auto;
-        display: block;
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-    .colorbar-right{
-        top: 0;
-        left: 25%;
-        width: 5px;
-        height: 100%;
-        background-image: url('../img/mosaic.png');
-        position: absolute;
-        z-index: 100;
-    }
-
-    .colorbar-left{
-        top: 0;
-        left: 0;
-        width: 5px;
-        height: 100%;
-        background-image: url('../img/mosaic.png');
-        position: absolute;
-    }
-
-    .blocBas{
-        .socialButtons{
-            width: 30%;
-            p{
-                font-family: 'Open Sans';
-                font-weight: 300;
-            }
-        }
-        .shareContainer{
+.fullWidth {
+    // BACKGROUND VIDEO
+    .js-video{
+        position: relative;
+        padding-bottom: 56.25%;
+        // padding-top: 30px;
+        // height: 0;
+        overflow: hidden;
+        .youtube-player{
+            position: absolute;
+            top: 0; 
+            left: 0;
             width: 100%;
-            .button{
-                background: url('../img/mosaic.png') no-repeat top left;
-                background-size: 250%;
-                padding: 10px 20px 5px;
-                border-radius: 10px;
-                color: #fff;
-                text-decoration: none;
-                font-size: 1.3em;
-                font-family: "Bebas";
-                filter: grayscale(0%);
-                margin: 0px auto;
-                display: block;
-                text-align: center;
-                width: 45%;
-                line-height: 1em;
-                letter-spacing: 1px;
-                transition: ease-in-out all .5s;
-                margin-bottom: 30px;
-                &:hover{
-                    filter: grayscale(100%);
+            height: 100%;
+            z-index: -10;
+        }
+        #player2{
+            z-index: -5;
+        }
+        // NAV
+        .navBar { 
+            background-color: transparent;
+            .top-bar-section{
+                background-color: transparent !important;
+                li {
+                    background-color: transparent !important;
+                    a {
+                        background-color: transparent !important;
+                    }
                 }
             }
         }
+        .baseline{
+            text-align: center;
+            z-index: 10;
+            display: table;
+            height: 100%;
+            h2{
+                display: table-cell;
+                vertical-align: middle;
+                color: #fff;
+                font-size: 2em;
+            }
+        }
     }
+}
+.descContainer{
+    padding: 100px 0;
+    .whoAre{
+        .descPart{
+            text-align: center;
+        }
+        .linkPart{
+            width: 50%;
+        }
+    }
+}
 
-    /* SOCIAL BUTTONS */
-    .socialButtons{
-        margin-top: 30px;
+// FOOTER
+footer{
+    background: #ccc;
+    padding: 20px 0;
+    text-align: center;
+    .socialPart{
         text-align: center;
-        margin-bottom: 80px;
-        width: 30%;
         .fbLink{
             color: darken(#e9e9ea, 20%);
             text-decoration: none;
-            float: left;
             transition: ease-in-out all .5s;
             &:before{
                 font-family: "social";
@@ -187,7 +127,6 @@ body {
         .instagramLink{
             color: darken(#e9e9ea, 20%);
             text-decoration: none;
-            float: right;
             transition: ease-in-out all .5s;
             &:before{
                 font-family: "social";
@@ -197,6 +136,18 @@ body {
                 color: #246087;
             }
         }
+        .pinterestLink{
+            color: darken(#e9e9ea, 20%);
+            text-decoration: none;
+            transition: ease-in-out all .5s;
+            &:before{
+                font-family: "social";
+                font-size: 2em;
+            }
+            &:hover{
+                color: #AB171E;
+            }
+        }
         .fbLink{
             &:before{
                 content:'\e000';
@@ -204,73 +155,14 @@ body {
         }
         .instagramLink{
             &:before{
-                content:'\e002';
+                content:'\e001';
+            }
+        }
+        .pinterestLink{
+            &:before{
+                content: '\e002';
             }
         }
     }
 }
 
-/* ESPACE GRAFF */
-.rightBar {
-	width: 75%;
-    display: inline-block;    
-	float: right;
-    height: 100%;
-    #message {
-        width: 75%;
-        color: #e2e2de;
-        font-size: 32px;
-        text-align: center;
-        letter-spacing: 2px;
-        position: fixed;
-        top: 50%;
-        margin-top: -0.5em;
-        text-shadow: 0 -1px 0 #d3d3d1;
-        z-index: 100;
-    }
-    canvas {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: darken(#353E42, 10%);
-    }
-    #graffScreen{
-        width: 100%;
-        height: 99.5%;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .rightBar {
-        width: 50%;
-        #message {
-        width: 50%;
-        }
-    }
-    .leftBar{
-    width: 50%;
-    }
-    .colorbar-right{
-        top: 0;
-        left: 50%!important;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .rightBar {
-    display: none;
-    }
-    .leftBar{
-    width: 100%;
-    .shareContainer{
-        display: none;
-    }
-    }
-    .close-button{
-    display: none;
-    }
-    .colorbar-right{
-        top: 0;
-        left: 98.6%!important;
-    }
-}
