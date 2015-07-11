@@ -19,7 +19,7 @@ Landingpage/dist/css/style.min.css
 Landingpage/app/css/styles.css
 Landingpage/app/css/style.min.css
 
-Webesite/dist/css/style.min.css
-Webesite/app/css/styles.css
-Webesite/app/css/style.min.css
-*.js
+Website/dist/css/style.min.css
+Website/app/css/styles.css
+Website/app/css/style.min.css
+Website/app/js/script.min.css
