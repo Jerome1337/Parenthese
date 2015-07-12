@@ -29,8 +29,8 @@ var concatCss = require('gulp-concat-css');
  */
 gulp.task('script', function() {
     return gulp.src([
-        appSrc + '/js/modernizr.js',
         appSrc + '/js/jquery.js',
+        appSrc + '/js/modernizr.js',
         appSrc + '/js/foundation.js',
         appSrc + '/js/main.js'])
         .pipe(reload({

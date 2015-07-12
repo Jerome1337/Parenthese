@@ -62,13 +62,17 @@ body {
             width: 100%;
             height: 100%;
             z-index: -10;
+            border: none;
         }
         #player2{
             z-index: -5;
         }
         // NAV
-        .navBar { 
+        .navBar {
             background-color: transparent;
+            position: fixed !important;
+            top: 0;
+            width: 100%;
             .top-bar-section{
                 background-color: transparent !important;
                 li {
@@ -94,7 +98,7 @@ body {
     }
 }
 .descContainer{
-    padding: 100px 0;
+    padding: 200px 0;
     .whoAre{
         .descPart{
             text-align: center;

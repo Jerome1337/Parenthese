@@ -1,3 +1,7 @@
+$(document).foundation();
+
+
+// YOUTUBE API
 var tag = document.createElement('script');  
 tag.src = "https://www.youtube.com/iframe_api";  
 var firstScriptTag = document.getElementsByTagName('script')[0];  
@@ -23,14 +27,29 @@ function onYouTubeIframeAPIReady() {
             enablejsapi: '1',
         },
         events: {  
-            'onReady': onPlayer1Ready,
+            // 'onReady': onPlayer1Ready,
             // 'onStateChange': onPlayer1StateChange
+            onReady: function(){
+                console.log('Ready: 1');
+                player1.setPlaybackQuality('hd720');
+                // preloading1 = true;
+                player1.seekTo(1);        // Start the preloading and wait a state change event
+                // event.target.playVideo();
+                // player1.playVideo();
+                player1.addEventListener('onStateChange',function(){});
+            },
+            onStateChange: function(){
+                console.log('Player1 Change');
+                player1.playVideo();
+                // player1.addEventListener('onChange',function(){});
+                // setTimeout(mafonction, 5000);
+            }
         }  
     });
     player2 = new YT.Player('player2', {  
         height: '1280',  
         width: '720',
-        videoId: 'p2cQSPRTdhg',
+        videoId: 'FAeAp9MzPtk',
         playerVars: {
             rel: '0',
             showinfo: '0',
@@ -45,11 +64,41 @@ function onYouTubeIframeAPIReady() {
             enablejsapi: '1',
         },
         events: {  
-            'onReady': onPlayer2Ready,
+            // 'onReady': onPlayer2Ready,
             // 'onStateChange': onPlayer2StateChange
+            onReady: function(){
+                console.log('Ready: 2');
+                player2.setPlaybackQuality('hd720');
+                // preloading1 = true;
+                player2.seekTo(1);        // Start the preloading and wait a state change event
+                // event.target.playVideo();
+                // player1.playVideo();
+                player2.addEventListener('onStateChange',function(){});
+            },
+            onStateChange: function(){
+                console.log('Player2 Change');
+                player2.playVideo();
+            }
         }  
     });
 }
+
+
+function onPlayer1StateChange(newState) {
+   console.log("Player1's new state: " + newState);
+   if(newState == 3)
+   {
+        player1.pauseVideo()
+   }
+}
+function onPlayer2StateChange(newState) {
+   console.log("Player2's new state: " + newState);
+   if(newState == 3)
+   {
+        player1.pauseVideo()
+   }
+}
+
 // var player1Ready = false;
 // var player2Ready = false;
 // var preloading1 = false;
@@ -81,21 +130,16 @@ function onYouTubeIframeAPIReady() {
 //     player2.playVideo();
 // }
 
-function onPlayer1Ready(event) {  
-    player1.setPlaybackQuality('hd1080');
-    // preloading1 = true;
-    player1.seekTo(1);        // Start the preloading and wait a state change event
-    event.target.playVideo();
-} 
+// function onPlayer1Ready(event) { 
+//     console.log('Ready: 1');
+//     player1.setPlaybackQuality('hd1080');
+//     // preloading1 = true;
+//     player1.seekTo(1);        // Start the preloading and wait a state change event
+//     // event.target.playVideo();
+//     player1.playVideo();
+// } 
 
-function onPlayer2Ready(event) {  
-    player2.setPlaybackQuality('hd1080');
-    // preloading1 = true;
-    player2.seekTo(1);        // Start the preloading and wait a state change event
-    player2.mute();
-    event.target.playVideo();
-} 
-
+// INTERACTIVE VIDEO 
 $(document).ready(function() {
     $(document).on('keydown', function(e) {
         if(e.keyCode == 88) {
@@ -107,6 +151,17 @@ $(document).ready(function() {
             $('#player2, .navBar').show();
         }
     });
+
+    var videoHeight = $('.videoHeight').height();
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > videoHeight) {
+            $('.navBar').css({'background': 'yellow'});
+        }else{
+            $('.navBar').css({'background': 'transparent'});    
+        }
+    });
+
+
     //FB SHARE
     // function nameUrl(imgNumb) {
     // // $('#share_button').click(function(){
@@ -134,6 +189,41 @@ $(document).ready(function() {
     //         console.log('Status updated!');
     //     });
     // });
+});
+
+$(document).ready(function() {
+    $('#formContact').submit(function(event) {
+
+        var formData = {
+            // 'functionName' : 'contact',
+            'name' : $('#formName').val(),
+            'email' : $("#formEmail").val(),
+            'tel' : $("#formTel").val(),
+            'subject' : $("#formSubject").val(),
+            'message' : $("#formMessage").val()
+        };
+
+        console.log(formData);
+
+        $.ajax({
+            url: "includes/functions",
+            type: "POST",
+            data: {action: 'contact', contactData: formData},
+            dataType: 'json',
+            encode: true
+        })
+        .done(function(data){
+            console.log(formData);
+            console.log(data);
+
+            if(!data.success){
+                console.log('EMAIL SEND');
+            }else{
+                console.log('EMAIL NOT SEND');
+            }
+        });
+        event.preventDefault();
+    });
 });
 
 // ANALITYCS

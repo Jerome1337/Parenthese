@@ -1,9 +1,16 @@
 <!doctype html>
 <html lang="fr-FR" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-    
-    <!-- INCLUDE DB CONNECTION -->
-    <?php include('includes/dbconnect.php'); ?>
-    
+    <?php
+    /* Connexion à une base ODBC avec l'invocation de pilote */
+    // $dsn = 'mysql:dbname=doyouclixubicrav;host=doyouclixubicrav.mysql.db';
+    // $user = 'doyouclixubicrav';
+    // $password = '5aGHC6aRJNbe';
+    // try {
+    //     $dbh = new PDO($dsn, $user, $password);
+    // } catch (PDOException $e) {
+    //     echo 'Connexion échouée : ' . $e->getMessage();
+    // }
+    ?>
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Bicrav'art est un système permettant la mise en relation des graffeurs et clients.">
@@ -39,41 +46,57 @@
         <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
         <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
-        <title>Accueil - Bicrav'Art</title>
+        <title>Contacts - Bicrav'Art</title>
         <link rel="stylesheet" type="text/css" href="css/style.min.css" title="Style de base" media="all">
     </head>
 <body></body>
-<section class="row fullWidth videoHeight">
-    <div class="js-video widescreen">
-        <div id="player1" class="youtube-player"></div>
-        <div id="player2" class="youtube-player"></div>
-        
-        <!-- INCLUDE NAV BAR -->
-        <?php include('includes/nav.php'); ?>
-
-        <div class="large-12 columns baseline">
-            <h2>"Monnayez votre art, tout en gardant votre annonymat"</h2>
-        </div>
-    </div>
+<section class="row fullWidth">
+    <nav class="top-bar navBar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="#">Bicravart</a></h1>
+            </li>
+        </ul>
+        <section class="top-bar-section">
+            <ul class="right">
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="#">Artistes</a></li>
+                <li><a href="#">Entreprises</a></li>
+                <li><a href="#">Références</a></li>
+                <li><a href="contact.php">Contacts</a></li>
+            </ul>
+        </section>
+    </nav>
 </section>
-<section class="descContainer">
-    <section class="row fullWidth whoAre">
-            <div class="large-12 columns descPart">
-                <h3>Qui sommes-nous ?</h3>
-                <p>BicravArt est un service de mise en relation entre les graffeurs<br> et les entreprises pour des projets de graffes dans différents environnements.</p>
-            </div>
-            <div class="large-6 medium-6 small-12 columns linkPart">
-                <p>Les graffeurs nous vous proposons de vous inscrire sur le site BicravArt dans la rubrique “Artistes”. Ainsi, nous récupérons des informations essentielles sur vous afin de mieux répondre aux demandes de votre futur employeur et de respecter au mieux votre univers.</p>
-                <a href="#">Inscrivez-vous</a>
-            </div>
-            <div class="large-6 medium-6 small-12 columns linkPart">
-                <p>Les entreprises sont invitées à remplir des informations pour la création de devis dans la rubrique “Entreprises”. Ces informations nous permettrons de comprendre votre projet et de cibler au mieux nos graffeurs pour un service de qualité.</p>
-                <a href="#">Demander un devis</a>
-            </div>
+<section class="contactContainer">
+    <section class="row fullWidth">
+        <h2>Nous contacter</h2>
+        <div class="large-8  medium-6 small-12 columns descPart">
+            <h3>Faites de vos projets des réussites !</h3>
+            <p>Imaginons ensemble de nouvelles solutions à vos projets.</p>
+            <h3>Vous avez une question ? Nous avons la réponse !</h3>
+            <p>Simple question ou envie d'en savoir un peu plus sur nous ? N'hésitez pas à nous contacter...</p>
+            <p>Des conseillers à l'écoute,</p>
+            <p>Bicravart s'est vraiment occupé de moi. Elle a vraiment pensé à mes objectifs professionels et elle m'a permis de décrocher un CDI chez Toy'R Us en tant que dessinateur pour enfant.</p>
+            <p>Bicravart s'est vraiment occupé de moi. Elle a vraiment pensé à mes objectifs professionels et elle m'a permis de décrocher un CDI chez Toy'R Us en tant que dessinateur pour enfant.</p>
+        </div>
+        <div class="large-4 medium-6 small-12 columns contactPart">
+            <form method="post" id="formContact">
+                <fieldset>
+                    <legend>Formulaire contact de Bicrav'art</legend>
+                    <div>
+                        <input type="text" placeholder="Nom Prénom" name="name" id="formName">
+                        <input type="tel" placeholder="Téléphone" name="tel" id="formTel">
+                        <input type="email" placeholder="Email" name="email" id="formEmail">
+                        <input type="text" placeholder="Objet" name="subject" id="formSubject">
+                    </div>
+                    <textarea cols="30" rows="10" placeholder="Message" name="message" id="formMessage"></textarea>
+                    <button type="submit" id="formSubmit">Envoyer</button>
+                </fieldset>
+            </form>
+        </div>
     </section>
 </section>
-
-<!-- INCLUDES FOOTER + SCRIPT -->
 <?php include('includes/footer.php'); ?>
 </body>
 </html>
