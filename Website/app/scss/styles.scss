@@ -48,6 +48,22 @@ body {
 }
 
 .fullWidth {
+    // NAV
+    .navBar {
+        // background-color: transparent;
+        // position: fixed !important;
+        // top: 0;
+        // width: 100%;
+        // .top-bar-section{
+        //     background-color: transparent !important;
+        //     li {
+        //         background-color: transparent !important;
+        //         a {
+        //             background-color: transparent !important;
+        //         }
+        //     }
+        // }
+    }
     // BACKGROUND VIDEO
     .js-video{
         position: relative;
@@ -66,22 +82,6 @@ body {
         }
         #player2{
             z-index: -5;
-        }
-        // NAV
-        .navBar {
-            background-color: transparent;
-            position: fixed !important;
-            top: 0;
-            width: 100%;
-            .top-bar-section{
-                background-color: transparent !important;
-                li {
-                    background-color: transparent !important;
-                    a {
-                        background-color: transparent !important;
-                    }
-                }
-            }
         }
         .baseline{
             text-align: center;
@@ -102,9 +102,6 @@ body {
     .whoAre{
         .descPart{
             text-align: center;
-        }
-        .linkPart{
-            width: 50%;
         }
     }
 }

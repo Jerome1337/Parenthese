@@ -1,6 +1,5 @@
 $(document).foundation();
 
-
 // YOUTUBE API
 var tag = document.createElement('script');  
 tag.src = "https://www.youtube.com/iframe_api";  
@@ -83,146 +82,144 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
-
-function onPlayer1StateChange(newState) {
-   console.log("Player1's new state: " + newState);
-   if(newState == 3)
-   {
-        player1.pauseVideo()
-   }
-}
-function onPlayer2StateChange(newState) {
-   console.log("Player2's new state: " + newState);
-   if(newState == 3)
-   {
-        player1.pauseVideo()
-   }
-}
-
-// var player1Ready = false;
-// var player2Ready = false;
-// var preloading1 = false;
-// var preloading2 = false;
-
-// function onPlayer1Ready(event) {
-//     player.setPlaybackQuality('hd1080'); 
-//     player1Ready = true;
-//     preloading1 = true;       // Flag the player 1 preloading
-//     player1.mute();           // Mute the player 1
-//     player1.seekTo(1);        // Start the preloading and wait a state change event
-// }
-
-// function onPlayer2Ready(event) {
-//     player.setPlaybackQuality('hd1080'); 
-//     player2Ready = true;      // The foreground video player is not preloaded here
-//     preloading1 = true;       // Flag the player 2 preloading
-//     player2.mute();           // Mute the player 2
-//     player2.seekTo(1);        // Start the preloading and wait a state change event
-// }
-
-// function onPlayer1StateChange(event) 
-// {
-//     player1.playVideo();
-// }
-
-// function onPlayer2StateChange(event) 
-// {
-//     player2.playVideo();
-// }
-
-// function onPlayer1Ready(event) { 
-//     console.log('Ready: 1');
-//     player1.setPlaybackQuality('hd1080');
-//     // preloading1 = true;
-//     player1.seekTo(1);        // Start the preloading and wait a state change event
-//     // event.target.playVideo();
-//     player1.playVideo();
-// } 
-
-// INTERACTIVE VIDEO 
 $(document).ready(function() {
+
+    // INTERACTIVE VIDEO 
     $(document).on('keydown', function(e) {
         if(e.keyCode == 88) {
-            $('#player2, .navBar, .baseline').hide();
+            $('#player2, .baseline').hide();
         }
-    })
-    .on('keyup', function(e){
+    }).on('keyup', function(e){
         if(e.keyCode == 88) {
-            $('#player2, .navBar').show();
+            $('#player2').show();
         }
     });
 
-    var videoHeight = $('.videoHeight').height();
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > videoHeight) {
-            $('.navBar').css({'background': 'yellow'});
-        }else{
-            $('.navBar').css({'background': 'transparent'});    
-        }
-    });
-
-
-    //FB SHARE
-    // function nameUrl(imgNumb) {
-    // // $('#share_button').click(function(){
-
-    //     // console.log(imgNumb);
-    //     // e.preventDefault();
-    //     var lien = 'http://bicravart.com/';
-    //     FB.ui({
-    //         method: 'share',
-    //         display: 'popup',
-    //         href: lien
-    //     }, function(response){});
-    //     console.log(lien);
-    // };
-
-    // $.ajaxSetup({
-    //     cache: true
+    // var videoHeight = $('.videoHeight').height();
+    // $(window).scroll(function() {
+    //     if ($(this).scrollTop() > videoHeight) {
+    //         $('.navBar').css({'background': 'yellow'});
+    //     }else{
+    //         $('.navBar').css({'background': 'transparent'});    
+    //     }
     // });
-    // $.getScript('//connect.facebook.net/fr_FR/all.js', function() {
-    //     FB.init({
-    //         appId: '696716717101760',
-    //     });
-    //     $('#loginbutton,#feedbutton').removeAttr('disabled');
-    //     FB.getLoginStatus(function() {
-    //         console.log('Status updated!');
-    //     });
-    // });
-});
 
-$(document).ready(function() {
+
+    //CONTACT FORM ACTION
     $('#formContact').submit(function(event) {
-
         var formData = {
-            // 'functionName' : 'contact',
+            'action' : 'contact',
             'name' : $('#formName').val(),
             'email' : $("#formEmail").val(),
             'tel' : $("#formTel").val(),
             'subject' : $("#formSubject").val(),
             'message' : $("#formMessage").val()
         };
-
-        console.log(formData);
+        // console.log(formData);
 
         $.ajax({
             url: "includes/functions",
             type: "POST",
-            data: {action: 'contact', contactData: formData},
+            data: formData,
             dataType: 'json',
             encode: true
         })
         .done(function(data){
-            console.log(formData);
+            // console.log(formData);
+            // console.log(data);
+
+            if(data.success){
+                // console.log('EMAIL SEND');
+            }else{
+                // console.log('EMAIL NOT SEND');
+            }
+        });
+        event.preventDefault();
+    });
+
+    //ADD GRAFFEUR ACTION
+    $('#formGraffeur').submit(function(event){
+        var graffeurData = {
+            'action' : 'graffeur',
+            'name' : $('#formName').val(),
+            'pseudo' : $('#formPseudo').val(),
+            'age' : $('#formAge').val(),
+            'tel' : $("#formTel").val(),
+            'email' : $("#formEmail").val(),
+            'website' : $("#formWebsite").val(),
+            'competences' : $("#formComp").val(),
+            'salaire' : $("#formSal").val(),
+            'message' : $("#formMessage").val()
+        };
+        console.log(graffeurData);
+
+        $.ajax({
+            url: "includes/functions",
+            type: "POST",
+            data: graffeurData,
+            dataType: 'json',
+            encode: true
+        })
+        .done(function(data){
+            console.log(graffeurData);
             console.log(data);
 
-            if(!data.success){
+            if(data.success){
+                console.log('GRAFFEUR ADDED');
+            }else{
+                console.log('FAIL');
+            }
+        });
+        event.preventDefault();
+    });
+
+    //ADD + EMAIL DEVIS ACTION
+    $('#formDevis').submit(function(event){
+        var devisData = {
+            'action' : 'devis',
+
+        };
+        $.ajax({
+            url: "includes/functions",
+            type: "POST",
+            data: devisData,
+            dataType: 'json',
+            encode: true
+        })
+        .done(function(data){
+            console.log(devisData);
+            console.log(data);
+
+            if(data.success){
                 console.log('EMAIL SEND');
             }else{
                 console.log('EMAIL NOT SEND');
             }
         });
         event.preventDefault();
+    });
+
+    //FB SHARE
+    $('#share_button').click(function(event){
+        event.preventDefault();
+        var lien = 'http://bicravart.com/';
+        FB.ui({
+            method: 'share',
+            display: 'popup',
+            href: lien
+        }, function(response){});
+        // console.log(lien);
+    });
+    $.ajaxSetup({
+        cache: true
+    });
+    $.getScript('//connect.facebook.net/fr_FR/all.js', function() {
+        FB.init({
+            appId: '696716717101760',
+        });
+        FB.getLoginStatus(function() {
+            // console.log('Status updated!');
+        });
     });
 });
 

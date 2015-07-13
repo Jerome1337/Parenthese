@@ -32,6 +32,7 @@ gulp.task('script', function() {
         appSrc + '/js/jquery.js',
         appSrc + '/js/modernizr.js',
         appSrc + '/js/foundation.js',
+        appSrc + '/js/foundation.topbar.js',
         appSrc + '/js/main.js'])
         .pipe(reload({
             stream: true,
