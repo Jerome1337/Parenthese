@@ -13,7 +13,12 @@ dist/**/**
 
 app/css/styles.css
 app/css/style.min.css
+
+app/js/script.min.js
+app/js/script.min.js
+
 *.css
+
 
 Landingpage/dist/css/style.min.css
 Landingpage/app/css/styles.css

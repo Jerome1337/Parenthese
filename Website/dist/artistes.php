@@ -16,33 +16,97 @@
             <?php include('includes/nav.php'); ?>
         </section>
         <section class="contactContainer">
-            <section class="row fullWidth">
-                <h2>Nous contacter</h2>
-                <div class="large-8  medium-6 small-12 columns descPart">
-                    <p>Cette inscription vous permettra d’être mis en relation, grâce à Bicravart, avec les diverses entreprises souhaitant faire appelle à un graffeur pour leur projet.</p>
-                    <p>Vos données seront gardées uniquement par la société Bicravart et dans le cadre des projets. Elles nous permettent de mieux vous connaître et ainsi répondre aux mieux à votre demande.</p>
-                    <p>Les graffes seront fait en toute légalité et ne seront pas sujet à des poursuites judiciaires. Vous avez la possibilité de renseigner votre prénom ou un pseudo de votre choix pour garder l’anonymat sur votre blaze que vous utilisez dans vos graffes personnels.</p>
-                    <p>Une question ? Rendez-vous sur les pages contact ou F.A.Q.</p>
-                    <p>"Avec Bicravart, j'ai pu vraiment augmenter ma notoriété. Je suis passé d'un parfait inconnu à un artiste reconnu dans le monde entier. Je travaille aujourd'hui pour un constructeur automobile en tant que Graffeurs d'intérieur. Bicravart à changer ma vie."</p>
-                    <p>"Avec Bicravart, j'ai pu vraiment augmenter ma notoriété. Je suis passé d'un parfait inconnu à un artiste reconnu dans le monde entier. Je travaille aujourd'hui pour un constructeur automobile en tant que Graffeurs d'intérieur. Bicravart à changer ma vie."</p>
-                    <p>"Avec Bicravart, j'ai pu vraiment augmenter ma notoriété. Je suis passé d'un parfait inconnu à un artiste reconnu dans le monde entier. Je travaille aujourd'hui pour un constructeur automobile en tant que Graffeurs d'intérieur. Bicravart à changer ma vie."</p>
+            <section class="row">
+                <div class="large-4 medium-4 small-12 columns">
+                    <p>Monnayez votre art</p>
+                    <p>Avec ses milliers de contrats, Bicravart vous permet de vous faire de l'argent tout en pratiquant votre art.</p> 
                 </div>
-                <div class="large-4 medium-6 small-12 columns contactPart">
+                <div class="large-4 medium-4 small-12 columns">
+                    <p>Gagnez en visibilité</p>
+                    <p>De nombreux grands groupes et multinationales ont déjà travailler avec nous. Avec Bicravart, prennez part à de grands projets !</p>
+                </div>
+                <div class="large-4 medium-4 small-12 columns">
+                    <p>Changez de vie</p>
+                    <p>Vous souhaitez vivre uniquement de votre passion ? N'attendez plus, avec notre aide, oubliez votre ancienne, vivez la vie de bicravart !</p>
+                </div>
+            </section>
+            <section class="row">
+                <h2>Ils travaillent avec nous !</h2>
+                <section>
+                    <div class="large-8 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-4 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="large-4 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-8 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="large-8 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-4 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="large-4 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-8 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                </section>
+            </section>
+            <section class="row">
+                <h2>Rejoignez-nous !</h2>
+                <div class="large-8 medium-8 small-12 columns contactPart">
                     <form method="post" id="formGraffeur">
                         <fieldset>
                             <legend>Formulaire d'inscription de Bicrav'art</legend>
                             <div>
-                                <input type="text" placeholder="Prénom" name="name" id="formName">
-                                <input type="text" placeholder="Pseudo" name="pseudo" id="formPseudo">
-                                <input type="text" placeholder="Age" name="age" id="formAge">
-                                <input type="tel" placeholder="Téléphone" name="tel" id="formTel">
-                                <input type="email" placeholder="Email" name="email" id="formEmail">
-                                <input type="text" placeholder="Objet" name="subject" id="formSubject">
-                                <input type="text" placeholder="Website" name="Website" id="formWebsite">
-                                <input type="text" placeholder="Compétences" name="competences" id="formComp">
-                                <input type="text" placeholder="Prétention salariales" name="Sal" id="formSal">
+                                <label for="formName">Prénom ou Pseudo* :</label>
+                                <input type="text" placeholder="Prénom ou Pseudo" name="name" id="formName">
                             </div>
-                            <textarea cols="30" rows="10" placeholder="Message" name="message" id="formMessage"></textarea>
+                            <div>
+                                <label for="formAge">Age :</label>
+                                <input type="text" placeholder="Age" name="age" id="formAge">
+                            </div>
+                            <div>
+                                <label for="formTel">Téléphone* :</label>
+                                <input type="tel" placeholder="Téléphone" name="tel" id="formTel">
+                            </div>
+                            <div>
+                                <label for="formEmail">E-Mail :</label>
+                                <input type="email" placeholder="E-mail" name="email" id="formEmail">
+                            </div>
+                            <div>
+                                <label for="formWebsite">Site Internet :</label>
+                                <input type="text" placeholder="Website" name="website" id="formWebsite">
+                            </div>
+                            <div>
+                                <label for="formComp">Compétences :</label>
+                                <input type="text" placeholder="Compétences" name="competences" id="formComp">
+                            </div>
+                            <div>
+                                <label for="formSal">Taux horaire :</label>
+                                <input type="text" placeholder="Taux Horaire" name="Sal" id="formSal">
+                            </div>
                             <button type="submit" id="formSubmit">Envoyer</button>
                         </fieldset>
                     </form>

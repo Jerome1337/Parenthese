@@ -106,7 +106,8 @@ $(document).ready(function() {
 
 
     //CONTACT FORM ACTION
-    $('#formContact').submit(function(event) {
+    $('#formContact').submit(function(e) {
+        e.preventDefault();
         var formData = {
             'action' : 'contact',
             'name' : $('#formName').val(),
@@ -115,6 +116,7 @@ $(document).ready(function() {
             'subject' : $("#formSubject").val(),
             'message' : $("#formMessage").val()
         };
+
         // console.log(formData);
 
         $.ajax({
@@ -134,7 +136,6 @@ $(document).ready(function() {
                 // console.log('EMAIL NOT SEND');
             }
         });
-        event.preventDefault();
     });
 
     //ADD GRAFFEUR ACTION

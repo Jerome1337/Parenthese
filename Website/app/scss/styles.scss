@@ -49,20 +49,24 @@ body {
 
 .fullWidth {
     // NAV
-    .navBar {
-        // background-color: transparent;
-        // position: fixed !important;
-        // top: 0;
-        // width: 100%;
-        // .top-bar-section{
-        //     background-color: transparent !important;
-        //     li {
-        //         background-color: transparent !important;
-        //         a {
-        //             background-color: transparent !important;
-        //         }
-        //     }
-        // }
+    .contain-to-grid{
+        .navBar {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: initial;
+            // background-color: transparent;
+            // top: 0;
+            .top-bar-section{
+                // background-color: transparent !important;
+                li {
+                    // background-color: transparent !important;
+                    a {
+                        // background-color: transparent !important;
+                    }
+                }
+            }
+        }
     }
     // BACKGROUND VIDEO
     .js-video{
