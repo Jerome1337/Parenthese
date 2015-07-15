@@ -1,14 +1,20 @@
 <?php
 	// error_reporting(E_ALL);
 	// ini_set("display_errors", 1);
+	include('dbconnect.php');
     $action = $_POST['action'];
     switch($_POST['action']) {
-        case 'contact': sendEmail();
-        case 'graffeur': addGraffeur();
-        case 'devis': addDevis();
-        break;
+        case 'contact':
+        	sendEmail();
+        	break;
+        case 'graffeur':
+        	addGraffeur();
+        	break;
+        case 'devis':
+        	addDevis();
+        	break;
         default:
-            die('Access denied for this function!');
+            die('Acces interdit !');
     }
 
 	// SEND EMAIL
@@ -68,7 +74,6 @@
 			$result = curl_exec($ch);
 
 			$data['success'] = true;
-			
 		}else{
 			$data['success'] = false;
 		}
@@ -84,7 +89,7 @@
 			&& !empty($_POST['email'])
 			&& !empty($_POST['website'])
 			&& !empty($_POST['competences'])
-			&& !empty($_POST['salaire'])
+			&& !empty($_POST['salaire']))
 		{
 			// var_dump($_POST['name']);
 			// var_dump($_POST['age']);
@@ -94,24 +99,25 @@
 			// var_dump($_POST['competences']);
 			// var_dump($_POST['salaire']);
 
-			$req = $bdd->prepare('INSERT INTO graffeurs (name, age, tel, email, website, competences, salaire)VALUES(:name, :age, :tel, :email, :website, :competences, :salaire)');
-			$req->execute(array(
-				'name' => $_POST['name'],
-				'age' => $_POST['age'],
-				'tel' => $_POST['tel'],
-				'email' => $_POST['email'],
-				'website' => $_POST['website'],
-				'competences' => $_POST['competences'],
-				'salaire' => $_POST['salaire'],
-			));
+			// $req = $bdd->prepare('INSERT INTO graffeurs (name, age, tel, email, website, competences, salaire)VALUES(:name, :age, :tel, :email, :website, :competences, :salaire)');
+			// $req->execute(array(
+			// 	'name' => $_POST['name'],
+			// 	'age' => $_POST['age'],
+			// 	'tel' => $_POST['tel'],
+			// 	'email' => $_POST['email'],
+			// 	'website' => $_POST['website'],
+			// 	'competences' => $_POST['competences'],
+			// 	'salaire' => $_POST['salaire']
+			// ));
 
 			$data['success'] = true;
 		}else{
 			$data['success'] = false;
 		}
+		echo json_encode($data);
 	}
 
-	// // ADD DEVIS TO + SEND EMAIL
+	// 	ADD DEVIS TO + SEND EMAIL
 	// function addDevis(){
 	// 	$data = array();
 	// 	if (!empty($_POST['name'])

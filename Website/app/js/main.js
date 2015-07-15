@@ -140,29 +140,27 @@ $(document).ready(function() {
 
     //ADD GRAFFEUR ACTION
     $('#formGraffeur').submit(function(event){
-        var graffeurData = {
+        var formData = {
             'action' : 'graffeur',
             'name' : $('#formName').val(),
-            'pseudo' : $('#formPseudo').val(),
             'age' : $('#formAge').val(),
             'tel' : $("#formTel").val(),
             'email' : $("#formEmail").val(),
             'website' : $("#formWebsite").val(),
             'competences' : $("#formComp").val(),
-            'salaire' : $("#formSal").val(),
-            'message' : $("#formMessage").val()
+            'salaire' : $("#formSal").val()
         };
-        console.log(graffeurData);
+        console.log(formData);
 
         $.ajax({
             url: "includes/functions",
             type: "POST",
-            data: graffeurData,
+            data: formData,
             dataType: 'json',
             encode: true
         })
         .done(function(data){
-            console.log(graffeurData);
+            console.log(formData);
             console.log(data);
 
             if(data.success){

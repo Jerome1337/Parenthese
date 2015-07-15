@@ -3,13 +3,13 @@
     // $dsn = '********';
     // $user = '*********';
     // $password = '*******';
-    // try {
+    //try {
     //     $dbh = new PDO($dsn, $user, $password);
     // } catch (PDOException $e) {
     //     echo 'Connexion échouée : ' . $e->getMessage();
     // }
 
-   	$dsn = 'mysql:dbname=bicravart;host=localhost;charset:UFT-8';
+   	$dsn = 'mysql:dbname=bicravart;host=localhost;charset:UTF-8';
 	$user = 'root';
 	$password = 'root';
 	try{
