@@ -52,11 +52,37 @@ body {
     .contain-to-grid{
         .navBar {
             width: 100%;
+            height: 85px;
             margin-left: auto;
             margin-right: auto;
             max-width: initial;
+            background-color: #2C2C2C;
+            z-index: 9999;
+            //position: fixed;
             // background-color: transparent;
             // top: 0;
+            .name{
+                float: left;
+                width: 25%;
+            }
+            .accueil, .artistes, .entreprises, .references, .contact{
+                width: 15%;
+                height: 85px;
+                text-align: center;
+                line-height: 85px;
+                vertical-align: middle;
+                float: left; 
+                color: white;
+                font-family: 'Raleway';
+                text-decoration: none;
+            }
+            .accueil:hover, .artistes:hover, .entreprises:hover, .references:hover, .contact:hover{
+                background-color: #F0B346;
+                color: #2C2C2C;
+            }
+            li{
+                list-style-type: none;
+            }
             .top-bar-section{
                 // background-color: transparent !important;
                 li {
@@ -92,6 +118,7 @@ body {
             z-index: 10;
             display: table;
             height: 100%;
+            width: 100%;   
             h2{
                 display: table-cell;
                 vertical-align: middle;
@@ -112,11 +139,26 @@ body {
 
 // FOOTER
 footer{
-    background: #ccc;
-    padding: 20px 0;
+    background: #2C2C2C;
+    height: 70px;
+    line-height: 70px;
     text-align: center;
+    bottom: 0;
+    .copyright{
+        float: left;
+        vertical-align: middle;
+        width: 33%;
+        span{
+            color: white;
+            font-family: 'Raleway';
+        }
+    }
     .socialPart{
         text-align: center;
+        vertical-align: middle;
+        float: left;
+        width: 33%;
+        height: 70px;
         .fbLink{
             color: darken(#e9e9ea, 20%);
             text-decoration: none;
@@ -167,6 +209,15 @@ footer{
             &:before{
                 content: '\e002';
             }
+        }
+    }
+    .linkPark{
+        width: 33%;
+        float: right;
+        vertical-align: middle;
+        a{
+            color: white;
+            font-family: 'Raleway';
         }
     }
 }

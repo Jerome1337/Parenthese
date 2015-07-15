@@ -36,4 +36,5 @@
     <link rel="canonical" href="http://bicravart.com/<?php echo $onglet_actif ?>">
     <title><?php echo $pageTitle ?> - Bicrav'Art</title>
     <link rel="stylesheet" type="text/css" href="css/style.min.css" title="Style de base" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>

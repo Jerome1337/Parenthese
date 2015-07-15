@@ -1,7 +1,7 @@
 <footer>
     <section class="row fullWidth footerContainer">
         <div class="large-4 small-12 columns copyright">
-            <p>Copyright 2015 &#169; Bicravart</p>
+            <span>Copyright 2015 &#169; Bicravart</span>
         </div>
         <div class="large-4 small-12 columns socialPart">
             <a href="#" title="" class="fbLink"></a>
