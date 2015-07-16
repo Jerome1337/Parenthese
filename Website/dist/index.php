@@ -20,31 +20,42 @@
                 </div>
             </section>
         </section>
+        <section class="container">
+            <div class="row fullWidth">
+                <span class="presentation">Bicrav’Art est un service de mise en relation entre les graffeurs et les
+                    entreprises pour des projets de graffes dans differents environements.
+                </span>
+            </div>
+        </section>
+        <section class="devisContainer">
+            <div class="row fullWidth">
+                <div class="left large-6 columns">
+                    <span>Vous êtes un graffeur et vous souhaitez gagner de l'argent ? Vous souhaitez augmenter votre notoriété ? Enfin vous avez envie de vivre de votre art ? Ne perdez pas de temps, rejoignez-nous !</span>
+                </div>
+                <div class="right large-6 columns">
+                    <span>Vous êtes une entreprise et vous avez un projet artistique ? Vous ne savez par où commencer ? Vous n'avez pas d'idées précises ? Décrivez-nous votre projet, nous pouvons vous aider !</span>
+                </div>
+            </div>
+        </section>
+        <section class="resultatContainer">
+            <div class="fondResultat">
+                <div class="row fullWidth">
+                
+                </div>
+            </div>
+        </section>
         <section class="descContainer">
-            <section class="row">
-                <h3>Qui sommes-nous ?</h3>
-                <div class="large-6 medium-6 small-12 columns linkPart">
-                    <a href="#" data-reveal-id="artistsModal">Ce que les artistes pensent de nous...</a>
-                </div>
-                <div class="large-6 medium-6 small-12 columns linkPart">
-                    <a href="#" data-reveal-id="entreprisesModal">Ce que les entreprises pensent de nous...</a>
-                </div>
-
-                <!-- MODAL SECTION -->
-                <div id="artistsModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-                  <h2 id="modalTitle">Awesome. I have it.</h2>
-                  <p class="lead">Your couch.  It is mine.</p>
-                  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-                  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-                </div>
-
-                <div id="entreprisesModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-                  <h2 id="modalTitle">Awesome. I have it.</h2>
-                  <p class="lead">Your couch.  It is mine.</p>
-                  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-                  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-                </div>
-            </section>
+            <div class="fondDesc">
+                <section class="row">
+                    <h3>Qui sommes-nous ?</h3>
+                    <div class="large-6 medium-6 small-12 columns linkPart">
+                        <a href="#" data-reveal-id="artistsModal">Ce que les artistes pensent de nous...</a>
+                    </div>
+                    <div class="large-6 medium-6 small-12 columns linkPart">
+                        <a href="#" data-reveal-id="entreprisesModal">Ce que les entreprises pensent de nous...</a>
+                    </div>
+                </section>
+            </div>
         </section>
         <section class="feedContainer">
             <section class="row">
@@ -54,9 +65,6 @@
                     <a href="#">Découvrez l'agence</a>
                 </div>
             </section>
-        </section>
-        <section class="">
-            
         </section>
         <!-- INCLUDES FOOTER + SCRIPT -->
         <?php include('includes/footer.php'); ?>

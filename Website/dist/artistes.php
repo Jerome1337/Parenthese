@@ -97,7 +97,7 @@
                             </div>
                             <div>
                                 <label for="formWebsite">Site Internet :</label>
-                                <input type="url" placeholder="Site internet" value="http://" name="website" id="formWebsite">
+                                <input type="url" placeholder="Site internet" name="website" id="formWebsite">
                             </div>
                             <div>
                                 <label for="formComp">Compétences :</label>
