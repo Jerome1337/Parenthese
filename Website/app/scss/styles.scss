@@ -35,20 +35,6 @@
     src:url("../font/Raleway-Light.ttf") format("truetype");
 }
 
-// @font-face {
-//   font-family: 'Open Sans';
-//   font-style: normal;
-//   font-weight: 300;
-//   src:url("../font/open300.woff") format('woff');
-// }
-
-// @font-face {
-//   font-family: 'Open Sans';
-//   font-style: normal;
-//   font-weight: 600;
-//   src:url("../font/open600.woff") format('woff');
-// }
-
 body, html{
     height:100%;
 }
@@ -57,7 +43,6 @@ body {
     padding: 0;
     margin: 0;
     overflow: auto;
-    user-select: none;
 }
 
 button{ 
@@ -316,6 +301,7 @@ footer{
     padding: 100px 0;
     background: url('../img/faq_bg.jpg') no-repeat center fixed;
     background-size: cover;
+    background-attachment: fixed;
     h2{
         color: $grey;
         font-family: $RALSB;
@@ -356,6 +342,7 @@ footer{
     padding: 100px 0;
     background: url('../img/faq_bg.jpg') no-repeat center fixed;
     background-size: cover;
+    background-attachment: fixed;
     h2{
         color: $grey;
         font-family: $RALSB;

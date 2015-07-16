@@ -17,7 +17,7 @@
         <div class="large-4 small-12 columns linkPark">
             <a href="faq.php" title="Lien vers la page F.A.Q de Bicrav'art" <?php echo ($page == "faq" ? "class=\"active\"" : "")?>>F.A.Q</a>
             <a href="about.php" title="Lien vers la page à propos de Bicrav'art" <?php echo ($page == "about" ? "class=\"active\"" : "")?>>À Propos</a>
-            <a href="mentions-légales.php" title="Lien vers la page mentions légales de Bicrav'art" <?php echo ($page == "mentions" ? "class=\"active\"" : "")?>>Mentions légales</a>
+            <a href="mentions-legales.php" title="Lien vers la page mentions légales de Bicrav'art" <?php echo ($page == "mentions" ? "class=\"active\"" : "")?>>Mentions légales</a>
         </div>
     </section>
 </footer>

@@ -1,13 +1,13 @@
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Bicrav'art est un système permettant la mise en relation des graffeurs et clients.">
+    <meta name="description" content="Bicravart est un système permettant la mise en relation des graffeurs et clients.">
     <meta name="keywords" content="bicravart, bricrav'art, graffeur, galerie, bicrave, art, graff, decoration, agence, artiste, artistes">
     <meta name="viewport" content="width=device-width, initial-scale=yes">
     <meta name="HandheldFriendly" content="true">
     <meta property="og:title" content="Bicrav'Art">
-    <meta property="og:site_name" content="Bicrav'Art">
+    <meta property="og:site_name" content="Bicravart">
     <meta property="og:url" content="http://bicravart.com/">
-    <meta property="og:description" content="Bicrav'art est un système permettant la mise en relation des graffeurs et clients.">
+    <meta property="og:description" content="Bicravart est un système permettant la mise en relation des graffeurs et clients.">
     <meta property="fb:app_id" content="696716717101760">
     <meta property="og:type" content="website">
     <meta property="og:image" content="http://www.bicravart.com/img/ImgShare.png">
@@ -34,6 +34,6 @@
     <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href="http://bicravart.com/<?php echo $onglet_actif ?>">
-    <title><?php echo $pageTitle ?> - Bicrav'Art</title>
+    <title><?php echo $pageTitle ?> - Bicravart</title>
     <link rel="stylesheet" type="text/css" href="css/style.min.css" title="Style de base" media="all">
 </head>

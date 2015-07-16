@@ -164,19 +164,23 @@ $(document).ready(function() {
 
     //ADD + EMAIL DEVIS ACTION
     $('#formDevis').submit(function(event){
-        var devisData = {
+        var formData = {
             'action' : 'devis',
-
+            'name' : $('#formName').val(),
+            'email' : $("#formEmail").val(),
+            'date' : $("#formDate").val(),
+            'lieu' : $("#formLieu").val(),
+            'desc' : $("#formDesc").val()
         };
         $.ajax({
             url: "includes/functions",
             type: "POST",
-            data: devisData,
+            data: formData,
             dataType: 'json',
             encode: true
         })
         .done(function(data){
-            console.log(devisData);
+            console.log(formData);
             console.log(data);
 
             if(data.success){

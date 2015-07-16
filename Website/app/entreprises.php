@@ -52,12 +52,12 @@
             <section class="row">
                 <h2>Demander un devis</h2>
                 <div class="large-8 medium-8 small-12 columns contactPart">
-                    <form method="post" id="formGraffeur">
+                    <form method="post" id="formDevis">
                         <fieldset>
                             <legend>Formulaire d'envoie de devis de Bicrav'art</legend>
                             <div>
                                 <label for="formName">Nom de l'entreprise* :</label>
-                                <input type="text" placeholder="Prénom ou Pseudo" name="name" id="formName">
+                                <input type="text" placeholder="Nom de l'entreprise" name="name" id="formName">
                             </div>
                             <div>
                                 <label for="formEmail">E-Mail :</label>
