@@ -16,31 +16,69 @@
             <?php include('includes/nav.php'); ?>
         </section>
         <section class="contactContainer">
-            <section class="row fullWidth">
-                <h2>Nous contacter</h2>
-                <div class="large-8  medium-6 small-12 columns descPart">
-                    <h3>Faites de vos projets des réussites !</h3>
-                    <p>Imaginons ensemble de nouvelles solutions à vos projets.</p>
-                    <h3>Vous avez une question ? Nous avons la réponse !</h3>
-                    <p>Simple question ou envie d'en savoir un peu plus sur nous ? N'hésitez pas à nous contacter...</p>
-                    <p>Des conseillers à l'écoute,</p>
-                    <p>Bicravart s'est vraiment occupé de moi. Elle a vraiment pensé à mes objectifs professionels et elle m'a permis de décrocher un CDI chez Toy'R Us en tant que dessinateur pour enfant.</p>
-                    <p>Bicravart s'est vraiment occupé de moi. Elle a vraiment pensé à mes objectifs professionels et elle m'a permis de décrocher un CDI chez Toy'R Us en tant que dessinateur pour enfant.</p>
+            <h2>Contactez-nous</h2>
+            <section class="row">
+                <div class="large-4 medium-4 show-for-medium-up columns artistPart">
+                    <h3>Vous êtes un artiste ?</h3>
                 </div>
-                <div class="large-4 medium-6 small-12 columns contactPart">
-                    <form method="post" id="formContact">
+                <div class="large-4 medium-4 columns show-for-medium-up entreprisePart">
+                    <h3>Vous êtes une entreprise ?</h3>
+                </div>
+                <div class="large-4 medium-4 columns show-for-medium-up coordoneesPart">
+                    <h3>Coordonnées</h3>
+                </div>
+                <div class="small-12 columns show-for-small-only selectPart">
+                    <select name="select">
+                        <option>Vous êtes un artiste ?</option>
+                        <option>Vous êtes une entreprise ?</option>
+                    </select>
+                </div>
+                <div class="small-12 columns contactPart">
+                    <form method="post" id="artistContact">
                         <fieldset>
-                            <legend>Formulaire contact de Bicrav'art</legend>
+                            <legend>Formulaire contact de Bicravart</legend>
                             <div>
-                                <input type="text" placeholder="Nom Prénom" name="name" id="formName">
-                                <input type="tel" placeholder="Téléphone" name="tel" id="formTel">
-                                <input type="email" placeholder="Email" name="email" id="formEmail">
-                                <input type="text" placeholder="Objet" name="subject" id="formSubject">
+                                <label for="formName">Nom* :</label>
+                                <input type="text" placeholder="Nom" name="name" id="formName">
                             </div>
-                            <textarea cols="30" rows="10" placeholder="Message" name="message" id="formMessage"></textarea>
+                            <div>
+                                <label for="formEmail">E-mail* :</label>
+                                <input type="email" placeholder="Email" name="email" id="formEmail">
+                            </div>
+                            <div>
+                                <label for="formTel">Téléphone* :</label>
+                                <input type="tel" placeholder="Téléphone" name="tel" id="formTel">
+                            </div>
+                            <div>
+                                <label for="formMessage">Message* :</label>
+                                <textarea cols="30" rows="10" placeholder="Message" name="message" id="formMessage"></textarea>
+                            </div>
                             <button type="submit" id="formSubmit">Envoyer</button>
                         </fieldset>
                     </form>
+                    <form method="post" id="entrepriseContact">
+                        <fieldset>
+                            <legend>Formulaire contact de Bicravart</legend>
+                            <div>
+                                <label for="formName">Nom* :</label>
+                                <input type="text" placeholder="Nom" name="name" id="formName">
+                            </div>
+                            <div>
+                                <label for="formEmail">E-mail* :</label>
+                                <input type="email" placeholder="Email" name="email" id="formEmail">
+                            </div>
+                            <div>
+                                <label for="formTel">Téléphone* :</label>
+                                <input type="tel" placeholder="Téléphone" name="tel" id="formTel">
+                            </div>
+                            <div>
+                                <label for="formMessage">Message* :</label>
+                                <textarea cols="30" rows="10" placeholder="Message" name="message" id="formMessage"></textarea>
+                            </div>
+                            <button type="submit" id="formSubmit">Envoyer</button>
+                        </fieldset>
+                    </form>
+                    <span>*Champs obligatoires</span>
                 </div>
             </section>
         </section>

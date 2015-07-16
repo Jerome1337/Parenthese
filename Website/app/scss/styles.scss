@@ -35,20 +35,6 @@
     src:url("../font/Raleway-Light.ttf") format("truetype");
 }
 
-// @font-face {
-//   font-family: 'Open Sans';
-//   font-style: normal;
-//   font-weight: 300;
-//   src:url("../font/open300.woff") format('woff');
-// }
-
-// @font-face {
-//   font-family: 'Open Sans';
-//   font-style: normal;
-//   font-weight: 600;
-//   src:url("../font/open600.woff") format('woff');
-// }
-
 body, html{
     height:100%;
 }
@@ -64,6 +50,17 @@ button{
     border:none;
 }
 
+*{
+    box-sizing: border-box;
+}
+
+fieldset{
+    border: none;
+    legend{
+        display: none;
+    }
+}
+
 .fullWidth {
    width: 100%;
    margin-left: auto;
@@ -73,8 +70,9 @@ button{
 
 // VAR
 $grey: #2C2C2C;
-$yellow: #F0B346;
+$yellow: #F7B232;
 $white: #fff;
+$lightgrey: #e1e1e1;
 $RALSB: 'Raleway-semibold', Helvetica, sans-serif;
 $RALR: 'Raleway-reg', Helvetica, sans-serif;
 $RALL: 'Raleway-light', Helvetica, sans-serif;
@@ -345,6 +343,30 @@ footer{
         }
     }
 }
+
+//CONTACT
+.contactContainer{
+    padding: 80px 0;
+    background-color: $lightgrey;
+    h2{
+        color: $grey;
+        font-family: $RALSB;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    .row{
+        .artistPart, .entreprisePart, .questionPart{
+            padding: 50px 0;
+            h3{
+                color: $grey;
+                text-align: center;
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+
 // FAQ
 .faqContainer{
     padding: 100px 0;

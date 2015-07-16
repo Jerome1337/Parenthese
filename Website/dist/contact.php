@@ -16,18 +16,18 @@
             <?php include('includes/nav.php'); ?>
         </section>
         <section class="contactContainer">
-            <section class="row fullWidth">
-                <h2>Nous contacter</h2>
-                <div class="large-8  medium-6 small-12 columns descPart">
-                    <h3>Faites de vos projets des réussites !</h3>
-                    <p>Imaginons ensemble de nouvelles solutions à vos projets.</p>
-                    <h3>Vous avez une question ? Nous avons la réponse !</h3>
-                    <p>Simple question ou envie d'en savoir un peu plus sur nous ? N'hésitez pas à nous contacter...</p>
-                    <p>Des conseillers à l'écoute,</p>
-                    <p>Bicravart s'est vraiment occupé de moi. Elle a vraiment pensé à mes objectifs professionels et elle m'a permis de décrocher un CDI chez Toy'R Us en tant que dessinateur pour enfant.</p>
-                    <p>Bicravart s'est vraiment occupé de moi. Elle a vraiment pensé à mes objectifs professionels et elle m'a permis de décrocher un CDI chez Toy'R Us en tant que dessinateur pour enfant.</p>
+            <h2>Contactez-nous</h2>
+            <section class="row">
+                <div class="large-4 medium-4 columns artistPart">
+                    <h3>Vous êtes un artiste ?</h3>
                 </div>
-                <div class="large-4 medium-6 small-12 columns contactPart">
+                <div class="large-4 medium-4 columns entreprisePart">
+                    <h3>Vous êtes une entreprise ?</h3>
+                </div>
+                <div class="large-4 medium-4 columns questionPart">
+                    <h3>Vous avez une question ?</h3>
+                </div>
+                <div class="small-12 columns contactPart">
                     <form method="post" id="formContact">
                         <fieldset>
                             <legend>Formulaire contact de Bicrav'art</legend>

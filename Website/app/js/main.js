@@ -140,7 +140,7 @@ $(document).ready(function() {
             'competences' : $("#formComp").val(),
             'salaire' : $("#formSal").val()
         };
-        console.log(formData);
+        // console.log(formData);
 
         $.ajax({
             url: "includes/functions",
@@ -150,13 +150,13 @@ $(document).ready(function() {
             encode: true
         })
         .done(function(data){
-            console.log(formData);
-            console.log(data);
+            // console.log(formData);
+            // console.log(data);
 
             if(data.success){
-                console.log('GRAFFEUR ADDED');
+                // console.log('GRAFFEUR ADDED');
             }else{
-                console.log('FAIL');
+                // console.log('FAIL');
             }
         });
         event.preventDefault();
@@ -180,6 +180,64 @@ $(document).ready(function() {
             encode: true
         })
         .done(function(data){
+            // console.log(formData);
+            // console.log(data);
+
+            if(data.success){
+                // console.log('EMAIL SEND');
+            }else{
+                // console.log('EMAIL NOT SEND');
+            }
+        });
+        event.preventDefault();
+    });
+
+    //CONTACT ARTISTS ACTION
+    $('#artistContact').submit(function(event){
+        var formData = {
+            'action' : 'contactArtist',
+            'name' : $('#formName').val(),
+            'email' : $("#formEmail").val(),
+            'date' : $("#formTel").val(),
+            'lieu' : $("#formMessage").val()
+        };
+        $.ajax({
+            url: "includes/functions",
+            type: "POST",
+            data: formData,
+            dataType: 'json',
+            encode: true
+        })
+        .done(function(data){
+            console.log(formData);
+            console.log(data);
+
+            if(data.success){
+                console.log('EMAIL SEND');
+            }else{
+                console.log('EMAIL NOT SEND');
+            }
+        });
+        event.preventDefault();
+    });
+
+    //CONTACT ENTREPRISE ACTION
+    $('#entrepriseContact').submit(function(event){
+        var formData = {
+            'action' : 'contactEntreprise',
+            'name' : $('#formName').val(),
+            'email' : $("#formEmail").val(),
+            'date' : $("#formTel").val(),
+            'lieu' : $("#formMessage").val()
+        };
+        $.ajax({
+            url: "includes/functions",
+            type: "POST",
+            data: formData,
+            dataType: 'json',
+            encode: true
+        })
+        .done(function(data){
             console.log(formData);
             console.log(data);
 
@@ -193,27 +251,27 @@ $(document).ready(function() {
     });
 
     //FB SHARE
-    $('#share_button').click(function(event){
-        event.preventDefault();
-        var lien = 'http://bicravart.com/';
-        FB.ui({
-            method: 'share',
-            display: 'popup',
-            href: lien
-        }, function(response){});
-        // console.log(lien);
-    });
-    $.ajaxSetup({
-        cache: true
-    });
-    $.getScript('//connect.facebook.net/fr_FR/all.js', function() {
-        FB.init({
-            appId: '696716717101760',
-        });
-        FB.getLoginStatus(function() {
-            // console.log('Status updated!');
-        });
-    });
+    // $('#share_button').click(function(event){
+    //     event.preventDefault();
+    //     var lien = 'http://bicravart.com/';
+    //     FB.ui({
+    //         method: 'share',
+    //         display: 'popup',
+    //         href: lien
+    //     }, function(response){});
+    //     // console.log(lien);
+    // });
+    // $.ajaxSetup({
+    //     cache: true
+    // });
+    // $.getScript('//connect.facebook.net/fr_FR/all.js', function() {
+    //     FB.init({
+    //         appId: '696716717101760',
+    //     });
+    //     FB.getLoginStatus(function() {
+    //         // console.log('Status updated!');
+    //     });
+    // });
 });
 
 // ANALITYCS
