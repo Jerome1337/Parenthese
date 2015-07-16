@@ -685,16 +685,39 @@ footer{
                 font-size: 1.1em;
                 margin-bottom: 30px;
             }
-            p{
-                color: $grey;
-                font-family: $RALL;
-                font-size: 1em;
-                margin-bottom: 30px;
-            }
         }
     }
 }
 
+.aboutContainer{
+    padding: 100px 0;
+    background: url('../img/faq_bg.jpg') no-repeat center fixed;
+    background-size: cover;
+    h3{
+        color: $grey;
+        font-family: $RALSB;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    p{
+        color: $grey;
+        font-family: $RALL;
+        font-size: 1em;
+        margin-bottom: 30px;
+        }
+    div{
+        color: $grey;
+        font-family: $RALSB;
+        font-size: 1.1em;
+        margin-bottom: 30px;
+        text-align: center;
+        margin: 0;
+        h4{
+            color: $black;  
+        }
+    }
+}
 // MENTIONS LEGALES
 .mentionsContainer{
     padding: 100px 0;
