@@ -17,6 +17,8 @@
                 <div id="player2" class="youtube-player"></div>
                 <div class="large-12 columns baseline">
                     <h2>"Monnayez votre art,<br> tout en gardant votre<br> annonymat"</h2>
+                    <p>Appuyez sur <span class="yellowZ">Z</span> pour <br> Commencer l'experience</p>
+                    <img src="img/souris.png" alt="souris">
                 </div>
             </section>
         </section>
@@ -30,10 +32,12 @@
         <section class="devisContainer">
             <div class="row fullWidth">
                 <div class="left large-6 columns">
+                    <img src="img/paint.png" alt="Pinceau">
                     <p>Vous êtes un graffeur et vous souhaitez gagner de l'argent ? Vous souhaitez augmenter votre notoriété ? Enfin vous avez envie de vivre de votre art ? Ne perdez pas de temps, rejoignez-nous !</p>
                     <button type="submit" id="formSubmit">INSCRIVEZ-VOUS</button>
                 </div>
                 <div class="right large-6 columns">
+                    <img src="img/valise.png" alt="Valise">
                     <p>Vous êtes une entreprise et vous avez un projet artistique ? Vous ne savez par où commencer ? Vous n'avez pas d'idées précises ? Décrivez-nous votre projet, nous pouvons vous aider !</p>
                     <button type="submit" id="formSubmit">DEMANDER UN<br>DEVIS</button>
                 </div>
@@ -49,12 +53,12 @@
         </section>
         <section class="descContainer">
             <section class="row">
-                <h3>Qui sommes-nous ?</h3>
+                <!-- <h3>Qui sommes-nous ?</h3> -->
                 <div class="large-6 medium-6 small-12 columns linkPart">
-                    <a href="#" data-reveal-id="artistsModal">Ce que les artistes pensent de nous...</a>
+                    <a href="#" data-reveal-id="artistsModal">Ce que les artistes<br> pensent de nous...</a>
                 </div>
                 <div class="large-6 medium-6 small-12 columns linkPart">
-                    <a href="#" data-reveal-id="entreprisesModal">Ce que les entreprises pensent de nous...</a>
+                    <a href="#" data-reveal-id="entreprisesModal">Ce que les entreprises<br> pensent de nous...</a>
                 </div>
             </section>
         </section>
@@ -62,7 +66,7 @@
             <section class="row">
                 <div class="row fullWidth">
                     <h3>Qui sommes-nous ?</h3>
-                    <p>Des artistes aux entreprises, Bicravart mise sur son équipe d'experts pour offire le meilleur service qu'il soit, pour un accompagnement sur le long et court termes. Avec Bicravart, monnayez votre art.</p>
+                    <p>Des artistes aux entreprises, Bicravart mise sur son équipe d'experts<br> pour offire le meilleur service qu'il soit, pour un accompagnement sur<br> le long et court termes. Avec Bicravart, monnayez votre art.</p>
                     <a href="#"><button type="submit" id="formSubmit">DECOUVREZ L'AGENCE</button></a>
                 </div>
             </section>
