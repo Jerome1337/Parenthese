@@ -221,19 +221,61 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-    $('#entrepriseContact, .coordonees').hide();
+    //CONTACT PAGE
+    $('.email').append('<a href=\"mailto:contact@bicravart.com\">contact@bicravart.com</a>');
+    $('#telNumb').append('06 04 05 09 84');
+    $('#entrepriseContact, .coordoneesSec').hide();
+    $('.artistPart').addClass('active');
+
     $('.artistPart').click(function(){
-        $('#entrepriseContact, .coordonees').hide();
+        $('#entrepriseContact, .coordoneesSec').hide();
         $('#artistContact').show();
+        $(this).addClass('active').siblings().removeClass('active');
     });
+
     $('.entreprisePart').click(function(){
-        $('#artistContact, .coordonees').hide();
+        $('#artistContact, .coordoneesSec').hide();
         $('#entrepriseContact').show();
+        $(this).addClass('active').siblings().removeClass('active');
     });
+
     $('.coordoneesPart').click(function(){
         $('#artistContact, #entrepriseContact').hide();
-        $('.coordonees').show();
+        $('.coordoneesSec').show();
+        $(this).addClass('active').siblings().removeClass('active');
     });
+
+    $("#select").change(function() {
+        var val = $(this).val();
+        if(val === "artist") {
+            $('#entrepriseContact, .coordoneesSec').hide();
+            $('#artistContact').show();
+        }
+        else if(val === "entreprise") {
+            $('#artistContact, .coordoneesSec').hide();
+            $('#entrepriseContact').show();
+        }
+        else{
+            $('#artistContact, #entrepriseContact').hide();
+            $('.coordoneesSec').show();
+        }
+    });
+
+    var onMapMouseleaveHandler = function (event) {
+        var that = $(this);
+        that.on('click', onMapClickHandler);
+        that.off('mouseleave', onMapMouseleaveHandler);
+        that.find('iframe').css("pointer-events", "none");
+    }
+
+    var onMapClickHandler = function (event) {
+        var that = $(this);
+        that.off('click', onMapClickHandler);
+        that.find('iframe').css("pointer-events", "auto");
+        that.on('mouseleave', onMapMouseleaveHandler);
+    }
+    $('.gmap').on('click', onMapClickHandler);
+
 
     //CONTACT ENTREPRISE ACTION
     $('#entrepriseContact').submit(function(event){

@@ -16,8 +16,10 @@
             <?php include('includes/nav.php'); ?>
         </section>
         <section class="contactContainer">
-            <h2>Contactez-nous</h2>
-            <section class="row">
+            <section class="row fullWidth titleContainer">
+               <h2>Contactez-nous</h2>
+            </section>
+            <section class="row fullWidth">
                 <div class="large-4 medium-4 show-for-medium-up columns artistPart">
                     <h3>Vous êtes un artiste ?</h3>
                 </div>
@@ -28,64 +30,75 @@
                     <h3>Coordonnées</h3>
                 </div>
                 <div class="small-12 columns show-for-small-only selectPart">
-                    <select name="select">
-                        <option>Vous êtes un artiste ?</option>
-                        <option>Vous êtes une entreprise ?</option>
-                        <option>Coordonnées</option>
+                    <select name="select" id="select">
+                        <option value="artist">Vous êtes un artiste ?</option>
+                        <option value="entreprise">Vous êtes une entreprise ?</option>
+                        <option value="coordonees">Coordonnées</option>
                     </select>
                 </div>
+            </section>
+            <section class="row">
                 <div class="small-12 columns contactPart">
                     <form method="post" id="artistContact">
                         <fieldset>
                             <legend>Formulaire contact de Bicravart</legend>
                             <div>
                                 <label for="formName">Nom* :</label>
-                                <input type="text" placeholder="Nom" name="name" id="formName">
+                                <input type="text" name="name" id="formName">
                             </div>
                             <div>
                                 <label for="formEmail">E-mail* :</label>
-                                <input type="email" placeholder="Email" name="email" id="formEmail">
+                                <input type="email" name="email" id="formEmail">
                             </div>
                             <div>
                                 <label for="formTel">Téléphone* :</label>
-                                <input type="tel" placeholder="Téléphone" name="tel" id="formTel">
+                                <input type="tel" name="tel" id="formTel">
                             </div>
                             <div>
                                 <label for="formMessage">Message* :</label>
-                                <textarea cols="30" rows="10" placeholder="Message" name="message" id="formMessage"></textarea>
+                                <textarea cols="30" rows="10" name="message" id="formMessage"></textarea>
                             </div>
-                            <button type="submit" id="formSubmit">Envoyer</button>
+                            <button type="submit" class="formSubmit">Envoyer</button>
                         </fieldset>
-                        <span>*Champs obligatoires</span>
+                        <p class="obg">*Champs obligatoires</p>
                     </form>
                     <form method="post" id="entrepriseContact">
                         <fieldset>
                             <legend>Formulaire contact de Bicravart</legend>
                             <div>
-                                <label for="formName">Nom* :</label>
-                                <input type="text" placeholder="Nom" name="name" id="formName">
+                                <label for="formName">Entreprise* :</label>
+                                <input type="text" name="name" id="formName">
                             </div>
                             <div>
                                 <label for="formEmail">E-mail* :</label>
-                                <input type="email" placeholder="Email" name="email" id="formEmail">
+                                <input type="email" name="email" id="formEmail">
                             </div>
                             <div>
                                 <label for="formTel">Téléphone* :</label>
-                                <input type="tel" placeholder="Téléphone" name="tel" id="formTel">
+                                <input type="tel" name="tel" id="formTel">
                             </div>
                             <div>
                                 <label for="formMessage">Message* :</label>
-                                <textarea cols="30" rows="10" placeholder="Message" name="message" id="formMessage"></textarea>
+                                <textarea cols="30" rows="10"  name="message" id="formMessage"></textarea>
                             </div>
-                            <button type="submit" id="formSubmit">Envoyer</button>
+                            <button type="submit" class="formSubmit">Envoyer</button>
                         </fieldset>
-                        <span>*Champs obligatoires</span>
+                        <p class="obg">*Champs obligatoires</p>
                     </form>
-                    <div class="coordonees">
+                    <div class="coordoneesSec" email"">
                         <p>Paris</p>
                         <p>62 cours de Vincennes, 75012 Paris</p>
-                        <p>Tél: 05 61 11 76 55</p>
-                        <p class="email"></p>
+                        <p>Tél: <span id="telNumb"></span></p>
+                        <p class="email">Email : </p>
+                        <div class="gmap">
+                            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.4431060933184!2d2.3376011!3d48.8688289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e3b07a8424d%3A0x1394f61585594c50!2s5+Rue+Saint-Augustin%2C+75002+Paris!5e0!3m2!1sfr!2sfr!4v1437082040931"
+                                width="100%"
+                                height="100%"
+                                frameborder="0"
+                                style="border:0"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -54,12 +54,38 @@ button{
     box-sizing: border-box;
 }
 
+textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]{
+    box-sizing: border-box;
+    background-clip:padding-box;
+    border-radius:0;
+    appearance:none;
+    background-color:#fff;
+    color:#000;
+    outline:0;
+    margin:0;
+    padding:0;
+    text-align: left;
+    font-size:1em;
+    height: 1em;
+    vertical-align: middle;
+    resize: vertical;
+}
+
+select{
+    background:#fff url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+    background-repeat: no-repeat;
+    background-position: 97% center;
+    padding:0 25px 0 8px;
+    font-size: .875em
+}
+
 fieldset{
     border: none;
     legend{
         display: none;
     }
 }
+
 
 .fullWidth {
    width: 100%;
@@ -403,22 +429,109 @@ footer{
 
 //CONTACT
 .contactContainer{
-    padding: 80px 0;
     background-color: $lightgrey;
-    h2{
-        color: $grey;
-        font-family: $RALSB;
-        font-size: 2em;
-        text-align: center;
-        margin-bottom: 70px;
+    .titleContainer{
+        padding: 80px 0;
+        background: url(../img/contact_bg.jpg)no-repeat fixed;
+        background: cover;
+        h2{
+            color: $grey;
+            font-family: $RALSB;
+            font-size: 2em;
+            text-align: center;
+        }
     }
+
     .row{
         .artistPart, .entreprisePart, .coordoneesPart{
-            padding: 50px 0;
+            padding: 20px 0;
+            background-color: $lightgrey;
             h3{
                 color: $grey;
                 text-align: center;
                 font-size: 1.2em;
+                font-family: $RALSB;
+            }
+            &:hover{
+                background-color: $yellow;
+            }
+        }
+        .active{
+            background-color: $yellow;
+        }
+        .entreprisePart{
+            border-left: 2px $grey solid;
+            border-right: 2px $grey solid;
+        }
+        form{
+            div{
+                label{
+                    display:inline-block;
+                    vertical-align:middle;
+                }
+                input{
+                    display:inline-block;
+                    vertical-align:middle;
+                    width: 300px;
+                    height: 35px;
+                    border-radius: 3px;
+                    border: none;
+                }
+            }
+            .formSubmit{
+                background-color: $yellow;
+                color: $grey;
+                transition: ease-in-out all 0.5s;
+                font-family: $RALSB;
+                width: 200px;
+                border-radius: 3px;
+                &:hover{
+                    background-color: $grey;
+                    color: $yellow;
+                }
+                &:active{
+                    background-color: lighten($grey, 20%);
+                    color: $white;
+                }
+            }
+        }
+        .selectPart{
+            padding: 70px 100px;
+            background-color: $yellow;
+            select{
+                height: 35px;
+                color: $grey;
+                font-family: $RALR;
+                option{
+                }
+            }
+        }
+        .contactPart{
+            background-color: $lightgrey;
+            #artistContact, #entrepriseContact, .coordonees{
+                label{
+                    color: $grey;
+                    font-family: $RALR;
+                }
+                .obg{
+                    text-align: right;
+                    color: $grey;
+                    font-family: $RALL;
+                }
+            }
+            .coordoneesSec{
+                p{
+                    text-align: center;
+                    color: $grey;
+                }
+                a{
+                    text-align: center;
+                    color: $grey;
+                    transition: ease-in-out all 0.5s;
+                    &:hover{
+                        color: $yellow;
+                    }
+                }
             }
         }
     }

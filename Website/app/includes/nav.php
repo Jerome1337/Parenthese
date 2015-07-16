@@ -9,10 +9,10 @@
         <section class="top-bar-section">
             <ul class="right">
                 <li><a class="accueil <?php echo ($page == "index" ? "active" : "")?>" href="index.php">Accueil</a></li>
-                <li><a class="artistes <?php echo ($page == "artistes" ? "active" : "")?>" href="artistes.php">Artistes</a></li>
-                <li><a class="entreprises <?php echo ($page == "entreprises" ? "active" : "")?>" href="entreprises.php">Entreprises</a></li>
-                <li><a class="references <?php echo ($page == "references" ? "active" : "")?>" href="references.php">Références</a></li>
-                <li><a class="contact <?php echo ($page == "contact" ? "active" : "")?>" href="contact.php">Contact</a></li>
+                <li><a class="artistes <?php echo ($page == "artistes" ? "active" : "")?>" href="artistes.php">Coin des artistes</a></li>
+                <li><a class="entreprises <?php echo ($page == "entreprises" ? "active" : "")?>" href="entreprises.php">Espace entreprise</a></li>
+                <li><a class="references <?php echo ($page == "references" ? "active" : "")?>" href="references.php">Nos références</a></li>
+                <li><a class="contact <?php echo ($page == "contact" ? "active" : "")?>" href="contact.php">Contactez-nous</a></li>
             </ul>
         </section>
     </nav>
