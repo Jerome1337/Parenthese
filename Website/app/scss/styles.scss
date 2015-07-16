@@ -511,11 +511,18 @@ footer{
         .artistPart, .entreprisePart, .coordoneesPart{
             padding: 20px 0;
             background-color: $lightgrey;
+            transition: ease-in-out all 0.5s;
             h3{
                 color: $grey;
                 text-align: center;
                 font-size: 1.2em;
                 font-family: $RALSB;
+            }
+            p{
+                text-align: center;
+                color: $grey;
+                font-family: "social";
+                font-size: 5em;
             }
             &:hover{
                 background-color: $yellow;
@@ -524,23 +531,58 @@ footer{
         .active{
             background-color: $yellow;
         }
+        .artistPart{
+            p{
+                &::before{
+                    content: '\e003';
+                }
+            }
+        }
         .entreprisePart{
             border-left: 2px $grey solid;
             border-right: 2px $grey solid;
+            p{
+                &::before{
+                    content:'\e004';
+                }
+            }
+        }
+        .coordoneesPart{
+            p{
+                &::before{
+                    content: '\e005';
+                }
+            }
         }
         form{
+            margin: 0 auto;
+            padding: 0px;
+            text-align:center;
             div{
+                margin-bottom: 20px;
                 label{
-                    display:inline-block;
-                    vertical-align:middle;
-                }
+                    color: $grey;
+                    height: 40px;
+                    width: 100px;
+                    margin: 10px 15px 0 10px;
+                    text-align: right;
+                    clear: both;
+                    float: left;
+                    display: inline-block;
+                    vertical-align: middle;
+                    }
                 input{
-                    display:inline-block;
-                    vertical-align:middle;
-                    width: 300px;
-                    height: 35px;
+                    width: 40%;
+                    height: 40px;
                     border-radius: 3px;
                     border: none;
+                }
+                textarea{
+                    width: 70%;
+                    height: 110px;
+                    border-radius: 3px;
+                    border: none;
+
                 }
             }
             .formSubmit{
@@ -567,12 +609,11 @@ footer{
                 height: 35px;
                 color: $grey;
                 font-family: $RALR;
-                option{
-                }
             }
         }
         .contactPart{
             background-color: $lightgrey;
+            padding: 30px 0;
             #artistContact, #entrepriseContact, .coordonees{
                 label{
                     color: $grey;
@@ -582,19 +623,32 @@ footer{
                     text-align: right;
                     color: $grey;
                     font-family: $RALL;
+                    margin-right: 15px;
                 }
             }
             .coordoneesSec{
-                p{
-                    text-align: center;
-                    color: $grey;
+                .infos{
+                    // margin: 30px 0;
+                    p{
+                        text-align: center;
+                        color: $grey;
+                        /* font-family: $RALR; */
+                        margin-bottom: 0;
+                    }
+                    a{
+                        text-align: center;
+                        color: $grey;
+                        transition: ease-in-out all 0.5s;
+                        /* font-family: $RALR; */
+                        &:hover{
+                            color: $yellow;
+                        }
+                    }
                 }
-                a{
-                    text-align: center;
-                    color: $grey;
-                    transition: ease-in-out all 0.5s;
-                    &:hover{
-                        color: $yellow;
+                .gmap{
+                    margin-top: 25px;
+                    iframe{
+                        height: 300px;
                     }
                 }
             }

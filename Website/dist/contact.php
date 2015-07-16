@@ -22,12 +22,15 @@
             <section class="row fullWidth">
                 <div class="large-4 medium-4 show-for-medium-up columns artistPart">
                     <h3>Vous êtes un artiste ?</h3>
+                    <p></p>
                 </div>
                 <div class="large-4 medium-4 columns show-for-medium-up entreprisePart">
                     <h3>Vous êtes une entreprise ?</h3>
+                    <p></p>
                 </div>
                 <div class="large-4 medium-4 columns show-for-medium-up coordoneesPart">
                     <h3>Coordonnées</h3>
+                    <p></p>
                 </div>
                 <div class="small-12 columns show-for-small-only selectPart">
                     <select name="select" id="select">

@@ -22,12 +22,15 @@
             <section class="row fullWidth">
                 <div class="large-4 medium-4 show-for-medium-up columns artistPart">
                     <h3>Vous êtes un artiste ?</h3>
+                    <p></p>
                 </div>
                 <div class="large-4 medium-4 columns show-for-medium-up entreprisePart">
                     <h3>Vous êtes une entreprise ?</h3>
+                    <p></p>
                 </div>
                 <div class="large-4 medium-4 columns show-for-medium-up coordoneesPart">
                     <h3>Coordonnées</h3>
+                    <p></p>
                 </div>
                 <div class="small-12 columns show-for-small-only selectPart">
                     <select name="select" id="select">
@@ -85,11 +88,13 @@
                         </fieldset>
                         <p class="obg">*Champs obligatoires</p>
                     </form>
-                    <div class="coordoneesSec" email"">
-                        <p>Paris</p>
-                        <p>62 cours de Vincennes, 75012 Paris</p>
-                        <p>Tél: <span id="telNumb"></span></p>
-                        <p class="email">Email : </p>
+                    <div class="coordoneesSec">
+                        <div class="infos">
+                            <p>Paris</p>
+                            <p>62 cours de Vincennes, 75012 Paris</p>
+                            <p>Tél: <span id="telNumb"></span></p>
+                            <p class="email">Email : </p>
+                        </div>
                         <div class="gmap">
                             <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.4431060933184!2d2.3376011!3d48.8688289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e3b07a8424d%3A0x1394f61585594c50!2s5+Rue+Saint-Augustin%2C+75002+Paris!5e0!3m2!1sfr!2sfr!4v1437082040931"
                                 width="100%"
