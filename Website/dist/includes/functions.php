@@ -183,16 +183,27 @@
 			// curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
 			// $result = curl_exec($ch);
 
+			$name = mysql_real_escape_string($_POST['name']);
+			$email = mysql_real_escape_string($_POST['email']);
+			$dateproj = mysql_real_escape_string($_POST['date']);
+			$lieu = mysql_real_escape_string($_POST['lieu']);
+			$description = mysql_real_escape_string($_POST['desc']);
+
+			$name = addcslashes($name, '%_');
+			$email = addcslashes($email, '%_');
+			$dateproj = addcslashes($dateproj, '%_');
+			$lieu = addcslashes($lieu, '%_');
+			$description = addcslashes($description, '%_');
 
 			$bdd = connect();
 
-			$req = $bdd->prepare('INSERT INTO entreprises (name, email, date, lieu, desc) VALUES (:name, :email, :date, :lieu, :desc)');
+			$req = $bdd->prepare('INSERT INTO entreprises (name, email, dateproj, lieu, description) VALUES (:name, :email, :dateproj, :lieu, :description)');
 			$req->execute(array(
-				'name' => $_POST['name'],
-				'email' => $_POST['email'],
-				'date' => $_POST['date'],
-				'lieu' => $_POST['lieu'],
-				'desc' => $_POST['desc']
+				'name' => $name,
+				'email' => $email,
+				'dateproj' => $dateproj,
+				'lieu' => $lieu,
+				'description' => $description
 			));
 
 			$data['success'] = true;

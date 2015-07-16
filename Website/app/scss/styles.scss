@@ -298,6 +298,8 @@ footer{
                 // font-size: 2em;
                 text-align: center;
                 z-index: 10;
+                margin-top: 10%;
+                font-family: $RALR;
             }
         }
     }
@@ -307,10 +309,13 @@ footer{
     background-size: cover;
     padding-bottom: 400px;
     .presentation{
-        text-align: center;
         vertical-align: middle;
         color: $white;
-        // font-size: 24px;
+        font-size: 1.5em;
+        text-align: center;
+        z-index: 10;
+        margin-top: 10%;
+        font-family: $RALR;
     }
 }
 .devisContainer{
@@ -322,17 +327,69 @@ footer{
     .left{
         float: left;
         height: 100%;
+        font-family: $RALR;
+        text-align: center;
     }
     .right{
         float: right;
         height: 100%;
+        font-family: $RALR;
+        text-align: center;
     }
+    div{
+        button{
+            background-color: #F0B346;
+            color: black;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            text-align: center;
+            &:hover{
+                color: #F0B346;
+                background-color: black;
+            }
+        }
+        p{
+            text-align: center;
+        }
+    }  
+}
+.feedContainer{
+    background: url('../img/fond-qui-sommes-nous.jpg');
+    background-size: cover;
+    padding-top: 400px;  
+    button{
+        background-color: #F0B346;
+        color: black;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        &:hover{
+            color: #F0B346;
+            background-color: black;
+        }
+    } 
 }
 .resultatContainer{
     background: url('../img/fond-nos-resultats.jpg')no-repeat;
-    background-size: cover;
+    background-size: cover!important;
     padding-top: 400px;
     padding-bottom: 400px;
+    button{
+        background-color: #F0B346;
+        color: black;
+        text-align: center;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        &:hover{
+            color: #F0B346;
+            background-color: black;
+        }
+    }
+    p{
+        text-align: center;
+    }
 }
 .descContainer{
     background: url('../img/fond-pensent.jpg')no-repeat;
