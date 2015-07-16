@@ -31,6 +31,7 @@
                     <select name="select">
                         <option>Vous êtes un artiste ?</option>
                         <option>Vous êtes une entreprise ?</option>
+                        <option>Coordonnées</option>
                     </select>
                 </div>
                 <div class="small-12 columns contactPart">
@@ -55,6 +56,7 @@
                             </div>
                             <button type="submit" id="formSubmit">Envoyer</button>
                         </fieldset>
+                        <span>*Champs obligatoires</span>
                     </form>
                     <form method="post" id="entrepriseContact">
                         <fieldset>
@@ -77,8 +79,14 @@
                             </div>
                             <button type="submit" id="formSubmit">Envoyer</button>
                         </fieldset>
+                        <span>*Champs obligatoires</span>
                     </form>
-                    <span>*Champs obligatoires</span>
+                    <div class="coordonees">
+                        <p>Paris</p>
+                        <p>62 cours de Vincennes, 75012 Paris</p>
+                        <p>Tél: 05 61 11 76 55</p>
+                        <p class="email"></p>
+                    </div>
                 </div>
             </section>
         </section>

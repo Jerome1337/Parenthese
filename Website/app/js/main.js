@@ -221,6 +221,20 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
+    $('#entrepriseContact, .coordonees').hide();
+    $('.artistPart').click(function(){
+        $('#entrepriseContact, .coordonees').hide();
+        $('#artistContact').show();
+    });
+    $('.entreprisePart').click(function(){
+        $('#artistContact, .coordonees').hide();
+        $('#entrepriseContact').show();
+    });
+    $('.coordoneesPart').click(function(){
+        $('#artistContact, #entrepriseContact').hide();
+        $('.coordonees').show();
+    });
+
     //CONTACT ENTREPRISE ACTION
     $('#entrepriseContact').submit(function(event){
         var formData = {
