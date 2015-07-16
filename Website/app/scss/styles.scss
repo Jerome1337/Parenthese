@@ -57,7 +57,7 @@ body {
     padding: 0;
     margin: 0;
     overflow: auto;
-    user-select: none;
+    // user-select: none;
 }
 
 button{ 
@@ -295,27 +295,60 @@ footer{
             // width: 100%;
             h2{
                 color: $white;
-                font-size: 2em;
+                // font-size: 2em;
                 text-align: center;
                 z-index: 10;
             }
         }
     }
 }
+.container{
+    background: url('../img/fond-losange.jpg')no-repeat;
+    background-size: cover;
+    padding-bottom: 400px;
+    .presentation{
+        text-align: center;
+        vertical-align: middle;
+        color: $white;
+        // font-size: 24px;
+    }
+}
+.devisContainer{
+    height: 317px;
+    background: url('../img/fond-graffeur-entreprise.jpg')no-repeat;
+    background-size: cover;
+    padding-top: 400px;
+    padding-bottom: 400px;
+    .left{
+        float: left;
+        height: 100%;
+    }
+    .right{
+        float: right;
+        height: 100%;
+    }
+}
+.resultatContainer{
+    background: url('../img/fond-nos-resultats.jpg')no-repeat;
+    background-size: cover;
+    padding-top: 400px;
+    padding-bottom: 400px;
+}
 .descContainer{
-    padding: 200px 0;
+    background: url('../img/fond-pensent.jpg')no-repeat;
+    background-size: cover!important;
+    padding-top: 400px;
+    padding-bottom: 400px;
     .whoAre{
         .descPart{
             text-align: center;
         }
     }
 }
-
 // FAQ
 .faqContainer{
     padding: 100px 0;
     background: url('../img/faq_bg.jpg') no-repeat center fixed;
-    background-size: cover;
     h2{
         color: $grey;
         font-family: $RALSB;

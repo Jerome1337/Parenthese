@@ -85,7 +85,7 @@
                             </div>
                             <div>
                                 <label for="formAge">Age :</label>
-                                <input type="text" placeholder="Age" name="age" id="formAge">
+                                <input type="number" placeholder="Age" name="age" id="formAge">
                             </div>
                             <div>
                                 <label for="formTel">Téléphone* :</label>
@@ -97,7 +97,7 @@
                             </div>
                             <div>
                                 <label for="formWebsite">Site Internet :</label>
-                                <input type="text" placeholder="Website" name="website" id="formWebsite">
+                                <input type="url" placeholder="Site internet" name="website" id="formWebsite">
                             </div>
                             <div>
                                 <label for="formComp">Compétences :</label>
@@ -105,7 +105,7 @@
                             </div>
                             <div>
                                 <label for="formSal">Taux horaire :</label>
-                                <input type="text" placeholder="Taux Horaire" name="Sal" id="formSal">
+                                <input type="number" placeholder="Taux Horaire" name="Sal" id="formSal">
                             </div>
                             <button type="submit" id="formSubmit">Envoyer</button>
                         </fieldset>

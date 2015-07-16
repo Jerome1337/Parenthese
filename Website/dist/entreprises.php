@@ -65,7 +65,7 @@
                             </div>
                             <div>
                                 <label for="formDate">Date du projet* :</label>
-                                <input type="text" placeholder="Date du projet" name="date" id="formDate">
+                                <input type="date" placeholder="Date du projet" name="date" id="formDate">
                             </div>
                             <div>
                                 <label for="formLieu">Lieu de création* :</label>
