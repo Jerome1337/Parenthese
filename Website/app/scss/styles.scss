@@ -305,7 +305,7 @@ footer{
 .container{
     background: url('../img/fond-losange.jpg')no-repeat;
     background-size: cover;
-    padding-bottom: 400px;
+    padding-bottom: 100px;
     .presentation{
         vertical-align: middle;
         color: $white;
@@ -320,8 +320,8 @@ footer{
     height: 317px;
     background: url('../img/fond-graffeur-entreprise.jpg')no-repeat;
     background-size: cover;
-    padding-top: 400px;
-    padding-bottom: 400px;
+    padding-top: 360px;
+    padding-bottom: 200px;
     .left{
         float: left;
         height: 100%;
@@ -335,6 +335,7 @@ footer{
         text-align: center;
     }
     div{
+        text-align: center;
         button{
             background-color: #F0B346;
             color: black;
@@ -342,6 +343,7 @@ footer{
             -moz-border-radius: 3px;
             border-radius: 3px;
             text-align: center;
+            font-family: $RALSB;
             &:hover{
                 color: #F0B346;
                 background-color: black;
@@ -349,6 +351,7 @@ footer{
         }
         p{
             text-align: center;
+            font-family: $RALSB;
         }
     }  
 }
@@ -356,12 +359,21 @@ footer{
     background: url('../img/fond-qui-sommes-nous.jpg');
     background-size: cover;
     padding-top: 400px;  
+    font-family: $RALR;
+    h3, p, a{
+        text-align: center;
+        display: block;
+        margin : auto;
+        font-family: $RALSB;
+    }
     button{
+        text-align: center;
         background-color: #F0B346;
         color: black;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
+        font-family: $RALR;
         &:hover{
             color: #F0B346;
             background-color: black;
@@ -380,13 +392,18 @@ footer{
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
+        display: block;
+        margin : auto;
+        font-family: $RALSB;
         &:hover{
             color: #F0B346;
             background-color: black;
         }
     }
     p{
+        font-family: $RALSB;
         text-align: center;
+        font-size: 2em;
     }
 }
 .descContainer{
@@ -394,6 +411,10 @@ footer{
     background-size: cover!important;
     padding-top: 400px;
     padding-bottom: 400px;
+    a, h3{
+        font-family: $RALSB;
+        text-align: center;
+    }
     .whoAre{
         .descPart{
             text-align: center;
