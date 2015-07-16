@@ -325,13 +325,30 @@ footer{
                 margin-top: 10%;
                 font-family: $RALR;
             }
+
+            .yellowZ{
+                color: #F7B232;
+                font-family: $RALR;
+            }
+
+            p{
+                color: $white;
+                font-family: $RALR;
+                text-align: center;
+            }
+        }
+        img{
+            text-align: center;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
         }
     }
 }
 .container{
     background: url('../img/fond-losange.jpg')no-repeat;
     background-size: cover;
-    padding-bottom: 400px;
+    padding-bottom: 100px;
     .presentation{
         vertical-align: middle;
         color: $white;
@@ -343,24 +360,41 @@ footer{
     }
 }
 .devisContainer{
-    height: 317px;
+    //height: 317px;
     background: url('../img/fond-graffeur-entreprise.jpg')no-repeat;
     background-size: cover;
-    padding-top: 400px;
-    padding-bottom: 400px;
+    padding-top: 360px;
+    padding-bottom: 200px;
     .left{
         float: left;
         height: 100%;
         font-family: $RALR;
         text-align: center;
+        p{
+            font-size: 1.2em;
+            text-align: left;
+        }
+        img{
+            display: block;
+            float: left;
+        }
     }
     .right{
         float: right;
         height: 100%;
         font-family: $RALR;
         text-align: center;
+        p{
+            font-size: 1.2em;
+            text-align: right;
+        }
+        img{
+            display: block;
+            float: right;
+        }
     }
     div{
+        text-align: center;
         button{
             background-color: #F0B346;
             color: black;
@@ -368,26 +402,42 @@ footer{
             -moz-border-radius: 3px;
             border-radius: 3px;
             text-align: center;
+            font-family: $RALSB;
             &:hover{
                 color: #F0B346;
                 background-color: black;
             }
         }
         p{
-            text-align: center;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: $RALSB;
         }
     }  
 }
 .feedContainer{
     background: url('../img/fond-qui-sommes-nous.jpg');
     background-size: cover;
-    padding-top: 400px;  
+    padding-top: 400px;
+    padding-bottom: 400px;  
+    font-family: $RALR;
+    h3, p, a{
+        text-align: center;
+        display: block;
+        margin : auto;
+        font-family: $RALSB;
+        color: $black;
+        width: 51%;
+    }
     button{
+        text-align: center;
         background-color: #F0B346;
         color: black;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
+        font-family: $RALR;
         &:hover{
             color: #F0B346;
             background-color: black;
@@ -406,13 +456,18 @@ footer{
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
+        display: block;
+        margin : auto;
+        font-family: $RALSB;
         &:hover{
             color: #F0B346;
             background-color: black;
         }
     }
     p{
+        font-family: $RALSB;
         text-align: center;
+        font-size: 2em;
     }
 }
 .descContainer{
@@ -420,6 +475,16 @@ footer{
     background-size: cover!important;
     padding-top: 400px;
     padding-bottom: 400px;
+    div{
+        text-align: center;
+    }
+    a, h3{
+        font-family: $RALSB;
+        text-align: center;
+        margin: 0;
+        color: $white;
+        font-size: 1.2em;
+    }
     .whoAre{
         .descPart{
             text-align: center;
