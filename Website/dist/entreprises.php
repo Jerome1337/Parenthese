@@ -18,39 +18,45 @@
                 <div class="large-12 medium-12 small-12 columns">
                     <h2>Quand vos projets artistiques deviennent une réalité</h2>
                 </div>
-            </section>
-            <section class="row">
                 <h2>Pourquoi nous faire confiance ?</h2>
-                <section>
+            </section>
+            <section>
+                <section class="row">
                     <div class="large-6 medium-6 small-12 columns">
                         <h3>Des artistes de qualités</h3>
                         <p>Nos artistes sont minutieusement selectionné par nos soins. Nous plaçons les artistes en fonction de vos projets. Chaque projet étant unique, nous mettons un point d'honneur à vous offrir ce qu'il y'a de mieux.</p>
                     </div>
                     <div class="large-6 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <div  class="pictos">
+                            <img src="img/badge.svg" alt="Badge">
+                        </div>
                     </div>
                 </section>
-                <section>
+                <section class="row">
                     <div class="large-6 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <div  class="pictos2">
+                            <img src="img/main.svg" alt="Mains">
+                        </div>
                     </div>
                     <div class="large-6 medium-6 small-12 columns">
                         <h3>Des experts à votre écoute</h3>
                         <p>Nos agents sont des experts reconnus dans le monde de l'art. Avec eux, vos projets deviennent réalités.Chaque projet est géré par un expert qui vous accompagne tout au long de votre projet.</p>
-                    </div>
+                    </div>  
                 </section>
-                <section>
+                <section class="row">
                     <div class="large-6 medium-6 small-12 columns">
                         <h3>Des prestations adaptées</h3>
                         <p>Chaque projet étant unique, nous adptons notre offre à votre demande. Nous pouvons réaliser de grand projet comme de petit projet.</p>
                     </div>
                     <div class="large-6 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <div class="pictos">
+                            <img class="reglage" src="img/reglage.svg" alt="reglage">
+                        </div>
                     </div>
                 </section>
             </section>
             <section class="row">
-                <h2>Demander un devis</h2>
+                <h2>Votre projet nous intéresse</h2>
                 <div class="large-8 medium-8 small-12 columns contactPart">
                     <form method="post" id="formDevis">
                         <fieldset>

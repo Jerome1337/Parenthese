@@ -4,9 +4,9 @@
     <!-- INCLUDE DB CONNECTION + HEAD -->
     <?php include('includes/dbconnect.php');
     
-    $onglet_actif = "mentions";
-    $page = "mentions";
-    $pageTitle = "Mentions légales";
+    $onglet_actif = "about";
+    $page = "about";
+    $pageTitle = "À propos";
 
     include('includes/head.php');
     ?>

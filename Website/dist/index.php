@@ -17,7 +17,7 @@
                 <div id="player2" class="youtube-player"></div>
                 <div class="large-12 columns baseline">
                     <h2>"Monnayez votre art,<br> tout en gardant votre<br> annonymat"</h2>
-                    <p>Appuyez sur <span class="yellowZ">Z</span> pour <br> Commencer l'experience</p>
+                    <p>Appuyez sur <span class="yellowZ">X</span> pour <br> Commencer l'experience</p>
                     <img src="img/souris.png" alt="souris">
                 </div>
             </section>

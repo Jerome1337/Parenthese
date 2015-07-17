@@ -495,12 +495,62 @@ footer{
 //CONTACT
 .contactContainer{
     background-color: $lightgrey;
+    font-family: $RALSB;
+    h2, h3{
+        color: $black;
+    }
+    button{
+        text-align: center;
+        margin: 0;
+        background-color: #F0B346;
+        color: black;
+        text-align: center;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        display: block;
+        margin : auto;
+        font-family: $RALSB;
+        &:hover{
+            color: #F0B346;
+            background-color: black;
+        }
+    }
+    img{
+        width: 100px;
+        display: inline-block;
+        padding-top: 20px;
+    }
+    .reglage{
+        padding-top: 14px;
+        width: 100px;
+        display: inline-block;
+    }
+    .pictos{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background-color: #F0B346;
+        width: 150px;
+        height: 150px;
+    }
+    .pictos2{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background-color: #F0B346;
+        width: 150px;
+        height: 150px;
+    }
     .titleContainer{
         padding: 80px 0;
         background: url(../img/contact_bg.jpg)no-repeat fixed;
         background: cover;
         h2{
-            color: $grey;
             font-family: $RALSB;
             font-size: 2em;
             text-align: center;
@@ -508,19 +558,19 @@ footer{
     }
 
     .row{
+        text-align: center;
+        padding-top: 100px;
         .artistPart, .entreprisePart, .coordoneesPart{
             padding: 20px 0;
             background-color: $lightgrey;
             transition: ease-in-out all 0.5s;
             h3{
-                color: $grey;
                 text-align: center;
                 font-size: 1.2em;
                 font-family: $RALSB;
             }
             p{
                 text-align: center;
-                color: $grey;
                 font-family: "social";
                 font-size: 5em;
             }
@@ -555,7 +605,7 @@ footer{
             }
         }
         form{
-            margin: 0 auto;
+            margin: 0;
             padding: 0px;
             text-align:center;
             div{
