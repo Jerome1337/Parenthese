@@ -32,17 +32,34 @@
 			&& !empty($_POST['salaire'])
 			)
 		{
+
+			$name = mysql_real_escape_string($_POST['name']);
+			$age = mysql_real_escape_string($_POST['age']);
+			$tel = mysql_real_escape_string($_POST['tel']);
+			$email = mysql_real_escape_string($_POST['email']);
+			$website = mysql_real_escape_string($_POST['website']);
+			$competences = mysql_real_escape_string($_POST['competences']);
+			$salaire = mysql_real_escape_string($_POST['salaire']);
+
+			$name = addcslashes($name, '%_');
+			$age = addcslashes($age, '%_');
+			$tel = addcslashes($tel, '%_');
+			$email = addcslashes($email, '%_');
+			$website = addcslashes($website, '%_');
+			$competences = addcslashes($competences, '%_');
+			$salaire = addcslashes($salaire, '%_');
+
 			$bdd = connect();
 
 			$req = $bdd->prepare('INSERT INTO graffeurs (name, age, tel, email, website, competences, salaire) VALUES (:name, :age, :tel, :email, :website, :competences, :salaire)');
 			$req->execute(array(
-				'name' => $_POST['name'],
-				'age' => $_POST['age'],
-				'tel' => $_POST['tel'],
-				'email' => $_POST['email'],
-				'website' => $_POST['website'],
-				'competences' => $_POST['competences'],
-				'salaire' => $_POST['salaire']
+				'name' => $name,
+				'age' => $age,
+				'tel' => $tel,
+				'email' => $email,
+				'website' => $website,
+				'competences' => $competences,
+				'salaire' => $salaire
 			));
 			$data['success'] = true;
 		}else{
@@ -183,25 +200,22 @@
 
 			$name = mysql_real_escape_string($_POST['name']);
 			$email = mysql_real_escape_string($_POST['email']);
-			$dateproj = mysql_real_escape_string($_POST['date']);
-			$lieu = mysql_real_escape_string($_POST['lieu']);
-			$description = mysql_real_escape_string($_POST['desc']);
+			$tel = mysql_real_escape_string($_POST['tel']);
+			$message = mysql_real_escape_string($_POST['message']);
 
 			$name = addcslashes($name, '%_');
 			$email = addcslashes($email, '%_');
-			$dateproj = addcslashes($dateproj, '%_');
-			$lieu = addcslashes($lieu, '%_');
-			$description = addcslashes($description, '%_');
+			$tel = addcslashes($tel, '%_');
+			$message = addcslashes($message, '%_');
 
 			$bdd = connect();
 
-			$req = $bdd->prepare('INSERT INTO entreprises (name, email, dateproj, lieu, description) VALUES (:name, :email, :dateproj, :lieu, :description)');
+			$req = $bdd->prepare('INSERT INTO contactArtist (name, email, tel, message) VALUES (:name, :email, :tel, :message)');
 			$req->execute(array(
 				'name' => $name,
 				'email' => $email,
-				'dateproj' => $dateproj,
-				'lieu' => $lieu,
-				'description' => $description
+				'tel' => $tel,
+				'message' => $message
 			));
 
 			$data['success'] = true;
@@ -264,25 +278,22 @@
 
 			$name = mysql_real_escape_string($_POST['name']);
 			$email = mysql_real_escape_string($_POST['email']);
-			$dateproj = mysql_real_escape_string($_POST['date']);
-			$lieu = mysql_real_escape_string($_POST['lieu']);
-			$description = mysql_real_escape_string($_POST['desc']);
+			$tel = mysql_real_escape_string($_POST['tel']);
+			$message = mysql_real_escape_string($_POST['message']);
 
 			$name = addcslashes($name, '%_');
 			$email = addcslashes($email, '%_');
-			$dateproj = addcslashes($dateproj, '%_');
-			$lieu = addcslashes($lieu, '%_');
-			$description = addcslashes($description, '%_');
+			$tel = addcslashes($tel, '%_');
+			$message = addcslashes($message, '%_');
 
 			$bdd = connect();
 
-			$req = $bdd->prepare('INSERT INTO entreprises (name, email, dateproj, lieu, description) VALUES (:name, :email, :dateproj, :lieu, :description)');
+			$req = $bdd->prepare('INSERT INTO contactEntreprise (name, email, tel, message) VALUES (:name, :email, :tel, :message)');
 			$req->execute(array(
 				'name' => $name,
 				'email' => $email,
-				'dateproj' => $dateproj,
-				'lieu' => $lieu,
-				'description' => $description
+				'tel' => $tel,
+				'message' => $message
 			));
 
 			$data['success'] = true;

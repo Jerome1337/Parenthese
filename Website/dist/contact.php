@@ -47,21 +47,21 @@
                             <legend>Formulaire contact de Bicravart</legend>
                             <div>
                                 <label for="formName">Nom* :</label>
-                                <input type="text" name="name" id="formName">
+                                <input type="text" name="name" id="formArtistName">
                             </div>
                             <div>
                                 <label for="formEmail">E-mail* :</label>
-                                <input type="email" name="email" id="formEmail">
+                                <input type="email" name="email" id="formArtistEmail">
                             </div>
                             <div>
                                 <label for="formTel">Téléphone* :</label>
-                                <input type="tel" name="tel" id="formTel">
+                                <input type="tel" name="tel" id="formArtistTel">
                             </div>
                             <div>
                                 <label for="formMessage">Message* :</label>
-                                <textarea cols="30" rows="10" name="message" id="formMessage"></textarea>
+                                <textarea cols="30" rows="10" name="message" id="formArtistMessage"></textarea>
                             </div>
-                            <button type="submit" class="formSubmit">Envoyer</button>
+                            <button type="submit" class="formSubmit" data-reveal-id="formConfirm">Envoyer</button>
                         </fieldset>
                         <p class="obg">*Champs obligatoires</p>
                     </form>
@@ -70,29 +70,31 @@
                             <legend>Formulaire contact de Bicravart</legend>
                             <div>
                                 <label for="formName">Entreprise* :</label>
-                                <input type="text" name="name" id="formName">
+                                <input type="text" name="name" id="formEntrepriseName">
                             </div>
                             <div>
                                 <label for="formEmail">E-mail* :</label>
-                                <input type="email" name="email" id="formEmail">
+                                <input type="email" name="email" id="formEntrepriseEmail">
                             </div>
                             <div>
                                 <label for="formTel">Téléphone* :</label>
-                                <input type="tel" name="tel" id="formTel">
+                                <input type="tel" name="tel" id="formEntrepriseTel">
                             </div>
                             <div>
                                 <label for="formMessage">Message* :</label>
-                                <textarea cols="30" rows="10"  name="message" id="formMessage"></textarea>
+                                <textarea cols="30" rows="10"  name="message" id="formEntrepriseMessage"></textarea>
                             </div>
-                            <button type="submit" class="formSubmit">Envoyer</button>
+                            <button type="submit" class="formSubmit" data-reveal-id="formConfirm">Envoyer</button>
                         </fieldset>
                         <p class="obg">*Champs obligatoires</p>
                     </form>
-                    <div class="coordoneesSec" email"">
-                        <p>Paris</p>
-                        <p>62 cours de Vincennes, 75012 Paris</p>
-                        <p>Tél: <span id="telNumb"></span></p>
-                        <p class="email">Email : </p>
+                    <div class="coordoneesSec">
+                        <div class="infos">
+                            <p>Paris</p>
+                            <p>62 cours de Vincennes, 75012 Paris</p>
+                            <p>Tél: <span id="telNumb"></span></p>
+                            <p class="email">Email : </p>
+                        </div>
                         <div class="gmap">
                             <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.4431060933184!2d2.3376011!3d48.8688289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e3b07a8424d%3A0x1394f61585594c50!2s5+Rue+Saint-Augustin%2C+75002+Paris!5e0!3m2!1sfr!2sfr!4v1437082040931"
                                 width="100%"
@@ -103,7 +105,22 @@
                             </iframe>
                         </div>
                     </div>
+                    <!-- MODAL -->
+                    <div id="formConfirm" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+                      <h2 id="modalTitle">Awesome. I have it.</h2>
+                      <p class="lead">Your couch.  It is mine.</p>
+                      <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+                      <button id="sendForm" data-reveal-id="formSuccess">ENVOIE</button>
+                      <button class="close-reveal-modal">ENVOIE PAS</button>
+                      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                    </div>
+                    <div id="formSuccess" class="reveal-modal" data-reveal aria-labelledby="secondModalTitle" aria-hidden="true" role="dialog">
+                      <h2 id="secondModalTitle">This is a second modal.</h2>
+                      <p>See? It just slides into place after the other first modal. Very handy when you need subsequent dialogs, or when a modal option impacts or requires another decision.</p>
+                      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                    </div>
                 </div>
+
             </section>
         </section>
         <?php include('includes/footer.php'); ?>

@@ -192,35 +192,6 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-    //CONTACT ARTISTS ACTION
-    $('#artistContact').submit(function(event){
-        var formData = {
-            'action' : 'contactArtist',
-            'name' : $('#formName').val(),
-            'email' : $("#formEmail").val(),
-            'date' : $("#formTel").val(),
-            'lieu' : $("#formMessage").val()
-        };
-        $.ajax({
-            url: "includes/functions",
-            type: "POST",
-            data: formData,
-            dataType: 'json',
-            encode: true
-        })
-        .done(function(data){
-            console.log(formData);
-            console.log(data);
-
-            if(data.success){
-                console.log('EMAIL SEND');
-            }else{
-                console.log('EMAIL NOT SEND');
-            }
-        });
-        event.preventDefault();
-    });
-
     //CONTACT PAGE
     $('.email').append('<a href=\"mailto:contact@bicravart.com\">contact@bicravart.com</a>');
     $('#telNumb').append('06 04 05 09 84');
@@ -281,11 +252,13 @@ $(document).ready(function() {
     $('#entrepriseContact').submit(function(event){
         var formData = {
             'action' : 'contactEntreprise',
-            'name' : $('#formName').val(),
-            'email' : $("#formEmail").val(),
-            'date' : $("#formTel").val(),
-            'lieu' : $("#formMessage").val()
+            'name' : $('#formEntrepriseName').val(),
+            'email' : $("#formEntrepriseEmail").val(),
+            'tel' : $("#formEntrepriseTel").val(),
+            'message' : $("#formEntrepriseMessage").val()
         };
+        // console.log(formData);
+
         $.ajax({
             url: "includes/functions",
             type: "POST",
@@ -294,40 +267,54 @@ $(document).ready(function() {
             encode: true
         })
         .done(function(data){
-            console.log(formData);
-            console.log(data);
+            // console.log(formData);
+            // console.log(data);
 
             if(data.success){
-                console.log('EMAIL SEND');
+                // console.log('EMAIL SEND');
             }else{
-                console.log('EMAIL NOT SEND');
+                // console.log('EMAIL NOT SEND');
             }
         });
         event.preventDefault();
     });
 
-    //FB SHARE
-    // $('#share_button').click(function(event){
-    //     event.preventDefault();
-    //     var lien = 'http://bicravart.com/';
-    //     FB.ui({
-    //         method: 'share',
-    //         display: 'popup',
-    //         href: lien
-    //     }, function(response){});
-    //     // console.log(lien);
-    // });
-    // $.ajaxSetup({
-    //     cache: true
-    // });
-    // $.getScript('//connect.facebook.net/fr_FR/all.js', function() {
-    //     FB.init({
-    //         appId: '696716717101760',
-    //     });
-    //     FB.getLoginStatus(function() {
-    //         // console.log('Status updated!');
-    //     });
-    // });
+    //CONTACT ARTISTS ACTION
+    $('#sendForm').click(function(event){
+        $(this).data('clicked', true);
+        
+        if($('#sendForm').data('clicked')){
+            var formData = {
+                'action' : 'contactArtist',
+                'name' : $('#formArtistName').val(),
+                'email' : $("#formArtistEmail").val(),
+                'tel' : $("#formArtistTel").val(),
+                'message' : $("#formArtistMessage").val()
+            };
+            // console.log(formData);
+            $.ajax({
+                url: "includes/functions",
+                type: "POST",
+                data: formData,
+                dataType: 'json',
+                encode: true
+            })
+            .done(function(data){
+                // console.log(formData);
+                // console.log(data);
+
+                if(data.success){
+                    // console.log('EMAIL SEND');
+                }else{
+                    // console.log('EMAIL NOT SEND');
+                }
+            $('#formArtistName, #formArtistEmail, #formArtistTel, #formArtistMessage').val('');
+            });
+        }else{
+            // console.log('essaie encore bitch');
+        }
+        event.preventDefault();
+    });
 });
 
 // ANALITYCS

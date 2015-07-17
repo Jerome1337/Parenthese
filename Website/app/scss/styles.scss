@@ -576,13 +576,14 @@ footer{
                     height: 40px;
                     border-radius: 3px;
                     border: none;
+                    padding: 0 10px;
                 }
                 textarea{
                     width: 70%;
                     height: 110px;
                     border-radius: 3px;
                     border: none;
-
+                    padding: 10px;
                 }
             }
             .formSubmit{
@@ -660,6 +661,7 @@ footer{
 .faqContainer{
     padding: 100px 0;
     background: url('../img/faq_bg.jpg') no-repeat center fixed;
+    background-size: cover;
     h2{
         color: $grey;
         font-family: $RALSB;

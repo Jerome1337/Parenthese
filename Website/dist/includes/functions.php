@@ -140,68 +140,65 @@
 			&& !empty($_POST['message'])
 			)
 		{
-			$to = 'contact@bicravart.com';
-			$content = ''.$_POST['message'].'';
-			$subject = 'Nouvelle demande de contact - Bicrav\'Art';
-			$from = ''.$_POST['email'].'';
+			// $to = 'contact@bicravart.com';
+			// $content = ''.$_POST['message'].'';
+			// $subject = 'Nouvelle demande de contact - Bicrav\'Art';
+			// $from = ''.$_POST['email'].'';
 
-			$uri = 'https://mandrillapp.com/api/1.0/messages/send.json';
-			$api_key = 'CqVeM7kidO1ZIokj7MwgtQ';
-			$content_text = strip_tags($content);
+			// $uri = 'https://mandrillapp.com/api/1.0/messages/send.json';
+			// $api_key = 'CqVeM7kidO1ZIokj7MwgtQ';
+			// $content_text = strip_tags($content);
 
-			$postString = '{
-				"key": "' . $api_key . '",
-				"message": {
-				"html": "' . $content . '",
-				"text": "' . $content_text . '",
-				"subject": "' . $subject . '",
-				"from_email": "' . $from . '",
-				"from_name": "' . $from . '",
-				"to": [
-				{
-					"email": "' . $to . '",
-					"name": "' . $to . '"
-				}
-				],
-				"track_opens": true,
-				"track_clicks": true,
-				"auto_text": true,
-				"url_strip_qs": true,
-				"preserve_recipients": true
-				},
-				"async": false
-			}';
+			// $postString = '{
+			// 	"key": "' . $api_key . '",
+			// 	"message": {
+			// 	"html": "' . $content . '",
+			// 	"text": "' . $content_text . '",
+			// 	"subject": "' . $subject . '",
+			// 	"from_email": "' . $from . '",
+			// 	"from_name": "' . $from . '",
+			// 	"to": [
+			// 	{
+			// 		"email": "' . $to . '",
+			// 		"name": "' . $to . '"
+			// 	}
+			// 	],
+			// 	"track_opens": true,
+			// 	"track_clicks": true,
+			// 	"auto_text": true,
+			// 	"url_strip_qs": true,
+			// 	"preserve_recipients": true
+			// 	},
+			// 	"async": false
+			// }';
 
-			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, $uri);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
-			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-			curl_setopt($ch, CURLOPT_POST, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
-			$result = curl_exec($ch);
+			// $ch = curl_init();
+			// curl_setopt($ch, CURLOPT_URL, $uri);
+			// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
+			// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
+			// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+			// curl_setopt($ch, CURLOPT_POST, true);
+			// curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
+			// $result = curl_exec($ch);
 
 			$name = mysql_real_escape_string($_POST['name']);
 			$email = mysql_real_escape_string($_POST['email']);
-			$dateproj = mysql_real_escape_string($_POST['date']);
-			$lieu = mysql_real_escape_string($_POST['lieu']);
-			$description = mysql_real_escape_string($_POST['desc']);
+			$tel = mysql_real_escape_string($_POST['tel']);
+			$message = mysql_real_escape_string($_POST['message']);
 
 			$name = addcslashes($name, '%_');
 			$email = addcslashes($email, '%_');
-			$dateproj = addcslashes($dateproj, '%_');
-			$lieu = addcslashes($lieu, '%_');
-			$description = addcslashes($description, '%_');
+			$tel = addcslashes($tel, '%_');
+			$message = addcslashes($message, '%_');
 
 			$bdd = connect();
 
-			$req = $bdd->prepare('INSERT INTO entreprises (name, email, dateproj, lieu, description) VALUES (:name, :email, :dateproj, :lieu, :description)');
+			$req = $bdd->prepare('INSERT INTO contactArtist (name, email, tel, message) VALUES (:name, :email, :tel, :message)');
 			$req->execute(array(
 				'name' => $name,
 				'email' => $email,
-				'dateproj' => $dateproj,
-				'lieu' => $lieu,
-				'description' => $description
+				'tel' => $tel,
+				'message' => $message
 			));
 
 			$data['success'] = true;
@@ -221,68 +218,65 @@
 			)
 		{
 
-			$to = 'contact@bicravart.com';
-			$content = ''.$_POST['message'].'';
-			$subject = 'Nouvelle demande de contact - Bicrav\'Art';
-			$from = ''.$_POST['email'].'';
+			// $to = 'contact@bicravart.com';
+			// $content = ''.$_POST['message'].'';
+			// $subject = 'Nouvelle demande de contact - Bicrav\'Art';
+			// $from = ''.$_POST['email'].'';
 
-			$uri = 'https://mandrillapp.com/api/1.0/messages/send.json';
-			$api_key = 'CqVeM7kidO1ZIokj7MwgtQ';
-			$content_text = strip_tags($content);
+			// $uri = 'https://mandrillapp.com/api/1.0/messages/send.json';
+			// $api_key = 'CqVeM7kidO1ZIokj7MwgtQ';
+			// $content_text = strip_tags($content);
 
-			$postString = '{
-				"key": "' . $api_key . '",
-				"message": {
-				"html": "' . $content . '",
-				"text": "' . $content_text . '",
-				"subject": "' . $subject . '",
-				"from_email": "' . $from . '",
-				"from_name": "' . $from . '",
-				"to": [
-				{
-					"email": "' . $to . '",
-					"name": "' . $to . '"
-				}
-				],
-				"track_opens": true,
-				"track_clicks": true,
-				"auto_text": true,
-				"url_strip_qs": true,
-				"preserve_recipients": true
-				},
-				"async": false
-			}';
+			// $postString = '{
+			// 	"key": "' . $api_key . '",
+			// 	"message": {
+			// 	"html": "' . $content . '",
+			// 	"text": "' . $content_text . '",
+			// 	"subject": "' . $subject . '",
+			// 	"from_email": "' . $from . '",
+			// 	"from_name": "' . $from . '",
+			// 	"to": [
+			// 	{
+			// 		"email": "' . $to . '",
+			// 		"name": "' . $to . '"
+			// 	}
+			// 	],
+			// 	"track_opens": true,
+			// 	"track_clicks": true,
+			// 	"auto_text": true,
+			// 	"url_strip_qs": true,
+			// 	"preserve_recipients": true
+			// 	},
+			// 	"async": false
+			// }';
 
-			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, $uri);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
-			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-			curl_setopt($ch, CURLOPT_POST, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
-			$result = curl_exec($ch);
+			// $ch = curl_init();
+			// curl_setopt($ch, CURLOPT_URL, $uri);
+			// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
+			// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
+			// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+			// curl_setopt($ch, CURLOPT_POST, true);
+			// curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
+			// $result = curl_exec($ch);
 
 			$name = mysql_real_escape_string($_POST['name']);
 			$email = mysql_real_escape_string($_POST['email']);
-			$dateproj = mysql_real_escape_string($_POST['date']);
-			$lieu = mysql_real_escape_string($_POST['lieu']);
-			$description = mysql_real_escape_string($_POST['desc']);
+			$tel = mysql_real_escape_string($_POST['tel']);
+			$message = mysql_real_escape_string($_POST['message']);
 
 			$name = addcslashes($name, '%_');
 			$email = addcslashes($email, '%_');
-			$dateproj = addcslashes($dateproj, '%_');
-			$lieu = addcslashes($lieu, '%_');
-			$description = addcslashes($description, '%_');
+			$tel = addcslashes($tel, '%_');
+			$message = addcslashes($message, '%_');
 
 			$bdd = connect();
 
-			$req = $bdd->prepare('INSERT INTO entreprises (name, email, dateproj, lieu, description) VALUES (:name, :email, :dateproj, :lieu, :description)');
+			$req = $bdd->prepare('INSERT INTO contactEntreprise (name, email, tel, message) VALUES (:name, :email, :tel, :message)');
 			$req->execute(array(
 				'name' => $name,
 				'email' => $email,
-				'dateproj' => $dateproj,
-				'lieu' => $lieu,
-				'description' => $description
+				'tel' => $tel,
+				'message' => $message
 			));
 
 			$data['success'] = true;
