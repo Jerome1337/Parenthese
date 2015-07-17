@@ -14,17 +14,19 @@
             <?php include('includes/nav.php'); ?>
         </section>
         <section class="contactContainer">
-            <section class="row">
-                <div class="large-12 medium-12 small-12 columns">
-                    <h2>Quand vos projets artistiques deviennent une réalité</h2>
-                </div>
-                <h2>Pourquoi nous faire confiance ?</h2>
-            </section>
+            <div class="fond">
+                <section class="row">
+                    <div class="large-12 medium-12 small-12 columns">
+                        <h2>Quand vos projets artistiques deviennent une réalité</h2>
+                    </div>  
+                </section>
+            </div>
             <section>
                 <section class="row">
+                    <h2>Pourquoi nous faire confiance ?</h2>
                     <div class="large-6 medium-6 small-12 columns">
-                        <h3>Des artistes de qualités</h3>
-                        <p>Nos artistes sont minutieusement selectionné par nos soins. Nous plaçons les artistes en fonction de vos projets. Chaque projet étant unique, nous mettons un point d'honneur à vous offrir ce qu'il y'a de mieux.</p>
+                        <h3 class="text-right">Des artistes de qualités</h3>
+                        <p class="text-right">Nos artistes sont minutieusement selectionné par nos soins. Nous plaçons les artistes en fonction de vos projets. Chaque projet étant unique, nous mettons un point d'honneur à vous offrir ce qu'il y'a de mieux.</p>
                     </div>
                     <div class="large-6 medium-6 small-12 columns">
                         <div  class="pictos">
@@ -39,14 +41,14 @@
                         </div>
                     </div>
                     <div class="large-6 medium-6 small-12 columns">
-                        <h3>Des experts à votre écoute</h3>
-                        <p>Nos agents sont des experts reconnus dans le monde de l'art. Avec eux, vos projets deviennent réalités.Chaque projet est géré par un expert qui vous accompagne tout au long de votre projet.</p>
+                        <h3 class="text-left">Des experts à votre écoute</h3>
+                        <p class="text-left">Nos agents sont des experts reconnus dans le monde de l'art. Avec eux, vos projets deviennent réalités.Chaque projet est géré par un expert qui vous accompagne tout au long de votre projet.</p>
                     </div>  
                 </section>
                 <section class="row">
                     <div class="large-6 medium-6 small-12 columns">
-                        <h3>Des prestations adaptées</h3>
-                        <p>Chaque projet étant unique, nous adptons notre offre à votre demande. Nous pouvons réaliser de grand projet comme de petit projet.</p>
+                        <h3 class="text-right">Des prestations adaptées</h3>
+                        <p class="text-right">Chaque projet étant unique, nous adptons notre offre à votre demande. Nous pouvons réaliser de grand projet comme de petit projet.</p>
                     </div>
                     <div class="large-6 medium-6 small-12 columns">
                         <div class="pictos">

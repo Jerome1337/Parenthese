@@ -361,9 +361,9 @@ footer{
 }
 .devisContainer{
     //height: 317px;
-    background: url('../img/fond-graffeur-entreprise.jpg')no-repeat;
+    //background: url('../img/fond-graffeur-entreprise.jpg')no-repeat;
     background-size: cover;
-    padding-top: 360px;
+    padding-top: 200px;
     padding-bottom: 200px;
     .left{
         float: left;
@@ -375,8 +375,8 @@ footer{
             text-align: left;
         }
         img{
-            display: block;
-            float: left;
+            padding-bottom: 40px;
+            width: 100px;
         }
     }
     .right{
@@ -389,14 +389,15 @@ footer{
             text-align: right;
         }
         img{
-            display: block;
-            float: right;
+            padding-bottom: 40px;
+            width: 100px;
         }
     }
+
     div{
         text-align: center;
         button{
-            background-color: #F0B346;
+            background-color: $yellow;
             color: black;
             -webkit-border-radius: 3px;
             -moz-border-radius: 3px;
@@ -404,7 +405,7 @@ footer{
             text-align: center;
             font-family: $RALSB;
             &:hover{
-                color: #F0B346;
+                color: $yellow;
                 background-color: black;
             }
         }
@@ -432,14 +433,14 @@ footer{
     }
     button{
         text-align: center;
-        background-color: #F0B346;
+        background-color: $yellow;
         color: black;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
         font-family: $RALR;
         &:hover{
-            color: #F0B346;
+            color: $yellow;
             background-color: black;
         }
     } 
@@ -449,8 +450,20 @@ footer{
     background-size: cover!important;
     padding-top: 400px;
     padding-bottom: 400px;
+    .leftImg, .centerImg, .rightImg{
+        padding: 0;
+        .orange{
+            background: orange;
+            opacity: 0;
+        }
+        
+        &:hover .orange{
+            opacity:0.7;
+        }
+    }
+
     button{
-        background-color: #F0B346;
+        background-color: $yellow;
         color: black;
         text-align: center;
         -webkit-border-radius: 3px;
@@ -460,7 +473,7 @@ footer{
         margin : auto;
         font-family: $RALSB;
         &:hover{
-            color: #F0B346;
+            color: $yellow;
             background-color: black;
         }
     }
@@ -496,13 +509,25 @@ footer{
 .contactContainer{
     background-color: $lightgrey;
     font-family: $RALSB;
+    .text-left{
+        text-align: left;
+    }
+    .text-right{
+        text-align: right;
+    }
+
+    .fond{
+        background: url('../img/VisuMain.jpg');
+        height: 100%;
+        margin: 0;
+    }
     h2, h3{
         color: $black;
     }
     button{
         text-align: center;
         margin: 0;
-        background-color: #F0B346;
+        background-color: $yellow;
         color: black;
         text-align: center;
         -webkit-border-radius: 3px;
@@ -512,7 +537,7 @@ footer{
         margin : auto;
         font-family: $RALSB;
         &:hover{
-            color: #F0B346;
+            color: $yellow;
             background-color: black;
         }
     }
@@ -532,9 +557,12 @@ footer{
         margin-right: auto;
         -webkit-border-radius: 50%;
         border-radius: 50%;
-        background-color: #F0B346;
+        background-color: $yellow;
         width: 150px;
         height: 150px;
+        &:hover{
+            background-color: $white;
+        }
     }
     .pictos2{
         text-align: center;
@@ -542,9 +570,12 @@ footer{
         margin-right: auto;
         -webkit-border-radius: 50%;
         border-radius: 50%;
-        background-color: #F0B346;
+        background-color: $yellow;
         width: 150px;
         height: 150px;
+        &:hover{
+            background-color: $white;
+        }
     }
     .titleContainer{
         padding: 80px 0;

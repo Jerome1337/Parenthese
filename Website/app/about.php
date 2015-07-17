@@ -30,19 +30,19 @@
 	                    </div>
             		</div>
             		<div class="large-3 medium-3 small-12 columns">
-            			<img src="#" alt="like">
+                        <img src="img/0.svg" alt="">
             			<p>L'exigence des compétences <br>et du professionnalisme<br> auprès des graffeurs</p>
             		</div>
             		<div class="large-3 medium-3 small-12 columns">
-            			<img src="#" alt="telephone">
+            			<img src="img/0.svg" alt="telephone">
             			<p>Nous mettons à votre <br>disposition notre large <br>carnet d'adresse</p>
             		</div>
             		<div class="large-3 medium-3 small-12 columns">
-            			<img src="#" alt="graphic">
+            			<img src="img/0.svg" alt="graphic">
             			<p>Répondre au-delà de vos <br>attentes et penser <br>toujours plus loin</p>
             		</div>
             		<div class="large-3 medium-3 small-12 columns">
-            			<img src="#" alt="photo">
+            			<img src="img/0.svg" alt="photo">
             			<p>Travailler à vos côtés pour <br>que votre notoriété décolle</p>
             		</div>
             		<div class="large-12 medium-12 small-12 columns">
