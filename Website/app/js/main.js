@@ -290,7 +290,7 @@ $(document).ready(function() {
     $('#artistContact').submit(function(event){
 
         var isFormValid = true;
-        $(".required").each(function(){
+        $(".artistChamp").each(function(){
             if ($.trim($(this).val()).length == 0){
                 console.log('formulaire non valide');
                 $(this).addClass('emptyField');

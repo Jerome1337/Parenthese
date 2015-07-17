@@ -47,19 +47,19 @@
                             <legend>Formulaire contact de Bicravart</legend>
                             <div>
                                 <label for="formName">Nom* :</label>
-                                <input type="text" name="name" id="formArtistName" class="required">
+                                <input type="text" name="name" id="formArtistName" class="required artistChamp">
                             </div>
                             <div>
                                 <label for="formEmail">E-mail* :</label>
-                                <input type="email" name="email" id="formArtistEmail" class="required">
+                                <input type="email" name="email" id="formArtistEmail" class="required artistChamp">
                             </div>
                             <div>
                                 <label for="formTel">Téléphone* :</label>
-                                <input type="tel" name="tel" id="formArtistTel" class="required telInput">
+                                <input type="tel" name="tel" id="formArtistTel" class="required artistChamp telInput">
                             </div>
                             <div>
                                 <label for="formMessage">Message* :</label>
-                                <textarea cols="30" rows="10" name="message" id="formArtistMessage" class="required"></textarea>
+                                <textarea cols="30" rows="10" name="message" id="formArtistMessage" class="required artistChamp"></textarea>
                             </div>
                         </fieldset>
                         <button type="submit" class="formSubmit">Envoyer</button>
@@ -70,19 +70,19 @@
                             <legend>Formulaire contact de Bicravart</legend>
                             <div>
                                 <label for="formName">Entreprise* :</label>
-                                <input type="text" name="name" id="formEntrepriseName" class="required">
+                                <input type="text" name="name" id="formEntrepriseName" class="required entrepriseChamp">
                             </div>
                             <div>
                                 <label for="formEmail">E-mail* :</label>
-                                <input type="email" name="email" id="formEntrepriseEmail" class="required">
+                                <input type="email" name="email" id="formEntrepriseEmail" class="required entrepriseChamp">
                             </div>
                             <div>
                                 <label for="formTel">Téléphone* :</label>
-                                <input type="tel" name="tel" id="formEntrepriseTel" class="required telInput">
+                                <input type="tel" name="tel" id="formEntrepriseTel" class="required entrepriseChamp telInput">
                             </div>
                             <div>
                                 <label for="formMessage">Message* :</label>
-                                <textarea cols="30" rows="10"  name="message" id="formEntrepriseMessage" class="required"></textarea>
+                                <textarea cols="30" rows="10"  name="message" id="formEntrepriseMessage" class="required entrepriseChamp"></textarea>
                             </div>
                         </fieldset>
                         <button type="submit" class="formSubmit">Envoyer</button>
