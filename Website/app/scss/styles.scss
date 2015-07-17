@@ -106,59 +106,89 @@ $RALL: 'Raleway-light', Helvetica, sans-serif;
 
 
 // NAV
-.contain-to-grid{
-    .navBar {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: initial;
-        background-color: $grey;
-        z-index: 9999;
-        font-family: $RALR;
-        .title-area{
-            .name{
-                h1{
-                    a{
-                        img{
-                            width: 50%;
-                        }
+.navBar {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+    background-color: $grey;
+    z-index: 9999;
+    font-family: $RALR;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    display: block;
+    .title-area{
+        .name{
+            width: 200px;
+            h1{
+                a{
+                    width: 100%;
+                    padding: 0 0 0 1.77rem;
+                    img{
+                        width: 80%;
                     }
                 }
             }
         }
-        .top-bar-section{
-            ul{
-                background-color: $grey;
+    }
+    .top-bar-section{
+        background-color: $grey !important;
+        ul{
+            background-color: $grey !important;
+            &:hover{
+                color: $grey;
+            }
+            li{                
+                text-align: center;
+                vertical-align: middle;
+                color: $white;
+                font-family: $RALR;
+                text-decoration: none;
+                background-color: $grey !important;
                 &:hover{
+                    background-color: $yellow;
+                    color: $grey;
+                    a{
+                        background-color: $yellow;
+                        color: $grey; 
+                    }
+                }
+                a{
+                    font-family: $RALR;
+                    background-color: $grey !important;
+                    font-size: 1em;
+                    transition: ease-in-out all .5s;
+                    padding-left: 0;
+                    padding-right: 0; 
+                    &:hover{
+                        background-color: $yellow !important;
+                        color: $grey;
+                    }
+                }
+                .active{
+                    background-color: $yellow !important;
                     color: $grey;
                 }
-                li{                
-                    text-align: center;
-                    vertical-align: middle;
-                    color: $white;
-                    font-family: $RALR;
-                    text-decoration: none;
-                    background-color: $grey;
-                    &:hover{
-                        background-color: $yellow;
-                        color: $grey;
-                        a{
-                            background-color: $yellow;
-                            color: $grey; 
-                        }
-                    }
-                    a{
-                        font-family: $RALR;
-                        background-color: $grey;
-                        font-size: 1em;
-                        transition: ease-in-out all .5s;
-                        &:hover{
-                            background-color: $yellow;
-                            color: $grey;
-                        }
-                    }
-                    .active{
-                        background-color: $yellow;
-                        color: $grey;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1050px) {
+    .top-bar {
+        .toggle-topbar.menu-icon{
+            a{
+                span{
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        height: 0px;
+                        top: 50%;
+                        margin-top: -8px;
+                        right: 20px;
+                        box-shadow: 0px 0px 0px 1px white,0px 7px 0px 1px white,0px 14px 0px 1px white;
+                        width: 20px;
                     }
                 }
             }
@@ -584,6 +614,10 @@ footer{
                     border-radius: 3px;
                     border: none;
                     padding: 10px;
+                }
+                .emptyField{
+                    border: rgba(255, 0, 0, 0.5) 1px solid;
+                    box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.2);
                 }
             }
             .formSubmit{

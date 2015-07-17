@@ -279,7 +279,35 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
+    $(".telInput").keypress(function(e) {
+         if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+            $("#errmsg").html("Digits Only").show().fadeOut("slow");
+            return false;
+        }
+    });
+
     //CONTACT ARTISTS ACTION
+    $('#artistContact').submit(function(event){
+
+        var isFormValid = true;
+        $(".required").each(function(){
+            if ($.trim($(this).val()).length == 0){
+                console.log('formulaire non valide');
+                $(this).addClass('emptyField');
+                isFormValid = false;        
+            }
+            else{
+                console.log('formulaire valide');
+            }
+        });
+        if(!isFormValid){
+            console.log('tg');
+        }
+        else{
+            $('#formConfirm').foundation('reveal', 'open');
+        }
+        event.preventDefault();
+    });
     $('#sendForm').click(function(event){
         $(this).data('clicked', true);
         
