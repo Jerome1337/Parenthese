@@ -16,7 +16,7 @@
             <?php include('includes/nav.php'); ?>
         </section>
         <section class="contactContainer">
-            <section class="row">
+            <section class="row part1">
                 <h2>Coins des artistes</h2>
                 <div class="large-4 medium-4 small-12 columns">
                     <p>Monnayez votre art</p>
@@ -30,79 +30,79 @@
                     <p>Changez de vie</p>
                     <p>La vie d'artiste est a porté de bras. Il ne tiens qu'à vous vivre de votre passion.</p>
                 </div>
+                <button type="submit" id="formSubmit">INSCRIVEZ-VOUS</button>
             </section>
-            <button type="submit" id="formSubmit">INSCRIVEZ-VOUS</button>
             <section class="row">
                 <h2>Ils travaillent avec nous !</h2>
                 <section>
                     <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <img src="img/Ligne1Photo1.png" alt="Ligne 1 Photo 1">
                         <p>Tasr</p>
                     </div>
                     <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <img src="img/Ligne1Photo2.png" alt="Ligne 1 Photo 2">
                         <p>Tasr</p>
                     </div>
                     <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <img src="img/Ligne1Photo3.png" alt="Ligne 1 Photo 3">
                         <p>Tasr</p>
                     </div>
                     <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
-                        <p>Tasr</p>
-                    </div>
-                </section>
-                <section>
-                    <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
-                        <p>Tasr</p>
-                    </div>
-                    <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
-                        <p>Tasr</p>
-                    </div>
-                    <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
-                        <p>Tasr</p>
-                    </div>
-                    <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <img src="img/Ligne1Photo4.png" alt="Ligne 1 Photo 4">
                         <p>Tasr</p>
                     </div>
                 </section>
                 <section>
                     <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <img src="img/Ligne2Photo1.png" alt="Ligne 2 Photo 1">
                         <p>Tasr</p>
                     </div>
                     <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <img src="img/Ligne2Photo2.png" alt="Ligne 2 Photo 2">
                         <p>Tasr</p>
                     </div>
                     <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <img src="img/Ligne2Photo3.png" alt="Ligne 2 Photo 3">
                         <p>Tasr</p>
                     </div>
                     <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <img src="img/Ligne2Photo4.png" alt="Ligne 2 Photo 4">
                         <p>Tasr</p>
                     </div>
                 </section>
                 <section>
                     <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <img src="img/Ligne3Photo1.png" alt="Ligne 3 Photo 1">
                         <p>Tasr</p>
                     </div>
                     <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <img src="img/Ligne3Photo2.png" alt="Ligne 3 Photo 2">
                         <p>Tasr</p>
                     </div>
                     <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <img src="img/Ligne3Photo3.png" alt="Ligne 3 Photo 3">
                         <p>Tasr</p>
                     </div>
                     <div class="large-3 medium-6 small-12 columns">
-                        <img src="#" alt="#">
+                        <img src="img/Ligne3Photo4.png" alt="Ligne 3 Photo 4">
+                        <p>Tasr</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="img/Ligne4Photo1.png" alt="Ligne 4 Photo 1">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="img/Ligne4Photo2.png" alt="Ligne 4 Photo 2">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="img/Ligne4Photo3.png" alt="Ligne 4 Photo 3">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="img/Ligne4Photo4.png" alt="Ligne 4 Photo 4">
                         <p>Tasr</p>
                     </div>
                 </section>
