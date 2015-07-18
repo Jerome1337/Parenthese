@@ -471,7 +471,7 @@ label{
 .devisContainer{
     //height: 317px;
     //background: url('../img/fond-graffeur-entreprise.jpg')no-repeat;
-    background-size: cover;
+    background-color: #E1E1E1;
     padding-top: 200px;
     padding-bottom: 200px;
     .left{
@@ -527,8 +527,7 @@ label{
     }  
 }
 .feedContainer{
-    background: url('../img/fond-qui-sommes-nous.jpg');
-    background-size: cover;
+    background: #E1E1E1;
     padding-top: 400px;
     padding-bottom: 400px;  
     font-family: $RALR;
@@ -593,7 +592,7 @@ label{
     }
 }
 .descContainer{
-    background: url('../img/fond-pensent.jpg')no-repeat;
+    background: url('../img/fond-qui-sommes-nous.jpg');
     background-size: cover!important;
     padding-top: 400px;
     padding-bottom: 400px;
@@ -618,12 +617,12 @@ label{
 .contactContainer{
     background-color: $lightgrey;
     font-family: $RALSB;
-    // .text-left{
-    //     text-align: left;
-    // }
-    // .text-right{
-    //     text-align: right;
-    // }
+    .text-left{
+        text-align: left;
+    }
+    .text-right{
+        text-align: right;
+    }
 
     // .fond{
     //     background: url('../img/VisuMain.jpg');

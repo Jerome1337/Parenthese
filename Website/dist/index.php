@@ -52,6 +52,15 @@
                 <button type="submit" id="formSubmit">DECOUVREZ NOS REFERENCES</button>               
             </div>
         </section>
+        <section class="feedContainer">
+            <section class="row">
+                <div class="row fullWidth">
+                    <h3>Qui sommes-nous ?</h3>
+                    <p>Des artistes aux entreprises, Bicravart mise sur son équipe d'experts<br> pour offire le meilleur service qu'il soit, pour un accompagnement sur<br> le long et court termes. Avec Bicravart, monnayez votre art.</p>
+                    <a href="#"><button type="submit" id="formSubmit">DECOUVREZ L'AGENCE</button></a>
+                </div>
+            </section>
+        </section>
         <section class="descContainer">
             <section class="row">
                 <!-- <h3>Qui sommes-nous ?</h3> -->
@@ -60,15 +69,6 @@
                 </div>
                 <div class="large-6 medium-6 small-12 columns linkPart">
                     <a href="#" data-reveal-id="entreprisesModal">Ce que les entreprises<br> pensent de nous...</a>
-                </div>
-            </section>
-        </section>
-        <section class="feedContainer">
-            <section class="row">
-                <div class="row fullWidth">
-                    <h3>Qui sommes-nous ?</h3>
-                    <p>Des artistes aux entreprises, Bicravart mise sur son équipe d'experts<br> pour offire le meilleur service qu'il soit, pour un accompagnement sur<br> le long et court termes. Avec Bicravart, monnayez votre art.</p>
-                    <a href="#"><button type="submit" id="formSubmit">DECOUVREZ L'AGENCE</button></a>
                 </div>
             </section>
         </section>
