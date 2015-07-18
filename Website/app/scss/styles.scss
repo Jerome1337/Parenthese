@@ -597,6 +597,12 @@ label{
     background-size: cover!important;
     padding-top: 400px;
     padding-bottom: 400px;
+    .leftPic{
+        float: left;
+    }
+    .rightPic{
+        float: right;
+    }
     div{
         text-align: center;
     }
@@ -765,6 +771,9 @@ label{
     background: url('../img/faq_bg.jpg') no-repeat center fixed;
     background-size: cover;
     min-height: 100%;
+    div{
+        padding: 0;
+    }
     h3{
         color: $grey;
         font-family: $RALSB;
