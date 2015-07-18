@@ -77,7 +77,7 @@
 			&& !empty($_POST['lieu'])
 			&& !empty($_POST['desc']))
 		{
-			$to = ''.$_POST['email'].'';
+			$to = 'contact@bicravart.com';
 			$content = ''.$_POST['message'].'';
 			$subject = 'Nouvelle demande de contact - Bicrav\'Art';
 			$from = ''.$_POST['email'].'';
