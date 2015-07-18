@@ -106,59 +106,89 @@ $RALL: 'Raleway-light', Helvetica, sans-serif;
 
 
 // NAV
-.contain-to-grid{
-    .navBar {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: initial;
-        background-color: $grey;
-        z-index: 9999;
-        font-family: $RALR;
-        .title-area{
-            .name{
-                h1{
-                    a{
-                        img{
-                            width: 50%;
-                        }
+.navBar {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+    background-color: $grey;
+    z-index: 9999;
+    font-family: $RALR;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    display: block;
+    .title-area{
+        .name{
+            width: 200px;
+            h1{
+                a{
+                    width: 100%;
+                    padding: 0 0 0 1.77rem;
+                    img{
+                        width: 80%;
                     }
                 }
             }
         }
-        .top-bar-section{
-            ul{
-                background-color: $grey;
+    }
+    .top-bar-section{
+        background-color: $grey !important;
+        ul{
+            background-color: $grey !important;
+            &:hover{
+                color: $grey;
+            }
+            li{                
+                text-align: center;
+                vertical-align: middle;
+                color: $white;
+                font-family: $RALR;
+                text-decoration: none;
+                background-color: $grey !important;
                 &:hover{
+                    background-color: $yellow;
+                    color: $grey;
+                    a{
+                        background-color: $yellow;
+                        color: $grey; 
+                    }
+                }
+                a{
+                    font-family: $RALR;
+                    background-color: $grey !important;
+                    font-size: 1em;
+                    transition: ease-in-out all .5s;
+                    padding-left: 0;
+                    padding-right: 0; 
+                    &:hover{
+                        background-color: $yellow !important;
+                        color: $grey;
+                    }
+                }
+                .active{
+                    background-color: $yellow !important;
                     color: $grey;
                 }
-                li{                
-                    text-align: center;
-                    vertical-align: middle;
-                    color: $white;
-                    font-family: $RALR;
-                    text-decoration: none;
-                    background-color: $grey;
-                    &:hover{
-                        background-color: $yellow;
-                        color: $grey;
-                        a{
-                            background-color: $yellow;
-                            color: $grey; 
-                        }
-                    }
-                    a{
-                        font-family: $RALR;
-                        background-color: $grey;
-                        font-size: 1em;
-                        transition: ease-in-out all .5s;
-                        &:hover{
-                            background-color: $yellow;
-                            color: $grey;
-                        }
-                    }
-                    .active{
-                        background-color: $yellow;
-                        color: $grey;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1050px) {
+    .top-bar {
+        .toggle-topbar.menu-icon{
+            a{
+                span{
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        height: 0px;
+                        top: 50%;
+                        margin-top: -8px;
+                        right: 20px;
+                        box-shadow: 0px 0px 0px 1px white,0px 7px 0px 1px white,0px 14px 0px 1px white;
+                        width: 20px;
                     }
                 }
             }
@@ -361,9 +391,9 @@ footer{
 }
 .devisContainer{
     //height: 317px;
-    background: url('../img/fond-graffeur-entreprise.jpg')no-repeat;
+    //background: url('../img/fond-graffeur-entreprise.jpg')no-repeat;
     background-size: cover;
-    padding-top: 360px;
+    padding-top: 200px;
     padding-bottom: 200px;
     .left{
         float: left;
@@ -375,8 +405,8 @@ footer{
             text-align: left;
         }
         img{
-            display: block;
-            float: left;
+            padding-bottom: 40px;
+            width: 100px;
         }
     }
     .right{
@@ -389,14 +419,15 @@ footer{
             text-align: right;
         }
         img{
-            display: block;
-            float: right;
+            padding-bottom: 40px;
+            width: 100px;
         }
     }
+
     div{
         text-align: center;
         button{
-            background-color: #F0B346;
+            background-color: $yellow;
             color: black;
             -webkit-border-radius: 3px;
             -moz-border-radius: 3px;
@@ -404,7 +435,7 @@ footer{
             text-align: center;
             font-family: $RALSB;
             &:hover{
-                color: #F0B346;
+                color: $yellow;
                 background-color: black;
             }
         }
@@ -432,14 +463,14 @@ footer{
     }
     button{
         text-align: center;
-        background-color: #F0B346;
+        background-color: $yellow;
         color: black;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
         font-family: $RALR;
         &:hover{
-            color: #F0B346;
+            color: $yellow;
             background-color: black;
         }
     } 
@@ -449,8 +480,20 @@ footer{
     background-size: cover!important;
     padding-top: 400px;
     padding-bottom: 400px;
+    .leftImg, .centerImg, .rightImg{
+        padding: 0;
+        .orange{
+            background: orange;
+            opacity: 0;
+        }
+        
+        &:hover .orange{
+            opacity:0.7;
+        }
+    }
+
     button{
-        background-color: #F0B346;
+        background-color: $yellow;
         color: black;
         text-align: center;
         -webkit-border-radius: 3px;
@@ -460,7 +503,7 @@ footer{
         margin : auto;
         font-family: $RALSB;
         &:hover{
-            color: #F0B346;
+            color: $yellow;
             background-color: black;
         }
     }
@@ -495,12 +538,80 @@ footer{
 //CONTACT
 .contactContainer{
     background-color: $lightgrey;
+    font-family: $RALSB;
+    .text-left{
+        text-align: left;
+    }
+    .text-right{
+        text-align: right;
+    }
+
+    .fond{
+        background: url('../img/VisuMain.jpg');
+        height: 100%;
+        margin: 0;
+    }
+    h2, h3{
+        color: $black;
+    }
+    button{
+        text-align: center;
+        margin: 0;
+        background-color: $yellow;
+        color: black;
+        text-align: center;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        display: block;
+        margin : auto;
+        font-family: $RALSB;
+        &:hover{
+            color: $yellow;
+            background-color: black;
+        }
+    }
+    img{
+        width: 100px;
+        display: inline-block;
+        padding-top: 20px;
+    }
+    .reglage{
+        padding-top: 14px;
+        width: 100px;
+        display: inline-block;
+    }
+    .pictos{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background-color: $yellow;
+        width: 150px;
+        height: 150px;
+        &:hover{
+            background-color: $white;
+        }
+    }
+    .pictos2{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background-color: $yellow;
+        width: 150px;
+        height: 150px;
+        &:hover{
+            background-color: $white;
+        }
+    }
     .titleContainer{
         padding: 80px 0;
         background: url(../img/contact_bg.jpg)no-repeat fixed;
         background: cover;
         h2{
-            color: $grey;
             font-family: $RALSB;
             font-size: 2em;
             text-align: center;
@@ -508,19 +619,19 @@ footer{
     }
 
     .row{
+        text-align: center;
+        padding-top: 100px;
         .artistPart, .entreprisePart, .coordoneesPart{
             padding: 20px 0;
             background-color: $lightgrey;
             transition: ease-in-out all 0.5s;
             h3{
-                color: $grey;
                 text-align: center;
                 font-size: 1.2em;
                 font-family: $RALSB;
             }
             p{
                 text-align: center;
-                color: $grey;
                 font-family: "social";
                 font-size: 5em;
             }
@@ -555,7 +666,7 @@ footer{
             }
         }
         form{
-            margin: 0 auto;
+            margin: 0;
             padding: 0px;
             text-align:center;
             div{
@@ -584,6 +695,10 @@ footer{
                     border-radius: 3px;
                     border: none;
                     padding: 10px;
+                }
+                .emptyField{
+                    border: rgba(255, 0, 0, 0.5) 1px solid;
+                    box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.2);
                 }
             }
             .formSubmit{

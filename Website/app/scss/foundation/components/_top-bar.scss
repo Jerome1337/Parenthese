@@ -73,10 +73,11 @@ $topbar-menu-icon-color-toggled: $jumbo !default;
 $topbar-menu-icon-position: $opposite-direction !default; // Change to $default-float for a left menu icon
 
 // Transitions and breakpoint styles
-$topbar-transition-speed: 300ms !default;
+$topbar-transition-speed: 0ms !default;
 // Using rem-calc for the below breakpoint causes issues with top bar
-$topbar-breakpoint: #{lower-bound($medium-range)} !default; // Change to 9999px for always mobile layout
+$topbar-breakpoint: 1050px !default;  // Change to 9999px for always mobile layout
 $topbar-media-query: "#{$screen} and (min-width:#{lower-bound($topbar-breakpoint)})";
+// $topbar-media-query: $large-up;
 
 // Top-bar input styles
 $topbar-input-height: rem-calc(28) !default;
@@ -112,7 +113,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
     // to ensure width calculations work correctly.
     meta.foundation-mq-topbar {
       font-family: "/" + unquote($topbar-media-query) + "/";
-      width: $topbar-breakpoint;
+      width: $large-up;
     }
 
     /* Wrapped around .top-bar to contain to grid width */

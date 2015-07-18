@@ -17,7 +17,7 @@
                 <div id="player2" class="youtube-player"></div>
                 <div class="large-12 columns baseline">
                     <h2>"Monnayez votre art,<br> tout en gardant votre<br> annonymat"</h2>
-                    <p>Appuyez sur <span class="yellowZ">Z</span> pour <br> Commencer l'experience</p>
+                    <p>Appuyez sur <span class="yellowZ">X</span> pour <br> Commencer l'experience</p>
                     <img src="img/souris.png" alt="souris">
                 </div>
             </section>
@@ -32,23 +32,24 @@
         <section class="devisContainer">
             <div class="row fullWidth">
                 <div class="left large-6 columns">
-                    <img src="img/paint.png" alt="Pinceau">
+                    <img src="img/paint.svg" alt="Pinceau">
                     <p>Vous êtes un graffeur et vous souhaitez gagner de l'argent ? Vous souhaitez augmenter votre notoriété ? Enfin vous avez envie de vivre de votre art ? Ne perdez pas de temps, rejoignez-nous !</p>
                     <button type="submit" id="formSubmit">INSCRIVEZ-VOUS</button>
                 </div>
                 <div class="right large-6 columns">
-                    <img src="img/valise.png" alt="Valise">
+                    <img src="img/valise.svg" alt="Valise">
                     <p>Vous êtes une entreprise et vous avez un projet artistique ? Vous ne savez par où commencer ? Vous n'avez pas d'idées précises ? Décrivez-nous votre projet, nous pouvons vous aider !</p>
                     <button type="submit" id="formSubmit">DEMANDER UN<br>DEVIS</button>
                 </div>
             </div>
         </section>
         <section class="resultatContainer">
-            <div class="row fullWidth">
-                <div class="small-12 columns">
-                    <p>Nos résultats</p>
-                    <button type="submit" id="formSubmit">DECOUVREZ NOS REFERENCES</button>
-                </div>               
+            <div class="row fullWidth"> 
+                <p>Nos résultats</p>
+                <div class="leftImg orange large-4 columns"><img  src="img/01-grand.jpg" alt="Street Art"></div>
+                <div class="centerImg orange large-4 columns"><img src="img/02-grand.jpg" alt="Graff"></div>
+                <div class="rightImg orange large-4 columns"><img src="img/03-grand.jpg" alt="Art"></div>
+                <button type="submit" id="formSubmit">DECOUVREZ NOS REFERENCES</button>               
             </div>
         </section>
         <section class="descContainer">

@@ -1,5 +1,5 @@
-<div class="contain-to-grid sticky">
-    <nav class="top-bar navBar" data-topbar role="navigation" data-options="sticky_on: large">
+<!-- <div class="contain-to-grid sticky"> -->
+    <nav class="top-bar navBar" data-topbar role="navigation">
         <ul class="title-area">
             <li class="name">
                 <h1><a href="index.php"><img src="img/bicravart-blanc.png" alt="Logo Bicravart"></a></h1>
@@ -16,4 +16,4 @@
             </ul>
         </section>
     </nav>
-</div>
+<!-- </div> -->

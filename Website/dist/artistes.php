@@ -17,64 +17,99 @@
         </section>
         <section class="contactContainer">
             <section class="row">
+                <h2>Coins des artistes</h2>
                 <div class="large-4 medium-4 small-12 columns">
                     <p>Monnayez votre art</p>
-                    <p>Avec ses milliers de contrats, Bicravart vous permet de vous faire de l'argent tout en pratiquant votre art.</p> 
+                    <p>Votre talent et votre créativité mérite salaire. Les futurs contrats vous attendent.</p> 
                 </div>
                 <div class="large-4 medium-4 small-12 columns">
                     <p>Gagnez en visibilité</p>
-                    <p>De nombreux grands groupes et multinationales ont déjà travailler avec nous. Avec Bicravart, prennez part à de grands projets !</p>
+                    <p>Travaillez pour les plus grandes entreprises avec votre identité graphique.</p>
                 </div>
                 <div class="large-4 medium-4 small-12 columns">
                     <p>Changez de vie</p>
-                    <p>Vous souhaitez vivre uniquement de votre passion ? N'attendez plus, avec notre aide, oubliez votre ancienne, vivez la vie de bicravart !</p>
+                    <p>La vie d'artiste est a porté de bras. Il ne tiens qu'à vous vivre de votre passion.</p>
                 </div>
             </section>
+            <button type="submit" id="formSubmit">INSCRIVEZ-VOUS</button>
             <section class="row">
                 <h2>Ils travaillent avec nous !</h2>
                 <section>
-                    <div class="large-8 medium-6 small-12 columns">
+                    <div class="large-3 medium-6 small-12 columns">
                         <img src="#" alt="#">
                         <p>Tasr</p>
                     </div>
-                    <div class="large-4 medium-6 small-12 columns">
+                    <div class="large-3 medium-6 small-12 columns">
                         <img src="#" alt="#">
                         <p>Tasr</p>
                     </div>
-                </section>
-                <section>
-                    <div class="large-4 medium-6 small-12 columns">
+                    <div class="large-3 medium-6 small-12 columns">
                         <img src="#" alt="#">
                         <p>Tasr</p>
                     </div>
-                    <div class="large-8 medium-6 small-12 columns">
-                        <img src="#" alt="#">
-                        <p>Tasr</p>
-                    </div>
-                </section>
-                <section>
-                    <div class="large-8 medium-6 small-12 columns">
-                        <img src="#" alt="#">
-                        <p>Tasr</p>
-                    </div>
-                    <div class="large-4 medium-6 small-12 columns">
+                    <div class="large-3 medium-6 small-12 columns">
                         <img src="#" alt="#">
                         <p>Tasr</p>
                     </div>
                 </section>
                 <section>
-                    <div class="large-4 medium-6 small-12 columns">
+                    <div class="large-3 medium-6 small-12 columns">
                         <img src="#" alt="#">
                         <p>Tasr</p>
                     </div>
-                    <div class="large-8 medium-6 small-12 columns">
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
+                        <img src="#" alt="#">
+                        <p>Tasr</p>
+                    </div>
+                    <div class="large-3 medium-6 small-12 columns">
                         <img src="#" alt="#">
                         <p>Tasr</p>
                     </div>
                 </section>
             </section>
             <section class="row">
-                <h2>Rejoignez-nous !</h2>
+                <h2>Devenez un artiste</h2>
+                <h3>Pour participer à de grand projets, remplissez le formulaire.</h3>
                 <div class="large-8 medium-8 small-12 columns contactPart">
                     <form method="post" id="formGraffeur">
                         <fieldset>
