@@ -6,6 +6,8 @@
     $onglet_actif = "entreprises";
     $page = "entreprises";
     $pageTitle = "Entreprises";
+    $modalMessage = "Merci, votre demande de devis a bien été prise en compte.";
+
     include('includes/head.php');
     ?>
     <body>
@@ -17,7 +19,7 @@
             <div class="fond">
                 <section class="row">
                     <div class="large-12 medium-12 small-12 columns">
-                        <h2>Quand vos projets artistiques deviennent une réalité</h2>
+                        <h2><img src="img/contactez-nous.png" alt="Contacter nous image"></h2>
                     </div>  
                 </section>
             </div>
@@ -60,33 +62,86 @@
             <section class="row">
                 <h2>Votre projet nous intéresse</h2>
                 <div class="large-8 medium-8 small-12 columns contactPart">
-                    <form method="post" id="formDevis">
+<!--                     <form method="post" id="formDevis">
                         <fieldset>
                             <legend>Formulaire d'envoie de devis de Bicrav'art</legend>
                             <div>
                                 <label for="formName">Nom de l'entreprise* :</label>
-                                <input type="text" placeholder="Nom de l'entreprise" name="name" id="formName">
+                                <input type="text" placeholder="Nom de l'entreprise" name="name" id="formName" class="required devisChamp">
                             </div>
                             <div>
                                 <label for="formEmail">E-Mail :</label>
-                                <input type="email" placeholder="E-mail" name="email" id="formEmail">
+                                <input type="email" placeholder="E-mail" name="email" id="formEmail" class="required devisChamp">
                             </div>
                             <div>
                                 <label for="formDate">Date du projet* :</label>
-                                <input type="date" placeholder="Date du projet" name="date" id="formDate">
+                                <input type="date" placeholder="Date du projet" name="date" id="formDate" class="required devisChamp">
                             </div>
                             <div>
                                 <label for="formLieu">Lieu de création* :</label>
-                                <input type="text" placeholder="Ex : Paris, 5 rue Saint Augustin" name="lieu" id="formLieu">
+                                <input type="text" placeholder="Ex : Paris, 5 rue Saint Augustin" name="lieu" id="formLieu" class="required devisChamp">
                             </div>
                             <div>
                                 <label for="formDesc">Description du projet :</label>
-                                <textarea cols="30" rows="10" placeholder="Décrivez-nous votre projet, vos envies, vos attentes." name="description" id="formDesc"></textarea>
+                                <textarea cols="30" rows="10" placeholder="Décrivez-nous votre projet, vos envies, vos attentes." name="description" id="formDesc" class="required devisChamp"></textarea>
                             </div>
-                            <button type="submit" id="formSubmit">Envoyer</button>
                         </fieldset>
+                        <button type="submit" id="formSubmit">Envoyer</button>
+                    </form> -->
+
+                    <form method="post" id="formDevis" class="forms">
+                        <fieldset>
+                            <legend>Formulaire d'envoie de devis de Bicravart</legend>
+                            <div class="row">
+                                <div class="small-12 columns">
+                                    <div class="row fieldContainer">
+                                        <div class="small-12 medium-3 large-3 columns labelContainer">
+                                            <label for="right-label" class="right inline">Entreprise*</label>
+                                        </div>
+                                        <div class="small-12 medium-6 large-4 columns champContainer">
+                                            <input type="text" id="right-label" name="name" class="required devisChamp formName">
+                                        </div>
+                                    </div>
+                                    <div class="row fieldContainer">
+                                        <div class="small-12 medium-3 large-3 columns labelContainer">
+                                            <label for="right-label" class="right inline">E-mail*</label>
+                                        </div>
+                                        <div class="small-12 medium-6 large-4 columns champContainer">
+                                            <input type="email" id="right-label" name="email" class="required devisChamp formEmail">
+                                        </div>
+                                    </div>
+                                    <div class="row fieldContainer">
+                                        <div class="small-12 medium-3 large-3 columns labelContainer">
+                                            <label for="right-label" class="right inline">Date du projet*</label>
+                                        </div>
+                                        <div class="small-12 medium-6 large-4 columns champContainer">
+                                            <input type="date" id="right-label" name="date" class="required devisChamp telInput formDate">
+                                        </div>
+                                    </div>
+                                    <div class="row fieldContainer">
+                                        <div class="small-12 medium-3 large-3 columns labelContainer">
+                                            <label for="right-label" class="right inline">Lieu de création*</label>
+                                        </div>
+                                        <div class="small-12 medium-8 large-6 columns champContainer">
+                                            <input type="text" name="lieu" id="right-label" placeholder="Ex : Paris, 5 rue Saint Augustin"  class="required devisChamp formLieu">
+                                        </div>
+                                    </div>
+                                    <div class="row fieldContainer">
+                                        <div class="small-12 medium-3 large-3 columns labelContainer">
+                                            <label for="right-label" class="right inline">Description du projet*</label>
+                                        </div>
+                                        <div class="small-12 medium-8 large-6 columns champContainer">
+                                            <textarea cols="30" rows="10"  name="description" placeholder="Décrivez-nous votre projet, vos envies, vos attentes." id="right-label" class="required devisChamp formDesc"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="formSubmit">Envoyer</button>
+                        <p class="obg">*Champs obligatoires</p>
                     </form>
                 </div>
+                <?php include('includes/modals.php'); ?>
             </section>
         </section>
         <?php include('includes/footer.php'); ?>

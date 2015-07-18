@@ -130,90 +130,150 @@ $(document).ready(function() {
 
     //ADD GRAFFEUR ACTION
     $('#formGraffeur').submit(function(event){
-        var formData = {
-            'action' : 'graffeur',
-            'name' : $('#formName').val(),
-            'age' : $('#formAge').val(),
-            'tel' : $("#formTel").val(),
-            'email' : $("#formEmail").val(),
-            'website' : $("#formWebsite").val(),
-            'competences' : $("#formComp").val(),
-            'salaire' : $("#formSal").val()
-        };
-        // console.log(formData);
 
-        $.ajax({
-            url: "includes/functions",
-            type: "POST",
-            data: formData,
-            dataType: 'json',
-            encode: true
-        })
-        .done(function(data){
-            // console.log(formData);
-            // console.log(data);
-
-            if(data.success){
-                // console.log('GRAFFEUR ADDED');
-            }else{
-                // console.log('FAIL');
+        var isFormValid = true;
+        $(".graffeurChamp").each(function(){
+            if ($.trim($(this).val()).length == 0){
+                // console.log('formulaire non valide');
+                $(this).addClass('emptyField');
+                isFormValid = false;        
+            }
+            else{
+                // console.log('formulaire valide');
             }
         });
+        if(!isFormValid){
+            // console.log('tg');
+        }
+        else{
+            $('#formConfirm').foundation('reveal', 'open');
+        }
+        event.preventDefault();
+    });
+    $('#sendForm').click(function(event){
+        $(this).data('clicked', true);
+        
+        if($('#sendForm').data('clicked')){
+            var formData = {
+                'action' : 'graffeur',
+                'name' : $('.formName').val(),
+                'age' : $('.formAge').val(),
+                'tel' : $(".formTel").val(),
+                'email' : $(".formEmail").val(),
+                'website' : $(".formWebsite").val(),
+                'competences' : $(".formComp").val(),
+                'salaire' : $(".formSal").val()
+            };
+            // console.log(formData);
+
+            $.ajax({
+                url: "includes/functions",
+                type: "POST",
+                data: formData,
+                dataType: 'json',
+                encode: true
+            })
+            .done(function(data){
+                // console.log(formData);
+                // console.log(data);
+
+                if(data.success){
+                    // console.log('GRAFFEUR ADDED');
+                }else{
+                    // console.log('FAIL');
+                }
+                $('.formName, .formAge, .formTel, .formEmail, .formComp, .formSal').val('');
+                $('.formWebsite').val('http://');
+            });
+        }else{
+            // console.log('essaie encore bitch');
+        }
         event.preventDefault();
     });
 
     //ADD + EMAIL DEVIS ACTION
     $('#formDevis').submit(function(event){
-        var formData = {
-            'action' : 'devis',
-            'name' : $('#formName').val(),
-            'email' : $("#formEmail").val(),
-            'date' : $("#formDate").val(),
-            'lieu' : $("#formLieu").val(),
-            'desc' : $("#formDesc").val()
-        };
-        $.ajax({
-            url: "includes/functions",
-            type: "POST",
-            data: formData,
-            dataType: 'json',
-            encode: true
-        })
-        .done(function(data){
-            // console.log(formData);
-            // console.log(data);
 
-            if(data.success){
-                // console.log('EMAIL SEND');
-            }else{
-                // console.log('EMAIL NOT SEND');
+        var isFormValid = true;
+        $(".devisChamp").each(function(){
+            if ($.trim($(this).val()).length == 0){
+                // console.log('formulaire non valide');
+                $(this).addClass('emptyField');
+                isFormValid = false;        
+            }
+            else{
+                // console.log('formulaire valide');
             }
         });
+        if(!isFormValid){
+            // console.log('tg');
+        }
+        else{
+            $('#formConfirm').foundation('reveal', 'open');
+        }
+        event.preventDefault();
+    });
+    $('#sendForm').click(function(event){
+        $(this).data('clicked', true);
+        
+        if($('#sendForm').data('clicked')){
+            var formData = {
+                'action' : 'devis',
+                'name' : $('.formName').val(),
+                'email' : $(".formEmail").val(),
+                'date' : $(".formDate").val(),
+                'lieu' : $(".formLieu").val(),
+                'desc' : $(".formDesc").val()
+            };
+            $.ajax({
+                url: "includes/functions",
+                type: "POST",
+                data: formData,
+                dataType: 'json',
+                encode: true
+            })
+            .done(function(data){
+                // console.log(formData);
+                // console.log(data);
+
+                if(data.success){
+                    // console.log('EMAIL SEND');
+                }else{
+                    // console.log('EMAIL NOT SEND');
+                }
+                $('.devisChamp').val('');
+            });
+        }else{
+            // console.log('essaie encore bitch');
+        }
         event.preventDefault();
     });
 
     //CONTACT PAGE
     $('.email').append('<a href=\"mailto:contact@bicravart.com\">contact@bicravart.com</a>');
-    $('#telNumb').append('06 04 05 09 84');
+    $('#telNumb').append('<a href=\"tel:06 04 05 09 84\">06 04 05 09 84</a>');
     $('#entrepriseContact, .coordoneesSec').hide();
-    $('.artistPart').addClass('active');
+    $('.artistPart p').addClass('active');
 
     $('.artistPart').click(function(){
         $('#entrepriseContact, .coordoneesSec').hide();
         $('#artistContact').show();
-        $(this).addClass('active').siblings().removeClass('active');
+        $('.artistPart p').addClass('active')
+        $('.entreprisePart p, .coordoneesPart p').removeClass('active');
     });
 
     $('.entreprisePart').click(function(){
         $('#artistContact, .coordoneesSec').hide();
         $('#entrepriseContact').show();
-        $(this).addClass('active').siblings().removeClass('active');
+        $('.entreprisePart p').addClass('active')
+        $('.artistPart p, .coordoneesPart p').removeClass('active');
     });
 
     $('.coordoneesPart').click(function(){
         $('#artistContact, #entrepriseContact').hide();
         $('.coordoneesSec').show();
-        $(this).addClass('active').siblings().removeClass('active');
+        $('.coordoneesPart p').addClass('active')
+        $('.artistPart p, .entreprisePart p').removeClass('active');
     });
 
     $("#select").change(function() {
@@ -232,65 +292,16 @@ $(document).ready(function() {
         }
     });
 
-    var onMapMouseleaveHandler = function (event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-
-    var onMapClickHandler = function (event) {
-        var that = $(this);
-        that.off('click', onMapClickHandler);
-        that.find('iframe').css("pointer-events", "auto");
-        that.on('mouseleave', onMapMouseleaveHandler);
-    }
-    $('.gmap').on('click', onMapClickHandler);
-
+    $('.gmap iframe').css("pointer-events", "none");
+    $('.gmap iframe').on('click', function(){
+        $(this).css("pointer-events", "auto");
+    });
 
     //CONTACT ENTREPRISE ACTION
     $('#entrepriseContact').submit(function(event){
-        var formData = {
-            'action' : 'contactEntreprise',
-            'name' : $('#formEntrepriseName').val(),
-            'email' : $("#formEntrepriseEmail").val(),
-            'tel' : $("#formEntrepriseTel").val(),
-            'message' : $("#formEntrepriseMessage").val()
-        };
-        // console.log(formData);
-
-        $.ajax({
-            url: "includes/functions",
-            type: "POST",
-            data: formData,
-            dataType: 'json',
-            encode: true
-        })
-        .done(function(data){
-            // console.log(formData);
-            // console.log(data);
-
-            if(data.success){
-                // console.log('EMAIL SEND');
-            }else{
-                // console.log('EMAIL NOT SEND');
-            }
-        });
-        event.preventDefault();
-    });
-
-    $(".telInput").keypress(function(e) {
-         if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-            $("#errmsg").html("Digits Only").show().fadeOut("slow");
-            return false;
-        }
-    });
-
-    //CONTACT ARTISTS ACTION
-    $('#artistContact').submit(function(event){
 
         var isFormValid = true;
-        $(".artistChamp").each(function(){
+        $(".entrepriseChamp").each(function(){
             if ($.trim($(this).val()).length == 0){
                 console.log('formulaire non valide');
                 $(this).addClass('emptyField');
@@ -313,11 +324,70 @@ $(document).ready(function() {
         
         if($('#sendForm').data('clicked')){
             var formData = {
+                'action' : 'contactEntreprise',
+                'name' : $('.formEntrepriseName').val(),
+                'email' : $(".formEntrepriseEmail").val(),
+                'tel' : $(".formEntrepriseTel").val(),
+                'message' : $(".formEntrepriseMessage").val()
+            };
+            // console.log(formData);
+
+            $.ajax({
+                url: "includes/functions",
+                type: "POST",
+                data: formData,
+                dataType: 'json',
+                encode: true
+            })
+            .done(function(data){
+                // console.log(formData);
+                // console.log(data);
+
+                if(data.success){
+                    // console.log('EMAIL SEND');
+                }else{
+                    // console.log('EMAIL NOT SEND');
+                }
+                $('.formEntrepriseName, .formEntrepriseEmail, .formEntrepriseTel, .formEntrepriseMessage').val('');
+            });
+        }else{
+            // console.log('essaie encore bitch');
+        }
+        event.preventDefault();
+    });
+
+    //CONTACT ARTISTS ACTION
+    $('#artistContact').submit(function(event){
+
+        var isFormValid = true;
+        $(".artistChamp").each(function(){
+            if ($.trim($(this).val()).length == 0){
+                // console.log('formulaire non valide');
+                $(this).addClass('emptyField');
+                isFormValid = false;        
+            }
+            else{
+                // console.log('formulaire valide');
+            }
+        });
+        if(!isFormValid){
+            // console.log('tg');
+        }
+        else{
+            $('#formConfirm').foundation('reveal', 'open');
+        }
+        event.preventDefault();
+    });
+    $('#sendForm').click(function(event){
+        $(this).data('clicked', true);
+        
+        if($('#sendForm').data('clicked')){
+            var formData = {
                 'action' : 'contactArtist',
-                'name' : $('#formArtistName').val(),
-                'email' : $("#formArtistEmail").val(),
-                'tel' : $("#formArtistTel").val(),
-                'message' : $("#formArtistMessage").val()
+                'name' : $('.formArtistName').val(),
+                'email' : $(".formArtistEmail").val(),
+                'tel' : $(".formArtistTel").val(),
+                'message' : $(".formArtistMessage").val()
             };
             // console.log(formData);
             $.ajax({
@@ -336,13 +406,26 @@ $(document).ready(function() {
                 }else{
                     // console.log('EMAIL NOT SEND');
                 }
-            $('#formArtistName, #formArtistEmail, #formArtistTel, #formArtistMessage').val('');
+            $('.formArtistName, .formArtistEmail, .formArtistTel, .formArtistMessage').val('');
             });
         }else{
             // console.log('essaie encore bitch');
         }
         event.preventDefault();
     });
+    
+    $('#endForm').click(function(){
+        $(this).foundation('reveal', 'close');
+    });
+
+    // BLOCK NUMBER TEL INPUT
+    $(".telInput").keypress(function(e) {
+         if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+            $("#errmsg").html("Digits Only").show().fadeOut("slow");
+            return false;
+        }
+    });
+
 });
 
 // ANALITYCS
@@ -353,4 +436,3 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-64742742-1', 'auto');
 ga('send', 'pageview');
-

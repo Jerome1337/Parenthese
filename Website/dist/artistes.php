@@ -7,6 +7,7 @@
     $onglet_actif = "artistes";
     $page = "artistes";
     $pageTitle = "Artistes";
+    $modalMessage = "Merci, votre inscription à bien été prise en compte.";
 
     include('includes/head.php');
     ?>
@@ -116,36 +117,37 @@
                             <legend>Formulaire d'inscription de Bicrav'art</legend>
                             <div>
                                 <label for="formName">Prénom ou Pseudo* :</label>
-                                <input type="text" placeholder="Prénom ou Pseudo" name="name" id="formName">
+                                <input type="text" placeholder="Prénom ou Pseudo" name="name" id="formName" class="required graffeurChamp">
                             </div>
                             <div>
                                 <label for="formAge">Age :</label>
-                                <input type="number" placeholder="Age" name="age" id="formAge">
+                                <input type="number" placeholder="Age" name="age" id="formAge" class="required graffeurChamp">
                             </div>
                             <div>
                                 <label for="formTel">Téléphone* :</label>
-                                <input type="tel" placeholder="Téléphone" name="tel" id="formTel">
+                                <input type="tel" placeholder="Téléphone" name="tel" id="formTel" class="required graffeurChamp telInput">
                             </div>
                             <div>
                                 <label for="formEmail">E-Mail :</label>
-                                <input type="email" placeholder="E-mail" name="email" id="formEmail">
+                                <input type="email" placeholder="E-mail" name="email" id="formEmail" class="required graffeurChamp">
                             </div>
                             <div>
                                 <label for="formWebsite">Site Internet :</label>
-                                <input type="url" placeholder="Site internet" value="http://" name="website" id="formWebsite">
+                                <input type="url" placeholder="Site internet" value="http://" name="website" id="formWebsite" class="required graffeurChamp">
                             </div>
                             <div>
                                 <label for="formComp">Compétences :</label>
-                                <input type="text" placeholder="Compétences" name="competences" id="formComp">
+                                <input type="text" placeholder="Compétences" name="competences" id="formComp" class="required graffeurChamp">
                             </div>
                             <div>
                                 <label for="formSal">Taux horaire :</label>
-                                <input type="number" placeholder="Taux Horaire" name="Sal" id="formSal">
+                                <input type="number" placeholder="Taux Horaire" name="Sal" id="formSal" class="required graffeurChamp">
                             </div>
-                            <button type="submit" id="formSubmit">Envoyer</button>
                         </fieldset>
+                        <button type="submit" id="formSubmit">Envoyer</button>
                     </form>
                 </div>
+                <?php include('includes/modals.php'); ?>
             </section>
         </section>
         <?php include('includes/footer.php'); ?>
