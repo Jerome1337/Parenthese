@@ -7,7 +7,6 @@
     $page = "entreprises";
     $pageTitle = "Entreprises";
     $modalMessage = "Merci, votre demande de devis a bien été prise en compte.";
-
     include('includes/head.php');
     ?>
     <body>
@@ -15,14 +14,10 @@
             <!-- INCLUDE NAV BAR -->
             <?php include('includes/nav.php'); ?>
         </section>
-        <section class="contactContainer">
-            <div class="fond">
-                <section class="row">
-                    <div class="large-12 medium-12 small-12 columns">
-                        <h2><img src="img/contactez-nous.png" alt="Contacter nous image"></h2>
-                    </div>  
-                </section>
-            </div>
+        <section class="entrepriseContainer underNav">
+            <section class="row fullWidth titleContainer">
+                <h2><img src="img/entreprises/espace-entreprise.png" alt="Image du titre de la page entreprises"></h2>
+            </section>
             <section>
                 <section class="row">
                     <h2>Pourquoi nous faire confiance ?</h2>
@@ -32,20 +27,20 @@
                     </div>
                     <div class="large-6 medium-6 small-12 columns">
                         <div  class="pictos">
-                            <img src="img/badge.svg" alt="Badge">
+                            <!-- <img src="img/badge.svg" alt="Badge"> -->
                         </div>
                     </div>
                 </section>
                 <section class="row">
                     <div class="large-6 medium-6 small-12 columns">
                         <div  class="pictos2">
-                            <img src="img/main.svg" alt="Mains">
+                            <!-- <img src="img/main.svg" alt="Mains"> -->
                         </div>
                     </div>
                     <div class="large-6 medium-6 small-12 columns">
                         <h3 class="text-left">Des experts à votre écoute</h3>
                         <p class="text-left">Nos agents sont des experts reconnus dans le monde de l'art. Avec eux, vos projets deviennent réalités.Chaque projet est géré par un expert qui vous accompagne tout au long de votre projet.</p>
-                    </div>  
+                    </div>
                 </section>
                 <section class="row">
                     <div class="large-6 medium-6 small-12 columns">
@@ -54,41 +49,15 @@
                     </div>
                     <div class="large-6 medium-6 small-12 columns">
                         <div class="pictos">
-                            <img class="reglage" src="img/reglage.svg" alt="reglage">
+                            <!-- <img class="reglage" src="img/reglage.svg" alt="reglage"> -->
                         </div>
                     </div>
                 </section>
             </section>
             <section class="row">
                 <h2>Votre projet nous intéresse</h2>
-                <div class="large-8 medium-8 small-12 columns contactPart">
-<!--                     <form method="post" id="formDevis">
-                        <fieldset>
-                            <legend>Formulaire d'envoie de devis de Bicrav'art</legend>
-                            <div>
-                                <label for="formName">Nom de l'entreprise* :</label>
-                                <input type="text" placeholder="Nom de l'entreprise" name="name" id="formName" class="required devisChamp">
-                            </div>
-                            <div>
-                                <label for="formEmail">E-Mail :</label>
-                                <input type="email" placeholder="E-mail" name="email" id="formEmail" class="required devisChamp">
-                            </div>
-                            <div>
-                                <label for="formDate">Date du projet* :</label>
-                                <input type="date" placeholder="Date du projet" name="date" id="formDate" class="required devisChamp">
-                            </div>
-                            <div>
-                                <label for="formLieu">Lieu de création* :</label>
-                                <input type="text" placeholder="Ex : Paris, 5 rue Saint Augustin" name="lieu" id="formLieu" class="required devisChamp">
-                            </div>
-                            <div>
-                                <label for="formDesc">Description du projet :</label>
-                                <textarea cols="30" rows="10" placeholder="Décrivez-nous votre projet, vos envies, vos attentes." name="description" id="formDesc" class="required devisChamp"></textarea>
-                            </div>
-                        </fieldset>
-                        <button type="submit" id="formSubmit">Envoyer</button>
-                    </form> -->
-
+                <p>Décrivez votre projet pour que nous puissions vous trouvez le meilleur graffeur.</p>
+                <div class="small-12 columns contactPart">
                     <form method="post" id="formDevis" class="forms">
                         <fieldset>
                             <legend>Formulaire d'envoie de devis de Bicravart</legend>

@@ -972,3 +972,18 @@ label{
         }
     }
 }
+
+// ENTREPRISE
+.entrepriseContainer{
+    background-color: $lightgrey; 
+    .titleContainer{
+        padding: 40px 0;
+        text-align: center;
+        h2{
+            img{
+                width: 180px;
+                padding: 0;
+            }
+        }
+    }
+}
