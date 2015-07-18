@@ -32,17 +32,34 @@
 			&& !empty($_POST['salaire'])
 			)
 		{
+
+			$name = mysql_real_escape_string($_POST['name']);
+			$age = mysql_real_escape_string($_POST['age']);
+			$tel = mysql_real_escape_string($_POST['tel']);
+			$email = mysql_real_escape_string($_POST['email']);
+			$website = mysql_real_escape_string($_POST['website']);
+			$competences = mysql_real_escape_string($_POST['competences']);
+			$salaire = mysql_real_escape_string($_POST['salaire']);
+
+			$name = addcslashes($name, '%_');
+			$age = addcslashes($age, '%_');
+			$tel = addcslashes($tel, '%_');
+			$email = addcslashes($email, '%_');
+			$website = addcslashes($website, '%_');
+			$competences = addcslashes($competences, '%_');
+			$salaire = addcslashes($salaire, '%_');
+
 			$bdd = connect();
 
 			$req = $bdd->prepare('INSERT INTO graffeurs (name, age, tel, email, website, competences, salaire) VALUES (:name, :age, :tel, :email, :website, :competences, :salaire)');
 			$req->execute(array(
-				'name' => $_POST['name'],
-				'age' => $_POST['age'],
-				'tel' => $_POST['tel'],
-				'email' => $_POST['email'],
-				'website' => $_POST['website'],
-				'competences' => $_POST['competences'],
-				'salaire' => $_POST['salaire']
+				'name' => $name,
+				'age' => $age,
+				'tel' => $tel,
+				'email' => $email,
+				'website' => $website,
+				'competences' => $competences,
+				'salaire' => $salaire
 			));
 			$data['success'] = true;
 		}else{
@@ -140,46 +157,46 @@
 			&& !empty($_POST['message'])
 			)
 		{
-			// $to = 'contact@bicravart.com';
-			// $content = ''.$_POST['message'].'';
-			// $subject = 'Nouvelle demande de contact - Bicrav\'Art';
-			// $from = ''.$_POST['email'].'';
+			$to = 'contact@bicravart.com';
+			$content = ''.$_POST['message'].'';
+			$subject = 'Nouvelle demande de contact - Bicrav\'Art';
+			$from = ''.$_POST['email'].'';
 
-			// $uri = 'https://mandrillapp.com/api/1.0/messages/send.json';
-			// $api_key = 'CqVeM7kidO1ZIokj7MwgtQ';
-			// $content_text = strip_tags($content);
+			$uri = 'https://mandrillapp.com/api/1.0/messages/send.json';
+			$api_key = 'CqVeM7kidO1ZIokj7MwgtQ';
+			$content_text = strip_tags($content);
 
-			// $postString = '{
-			// 	"key": "' . $api_key . '",
-			// 	"message": {
-			// 	"html": "' . $content . '",
-			// 	"text": "' . $content_text . '",
-			// 	"subject": "' . $subject . '",
-			// 	"from_email": "' . $from . '",
-			// 	"from_name": "' . $from . '",
-			// 	"to": [
-			// 	{
-			// 		"email": "' . $to . '",
-			// 		"name": "' . $to . '"
-			// 	}
-			// 	],
-			// 	"track_opens": true,
-			// 	"track_clicks": true,
-			// 	"auto_text": true,
-			// 	"url_strip_qs": true,
-			// 	"preserve_recipients": true
-			// 	},
-			// 	"async": false
-			// }';
+			$postString = '{
+				"key": "' . $api_key . '",
+				"message": {
+				"html": "' . $content . '",
+				"text": "' . $content_text . '",
+				"subject": "' . $subject . '",
+				"from_email": "' . $from . '",
+				"from_name": "' . $from . '",
+				"to": [
+				{
+					"email": "' . $to . '",
+					"name": "' . $to . '"
+				}
+				],
+				"track_opens": true,
+				"track_clicks": true,
+				"auto_text": true,
+				"url_strip_qs": true,
+				"preserve_recipients": true
+				},
+				"async": false
+			}';
 
-			// $ch = curl_init();
-			// curl_setopt($ch, CURLOPT_URL, $uri);
-			// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
-			// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
-			// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-			// curl_setopt($ch, CURLOPT_POST, true);
-			// curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
-			// $result = curl_exec($ch);
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $uri);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+			curl_setopt($ch, CURLOPT_POST, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
+			$result = curl_exec($ch);
 
 			$name = mysql_real_escape_string($_POST['name']);
 			$email = mysql_real_escape_string($_POST['email']);
@@ -218,46 +235,46 @@
 			)
 		{
 
-			// $to = 'contact@bicravart.com';
-			// $content = ''.$_POST['message'].'';
-			// $subject = 'Nouvelle demande de contact - Bicrav\'Art';
-			// $from = ''.$_POST['email'].'';
+			$to = 'contact@bicravart.com';
+			$content = ''.$_POST['message'].'';
+			$subject = 'Nouvelle demande de contact - Bicrav\'Art';
+			$from = ''.$_POST['email'].'';
 
-			// $uri = 'https://mandrillapp.com/api/1.0/messages/send.json';
-			// $api_key = 'CqVeM7kidO1ZIokj7MwgtQ';
-			// $content_text = strip_tags($content);
+			$uri = 'https://mandrillapp.com/api/1.0/messages/send.json';
+			$api_key = 'CqVeM7kidO1ZIokj7MwgtQ';
+			$content_text = strip_tags($content);
 
-			// $postString = '{
-			// 	"key": "' . $api_key . '",
-			// 	"message": {
-			// 	"html": "' . $content . '",
-			// 	"text": "' . $content_text . '",
-			// 	"subject": "' . $subject . '",
-			// 	"from_email": "' . $from . '",
-			// 	"from_name": "' . $from . '",
-			// 	"to": [
-			// 	{
-			// 		"email": "' . $to . '",
-			// 		"name": "' . $to . '"
-			// 	}
-			// 	],
-			// 	"track_opens": true,
-			// 	"track_clicks": true,
-			// 	"auto_text": true,
-			// 	"url_strip_qs": true,
-			// 	"preserve_recipients": true
-			// 	},
-			// 	"async": false
-			// }';
+			$postString = '{
+				"key": "' . $api_key . '",
+				"message": {
+				"html": "' . $content . '",
+				"text": "' . $content_text . '",
+				"subject": "' . $subject . '",
+				"from_email": "' . $from . '",
+				"from_name": "' . $from . '",
+				"to": [
+				{
+					"email": "' . $to . '",
+					"name": "' . $to . '"
+				}
+				],
+				"track_opens": true,
+				"track_clicks": true,
+				"auto_text": true,
+				"url_strip_qs": true,
+				"preserve_recipients": true
+				},
+				"async": false
+			}';
 
-			// $ch = curl_init();
-			// curl_setopt($ch, CURLOPT_URL, $uri);
-			// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
-			// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
-			// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-			// curl_setopt($ch, CURLOPT_POST, true);
-			// curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
-			// $result = curl_exec($ch);
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $uri);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+			curl_setopt($ch, CURLOPT_POST, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
+			$result = curl_exec($ch);
 
 			$name = mysql_real_escape_string($_POST['name']);
 			$email = mysql_real_escape_string($_POST['email']);
