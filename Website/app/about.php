@@ -58,22 +58,30 @@
                     <div class="row fullWidth photosContainer">
                         <section>
                             <div class="Hadrien large-3 medium-6 small-12 columns">
+                                <p class="Name">Hadrien <br> Chef de projet</p>
                             </div>
                             <div class="Laura large-3 medium-6 small-12 columns">
+                                <p class="Name">Laura <br> Motion Designer</p>
                             </div>
                             <div class="Marie large-3 medium-6 small-12 columns">
+                                <p class="Name">Marie <br> UX Designer</p>
                             </div>
                             <div class="Stephane large-3 medium-6 small-12 columns">
+                                <p class="Name">Stephane <br> UX Designer</p>
                             </div>
                         </section>
                         <section>
                             <div class="Lisa large-3 medium-6 small-12 columns">
+                                <p class="Name">Lisa <br>Graffiste</p>
                             </div>
                             <div class="Pascal large-3 medium-6 small-12 columns">
+                                <p class="Name">Pascal <br>Graffiste</p>
                             </div>
                             <div class="Elvis large-3 medium-6 small-12 columns">
+                                <p class="Name">Elvis  <br>Développeur</p>
                             </div>
                             <div class="Jerome large-3 medium-6 small-12 columns">
+                                <p class="Name">Jérome <br>Développeur</p>
                             </div>
                         </section>
                     </div>

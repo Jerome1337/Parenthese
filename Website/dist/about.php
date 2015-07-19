@@ -57,31 +57,31 @@
                 <section class="coinWrap">
                     <div class="row fullWidth photosContainer">
                         <section>
-                            <div class="large-3 medium-6 small-12 columns">
-                                <img src="img/portrait-01.png" alt="Hadrien">
+                            <div class="Hadrien large-3 medium-6 small-12 columns">
+                                <p class="Name">Hadrien <br> Chef de projet</p>
                             </div>
-                            <div class="large-3 medium-6 small-12 columns">
-                                <img src="img/portrait-02.png" alt="Laura">
+                            <div class="Laura large-3 medium-6 small-12 columns">
+                                <p class="Name">Laura <br> Motion Design</p>
                             </div>
-                            <div class="large-3 medium-6 small-12 columns">
-                                <img src="img/portrait-03.png" alt="Marie">
+                            <div class="Marie large-3 medium-6 small-12 columns">
+                                <p class="Name">Marie <br> UX Design</p>
                             </div>
-                            <div class="large-3 medium-6 small-12 columns">
-                                <img src="img/portrait-04.png" alt="Stéphane">
+                            <div class="Stephane large-3 medium-6 small-12 columns">
+                                <p class="Name">Stephane <br> UX Design</p>
                             </div>
                         </section>
                         <section>
-                            <div class="large-3 medium-6 small-12 columns">
-                                <img src="img/portrait-05.png" alt="Lisa">
+                            <div class="Lisa large-3 medium-6 small-12 columns">
+                                <p class="Name">Lisa <br>Graffiste</p>
                             </div>
-                            <div class="large-3 medium-6 small-12 columns">
-                                <img src="img/portrait-06.png" alt="Pascal">
+                            <div class="Pascal large-3 medium-6 small-12 columns">
+                                <p class="Name">Pascal <br>Graffiste</p>
                             </div>
-                            <div class="large-3 medium-6 small-12 columns">
-                                <img src="img/portrait-07.png" alt="Elvis">
+                            <div class="Elvis large-3 medium-6 small-12 columns">
+                                <p class="Name">Elvis  <br>Développeur</p>
                             </div>
-                            <div class="large-3 medium-6 small-12 columns">
-                                <img src="img/portrait-08.png" alt="Jerome">
+                            <div class="Jerome large-3 medium-6 small-12 columns">
+                                <p class="Name">Jérome <br>Développeur</p>
                             </div>
                         </section>
                     </div>
