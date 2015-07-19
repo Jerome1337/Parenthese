@@ -15,20 +15,22 @@
             <!-- INCLUDE NAV BAR -->
             <?php include('includes/nav.php'); ?>
         </section>
-			<section class="aboutContainer">
-            	<section class="row">
-            		<div class="large-12 medium-12 small-12 columns">
-            			<h3><img src="img/A-Propos.svg" alt="A Propos"></h3>
-	                    <div>
-	                        <h4>Notre agence</h4>
-	                        <p>Créée en 2015 à Paris, la société Bicravart a pour but de mettre en relation les artistes, 
-							en particuliers les graffeurs, avec des entreprises pour leur permettre d’accroitre leur notoriété 
-							ainsi que de vivre de leur art.
-							Parce que nous sommes soucieux de votre image, 
-							nous vous accompagnons dans vos recherches et vous aidons à concrétiser vos projets.
-							</p>
-	                    </div>
-            		</div>
+			<section class="aboutContainer underNav">
+                <section class="coinWrap">
+            		<div class="row fullWidth titleContainer">
+            			<h3><img class="pictopropos" src="img/A-Propos.svg" alt="A Propos"></h3>
+                    </div>
+                </section>
+                <section class="row">
+                    <div>
+                        <h4>Notre agence</h4>
+                        <p>Créée en 2015 à Paris, la société Bicravart a pour but de mettre en relation les artistes, 
+						en particuliers les graffeurs, avec des entreprises pour leur permettre d’accroitre leur notoriété 
+						ainsi que de vivre de leur art.
+						Parce que nous sommes soucieux de votre image, 
+						nous vous accompagnons dans vos recherches et vous aidons à concrétiser vos projets.
+						</p>
+                    </div>
             		<div class="large-3 medium-3 small-12 columns">
                         <img src="img/like.svg" alt="">
             			<p>L'exigence des compétences <br>et du professionnalisme<br> auprès des graffeurs</p>
@@ -49,35 +51,39 @@
 						<h4>Notre équipe</h4>
 	                    <p>Découvrez notre équipe talentueuse</p>
             		</div>
-                    <section>
-                    <div class="large-3 medium-6 small-12 columns">
-                        <img src="img/portrait-01.png" alt="Hadrien">
-                    </div>
-                    <div class="large-3 medium-6 small-12 columns">
-                        <img src="img/portrait-02.png" alt="Laura">
-                    </div>
-                    <div class="large-3 medium-6 small-12 columns">
-                        <img src="img/portrait-03.png" alt="Marie">
-                    </div>
-                    <div class="large-3 medium-6 small-12 columns">
-                        <img src="img/portrait-04.png" alt="Stéphane">
+                </section>  
+                <section class="coinWrap">
+                    <div class="row fullWidth photosContainer">
+                        <section>
+                            <div class="large-3 medium-6 small-12 columns">
+                                <img src="img/portrait-01.png" alt="Hadrien">
+                            </div>
+                            <div class="large-3 medium-6 small-12 columns">
+                                <img src="img/portrait-02.png" alt="Laura">
+                            </div>
+                            <div class="large-3 medium-6 small-12 columns">
+                                <img src="img/portrait-03.png" alt="Marie">
+                            </div>
+                            <div class="large-3 medium-6 small-12 columns">
+                                <img src="img/portrait-04.png" alt="Stéphane">
+                            </div>
+                        </section>
+                        <section>
+                            <div class="large-3 medium-6 small-12 columns">
+                                <img src="img/portrait-05.png" alt="Lisa">
+                            </div>
+                            <div class="large-3 medium-6 small-12 columns">
+                                <img src="img/portrait-06.png" alt="Pascal">
+                            </div>
+                            <div class="large-3 medium-6 small-12 columns">
+                                <img src="img/portrait-07.png" alt="Elvis">
+                            </div>
+                            <div class="large-3 medium-6 small-12 columns">
+                                <img src="img/portrait-08.png" alt="Jerome">
+                            </div>
+                        </section>
                     </div>
                 </section>
-                <section>
-                    <div class="large-3 medium-6 small-12 columns">
-                        <img src="img/portrait-05.png" alt="Lisa">
-                    </div>
-                    <div class="large-3 medium-6 small-12 columns">
-                        <img src="img/portrait-06.png" alt="Pascal">
-                    </div>
-                    <div class="large-3 medium-6 small-12 columns">
-                        <img src="img/portrait-07.png" alt="Elvis">
-                    </div>
-                    <div class="large-3 medium-6 small-12 columns">
-                        <img src="img/portrait-08.png" alt="Jerome">
-                    </div>
-                </section>
-            	</section>
             </section>
         <?php include('includes/footer.php'); ?>
     </body>
