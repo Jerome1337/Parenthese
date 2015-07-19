@@ -8,6 +8,8 @@
     $page = "faq";
     $pageTitle = "F.A.Q";
 
+    $path = "";
+
     include('includes/head.php');
     ?>
     <body>

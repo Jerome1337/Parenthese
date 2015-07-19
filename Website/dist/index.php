@@ -6,18 +6,24 @@
     $onglet_actif = "index";
     $page = "index";
     $pageTitle = "Accueil";
+
+    $navclass = "transparentNav";
+
     include('includes/head.php');
     ?>
     <body>
-        <section class="row fullWidth videoHeight">
+        <section class="row fullWidth">
             <!-- INCLUDE NAV BAR -->
             <?php include('includes/nav.php'); ?>
+        </section>
+        <section class="row fullWidth videoHeight">
             <section class="js-video widescreen">
+                <div id="videosOverlay"></div>
                 <div id="player1" class="youtube-player"></div>
                 <div id="player2" class="youtube-player"></div>
                 <div class="large-12 columns baseline">
-                    <h2>"Monnayez votre art,<br> tout en gardant votre<br> annonymat"</h2>
-                    <p>Appuyez sur <span class="yellowZ">N</span> pour <br> Commencer l'experience</p>
+                    <h2><img src="img/home/title-home.png" alt="Image du titre de la page d'accueil"></h2>
+                    <p id="interactivKey">Appuyez sur <span class="yellowZ">N</span><br>pour passer en mode nuit.</p>
                     <img src="img/souris.png" alt="souris">
                 </div>
             </section>

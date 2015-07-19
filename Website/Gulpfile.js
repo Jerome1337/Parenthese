@@ -31,7 +31,7 @@ gulp.task('script', function() {
     return gulp.src([
         appSrc + '/js/modernizr.js',
         appSrc + '/js/jquery.js',
-        appSrc + '/js/jqueryui.js',
+        // appSrc + '/js/jqueryui.js',
         appSrc + '/js/foundation.js',
         appSrc + '/js/foundation.topbar.js',
         appSrc + '/js/foundation.reveal.js',

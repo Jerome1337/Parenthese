@@ -22,3 +22,9 @@
     </section>
 </footer>
 <script type="text/javascript" src="js/script.min.js"></script>
+<!-- <script src="js/modernizr.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/foundation.js"></script>
+<script src="js/foundation.topbar.js"></script>
+<script src="js/foundation.reveal.js"></script>
+<script src="js/main.js"></script> -->

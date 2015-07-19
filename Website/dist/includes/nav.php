@@ -1,5 +1,5 @@
 <!-- <div class="contain-to-grid sticky"> -->
-    <nav class="top-bar navBar" data-topbar role="navigation">
+    <nav class="top-bar navBar <?php echo ($navclass == "transparentNav" ? "transparentNav" : "")?>" data-topbar role="navigation">
         <ul class="title-area">
             <li class="name">
                 <h1><a href="index.php"><img src="img/bicravart-blanc.png" alt="Logo Bicravart"></a></h1>

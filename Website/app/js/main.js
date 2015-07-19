@@ -13,77 +13,169 @@ function onYouTubeIframeAPIReady() {
         width: '720',
         videoId: 'RAzzv6Ks9nc',
         playerVars: {
-            rel: '0',
-            showinfo: '0',
-            iv_load_policy: '3',
-            showinfo: '0',
-            controls: '0',
-            modestbranding: '1',
-            loop: '1',
-            cc_load_policy: '1',
-            fs: '0',
-            showsearch: '0',
-            enablejsapi: '1',
+            "rel": 0,
+            "showinfo": 0,
+            "iv_load_policy": 3,
+            "showinfo": 0,
+            "controls": 0,
+            "modestbranding": 1,
+            "loop": 1,
+            "cc_load_policy": 1,
+            "fs": 0,
+            "showsearch": 0,
+            "enablejsapi": 1,
+            "autoplay": 0
         },
-        events: {  
-            // 'onReady': onPlayer1Ready,
-            // 'onStateChange': onPlayer1StateChange
-            onReady: function(){
-                console.log('Ready: 1');
-                player1.setPlaybackQuality('hd720');
-                // preloading1 = true;
-                player1.seekTo(1);        // Start the preloading and wait a state change event
-                // event.target.playVideo();
-                // player1.playVideo();
-                player1.addEventListener('onStateChange',function(){});
-            },
-            onStateChange: function(){
-                console.log('Player1 Change');
-                player1.playVideo();
-                // player1.addEventListener('onChange',function(){});
-                // setTimeout(mafonction, 5000);
-            }
+        events: {
+            'onReady': onPlayer1Ready,
+            'onStateChange': onPlayer1StateChange
         }  
     });
     player2 = new YT.Player('player2', {  
         height: '1280',  
         width: '720',
-        videoId: 'FAeAp9MzPtk',
+        videoId: 'RAzzv6Ks9nc',
         playerVars: {
-            rel: '0',
-            showinfo: '0',
-            iv_load_policy: '3',
-            showinfo: '0',
-            controls: '0',
-            modestbranding: '1',
-            loop: '1',
-            cc_load_policy: '1',
-            fs: '0',
-            showsearch: '0',
-            enablejsapi: '1',
+            "rel": 0,
+            "showinfo": 0,
+            "iv_load_policy": 3,
+            "showinfo": 0,
+            "controls": 0,
+            "modestbranding": 1,
+            "loop": 1,
+            "cc_load_policy": 1,
+            "fs": 0,
+            "showsearch": 0,
+            "enablejsapi": 1,
+            "autoplay": 0
         },
         events: {  
-            // 'onReady': onPlayer2Ready,
-            // 'onStateChange': onPlayer2StateChange
-            onReady: function(){
-                console.log('Ready: 2');
-                player2.setPlaybackQuality('hd720');
-                // preloading1 = true;
-                player2.seekTo(1);
-                player2.mute();        // Start the preloading and wait a state change event
-                // event.target.playVideo();
-                // player1.playVideo();
-                player2.addEventListener('onStateChange',function(){});
-            },
-            onStateChange: function(){
-                console.log('Player2 Change');
-                player2.playVideo();
-            }
+            'onReady': onPlayer2Ready,
+            'onStateChange': onPlayer2StateChange
         }  
     });
 }
 
+var player1Ready = false;
+var player2Ready = false;
+
+function onPlayer1Ready(event){
+    player1Ready = true;
+    preloading1 = true;       // Flag the player 1 preloading
+    player1.mute();           // Mute the player 1
+    // $( "#player1" ).hide();   // Hide it
+    player1.seekTo(1);        // Start the preloading and wait a state change event
+    console.log('Player1 Ready ' + player1Ready + '');
+    console.log('Player1 LOADING ' + preloading1 + '');
+}
+
+function onPlayer2Ready(event) {
+    player2Ready = true;      // The foreground video player is not preloaded here
+    console.log('Player2 Ready ' + player2Ready + '');
+}
+
+function onPlayer1StateChange(event){
+    if (event.data == YT.PlayerState.PLAYING ) {
+        if(preloading1)
+        {
+            // prompt("Background ready");     // For testing
+            console.log('PLAYER 1 LOADED');
+            player1.pauseVideo();           // Pause the video
+            player1.seekTo(0);              // Rewind
+            player1.unMute();           // Comment this after test
+            // $( "#player1" ).show();         // Show the player
+            preloading1 = false;
+
+            player2Ready = true;
+            preloading2 = true;             // Flag for foreground video preloading
+            player2.mute();
+            //$( "#player2" ).hide();
+            player2.seekTo(1);              // Start buffering and wait the event
+
+            console.log('Player2 Ready ' + player2Ready + '');
+            console.log('Player2 LOADING ' + preloading2 + '');
+        }
+        else
+            player2.playVideo();            // If not preloading link the 2 players PLAY events
+            console.log('PLAYER 2 PLAY');
+    }
+
+    // else if (event.data == YT.PlayerState.PAUSED ) {
+    //     if(!preloading1)
+    //         player2.pauseVideo();           // If not preloading link the 2 players PAUSE events
+    //         console.log('PLAYER 2 PAUSED');
+
+    // }
+    // else if (event.data == YT.PlayerState.BUFFERING ) {
+    //     if(!preloading1)
+    //     {
+    //         player2.pauseVideo();           // If not preloading link the 2 players BUFFERING events
+    //         console.log('PLAYER 2 BUFFERING');
+
+    //     }
+    // }
+    // else if (event.data == YT.PlayerState.CUED ) {
+    //     if(!preloading1)
+    //         player2.pauseVideo();           // If not preloading link the 2 players CUEING events
+    //         console.log('PLAYER 2 CUED');
+
+    // }
+    // else if (event.data == YT.PlayerState.ENDED ) {
+    //     player2.stopVideo();                // If not preloading link the 2 players ENDING events
+    //         console.log('PLAYER 2 ENDED');
+
+    // }
+}
+
+var videosPlaying = false;
+
+function onPlayer2StateChange(event){
+    if (event.data == YT.PlayerState.PLAYING ) {
+        if(preloading2)
+        {
+            // prompt("Foreground ready");
+            console.log('PLAYER 2 LOADED');
+            player2.pauseVideo();           // Pause the video
+            player2.seekTo(0);              // Rewind
+            player2.unMute();               // Unmute
+            preloading2 = false;
+
+            $( "#player2" ).show(50, function() {
+                player2.playVideo();
+                videosPlaying = true;
+                $('#videosOverlay').hide();
+                $('#interactivKey').show();
+                console.log('PLAYER 2 PLAYING');
+            });
+        }
+        else
+            player1.playVideo();
+            console.log('PLAYER 1 PLAYING');
+    }
+    else if (event.data == YT.PlayerState.PAUSED ) {
+        if(/*!preloading1 &&*/ !preloading2)
+            player1.pauseVideo();
+    }
+    else if (event.data == YT.PlayerState.BUFFERING ) {
+        if(!preloading2)
+        {
+            player1.pauseVideo();
+            //player1.seekTo(... // Correct the offset here
+        }
+    }
+    else if (event.data == YT.PlayerState.CUED ) {
+        if(!preloading2)
+            player1.pauseVideo();
+    }
+    else if (event.data == YT.PlayerState.ENDED ) {
+        player1.stopVideo();
+    }
+}
+
+
 $(document).ready(function() {
+
+    $('#interactivKey').hide();
 
     // INTERACTIVE VIDEO 
     $(document).on('keydown', function(e) {
@@ -92,7 +184,37 @@ $(document).ready(function() {
         }
     }).on('keyup', function(e){
         if(e.keyCode == 78) {
-            $('#player2').show();
+            $('#player2, .baseline').show();
+        }
+    });
+
+    $('.js-video').click(function(){
+        if(videosPlaying == true){
+            videosPlaying = false;
+            player1.pauseVideo();
+            player2.pauseVideo();
+        }else{
+            videosPlaying = true;
+            player1.playVideo();
+            player2.playVideo();
+        }
+    });
+
+    var targetOffset = $(".explainContainer").offset().top;
+
+    var $w = $(window).scroll(function(){
+        if ( $w.scrollTop() > targetOffset ) {   
+            $('.transparentNav').css({"background-color":"#2c2c2c"});
+            $('.top-bar-section').css({"background-color":"#2c2c2c"});
+            $('.top-bar-section ul').css({"background-color":"#2c2c2c"});
+            $('.top-bar-section ul li').css({"background-color":"#2c2c2c"});
+            $('.top-bar-section ul li a').css({"background-color":"#2c2c2c"});
+        } else {
+            $('.transparentNav').css({"background-color":"transparent"});
+            $('.top-bar-section').css({"background-color":"transparent"});
+            $('.top-bar-section ul').css({"background-color":"transparent"});
+            $('.top-bar-section ul li').css({"background-color":"transparent"});
+            $('.top-bar-section ul li a').css({"background-color":"transparent"});
         }
     });
 
