@@ -19,7 +19,7 @@
         </section>
         <section class="contactContainer underNav">
             <section class="row fullWidth titleContainer">
-                <h2><img src="img/contactez-nous.png" alt="Contactez-nous image"></h2>
+                <h2><img src="img/contacts/contactez-nous.png" alt="Contactez-nous image"></h2>
             </section>
             <section class="row fullWidth">
                 <div class="large-4 medium-4 show-for-medium-up columns artistPart">

@@ -509,7 +509,7 @@ label{
     }
 }
 .mobileContent{
-    padding: 300px 0;
+    padding: 100px 0;
     background: url(http://lorempixel.com/400/300) no-repeat center;
     background-size: cover;
     text-align: center;
@@ -693,7 +693,7 @@ label{
                     padding: 0;
                 }
                 .temoignagesText{
-                    padding: 30px;
+                    padding: 30px 30px 0;
                     .phrase, .from{
                         color: $grey;
                         font-family: $RALL;
@@ -717,7 +717,7 @@ label{
     font-family: $RALSB;
     .titleContainer{
         padding: 40px 0;
-        background: url(../img/contact_bg.jpg)no-repeat fixed;
+        background: url(../img/contacts/contact_bg.jpg)no-repeat fixed;
         background-size: cover;
         min-height: 100%;
         h2{
@@ -867,12 +867,12 @@ label{
     }
     .titleContainer
     {
-        background: url("../img/apropos_img.jpg") no-repeat fixed;
+        background: url(../img/apropos_img.jpg) no-repeat fixed;
         min-height: 100%;
     }
     .photosContainer
     {
-        background: url("../img/IMG.jpg") no-repeat center fixed;
+        background: url(../img/IMG.jpg) no-repeat center fixed;
         background-size: cover;
         min-height: 100%;
         padding: 50px 0 70px; 
@@ -909,7 +909,7 @@ label{
 // MENTIONS LEGALES
 .mentionsContainer{
     padding: 100px 0;
-    background: url('../img/faq_bg.jpg') no-repeat center fixed;
+    background: url(../img/faq_bg.jpg) no-repeat center fixed;
     background-size: cover;
     h2{
         color: $grey;
@@ -1198,7 +1198,7 @@ label{
 .artistContainer{
     background-color: $whitegrey;
     .coinWrap{
-        background: url(../img/artists/header-bg.png) no-repeat center fixed;
+        background: url(../img/artists/header-bg.jpg) no-repeat center fixed;
         background-size: cover;
         min-height: 100%;
         padding: 50px 0 70px;
@@ -1269,7 +1269,7 @@ label{
         }
     }
     .artistForm{
-        background: url(../img/artists/form-bg.png) no-repeat center fixed;
+        background: url(../img/artists/form-bg.jpg) no-repeat center fixed;
         padding: 100px 0;
         h2, h3{
             text-align: center;
