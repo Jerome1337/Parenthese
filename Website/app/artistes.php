@@ -54,88 +54,88 @@
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne1Photo1.png" alt="Ligne 1 Photo 1" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Cédric</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne1Photo2.png" alt="Ligne 1 Photo 2" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Lil Thug</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne1Photo3.png" alt="Ligne 1 Photo 3" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Fouiny Babe</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne1Photo4.png" alt="Ligne 1 Photo 4" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Marine</p>
                         </div>
                     </section>
                     <section>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne2Photo1.png" alt="Ligne 2 Photo 1" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Jean-Jerome</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne2Photo2.png" alt="Ligne 2 Photo 2" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Trecy</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne2Photo3.png" alt="Ligne 2 Photo 3" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Jack</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne2Photo4.png" alt="Ligne 2 Photo 4" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Pierre-Cyril</p>
                         </div>
                     </section>
                     <section>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne3Photo1.png" alt="Ligne 3 Photo 1" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Gordon Ramsey</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne3Photo2.png" alt="Ligne 3 Photo 2" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Igor</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne3Photo3.png" alt="Ligne 3 Photo 3" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Matthieu</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne3Photo4.png" alt="Ligne 3 Photo 4" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Nico</p>
                         </div>
                     </section>
                     <section>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne4Photo1.png" alt="Ligne 4 Photo 1" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Artyom</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne4Photo2.png" alt="Ligne 4 Photo 2" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Alex</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne4Photo3.png" alt="Ligne 4 Photo 3" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">Steph</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures">
                             <img src="img/artists/Ligne4Photo4.png" alt="Ligne 4 Photo 4" class="artistsImages">
                             <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Tasr</p>
+                            <p class="artistName">John</p>
                         </div>
                     </section>
                 </section>
