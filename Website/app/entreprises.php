@@ -84,7 +84,7 @@
                                                 <label for="right-label" class="right inline">Date du projet*</label>
                                             </div>
                                             <div class="small-12 medium-6 large-4 columns champContainer">
-                                                <input type="date" id="right-label" name="date" class="required devisChamp telInput formDate">
+                                                <input type="date" id="right-label" name="date" class="required devisChamp formDate">
                                             </div>
                                         </div>
                                         <div class="row fieldContainer">

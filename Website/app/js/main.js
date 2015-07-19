@@ -426,6 +426,12 @@ $(document).ready(function() {
         }
     });
 
+    // SCROLL TO
+    $('.scrollTo').click(function() {
+        $('html, body').animate({scrollTop: $('.artistForm').offset().top}, 750 );
+        return false;
+    });
+
 });
 
 // ANALITYCS

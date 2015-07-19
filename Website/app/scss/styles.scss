@@ -72,6 +72,10 @@ button{
         background-color: lighten($grey, 20%);
         color: $white;
     }
+    &:visited{
+        background-color: lighten($grey, 20%);
+        color: $white;
+    }
 }
 
 *{
@@ -368,7 +372,7 @@ label{
         text-align: right;
         color: $grey;
         font-family: $RALL;
-        margin: 20px 15px 0 0;
+        margin: 40px 15px 0 0;
     }
 }
 
@@ -1047,6 +1051,159 @@ label{
             color: $grey;
             text-align: center;
             margin: 60px 0 40px;
+        }
+    }
+}
+
+// ARTISTS
+
+.artistContainer{
+    background-color: $whitegrey;
+    .coinWrap{
+        background: url(../img/artists/header-bg.png) no-repeat center fixed;
+        background-size: cover;
+        min-height: 100%;
+        padding: 50px 0 70px;
+        .titleContainer{
+            // padding: 120px 0;
+            text-align: center;
+            h2{
+                img{
+                    width: 250px;
+                    padding: 0;
+                }
+            }
+        }
+        .explications{
+            overflow: hidden;
+            .part1{
+                .backgroundPa{
+                    margin-left: -100px;
+                }
+            }
+            .part2{
+                .textArt{
+                    margin: 0 0 0 15px;
+                }
+            }
+            .part3{
+                .backgroundPa{
+                    margin-right: -100px;
+                }
+                .textArt{
+                    margin: 0 0 0 40px;
+                }
+            }
+            .part1, .part2, .part3{
+                margin: 50px 0 110px;
+                .backgroundPa{
+                    background: $lightgrey;
+                    -webkit-transform: skew(-25deg);
+                    -moz-transform: skew(-25deg);
+                    -o-transform: skew(-25deg);
+                    tranform: skew(-25deg);
+                    padding: 100px;
+                }
+                .textArt{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    color: $grey;
+                    width: 90%;
+                    padding-top: 35px;
+                    h3{
+                        font-size: 1.2em;
+                        font-family: $RALSB;
+                        color: $grey;
+                    }
+                    p{
+                        
+                    }
+                }
+            }
+            .scrollTo{
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+    .artistForm{
+        background: url(../img/artists/form-bg.png) no-repeat center fixed;
+        padding: 100px 0;
+        h2, h3{
+            text-align: center;
+            color: $grey;
+            font-family: $RALSB;
+        }
+        h2{
+            font-size: 1.8em;
+        }
+        h3{
+            font-size: 1.3em;
+            margin: 25px 0 65px;
+        }
+    }
+    .artistWrap{
+        margin: 80px 0;
+        h2{
+            text-align: center;
+            color: $grey;
+            font-family: $RALSB;
+            font-size: 1.8em;
+            margin-bottom: 110px;
+        }
+        .artistPictures{
+            &:hover{
+                .artistName{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 40em) { 
+    .artistContainer{
+        .coinWrap{
+            .explications{
+                .part1{
+                    margin: 50px 0 0;
+                    .backgroundPa{
+                        margin-left: 0;
+                    }
+                }
+                .part2{
+                    margin: 25px 0;
+                    .textArt{
+                        margin:0;
+                    }
+                }
+                .part3{
+                    margin: 0 0 70px;
+                    .backgroundPa{
+                        margin-right: 0;
+                    }
+                    .textArt{
+                        margin:0;
+                    }
+                }
+                .part1, .part2, .part3{
+                    padding: 0;
+                    .backgroundPa{
+                        -webkit-transform: skew(0deg);
+                        -moz-transform: skew(0deg);
+                        -o-transform: skew(0deg);
+                        tranform: skew(0deg);
+                    }
+                    .textArt{
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

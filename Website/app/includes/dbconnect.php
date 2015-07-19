@@ -9,9 +9,7 @@
     //     echo 'Connexion échouée : ' . $e->getMessage();
     // }
 
-   	$dsn = 'mysql:dbname=bicravart;host=127.0.0.1;charset:UTF-8';
-	$user = 'root';
-	$password = '';
+    header("Connection: keep-alive");
 
     function connect(){
         try{

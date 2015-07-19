@@ -6,6 +6,12 @@ Options +FollowSymLinks -MultiViews
 	deny from all
 </Files>
 
+##<IfModule mod_headers.c>
+##	<FileMatch ".(js|css|xml|gz|html|php)$">
+##		Header append Vary: Accept-Encoding
+##	</FileMatch>
+##</IfModule>
+
 RewriteEngine on
 RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.bicravart\.com [NC]
