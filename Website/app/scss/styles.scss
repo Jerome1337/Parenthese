@@ -66,14 +66,14 @@ button{
     border-radius: 4px;
     &:hover{
         background-color: $grey;
-        color: $yellow;
+        color: $yellow !important;
         a{
             color: $yellow;
         }
     }
     &:active{
         background-color: lighten($grey, 20%);
-        color: $white;
+        color: $white !important;
         a{
             color: $white;
         }
@@ -220,7 +220,20 @@ fieldset{
 }
 
 @media screen and (max-width: 1050px) {
-    .top-bar {
+    .transparentNav{
+        background-color: $grey;
+            .top-bar-section{ 
+                background-color: $grey !important;
+                ul{
+                    background-color: $grey !important;
+                    li{
+                        background-color: $grey !important;
+                        a{
+                            background-color: $grey !important;
+                        }
+                    }
+                }
+            }
         .toggle-topbar.menu-icon{
             a{
                 span{
@@ -441,7 +454,7 @@ label{
         height: 0;
         overflow: hidden;
         #videosOverlay{
-            background: url(http://lorempixel.com/400/300) no-repeat center center;
+            background: url(http://lorempixel.com/400/300) no-repeat center;
             background-size: cover;
             position: absolute;
             top: 0; 
@@ -492,6 +505,18 @@ label{
             margin-left: auto;
             width: 40px;
             margin-top: 60px;
+        }
+    }
+}
+.mobileContent{
+    padding: 300px 0;
+    background: url(http://lorempixel.com/400/300) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    h2{
+        img{
+            width: 80%;
+            padding: 0;
         }
     }
 }
@@ -577,15 +602,11 @@ label{
         button{
             margin: auto;
             display: block;
-            &:hover{
-                color: $yellow;
-                background-color: black;
-            }
         }
     }
 }
 .resultatContainer{
-    background: url(../img/home/noref-bg.jpg) no-repeat center fixed;
+    background: url(../img/home/noref-bg.jpg) no-repeat center;
     background-size: cover;
     padding: 100px 0;
     div{
@@ -653,7 +674,7 @@ label{
     }
 }
 .descContainer{
-    background: url('../img/home/temoignage-bg.jpg') no-repeat center fixed;
+    background: url('../img/home/temoignage-bg.jpg') no-repeat center;
     background-size: cover;
     padding: 100px 0;
     section{
@@ -662,13 +683,28 @@ label{
                text-align: center;
                font-size: 1.3em;
                font-family: $RALSB;
-               color: $grey; 
+               color: $grey;
+               height: 50px;
             }
             .temoignageLeft, .temoignageRight{
                 margin: 50px 0 100px;
                 background-color: $lightgrey;
-                img{
-
+                .leftPic, .rightPic{
+                    padding: 0;
+                }
+                .temoignagesText{
+                    padding: 30px;
+                    .phrase, .from{
+                        color: $grey;
+                        font-family: $RALL;
+                        font-size: 1.1em;
+                    }
+                    .phrase{
+                        text-align: center;
+                    }
+                    .from{
+                        text-align: right;
+                    }
                 }
             }
         }
@@ -985,8 +1021,7 @@ label{
     }
 }
 
-.referencesPageContainer
-{
+.referencesPageContainer{
     padding-top: 50px;
     h2{
         text-align: center;

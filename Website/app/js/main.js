@@ -200,10 +200,8 @@ $(document).ready(function() {
         }
     });
 
-    var targetOffset = $(".explainContainer").offset().top;
-
     var $w = $(window).scroll(function(){
-        if ( $w.scrollTop() > targetOffset ) {   
+        if ( $w.scrollTop() > $(".explainContainer").offset().top ) {   
             $('.transparentNav').css({"background-color":"#2c2c2c"});
             $('.top-bar-section').css({"background-color":"#2c2c2c"});
             $('.top-bar-section ul').css({"background-color":"#2c2c2c"});

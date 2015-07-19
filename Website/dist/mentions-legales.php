@@ -7,6 +7,7 @@
     $onglet_actif = "mentions";
     $page = "mentions";
     $pageTitle = "Mentions légales";
+    $path = "";
 
     include('includes/head.php');
     ?>

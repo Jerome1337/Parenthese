@@ -17,16 +17,21 @@
             <!-- INCLUDE NAV BAR -->
             <?php include('includes/nav.php'); ?>
         </section>
-        <section class="row fullWidth videoHeight">
+        <section class="row fullWidth videoHeight show-for-medium-up">
             <section class="js-video widescreen">
                 <div id="videosOverlay"></div>
-                <div id="player1" class="youtube-player show-for-medium-up"></div>
-                <div id="player2" class="youtube-player show-for-medium-up"></div>
+                <div id="player1" class="youtube-player"></div>
+                <div id="player2" class="youtube-player"></div>
                 <div class="large-12 columns baseline">
                     <h2><img src="img/home/title-home.png" alt="Image du titre de la page d'accueil"></h2>
                     <p id="interactivKey">Appuyez sur <span class="yellowZ">N</span><br>pour passer en mode nuit.</p>
                     <img src="img/souris.png" alt="souris">
                 </div>
+            </section>
+        </section>
+        <section class="mobileContent show-for-small-only underNav">
+            <section class="row fullWidth">
+                <h2><img src="img/home/title-home.png" alt="Image du titre de la page d'accueil"></h2>
             </section>
         </section>
         <section class="explainContainer">
@@ -55,21 +60,21 @@
                 <h3>Nos résultats</h3>
                 <section>
                     <div class="large-4 medium-6 small-12 columns imgWrap">
-                        <a href="references/reference-01.php">
+                        <a href="reference/reference-01.php">
                             <img src="img/references/reference-01.jpg" alt="Image référence 01">
                             <p class="referenceDesc">Urban Lion</p>
                             <span class="plusIcon"></span>
                         </a>
                     </div>
                     <div class="large-4 medium-6 small-12 columns imgWrap">
-                        <a href="references/reference-02.php">
+                        <a href="reference/reference-02.php">
                             <img src="img/references/reference-02.jpg" alt="Image référence 02">
                             <p class="referenceDesc">Urban Lion</p>
                             <span class="plusIcon"></span>
                         </a>
                     </div>
                     <div class="large-4 medium-6 small-12 columns imgWrap">
-                        <a href="references/reference-03.php">
+                        <a href="reference/reference-03.php">
                             <img src="img/references/reference-03.jpg" alt="Image référence 03">
                             <p class="referenceDesc">Urban Lion</p>
                             <span class="plusIcon"></span>
@@ -90,38 +95,50 @@
             <section class="row">
                 <div class="large-6 medium-6 small-12 columns temoignagePart">
                     <h3>LES ARTISTES ONT LA PAROLES</h3>
-                    <div class="temoignageLeft">
-                        <img class="leftPic" src="img/img-01.jpg" alt="">
-                        <p class="leftPic">"Je suis devenu un véritable artiste grace à Bicrav'art !"</p>
-                        <p class="leftPic">Tasr</p>
+                    <div class="row temoignageLeft">
+                        <img class="large-4 medium-12 small-12 columns leftPic" src="img/img-01.jpg" alt="">
+                        <div class="large-8 medium-12 small-12 columns temoignagesText">
+                            <p class="phrase">"Je suis devenu un véritable artiste grace à Bicrav'art !"</p>
+                            <p class="from">Tasr</p>
+                        </div>
                     </div>
-                    <div class="temoignageLeft">
-                        <img  class="leftPic"src="img/img-02.jpg" alt="">
-                        <p class="leftPic">"Aujourd'hui je ne vis que de mon art."</p>
-                        <p class="leftPic">Pablo P.</p>
+                    <div class="row temoignageLeft">
+                        <img  class="large-4 medium-12 small-12 columns leftPic"src="img/img-02.jpg" alt="">
+                        <div class="large-8 medium-12 small-12 columns temoignagesText">
+                            <p class="phrase">"Aujourd'hui je ne vis que de mon art."</p>
+                            <p class="from">Pablo P.</p>
+                        </div>
                     </div>
-                    <div class="temoignageLeft">
-                        <img  class="leftPic"src="img/img-03.jpg" alt="">
-                        <p class="leftPic">"Avec Bicrav'art j'ai pu prendre part à de grands projets"</p>
-                        <p class="leftPic">Serguey</p>
+                    <div class="row temoignageLeft">
+                        <img  class="large-4 medium-12 small-12 columns leftPic"src="img/img-03.jpg" alt="">
+                        <div class="large-8 medium-12 small-12 columns temoignagesText">
+                            <p class="phrase">"Avec Bicrav'art j'ai pu prendre part à de grands projets"</p>
+                            <p class="from">Serguey</p>
+                        </div>
                     </div>
                 </div>
                 <div class="large-6 medium-6 small-12 columns temoignagePart">
                     <h3>CE QUE LES ENTREPRISES PENSENT DE NOUS</h3>
-                    <div class="temoignageRight">
-                        <img class="rightPic" src="img/img-04.jpg" alt="">
-                        <p class="rightPic">"Les meilleurs graffeurs sont sur Bicrav'art"</p>
-                        <p class="rightPic">Maire de Torcy</p>
+                    <div class="row temoignageRight">
+                        <div class="large-8 medium-12 small-12 columns temoignagesText">
+                            <p class="phrase">"Les meilleurs graffeurs sont sur Bicrav'art"</p>
+                            <p class="from">Maire de Torcy</p>
+                        </div>
+                        <img class="large-4 medium-12 small-12 columns rightPic" src="img/img-04.jpg" alt="">
                     </div>
-                    <div class="temoignageRight">
-                        <img class="rightPic" src="img/img-05.jpg" alt="">
-                        <p class="rightPic">"Des expert disponible et à notre écoute"</p>
-                        <p class="rightPic">SNCF</p>
+                    <div class="row temoignageRight">
+                        <div class="large-8 medium-12 small-12 columns temoignagesText">
+                            <p class="phrase">"Des expert disponible et à notre écoute"</p>
+                            <p class="from">SNCF</p>
+                        </div>
+                        <img class="large-4 medium-12 small-12 columns rightPic" src="img/img-05.jpg" alt="">
                     </div>
-                    <div class="temoignageRight">
-                        <img class="rightPic" src="img/img-06.jpg" alt="">
-                        <p class="rightPic">"Très satisfait du travail fournit par les artistes."</p>
-                        <p class="rightPic">Marie de Chessy</p>
+                    <div class="row temoignageRight">
+                        <div class="large-8 medium-12 small-12 columns temoignagesText">
+                            <p class="phrase">"Très satisfait du travail fournit par les artistes."</p>
+                            <p class="from">Marie de Chessy</p>
+                        </div>
+                        <img class="large-4 medium-12 small-12 columns rightPic" src="img/img-06.jpg" alt="">
                     </div>
                 </div>
             </section>

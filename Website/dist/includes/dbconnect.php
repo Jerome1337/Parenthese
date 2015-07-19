@@ -19,4 +19,13 @@
                 echo 'Erreur : ' . $e->getMessage();
         }
     }
+
+    // function connect(){
+    //     try{
+    //         $bdd = new PDO('mysql:host=host=doyouclixubicrav.mysql.db;dbname=doyouclixubicrav', 'doyouclixubicrav', '5aGHC6aRJNbe');
+    //         return $bdd;
+    //     }catch (PDOException $e){
+    //             echo 'Erreur : ' . $e->getMessage();
+    //     }
+    // }
 ?>

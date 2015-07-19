@@ -7,6 +7,9 @@
     $page = "artistes";
     $pageTitle = "Artistes";
     $modalMessage = "Merci, votre inscription à bien été prise en compte.";
+
+    $path = "";
+    
     include('includes/head.php');
     ?>
     <body>
