@@ -32,14 +32,14 @@ function onYouTubeIframeAPIReady() {
                 console.log('Ready: 1');
                 player1.setPlaybackQuality('hd720');
                 // preloading1 = true;
-                // player1.seekTo(1);        // Start the preloading and wait a state change event
+                player1.seekTo(1);        // Start the preloading and wait a state change event
                 // event.target.playVideo();
                 // player1.playVideo();
                 player1.addEventListener('onStateChange',function(){});
             },
             onStateChange: function(){
                 console.log('Player1 Change');
-                // player1.playVideo();
+                player1.playVideo();
                 // player1.addEventListener('onChange',function(){});
                 // setTimeout(mafonction, 5000);
             }
@@ -69,14 +69,15 @@ function onYouTubeIframeAPIReady() {
                 console.log('Ready: 2');
                 player2.setPlaybackQuality('hd720');
                 // preloading1 = true;
-                // player2.seekTo(1);        // Start the preloading and wait a state change event
+                player2.seekTo(1);
+                player2.mute();        // Start the preloading and wait a state change event
                 // event.target.playVideo();
                 // player1.playVideo();
                 player2.addEventListener('onStateChange',function(){});
             },
             onStateChange: function(){
                 console.log('Player2 Change');
-                // player2.playVideo();
+                player2.playVideo();
             }
         }  
     });
@@ -86,11 +87,11 @@ $(document).ready(function() {
 
     // INTERACTIVE VIDEO 
     $(document).on('keydown', function(e) {
-        if(e.keyCode == 88) {
+        if(e.keyCode == 78) {
             $('#player2, .baseline').hide();
         }
     }).on('keyup', function(e){
-        if(e.keyCode == 88) {
+        if(e.keyCode == 78) {
             $('#player2').show();
         }
     });
