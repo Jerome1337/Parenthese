@@ -9,13 +9,11 @@
     //     echo 'Connexion échouée : ' . $e->getMessage();
     // }
 
-   	$dsn = 'mysql:dbname=bicravart;host=localhost;charset:UTF-8';
-	$user = 'root';
-	$password = 'root';
+    header("Connection: keep-alive");
 
     function connect(){
         try{
-            $bdd = new PDO('mysql:host=localhost;dbname=bicravart', 'root', 'root');
+            $bdd = new PDO('mysql:host=127.0.0.1;dbname=bicravart', 'root', '');
             return $bdd;
         }catch (PDOException $e){
                 echo 'Erreur : ' . $e->getMessage();

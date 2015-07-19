@@ -35,6 +35,16 @@
     src:url("../font/Raleway-Light.ttf") format("truetype");
 }
 
+// VAR
+$grey: #2C2C2C;
+$yellow: #F7B232;
+$white: #fff;
+$lightgrey: #e1e1e1;
+$whitegrey: #f6f6f6;
+$RALSB: 'Raleway-semibold', Helvetica, sans-serif;
+$RALR: 'Raleway-reg', Helvetica, sans-serif;
+$RALL: 'Raleway-light', Helvetica, sans-serif;
+
 body, html{
     height:100%;
 }
@@ -48,6 +58,24 @@ body {
 
 button{ 
     border:none;
+    text-transform: uppercase;
+    background-color: $yellow;
+    color: $grey;
+    transition: ease-in-out all 0.5s;
+    font-family: $RALSB;
+    border-radius: 4px;
+    &:hover{
+        background-color: $grey;
+        color: $yellow;
+    }
+    &:active{
+        background-color: lighten($grey, 20%);
+        color: $white;
+    }
+    &:visited{
+        background-color: lighten($grey, 20%);
+        color: $white;
+    }
 }
 
 *{
@@ -66,7 +94,6 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
     padding:0;
     text-align: left;
     font-size:1em;
-    height: 1em;
     vertical-align: middle;
     resize: vertical;
 }
@@ -78,14 +105,12 @@ select{
     padding:0 25px 0 8px;
     font-size: .875em
 }
-
 fieldset{
     border: none;
     legend{
         display: none;
     }
 }
-
 
 .fullWidth {
    width: 100%;
@@ -94,18 +119,11 @@ fieldset{
    max-width: initial;
 }
 
-// VAR
-$grey: #2C2C2C;
-$yellow: #F7B232;
-$white: #fff;
-$lightgrey: #e1e1e1;
-$RALSB: 'Raleway-semibold', Helvetica, sans-serif;
-$RALR: 'Raleway-reg', Helvetica, sans-serif;
-$RALL: 'Raleway-light', Helvetica, sans-serif;
-
-
-
 // NAV
+.underNav{
+    margin-top: 5.3125rem;
+}
+
 .navBar {
     margin-left: auto;
     margin-right: auto;
@@ -147,11 +165,8 @@ $RALL: 'Raleway-light', Helvetica, sans-serif;
                 text-decoration: none;
                 background-color: $grey !important;
                 &:hover{
-                    background-color: $yellow;
-                    color: $grey;
                     a{
-                        background-color: $yellow;
-                        color: $grey; 
+                        color: $yellow; 
                     }
                 }
                 a{
@@ -162,13 +177,12 @@ $RALL: 'Raleway-light', Helvetica, sans-serif;
                     padding-left: 0;
                     padding-right: 0; 
                     &:hover{
-                        background-color: $yellow !important;
-                        color: $grey;
+                        color: $yellow;
                     }
                 }
                 .active{
-                    background-color: $yellow !important;
-                    color: $grey;
+                    color: $yellow;
+                    font-family: $RALSB;
                 }
             }
         }
@@ -315,6 +329,76 @@ footer{
     }
 }
 
+//FORMS
+label{
+    font-family: $RALSB !important;
+    color: $grey;
+}
+
+.forms{
+    .fieldContainer{
+        margin-bottom: 10px !important;
+        .labelContainer{
+            label{
+                padding: 15px 0;
+            }
+        }
+        .champContainer{
+            float: left !important;
+            input{
+                padding: 0 10px;
+                border-radius: 6px;
+                border: none;
+                height: 45px;
+                font-family: $RALL;
+            }
+            textarea{
+                padding: 10px 10px;
+                border-radius: 6px;
+                border: none;
+                font-family: $RALL;
+            }
+            .emptyField{
+                border: rgba(255, 0, 0, 0.5) 1px solid;
+                box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.2);
+            }
+        }
+    }
+    .formSubmit{
+        width: 200px;
+        margin: 80px 0 0 265px;
+    }
+    .obg{
+        text-align: right;
+        color: $grey;
+        font-family: $RALL;
+        margin: 40px 15px 0 0;
+    }
+}
+
+@media only screen and (max-width: 40em) { 
+    .forms{
+        .fieldContainer{
+            .labelContainer{
+                height: 45px !important;
+                label{
+                    float: left !important;
+                }
+            }
+        }
+        .formSubmit{
+            margin-left: 1.25rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
+    .forms{
+        .formSubmit{
+            margin-left: 192px;
+        }
+    } 
+}
 
 // HOME
 .fullWidth {
@@ -392,7 +476,7 @@ footer{
 .devisContainer{
     //height: 317px;
     //background: url('../img/fond-graffeur-entreprise.jpg')no-repeat;
-    background-size: cover;
+    background-color: $lightgrey;
     padding-top: 200px;
     padding-bottom: 200px;
     .left{
@@ -448,8 +532,7 @@ footer{
     }  
 }
 .feedContainer{
-    background: url('../img/fond-qui-sommes-nous.jpg');
-    background-size: cover;
+    background: $lightgrey;
     padding-top: 400px;
     padding-bottom: 400px;  
     font-family: $RALR;
@@ -477,7 +560,7 @@ footer{
 }
 .resultatContainer{
     background: url('../img/fond-nos-resultats.jpg')no-repeat;
-    background-size: cover!important;
+    background-size: cover !important;
     padding-top: 400px;
     padding-bottom: 400px;
     .leftImg, .centerImg, .rightImg{
@@ -514,10 +597,16 @@ footer{
     }
 }
 .descContainer{
-    background: url('../img/fond-pensent.jpg')no-repeat;
+    background: url('../img/fond-qui-sommes-nous.jpg');
     background-size: cover!important;
     padding-top: 400px;
     padding-bottom: 400px;
+    .leftPic{
+        float: left;
+    }
+    .rightPic{
+        float: right;
+    }
     div{
         text-align: center;
     }
@@ -539,108 +628,46 @@ footer{
 .contactContainer{
     background-color: $lightgrey;
     font-family: $RALSB;
-    .text-left{
-        text-align: left;
-    }
-    .text-right{
-        text-align: right;
-    }
-
-    .fond{
-        background: url('../img/VisuMain.jpg');
-        height: 100%;
-        margin: 0;
-    }
-    h2, h3{
-        color: $black;
-    }
-    button{
-        text-align: center;
-        margin: 0;
-        background-color: $yellow;
-        color: black;
-        text-align: center;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        display: block;
-        margin : auto;
-        font-family: $RALSB;
-        &:hover{
-            color: $yellow;
-            background-color: black;
-        }
-    }
-    img{
-        width: 100px;
-        display: inline-block;
-        padding-top: 20px;
-    }
-    .reglage{
-        padding-top: 14px;
-        width: 100px;
-        display: inline-block;
-    }
-    .pictos{
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        background-color: $yellow;
-        width: 150px;
-        height: 150px;
-        &:hover{
-            background-color: $white;
-        }
-    }
-    .pictos2{
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        background-color: $yellow;
-        width: 150px;
-        height: 150px;
-        &:hover{
-            background-color: $white;
-        }
-    }
     .titleContainer{
-        padding: 80px 0;
+        padding: 40px 0;
         background: url(../img/contact_bg.jpg)no-repeat fixed;
-        background: cover;
+        background-size: cover;
+        min-height: 100%;
         h2{
-            font-family: $RALSB;
-            font-size: 2em;
-            text-align: center;
+            img{
+                width: 180px;
+                padding: 0;
+            }
         }
     }
 
     .row{
         text-align: center;
-        padding-top: 100px;
         .artistPart, .entreprisePart, .coordoneesPart{
             padding: 20px 0;
             background-color: $lightgrey;
-            transition: ease-in-out all 0.5s;
             h3{
                 text-align: center;
                 font-size: 1.2em;
                 font-family: $RALSB;
+                color: $grey;
             }
             p{
                 text-align: center;
                 font-family: "social";
                 font-size: 5em;
+                color: $yellow;
+                transition: ease-in-out all 0.5s;
+                cursor: pointer;
+            }
+            .active{
+                color: $grey;
             }
             &:hover{
-                background-color: $yellow;
+                p{
+                    color: $grey;
+                }
             }
-        }
-        .active{
-            background-color: $yellow;
         }
         .artistPart{
             p{
@@ -665,62 +692,8 @@ footer{
                 }
             }
         }
-        form{
-            margin: 0;
-            padding: 0px;
-            text-align:center;
-            div{
-                margin-bottom: 20px;
-                label{
-                    color: $grey;
-                    height: 40px;
-                    width: 100px;
-                    margin: 10px 15px 0 10px;
-                    text-align: right;
-                    clear: both;
-                    float: left;
-                    display: inline-block;
-                    vertical-align: middle;
-                    }
-                input{
-                    width: 40%;
-                    height: 40px;
-                    border-radius: 3px;
-                    border: none;
-                    padding: 0 10px;
-                }
-                textarea{
-                    width: 70%;
-                    height: 110px;
-                    border-radius: 3px;
-                    border: none;
-                    padding: 10px;
-                }
-                .emptyField{
-                    border: rgba(255, 0, 0, 0.5) 1px solid;
-                    box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.2);
-                }
-            }
-            .formSubmit{
-                background-color: $yellow;
-                color: $grey;
-                transition: ease-in-out all 0.5s;
-                font-family: $RALSB;
-                width: 200px;
-                border-radius: 3px;
-                &:hover{
-                    background-color: $grey;
-                    color: $yellow;
-                }
-                &:active{
-                    background-color: lighten($grey, 20%);
-                    color: $white;
-                }
-            }
-        }
         .selectPart{
-            padding: 70px 100px;
-            background-color: $yellow;
+            padding: 75px 100px 0;
             select{
                 height: 35px;
                 color: $grey;
@@ -730,42 +703,32 @@ footer{
         .contactPart{
             background-color: $lightgrey;
             padding: 30px 0;
-            #artistContact, #entrepriseContact, .coordonees{
-                label{
+        }
+        .coordoneesSec{
+            .infos{
+                // margin: 30px 0;
+                p{
+                    text-align: center;
                     color: $grey;
-                    font-family: $RALR;
+                    /* font-family: $RALR; */
+                    margin-bottom: 0;
                 }
-                .obg{
-                    text-align: right;
+                a{
+                    text-align: center;
                     color: $grey;
-                    font-family: $RALL;
-                    margin-right: 15px;
+                    transition: ease-in-out all 0.5s;
+                    /* font-family: $RALR; */
+                    &:hover{
+                        color: $yellow;
+                    }
                 }
             }
-            .coordoneesSec{
-                .infos{
-                    // margin: 30px 0;
-                    p{
-                        text-align: center;
-                        color: $grey;
-                        /* font-family: $RALR; */
-                        margin-bottom: 0;
-                    }
-                    a{
-                        text-align: center;
-                        color: $grey;
-                        transition: ease-in-out all 0.5s;
-                        /* font-family: $RALR; */
-                        &:hover{
-                            color: $yellow;
-                        }
-                    }
-                }
-                .gmap{
-                    margin-top: 25px;
-                    iframe{
-                        height: 300px;
-                    }
+            .gmap{
+                margin-top: 25px;
+                height: 300px;
+                iframe{
+                    height: 300px;
+                    width: 100%;
                 }
             }
         }
@@ -777,6 +740,7 @@ footer{
     padding: 100px 0;
     background: url('../img/faq_bg.jpg') no-repeat center fixed;
     background-size: cover;
+    min-height: 100%;
     h2{
         color: $grey;
         font-family: $RALSB;
@@ -810,6 +774,10 @@ footer{
     padding: 100px 0;
     background: url('../img/faq_bg.jpg') no-repeat center fixed;
     background-size: cover;
+    min-height: 100%;
+    div{
+        padding: 0;
+    }
     h3{
         color: $grey;
         font-family: $RALSB;
@@ -866,6 +834,375 @@ footer{
                 font-family: $RALL;
                 font-size: 1em;
                 margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+// MODALS
+.reveal-modal{
+    .lead{
+        text-align: center;
+        font-family: $RALR;
+        color: $grey;
+        font-size: 1.3em;
+    }
+    #endForm{
+        display: block;
+        margin: auto;
+    }
+    .modalButton{
+        width: 200px;
+    }
+}
+
+// REFERENCES
+.referencesContainer{
+    background-color: $lightgrey; 
+    .titleContainer{
+        padding: 40px 0;
+        text-align: center;
+        h2{
+            img{
+                width: 180px;
+                padding: 0;
+            }
+        }
+    }
+    .referencesImages{
+        padding-bottom: 200px;
+        section{
+            .imgWrap{
+                margin: 0;
+                padding: 0;
+                a{
+                    .referenceDesc{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        margin: 0;
+                        background: rgba($yellow, 0.6);
+                        color: $grey;
+                        visibility: hidden;
+                        font-size: 1.15em;
+                        opacity: 0;
+                        transition: ease-in-out all 0.5s;
+                        padding-top: 80px;
+                    }
+                    &:hover{
+                        .referenceDesc, .plusIcon{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    .plusIcon{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        margin: 0;
+                        background: url(../img/references/plus.png) no-repeat center;
+                        background-size: 25px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: ease-in-out all 0.5s;
+                    }
+                }   
+            }
+        }
+    }
+}
+
+// ENTREPRISE
+.entrepriseContainer{
+    background-color: $lightgrey;
+    .titleContainer{
+        padding: 100px 0;
+        background: url(../img/entreprises/entreprise_bg.jpg)no-repeat center fixed;
+        background-size: cover;
+        min-height: 100%;
+        padding: 120px 0;
+        text-align: center;
+        h2{
+            img{
+                width: 400px;
+                padding: 0;
+            }
+        }
+    }
+    .firstContainer, .thirdContainer{
+        .leftText{
+            h4, p{
+                text-align: right;
+                color: $grey;
+                font-size: 1.1em;
+            }
+            h4{
+                font-family: $RALSB;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+            p{
+                font-family: $RALR;
+            }
+        }
+        .pictoWrap{
+            p{
+                font-family: 'social';
+                font-size: 8em;
+                margin: 25px 0 0 50px;
+            }
+        }
+    }
+    .firstContainer{
+        background-color: $whitegrey;
+        padding: 100px 0;
+        h3{
+            color: $grey;
+            text-align: center;
+            font-family: $RALSB;
+            font-size: 1.8em;
+            margin-bottom: 110px;
+        }
+        .pictoWrap{
+            p{
+                background: url(../img/entreprises/rond-01.png) no-repeat;
+                background-size: 140px;
+                &::before{
+                    content: '\e007';
+                    vertical-align: top;
+                    margin-left: 6px;
+                    line-height: 155px;
+                }
+            }
+        }
+    }
+    .secondContainer{
+        padding: 100px 0;
+        background: url(../img/entreprises/des-experts.jpg)no-repeat center fixed;
+        background-size: cover;
+        min-height: 100%;
+        .rightText{
+            h4, p{
+                text-align: left;
+                color: $grey;
+                font-size: 1.1em;
+            }
+            h4{
+                font-family: $RALSB;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+            p{
+                font-family: $RALR;
+            }
+        }
+        .pictoWrap{
+            p{
+                background-color: $whitegrey;
+                border-radius: 50%;
+                width: 140px;
+                height: 140px;
+                font-family: 'social';
+                font-size: 8em;
+                margin: 25px 0 0 290px;
+                &::before{
+                    content: '\e008';
+                    vertical-align: top;
+                    margin-left: 5px;
+                    line-height: 160px;
+                }
+            }
+        }
+    }
+    .thirdContainer{
+        background-color: $whitegrey;
+        padding: 100px 0;
+        .pictoWrap{
+            p{
+                background: url(../img/entreprises/rond-03.png) no-repeat;
+                background-size: 140px;
+                &::before{
+                    content: '\e006';
+                    vertical-align: top;
+                    margin-left: 4px;
+                    line-height: 150px;
+                }
+            }
+        }
+    }
+    .formWrap{
+        padding: 100px 0;
+        background-color: $lightgrey;
+        h2{
+            font-family: $RALSB;
+            font-size: 1.8em;
+            color: $grey;
+            text-align: center;
+        }
+        #decrivez{
+            font-family: $RALR;
+            font-size: 1.2em;
+            color: $grey;
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+    }
+}
+
+// ARTISTS
+
+.artistContainer{
+    background-color: $whitegrey;
+    .coinWrap{
+        background: url(../img/artists/header-bg.png) no-repeat center fixed;
+        background-size: cover;
+        min-height: 100%;
+        padding: 50px 0 70px;
+        .titleContainer{
+            // padding: 120px 0;
+            text-align: center;
+            h2{
+                img{
+                    width: 250px;
+                    padding: 0;
+                }
+            }
+        }
+        .explications{
+            overflow: hidden;
+            .part1{
+                .backgroundPa{
+                    margin-left: -100px;
+                }
+            }
+            .part2{
+                .textArt{
+                    margin: 0 0 0 15px;
+                }
+            }
+            .part3{
+                .backgroundPa{
+                    margin-right: -100px;
+                }
+                .textArt{
+                    margin: 0 0 0 40px;
+                }
+            }
+            .part1, .part2, .part3{
+                margin: 50px 0 110px;
+                .backgroundPa{
+                    background: $lightgrey;
+                    -webkit-transform: skew(-25deg);
+                    -moz-transform: skew(-25deg);
+                    -o-transform: skew(-25deg);
+                    tranform: skew(-25deg);
+                    padding: 100px;
+                }
+                .textArt{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    color: $grey;
+                    width: 90%;
+                    padding-top: 35px;
+                    h3{
+                        font-size: 1.2em;
+                        font-family: $RALSB;
+                        color: $grey;
+                    }
+                    p{
+                        
+                    }
+                }
+            }
+            .scrollTo{
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+    .artistForm{
+        background: url(../img/artists/form-bg.png) no-repeat center fixed;
+        padding: 100px 0;
+        h2, h3{
+            text-align: center;
+            color: $grey;
+            font-family: $RALSB;
+        }
+        h2{
+            font-size: 1.8em;
+        }
+        h3{
+            font-size: 1.3em;
+            margin: 25px 0 65px;
+        }
+    }
+    .artistWrap{
+        margin: 80px 0;
+        h2{
+            text-align: center;
+            color: $grey;
+            font-family: $RALSB;
+            font-size: 1.8em;
+            margin-bottom: 110px;
+        }
+        .artistPictures{
+            &:hover{
+                .artistName{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 40em) { 
+    .artistContainer{
+        .coinWrap{
+            .explications{
+                .part1{
+                    margin: 50px 0 0;
+                    .backgroundPa{
+                        margin-left: 0;
+                    }
+                }
+                .part2{
+                    margin: 25px 0;
+                    .textArt{
+                        margin:0;
+                    }
+                }
+                .part3{
+                    margin: 0 0 70px;
+                    .backgroundPa{
+                        margin-right: 0;
+                    }
+                    .textArt{
+                        margin:0;
+                    }
+                }
+                .part1, .part2, .part3{
+                    padding: 0;
+                    .backgroundPa{
+                        -webkit-transform: skew(0deg);
+                        -moz-transform: skew(0deg);
+                        -o-transform: skew(0deg);
+                        tranform: skew(0deg);
+                    }
+                    .textArt{
+                        width: 100%;
+                    }
+                }
             }
         }
     }

@@ -1,0 +1,1046 @@
+// ALL
+@import '_foundation';
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: "social";
+    src:url("../font/social.eot");
+    src:url("../font/social.eot?#iefix") format("embedded-opentype"),
+    url("../font/social.woff") format("woff"),
+    url("../font/social.ttf") format("truetype"),
+    url("../font/social.svg#social") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway-semibold';
+    font-weight: bold;
+    font-style: bold;
+    src:url("../font/Raleway-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Raleway-reg';
+    font-weight: normal;
+    font-style: normal;
+    src:url("../font/Raleway-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Raleway-light';
+    font-weight: lighter;
+    font-style: lighter;
+    src:url("../font/Raleway-Light.ttf") format("truetype");
+}
+
+// VAR
+$grey: #2C2C2C;
+$yellow: #F7B232;
+$white: #fff;
+$lightgrey: #e1e1e1;
+$RALSB: 'Raleway-semibold', Helvetica, sans-serif;
+$RALR: 'Raleway-reg', Helvetica, sans-serif;
+$RALL: 'Raleway-light', Helvetica, sans-serif;
+
+body, html{
+    height:100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    // user-select: none;
+}
+
+button{ 
+    border:none;
+    text-transform: uppercase;
+    background-color: $yellow;
+    color: $grey;
+    transition: ease-in-out all 0.5s;
+    font-family: $RALSB;
+    border-radius: 4px;
+    &:hover{
+        background-color: $grey;
+        color: $yellow;
+    }
+    &:active{
+        background-color: lighten($grey, 20%);
+        color: $white;
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]{
+    box-sizing: border-box;
+    background-clip:padding-box;
+    border-radius:0;
+    appearance:none;
+    background-color:#fff;
+    color:#000;
+    outline:0;
+    margin:0;
+    padding:0;
+    text-align: left;
+    font-size:1em;
+    vertical-align: middle;
+    resize: vertical;
+}
+
+select{
+    background:#fff url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+    background-repeat: no-repeat;
+    background-position: 97% center;
+    padding:0 25px 0 8px;
+    font-size: .875em
+}
+fieldset{
+    border: none;
+    legend{
+        display: none;
+    }
+}
+
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
+// NAV
+.underNav{
+    margin-top: 5.3125rem;
+}
+
+.navBar {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+    background-color: $grey;
+    z-index: 9999;
+    font-family: $RALR;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    display: block;
+    .title-area{
+        .name{
+            width: 200px;
+            h1{
+                a{
+                    width: 100%;
+                    padding: 0 0 0 1.77rem;
+                    img{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+    .top-bar-section{
+        background-color: $grey !important;
+        ul{
+            background-color: $grey !important;
+            &:hover{
+                color: $grey;
+            }
+            li{                
+                text-align: center;
+                vertical-align: middle;
+                color: $white;
+                font-family: $RALR;
+                text-decoration: none;
+                background-color: $grey !important;
+                &:hover{
+                    a{
+                        color: $yellow; 
+                    }
+                }
+                a{
+                    font-family: $RALR;
+                    background-color: $grey !important;
+                    font-size: 1em;
+                    transition: ease-in-out all .5s;
+                    padding-left: 0;
+                    padding-right: 0; 
+                    &:hover{
+                        color: $yellow;
+                    }
+                }
+                .active{
+                    color: $yellow;
+                    font-family: $RALSB;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1050px) {
+    .top-bar {
+        .toggle-topbar.menu-icon{
+            a{
+                span{
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        height: 0px;
+                        top: 50%;
+                        margin-top: -8px;
+                        right: 20px;
+                        box-shadow: 0px 0px 0px 1px white,0px 7px 0px 1px white,0px 14px 0px 1px white;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// FOOTER
+footer{
+    background: $grey;
+    text-align: center;
+    bottom: 0;
+    padding: 10px 0 25px;
+    .copyright{
+        vertical-align: middle;
+        margin: 22px 0 10px;
+        span{
+            color: $white;
+            font-family: $RALR;
+        }
+    }
+    .socialPart{
+        text-align: center;
+        .fbBack{
+            display: inline-block;
+            margin: 15px 10px 0;
+            border-radius: 50%;
+            background-color: #45619d;
+            transition: ease-in-out all .5s;
+            .fbLink{
+                color: $white;
+                text-decoration: none;
+                transition: ease-in-out all .5s;
+                display: table-cell;
+                vertical-align: middle; 
+                text-align: center;
+                height: 40px;
+                width: 40px; 
+                &:before{
+                    font-family: "social";
+                    font-size: 1.4em;
+                    content:'\e001';
+                }
+                &:hover{
+                    color: $grey;
+                }
+            }
+            &:hover{
+                background-color: $yellow;
+            }
+        }
+        .instaBack{
+            display: inline-block;
+            border-radius: 50%;
+            margin-top: 15px;
+            background-color: #246087;
+            transition: ease-in-out all .5s;
+            .instagramLink{
+                color: $white;
+                text-decoration: none;
+                transition: ease-in-out all .5s;
+                display: table-cell;
+                vertical-align: middle; 
+                text-align: center;
+                height: 40px;
+                width: 40px; 
+                &:before{
+                    font-family: "social";
+                    font-size: 1.4em;
+                    content:'\e000';
+                }
+                &:hover{
+                    color: $grey;
+                }
+            }
+            &:hover{
+                background-color: $yellow;
+            }
+        }
+        .pinBack{
+            display: inline-block;
+            border-radius: 50%;
+            margin-top: 15px;
+            background-color: #ab171e;
+            transition: ease-in-out all .5s;
+            .pinterestLink{
+                color: $white;
+                text-decoration: none;
+                transition: ease-in-out all .5s;
+                display: table-cell;
+                vertical-align: middle; 
+                text-align: center;
+                height: 40px;
+                width: 40px; 
+                &:before{
+                    font-family: "social";
+                    font-size: 1.3em;
+                    content: '\e002';
+                }
+                &:hover{
+                    color: $grey;
+                }
+            }
+            &:hover{
+                background-color: $yellow;
+            }
+        }
+    }
+    .linkPark{
+        vertical-align: middle;
+        margin-top: 22px;
+        a{
+            color: $white;
+            font-family: $RALR;
+            margin: 0 15px;
+            transition: ease-in-out all .5s;
+            &:hover{
+                color: $yellow;
+            }
+        }
+        .active{
+            color: $yellow;
+        }
+    }
+}
+
+//FORMS
+label{
+    font-family: $RALSB !important;
+    color: $grey;
+}
+
+.forms{
+    .fieldContainer{
+        margin-bottom: 10px !important;
+        .labelContainer{
+            label{
+                padding: 15px 0;
+            }
+        }
+        .champContainer{
+            float: left !important;
+            input{
+                padding: 0 10px;
+                border-radius: 6px;
+                border: none;
+                height: 45px;
+                font-family: $RALL;
+            }
+            textarea{
+                padding: 10px 10px;
+                border-radius: 6px;
+                border: none;
+                font-family: $RALL;
+            }
+            .emptyField{
+                border: rgba(255, 0, 0, 0.5) 1px solid;
+                box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.2);
+            }
+        }
+    }
+    .formSubmit{
+        width: 200px;
+        margin: 80px 0 0 265px;
+    }
+    .obg{
+        text-align: right;
+        color: $grey;
+        font-family: $RALL;
+        margin: 20px 15px 0 0;
+    }
+}
+
+@media only screen and (max-width: 40em) { 
+    .forms{
+        .fieldContainer{
+            .labelContainer{
+                height: 45px !important;
+                label{
+                    float: left !important;
+                }
+            }
+        }
+        .formSubmit{
+            margin-left: 1.25rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
+    .forms{
+        .formSubmit{
+            margin-left: 192px;
+        }
+    } 
+}
+
+// HOME
+.fullWidth {
+    // BACKGROUND VIDEO
+    .js-video{
+        position: relative;
+        padding-bottom: 56.25%;
+        // padding-top: 30px;
+        // height: 0;
+        overflow: hidden;
+        .youtube-player{
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 80%;
+            z-index: -10;
+            border: none;
+        }
+        #player2{
+            z-index: -5;
+        }
+        .baseline{
+            // position: absolute;
+            // top: 0;
+            // bottom: 0;
+            // left: 0;
+            // right: 0;
+            // display: flex; /* add */
+            // justify-content: center; /* add to align horizontal */
+            // align-items: center;
+            // width: 100%;
+            h2{
+                color: $white;
+                // font-size: 2em;
+                text-align: center;
+                z-index: 10;
+                margin-top: 10%;
+                font-family: $RALR;
+            }
+
+            .yellowZ{
+                color: #F7B232;
+                font-family: $RALR;
+            }
+
+            p{
+                color: $white;
+                font-family: $RALR;
+                text-align: center;
+            }
+        }
+        img{
+            text-align: center;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+}
+.container{
+    background: url('../img/fond-losange.jpg')no-repeat;
+    background-size: cover;
+    padding-bottom: 100px;
+    .presentation{
+        vertical-align: middle;
+        color: $white;
+        font-size: 1.5em;
+        text-align: center;
+        z-index: 10;
+        margin-top: 10%;
+        font-family: $RALR;
+    }
+}
+.devisContainer{
+    //height: 317px;
+    //background: url('../img/fond-graffeur-entreprise.jpg')no-repeat;
+    background-color: #E1E1E1;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    .left{
+        float: left;
+        height: 100%;
+        font-family: $RALR;
+        text-align: center;
+        p{
+            font-size: 1.2em;
+            text-align: left;
+        }
+        img{
+            padding-bottom: 40px;
+            width: 100px;
+        }
+    }
+    .right{
+        float: right;
+        height: 100%;
+        font-family: $RALR;
+        text-align: center;
+        p{
+            font-size: 1.2em;
+            text-align: right;
+        }
+        img{
+            padding-bottom: 40px;
+            width: 100px;
+        }
+    }
+
+    div{
+        text-align: center;
+        button{
+            background-color: $yellow;
+            color: black;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            text-align: center;
+            font-family: $RALSB;
+            &:hover{
+                color: $yellow;
+                background-color: black;
+            }
+        }
+        p{
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: $RALSB;
+        }
+    }  
+}
+.feedContainer{
+    background: #E1E1E1;
+    padding-top: 400px;
+    padding-bottom: 400px;  
+    font-family: $RALR;
+    h3, p, a{
+        text-align: center;
+        display: block;
+        margin : auto;
+        font-family: $RALSB;
+        color: $black;
+        width: 51%;
+    }
+    button{
+        text-align: center;
+        background-color: $yellow;
+        color: black;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        font-family: $RALR;
+        &:hover{
+            color: $yellow;
+            background-color: black;
+        }
+    } 
+}
+.resultatContainer{
+    background: url('../img/fond-nos-resultats.jpg')no-repeat;
+    background-size: cover!important;
+    padding-top: 400px;
+    padding-bottom: 400px;
+    .leftImg, .centerImg, .rightImg{
+        padding: 0;
+        .orange{
+            background: orange;
+            opacity: 0;
+        }
+        
+        &:hover .orange{
+            opacity:0.7;
+        }
+    }
+
+    button{
+        background-color: $yellow;
+        color: black;
+        text-align: center;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        display: block;
+        margin : auto;
+        font-family: $RALSB;
+        &:hover{
+            color: $yellow;
+            background-color: black;
+        }
+    }
+    p{
+        font-family: $RALSB;
+        text-align: center;
+        font-size: 2em;
+    }
+}
+.descContainer{
+    background: url('../img/fond-qui-sommes-nous.jpg');
+    background-size: cover!important;
+    padding-top: 400px;
+    padding-bottom: 400px;
+    div{
+        text-align: center;
+    }
+    a, h3{
+        font-family: $RALSB;
+        text-align: center;
+        margin: 0;
+        color: $white;
+        font-size: 1.2em;
+    }
+    .whoAre{
+        .descPart{
+            text-align: center;
+        }
+    }
+}
+
+//CONTACT
+.contactContainer{
+    background-color: $lightgrey;
+    font-family: $RALSB;
+<<<<<<< HEAD
+    // .text-left{
+    //     text-align: left;
+    // }
+    // .text-right{
+    //     text-align: right;
+    // }
+
+    // .fond{
+    //     background: url('../img/VisuMain.jpg');
+    //     height: 100%;
+    //     margin: 0;
+    // }
+    // h2, h3{
+    //     color: $black;
+    // }
+    // button{
+    //     text-align: center;
+    //     margin: 0;
+    //     background-color: $yellow;
+    //     color: black;
+    //     text-align: center;
+    //     -webkit-border-radius: 3px;
+    //     -moz-border-radius: 3px;
+    //     border-radius: 3px;
+    //     display: block;
+    //     margin : auto;
+    //     font-family: $RALSB;
+    //     &:hover{
+    //         color: $yellow;
+    //         background-color: black;
+    //     }
+    // }
+    // img{
+    //     width: 100px;
+    //     display: inline-block;
+    //     padding-top: 20px;
+    // }
+    // .reglage{
+    //     padding-top: 14px;
+    //     width: 100px;
+    //     display: inline-block;
+    // }
+=======
+    // .part1{
+    //     background: url('../img/IMGHearder.png');
+    // }
+    section{
+        div{
+            padding:0;
+        }
+    }
+    .text-left{
+        text-align: left;
+    }
+    .text-right{
+        text-align: right;
+    }
+
+    .fond{
+        background: url('../img/VisuMain.jpg');
+        height: 100%;
+        margin: 0;
+    }
+    h2, h3{
+        color: $black;
+    }
+    button{
+        text-align: center;
+        margin: 0;
+        background-color: $yellow;
+        color: black;
+        text-align: center;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        display: block;
+        margin : auto;
+        font-family: $RALSB;
+        &:hover{
+            color: $yellow;
+            background-color: black;
+        }
+    }
+    img{
+        display: inline-block;
+        padding-top: 20px;
+    }
+    .reglage{
+        padding-top: 14px;
+        width: 100px;
+        display: inline-block;
+    }
+>>>>>>> 74d371fca8e15e29da12817636addf674f25a15d
+    // .pictos{
+    //     text-align: center;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     -webkit-border-radius: 50%;
+    //     border-radius: 50%;
+    //     background-color: $yellow;
+    //     width: 150px;
+    //     height: 150px;
+<<<<<<< HEAD
+    //     &:hover{
+    //         background-color: $white;
+    //     }
+=======
+>>>>>>> 74d371fca8e15e29da12817636addf674f25a15d
+    // }
+    // .pictos2{
+    //     text-align: center;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     -webkit-border-radius: 50%;
+    //     border-radius: 50%;
+    //     background-color: $yellow;
+    //     width: 150px;
+    //     height: 150px;
+<<<<<<< HEAD
+    //     &:hover{
+    //         background-color: $white;
+    //     }
+=======
+>>>>>>> 74d371fca8e15e29da12817636addf674f25a15d
+    // }
+    .titleContainer{
+        padding: 40px 0;
+        background: url(../img/contact_bg.jpg)no-repeat fixed;
+        background-size: cover;
+        min-height: 100%;
+        h2{
+            img{
+                width: 180px;
+                padding: 0;
+            }
+        }
+    }
+
+    .row{
+        text-align: center;
+        .artistPart, .entreprisePart, .coordoneesPart{
+            padding: 20px 0;
+            background-color: $lightgrey;
+            h3{
+                text-align: center;
+                font-size: 1.2em;
+                font-family: $RALSB;
+                color: $grey;
+            }
+            p{
+                text-align: center;
+                font-family: "social";
+                font-size: 5em;
+                color: $yellow;
+                transition: ease-in-out all 0.5s;
+                cursor: pointer;
+            }
+            .active{
+                color: $grey;
+            }
+            &:hover{
+                p{
+                    color: $grey;
+                }
+            }
+        }
+        .artistPart{
+            p{
+                &::before{
+                    content: '\e003';
+                }
+            }
+        }
+        .entreprisePart{
+            border-left: 2px $grey solid;
+            border-right: 2px $grey solid;
+            p{
+                &::before{
+                    content:'\e004';
+                }
+            }
+        }
+        .coordoneesPart{
+            p{
+                &::before{
+                    content: '\e005';
+                }
+            }
+        }
+        .selectPart{
+            padding: 75px 100px 0;
+            select{
+                height: 35px;
+                color: $grey;
+                font-family: $RALR;
+            }
+        }
+        .contactPart{
+            background-color: $lightgrey;
+            padding: 30px 0;
+        }
+        .coordoneesSec{
+            .infos{
+                // margin: 30px 0;
+                p{
+                    text-align: center;
+                    color: $grey;
+                    /* font-family: $RALR; */
+                    margin-bottom: 0;
+                }
+                a{
+                    text-align: center;
+                    color: $grey;
+                    transition: ease-in-out all 0.5s;
+                    /* font-family: $RALR; */
+                    &:hover{
+                        color: $yellow;
+                    }
+                }
+            }
+            .gmap{
+                margin-top: 25px;
+                height: 300px;
+                iframe{
+                    height: 300px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// FAQ
+.faqContainer{
+    padding: 100px 0;
+    background: url('../img/faq_bg.jpg') no-repeat center fixed;
+    background-size: cover;
+    min-height: 100%;
+    h2{
+        color: $grey;
+        font-family: $RALSB;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    .leftFaq{
+        margin-bottom: 35px;
+    }
+    .leftFaq, .rightFaq{
+        h3{
+            color: $grey;
+            font-family: $RALSB;
+            font-size: 1.3em;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        div{
+            h4{
+                color: $grey;
+                font-family: $RALSB;
+                font-size: 1.1em;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.aboutContainer{
+    padding: 100px 0;
+    background: url('../img/faq_bg.jpg') no-repeat center fixed;
+    background-size: cover;
+    min-height: 100%;
+    h3{
+        color: $grey;
+        font-family: $RALSB;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    p{
+        color: $grey;
+        font-family: $RALL;
+        font-size: 1em;
+        margin-bottom: 30px;
+        }
+    div{
+        color: $grey;
+        font-family: $RALSB;
+        font-size: 1.1em;
+        margin-bottom: 30px;
+        text-align: center;
+        margin: 0;
+        h4{
+            color: $black;  
+        }
+    }
+}
+// MENTIONS LEGALES
+.mentionsContainer{
+    padding: 100px 0;
+    background: url('../img/faq_bg.jpg') no-repeat center fixed;
+    background-size: cover;
+    h2{
+        color: $grey;
+        font-family: $RALSB;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    .leftMentions{
+        p{
+            color: $grey;
+            font-family: $RALL;
+            font-size: 1em;
+            margin-bottom: 30px;
+        }
+        div{
+            h3{
+                color: $grey;
+                font-family: $RALSB;
+                font-size: 1.1em;
+                margin-bottom: 30px;
+            }
+            p{
+                color: $grey;
+                font-family: $RALL;
+                font-size: 1em;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+// MODALS
+.reveal-modal{
+    .lead{
+        text-align: center;
+        font-family: $RALR;
+        color: $grey;
+        font-size: 1.3em;
+    }
+    #endForm{
+        display: block;
+        margin: auto;
+    }
+    .modalButton{
+        width: 200px;
+    }
+}
+
+// REFERENCES
+.referencesContainer{
+    background-color: $lightgrey; 
+    .titleContainer{
+        padding: 40px 0;
+        text-align: center;
+        h2{
+            img{
+                width: 180px;
+                padding: 0;
+            }
+        }
+    }
+    .referencesImages{
+        padding-bottom: 200px;
+        section{
+            .imgWrap{
+                margin: 0;
+                padding: 0;
+                a{
+                    .referenceDesc{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        margin: 0;
+                        background: rgba($yellow, 0.6);
+                        color: $grey;
+                        visibility: hidden;
+                        font-size: 1.15em;
+                        opacity: 0;
+                        transition: ease-in-out all 0.5s;
+                        padding-top: 80px;
+                    }
+                    &:hover{
+                        .referenceDesc, .plusIcon{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    .plusIcon{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        margin: 0;
+                        background: url(../img/references/plus.png) no-repeat center;
+                        background-size: 25px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: ease-in-out all 0.5s;
+                    }
+                }   
+            }
+        }
+    }
+}
+
+// ENTREPRISE
+.entrepriseContainer{
+    background-color: $lightgrey; 
+    .titleContainer{
+        padding: 40px 0;
+        text-align: center;
+        h2{
+            img{
+                width: 180px;
+                padding: 0;
+            }
+        }
+    }
+}

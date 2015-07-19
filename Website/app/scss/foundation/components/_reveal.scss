@@ -81,9 +81,9 @@ $z-index-base: 1005;
     border-radius: $border-radius;
     #{$default-float}: 0;
 
-    @media #{$small-only} {
-      min-height:100vh;
-    }
+    // @media #{$small-only} {
+    //   min-height:100vh;
+    // }
 
     // Make sure rows don't have a min-width on them
     .column, .columns { min-width: 0; }

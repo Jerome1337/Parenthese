@@ -29,8 +29,9 @@ var concatCss = require('gulp-concat-css');
  */
 gulp.task('script', function() {
     return gulp.src([
-        appSrc + '/js/jquery.js',
         appSrc + '/js/modernizr.js',
+        appSrc + '/js/jquery.js',
+        appSrc + '/js/jqueryui.js',
         appSrc + '/js/foundation.js',
         appSrc + '/js/foundation.topbar.js',
         appSrc + '/js/foundation.reveal.js',
@@ -196,7 +197,7 @@ gulp.task('serve', ['build'], function() {
         // Note: this uses an unsigned certificate which on first access
         //       will present a certificate warning in the browser.
         // https: true,
-        proxy: "http://bicravart:8888/"
+        proxy: "http://127.0.0.1/parenthese/Website/app/"
         //server: [ appTemp, appSrc]
     });
     gulp.watch( appSrc + '/**/*.php', reload);

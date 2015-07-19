@@ -52,23 +52,53 @@
                 <button type="submit" id="formSubmit">DECOUVREZ NOS REFERENCES</button>               
             </div>
         </section>
-        <section class="descContainer">
-            <section class="row">
-                <!-- <h3>Qui sommes-nous ?</h3> -->
-                <div class="large-6 medium-6 small-12 columns linkPart">
-                    <a href="#" data-reveal-id="artistsModal">Ce que les artistes<br> pensent de nous...</a>
-                </div>
-                <div class="large-6 medium-6 small-12 columns linkPart">
-                    <a href="#" data-reveal-id="entreprisesModal">Ce que les entreprises<br> pensent de nous...</a>
-                </div>
-            </section>
-        </section>
         <section class="feedContainer">
             <section class="row">
                 <div class="row fullWidth">
                     <h3>Qui sommes-nous ?</h3>
-                    <p>Des artistes aux entreprises, Bicravart mise sur son équipe d'experts<br> pour offire le meilleur service qu'il soit, pour un accompagnement sur<br> le long et court termes. Avec Bicravart, monnayez votre art.</p>
+                    <p>Des artistes aux entreprises, Bicravart mise sur son équipe d'experts<br> pour offire le meilleur service qu'il soit, pour un accompagnement sur<br> le long et court terme. Avec Bicrav'art, monnayez votre art.</p>
                     <a href="#"><button type="submit" id="formSubmit">DECOUVREZ L'AGENCE</button></a>
+                </div>
+            </section>
+        </section>
+        <section class="descContainer">
+            <section class="row">
+                <!-- <h3>Qui sommes-nous ?</h3> -->
+                <div class="large-6 medium-6 small-12 columns linkPart">
+                    <a href="#" data-reveal-id="artistsModal">LES ARTISTES ONT LA PAROLES</a>
+                    <div class="bloc">
+                        <img class="leftPic" src="img/img-01.jpg" alt="">
+                        <p class="leftPic">"Je suis devenu un véritable artiste grace à Bicrav'art !"</p>
+                        <p class="leftPic">Tasr</p>
+                    </div>
+                    <div class="bloc">
+                        <img  class="leftPic"src="img/img-02.jpg" alt="">
+                        <p class="leftPic">"Aujourd'hui je ne vis que de mon art."</p>
+                        <p class="leftPic">Pablo P.</p>
+                    </div>
+                    <div class="bloc">
+                        <img  class="leftPic"src="img/img-03.jpg" alt="">
+                        <p class="leftPic">"Avec Bicrav'art j'ai pu prendre part à de grands projets"</p>
+                        <p class="leftPic">Serguey</p>
+                    </div>
+                </div>
+                <div class="large-6 medium-6 small-12 columns linkPart">
+                    <a href="#" data-reveal-id="entreprisesModal">CE QUE LES ENTREPRISES PENSENT DE NOUS</a>
+                    <div class="bloc">
+                        <img class="rightPic" src="img/img-04.jpg" alt="">
+                        <p class="rightPic">"Les meilleurs graffeurs sont sur Bicrav'art"</p>
+                        <p class="rightPic">Maire de Torcy</p>
+                    </div>
+                    <div class="bloc">
+                        <img class="rightPic" src="img/img-05.jpg" alt="">
+                        <p class="rightPic">"Des expert disponible et à notre écoute"</p>
+                        <p class="rightPic">SNCF</p>
+                    </div>
+                    <div class="bloc">
+                        <img class="rightPic" src="img/img-06.jpg" alt="">
+                        <p class="rightPic">"Très satisfait du travail fournit par les artistes."</p>
+                        <p class="rightPic">Marie de Chessy</p>
+                    </div>
                 </div>
             </section>
         </section>
