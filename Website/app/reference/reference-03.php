@@ -20,30 +20,30 @@
         <section class="referencesPageContainer underNav">
             <section class="row fullWidth titleContainer">
                 <div class="large-12 medium-12 small-12 columns">
-                    <h2>Urban Lion</h2>
+                    <h2>Graffs au Parc des félins de Nels</h2>
                 </div>
             </section>
             <section class="row refContainer">
-                <div class="large-6 medium-6 small-6 columns">
+                <div class="large-6 medium-6 small-12 columns">
                     <img src="../img/references/reference-03.jpg" alt="reference 03">            
                 </div>
-                <div class="large-6 medium-6 small-6 columns">
+                <div class="large-6 medium-6 small-12 columns">
                     <div class="texte">
-                        <h3>Titre</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde molestiae perspiciatis, quis sit debitis voluptatibus, ut explicabo quidem sunt animi qui, quo veniam repudiandae. Dolor placeat facere magni eos non.</p>
+                        <h3>Graffs au Parc des félins de Nels</h3>
+                        <p>Les artistes de Bicrav’art on pris d’assaut le parc des félins de Nels, et ont réalisé pas moins de 30 fresques un peu partout dans le parc.</p>
                     </div>
                 </div>
             </section>
             <section class="row">
-                <div class="large-4 medium-4 small-4 columns">
+                <div class="large-4 medium-4 small-12 columns">
                     <p>Vous êtes un artiste, et vous êtes rempli de talents. Vous souhaitez vivre de votre art et gagner en notorité ? Bicravart peut vous aider.</p>
-                    <button type="submit" class="formSubmit">INSCRIPTION</button>
+                    <a href="http://www.bicravart.com/artistes"><button type="submit" class="formSubmit">INSCRIPTION</button></a>
                 </div>
-                <div class="large-4 medium-4 small-4 columns">
+                <div class="large-4 medium-4 small-12 columns">
                     <p>Vous êtes une entreprise et vous souhaitez bénéfier de nos plus grand artistes pour vos projets ? <br>Estimer votre projet :</p>
-                    <button type="submit" class="formSubmit">DEMANDER UN DEVIS</button>
+                    <a href="http://www.bicravart.com/entreprises"><button type="submit" class="formSubmit">DEMANDER UN DEVIS</button></a>
                 </div>
-                <div class="large-4 medium-4 small-4 columns">
+                <div class="large-4 medium-4 small-12 columns">
                 </div>
             </section>
         </section>
