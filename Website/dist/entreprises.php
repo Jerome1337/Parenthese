@@ -8,6 +8,8 @@
     $pageTitle = "Entreprises";
     $modalMessage = "Merci, votre demande de devis a bien été prise en compte.";
     
+    $path = "";
+
     include('includes/head.php');
     ?>
     <body>
