@@ -876,6 +876,62 @@ label{
         background-size: cover;
         min-height: 100%;
         padding: 50px 0 70px; 
+        .Hadrien{
+            background: url('../img/portrait-01.png')no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url('../img/portrait-01-j.png')no-repeat center;
+            }
+        }
+        .Laura{
+            background: url('../img/portrait-02.png')no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url('../img/portrait-02-j.png')no-repeat center;
+            }
+        }
+        .Marie{
+            background: url('../img/portrait-03.png')no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url('../img/portrait-03-j.png')no-repeat center;
+            }
+        }
+        .Stephane{
+            background: url('../img/portrait-04.png')no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url('../img/portrait-04-j.png')no-repeat center;
+            }
+        }
+        .Lisa{
+            background: url('../img/portrait-05.png')no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url('../img/portrait-05-j.png')no-repeat center;
+            }
+        }
+        .Pascal{
+            background: url('../img/portrait-06.png')no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url('../img/portrait-06-j.png')no-repeat center;
+            }
+        }
+        .Elvis{
+            background: url('../img/portrait-07.png')no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url('../img/portrait-07-j.png')no-repeat center;
+            }
+        }
+        .Jerome{
+            background: url('../img/portrait-08.png')no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url('../img/portrait-08-j.png')no-repeat center;
+            }
+        }
     }
     div{
         padding: 0;
