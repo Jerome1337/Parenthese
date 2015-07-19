@@ -771,12 +771,28 @@ label{
 }
 
 .aboutContainer{
-    padding: 100px 0;
-    background: url('../img/faq_bg.jpg') no-repeat center fixed;
+    // padding: 100px 0;
+    // background: url('../img/faq_bg.jpg') no-repeat center fixed;
     background-size: cover;
     min-height: 100%;
+    .pictopropos{
+        width: 250px;
+    }
+    .titleContainer
+    {
+        background: url("../img/apropos_img.jpg") no-repeat fixed;
+        min-height: 100%;
+    }
+    .photosContainer
+    {
+        background: url("../img/IMG.jpg") no-repeat center fixed;
+        background-size: cover;
+        min-height: 100%;
+        padding: 50px 0 70px; 
+    }
     div{
         padding: 0;
+        margin-top: 45px;
     }
     h3{
         color: $grey;
@@ -913,6 +929,43 @@ label{
                         transition: ease-in-out all 0.5s;
                     }
                 }   
+            }
+        }
+    }
+}
+
+.referencesPageContainer
+{
+    padding-top: 50px;
+    h2{
+        text-align: center;
+        color: $black;
+        font-family: $RALSB;
+    }
+    h3{
+        color: $black;
+        text-align: center;
+    }
+    .refContainer{
+        background-color: #E1E1E1;
+        div{
+            padding:0;
+        }
+        .texte{
+            padding: 40px;
+            font-family: $RALSB;
+            color: $black;
+        }
+        p{
+            font-family: $RALSB;
+        }
+    }
+    .row{
+        div{
+            padding: 0;
+            p{
+                margin-right: 10px;
+                margin-top: 10px;
             }
         }
     }
