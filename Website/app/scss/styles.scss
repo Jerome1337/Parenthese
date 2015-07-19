@@ -60,7 +60,7 @@ button{
     border:none;
     text-transform: uppercase;
     background-color: $yellow;
-    color: $grey;
+    color: $grey !important;
     transition: ease-in-out all 0.5s;
     font-family: $RALSB;
     border-radius: 4px;
@@ -73,8 +73,8 @@ button{
         color: $white;
     }
     &:visited{
-        background-color: lighten($grey, 20%);
-        color: $white;
+        background-color: lighten($grey, 20%) !important;
+        color: $white !important;
     }
 }
 
@@ -406,15 +406,15 @@ label{
     .js-video{
         position: relative;
         padding-bottom: 56.25%;
-        // padding-top: 30px;
-        // height: 0;
+        padding-top: 25px;
+        height: 0;
         overflow: hidden;
         .youtube-player{
             position: absolute;
             top: 0; 
             left: 0;
             width: 100%;
-            height: 80%;
+            height: 100%;
             z-index: -10;
             border: none;
         }
@@ -459,136 +459,156 @@ label{
         }
     }
 }
-.container{
-    background: url('../img/fond-losange.jpg')no-repeat;
+.explainContainer{
+    background: url('../img/home/explain-bg.jpg')no-repeat center;
     background-size: cover;
-    padding-bottom: 100px;
-    .presentation{
+    padding: 100px 0;
+    .explication{
         vertical-align: middle;
         color: $white;
         font-size: 1.5em;
         text-align: center;
-        z-index: 10;
-        margin-top: 10%;
         font-family: $RALR;
     }
 }
 .devisContainer{
-    //height: 317px;
-    //background: url('../img/fond-graffeur-entreprise.jpg')no-repeat;
     background-color: $lightgrey;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    .left{
-        float: left;
-        height: 100%;
-        font-family: $RALR;
-        text-align: center;
-        p{
-            font-size: 1.2em;
-            text-align: left;
-        }
-        img{
-            padding-bottom: 40px;
-            width: 100px;
-        }
-    }
-    .right{
-        float: right;
-        height: 100%;
-        font-family: $RALR;
-        text-align: center;
-        p{
-            font-size: 1.2em;
-            text-align: right;
-        }
-        img{
-            padding-bottom: 40px;
-            width: 100px;
-        }
-    }
-
-    div{
-        text-align: center;
-        button{
-            background-color: $yellow;
-            color: black;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
+    .artistBlock, .entrepriseBlock{
+        padding: 100px 0;
+        h3{
             text-align: center;
+            font-size: 1.3em;
+            font-family: $RALL;
+            color: $grey;
+            text-transform: uppercase;
+        }
+        .iconsDevis{
+            margin: 20px;
+            font-family: 'social';
+            text-align: center;
+            font-size: 6em;
+        }
+        .txtWrap{
+            text-align: center;
+            font-family: $RALR;
+            font-size: 1.1em;
+            width: 70%;
+            display: block;
+            margin: auto;
+        }
+        button{
+            margin-top: 50px;
+        }
+    }
+    .artistBlock{
+        .iconsDevis{
+            &:before{
+                content:'\e003';
+            }
+        }
+    }
+    .entrepriseBlock{
+        border-left: solid #fff 5px;
+        .iconsDevis{
+            &:before{
+                content:'\e004';
+            }
+        }
+    }
+    button{
+        display: block;
+        margin : auto;
+    }
+}
+.feedContainer{
+    background: $lightgrey;
+    padding: 100px 0; 
+    font-family: $RALR;
+    section{
+        h3{
+            text-align: center;
+            font-size: 1.8em;
             font-family: $RALSB;
+            color: $grey;
+        }
+        p{
+            text-align: center;
+            font-size: 1.2em;
+            font-family: $RALL;
+            color: $grey;
+            margin: 90px 0 110px;
+        }
+        button{
+            margin: auto;
+            display: block;
             &:hover{
                 color: $yellow;
                 background-color: black;
             }
         }
-        p{
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            font-family: $RALSB;
-        }
-    }  
-}
-.feedContainer{
-    background: $lightgrey;
-    padding-top: 400px;
-    padding-bottom: 400px;  
-    font-family: $RALR;
-    h3, p, a{
-        text-align: center;
-        display: block;
-        margin : auto;
-        font-family: $RALSB;
-        color: $black;
-        width: 51%;
     }
-    button{
-        text-align: center;
-        background-color: $yellow;
-        color: black;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        font-family: $RALR;
-        &:hover{
-            color: $yellow;
-            background-color: black;
-        }
-    } 
 }
 .resultatContainer{
-    background: url('../img/fond-nos-resultats.jpg')no-repeat;
-    background-size: cover !important;
-    padding-top: 400px;
-    padding-bottom: 400px;
-    .leftImg, .centerImg, .rightImg{
-        padding: 0;
-        .orange{
-            background: orange;
-            opacity: 0;
+    background: url('../img/home/noref-bg.jpg') no-repeat center fixed;
+    background-size: cover;
+    padding: 100px 0;
+    div{
+        margin-bottom: 120px;
+        h3{
+            text-align: center;
+            font-size: 1.8em;
+            font-family: $RALSB;
+            color: $grey;
         }
-        
-        &:hover .orange{
-            opacity:0.7;
+        section{
+            margin-top: 100px;
+            .imgWrap{
+                margin: 0;
+                padding: 0;
+                a{
+                    .referenceDesc{
+                        position: absolute;
+                        top: 0;
+                        bottom: -1px;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        margin: 0;
+                        background: rgba($yellow, 0.6);
+                        color: $grey;
+                        visibility: hidden;
+                        font-size: 1.15em;
+                        opacity: 0;
+                        transition: ease-in-out all 0.5s;
+                        padding-top: 115px;
+                    }
+                    &:hover{
+                        .referenceDesc, .plusIcon{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    .plusIcon{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        margin: 0;
+                        background: url(../img/references/plus.png) no-repeat center;
+                        background-size: 25px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: ease-in-out all 0.5s;
+                    }
+                }   
+            }
         }
     }
-
     button{
-        background-color: $yellow;
-        color: black;
-        text-align: center;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
         display: block;
         margin : auto;
-        font-family: $RALSB;
-        &:hover{
-            color: $yellow;
-            background-color: black;
-        }
     }
     p{
         font-family: $RALSB;
@@ -597,29 +617,24 @@ label{
     }
 }
 .descContainer{
-    background: url('../img/fond-qui-sommes-nous.jpg');
-    background-size: cover!important;
-    padding-top: 400px;
-    padding-bottom: 400px;
-    .leftPic{
-        float: left;
-    }
-    .rightPic{
-        float: right;
-    }
-    div{
-        text-align: center;
-    }
-    a, h3{
-        font-family: $RALSB;
-        text-align: center;
-        margin: 0;
-        color: $white;
-        font-size: 1.2em;
-    }
-    .whoAre{
-        .descPart{
-            text-align: center;
+    background: url('../img/home/temoignage-bg.jpg') no-repeat center fixed;
+    background-size: cover;
+    padding: 100px 0;
+    section{
+        .temoignagePart{
+            h3{
+               text-align: center;
+               font-size: 1.3em;
+               font-family: $RALSB;
+               color: $grey; 
+            }
+            .temoignageLeft, .temoignageRight{
+                margin: 50px 0 100px;
+                background-color: $lightgrey;
+                img{
+
+                }
+            }
         }
     }
 }
@@ -1056,7 +1071,6 @@ label{
 }
 
 // ARTISTS
-
 .artistContainer{
     background-color: $whitegrey;
     .coinWrap{
