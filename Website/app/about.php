@@ -18,11 +18,13 @@
             <?php include('includes/nav.php'); ?>
         </section>
 			<section class="aboutContainer underNav">
-                <section class="coinWrap">
+                <section class="headWrap">
             		<div class="row fullWidth titleContainer">
-            			<h3><img class="pictopropos" src="img/A-Propos.svg" alt="A Propos"></h3>
+            			<h3><img class="pictopropos" src="img/about/A-Propos.svg" alt="A Propos"></h3>
                     </div>
                 </section>
+            </section>
+            <section class="contentAbout">
                 <section class="row">
                     <div>
                         <h4>Notre agence</h4>
@@ -33,20 +35,20 @@
 						nous vous accompagnons dans vos recherches et vous aidons à concrétiser vos projets.
 						</p>
                     </div>
-            		<div class="large-3 medium-3 small-12 columns">
-                        <img src="img/like.svg" alt="">
+            		<div class="large-3 medium-3 small-12 columns whoAre">
+                        <img src="img/about/like.svg" alt="Like picto">
             			<p>L'exigence des compétences <br>et du professionnalisme<br> auprès des graffeurs</p>
             		</div>
-            		<div class="large-3 medium-3 small-12 columns">
-            			<img src="img/tel.svg" alt="telephone">
+            		<div class="large-3 medium-3 small-12 columns whoAre">
+            			<img src="img/about/tel.svg" alt="telephone picto">
             			<p>Nous mettons à votre <br>disposition notre large <br>carnet d'adresse</p>
             		</div>
-            		<div class="large-3 medium-3 small-12 columns">
-            			<img src="img/graphic.svg" alt="graphic">
+            		<div class="large-3 medium-3 small-12 columns whoAre">
+            			<img src="img/about/graphic.svg" alt="graphic picto" class="graphique">
             			<p>Répondre au-delà de vos <br>attentes et penser <br>toujours plus loin</p>
             		</div>
-            		<div class="large-3 medium-3 small-12 columns">
-            			<img src="img/photo.svg" alt="photo">
+            		<div class="large-3 medium-3 small-12 columns whoAre">
+            			<img src="img/about/photo.svg" alt="photo picto">
             			<p>Travailler à vos côtés pour <br>que votre notoriété décolle</p>
             		</div>
             		<div class="large-12 medium-12 small-12 columns">
@@ -72,10 +74,10 @@
                         </section>
                         <section>
                             <div class="Lisa large-3 medium-6 small-12 columns">
-                                <p class="Name">Lisa <br>Graffiste</p>
+                                <p class="Name">Lisa <br>Graphiste</p>
                             </div>
                             <div class="Pascal large-3 medium-6 small-12 columns">
-                                <p class="Name">Pascal <br>Graffiste</p>
+                                <p class="Name">Pascal <br>Graphiste</p>
                             </div>
                             <div class="Elvis large-3 medium-6 small-12 columns">
                                 <p class="Name">Elvis  <br>Développeur</p>

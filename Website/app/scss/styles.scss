@@ -858,24 +858,33 @@ label{
 }
 
 .aboutContainer{
-    // padding: 100px 0;
-    // background: url('../img/faq_bg.jpg') no-repeat center fixed;
+    padding: 40px 0;
+    background: url(../img/about/apropos_img.jpg) no-repeat fixed;
     background-size: cover;
-    min-height: 100%;
     .pictopropos{
         width: 250px;
+        margin: auto;
+        display: block;
     }
-    .titleContainer
-    {
-        background: url(../img/apropos_img.jpg) no-repeat fixed;
-        min-height: 100%;
+}
+.contentAbout{
+    padding-top: 40px;
+    .whoAre{
+        margin: 25px 0 40px;
+        img{
+            margin-bottom: 40px;
+        }
+        .graphique{
+            width: 55px;
+        }
     }
     .photosContainer
     {
-        background: url(../img/IMG.jpg) no-repeat center fixed;
+        background: url(../img/about/IMG.jpg) no-repeat center center fixed;
         background-size: cover;
         min-height: 100%;
         padding: 50px 0 70px;
+        margin-top: 30px;
         .Name{
             position: absolute;
             top: 0;
@@ -893,10 +902,11 @@ label{
             font-family: $RALSB;
         }
         .Hadrien{
-            background: url('../img/portrait-01.png')no-repeat center;
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-01.png)no-repeat center;
             height: 154px;
             &:hover{
-                background: url('../img/portrait-01-j.png')no-repeat center;
+                background: url(../img/about/portrait-01-j.png)no-repeat center;
                 .Name{
                     z-index: 99;
                     width: 100%;
@@ -906,10 +916,11 @@ label{
             }
         }
         .Laura{
-            background: url('../img/portrait-02.png')no-repeat center;
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-02.png)no-repeat center;
             height: 154px;
             &:hover{
-                background: url('../img/portrait-02-j.png')no-repeat center;
+                background: url(../img/about/portrait-02-j.png)no-repeat center;
                 .Name{
                     z-index: 99;
                     width: 100%;
@@ -919,10 +930,11 @@ label{
             }
         }
         .Marie{
-            background: url('../img/portrait-03.png')no-repeat center;
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-03.png)no-repeat center;
             height: 154px;
             &:hover{
-                background: url('../img/portrait-03-j.png')no-repeat center;
+                background: url(../img/about/portrait-03-j.png)no-repeat center;
                 .Name{
                     z-index: 99;
                     width: 100%;
@@ -932,10 +944,11 @@ label{
             }
         }
         .Stephane{
-            background: url('../img/portrait-04.png')no-repeat center;
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-04.png)no-repeat center;
             height: 154px;
             &:hover{
-                background: url('../img/portrait-04-j.png')no-repeat center;
+                background: url(../img/about/portrait-04-j.png)no-repeat center;
                 .Name{
                     z-index: 99;
                     width: 100%;
@@ -945,10 +958,11 @@ label{
             }
         }
         .Lisa{
-            background: url('../img/portrait-05.png')no-repeat center;
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-05.png)no-repeat center;
             height: 154px;
             &:hover{
-                background: url('../img/portrait-05-j.png')no-repeat center;
+                background: url(../img/about/portrait-05-j.png)no-repeat center;
                 .Name{
                     z-index: 99;
                     width: 100%;
@@ -958,10 +972,11 @@ label{
             }
         }
         .Pascal{
-            background: url('../img/portrait-06.png')no-repeat center;
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-06.png)no-repeat center;
             height: 154px;
             &:hover{
-                background: url('../img/portrait-06-j.png')no-repeat center;
+                background: url(../img/about/portrait-06-j.png)no-repeat center;
                 .Name{
                     z-index: 99;
                     width: 100%;
@@ -971,10 +986,11 @@ label{
             }
         }
         .Elvis{
-            background: url('../img/portrait-07.png')no-repeat center;
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-07.png)no-repeat center;
             height: 154px;
             &:hover{
-                background: url('../img/portrait-07-j.png')no-repeat center;
+                background: url(../img/about/portrait-07-j.png)no-repeat center;
                 .Name{
                     z-index: 99;
                     width: 100%;
@@ -984,10 +1000,11 @@ label{
             }
         }
         .Jerome{
-            background: url('../img/portrait-08.png')no-repeat center;
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-08.png)no-repeat center;
             height: 154px;
             &:hover{
-                background: url('../img/portrait-08-j.png')no-repeat center;
+                background: url(../img/about/portrait-08-j.png)no-repeat center;
                 .Name{
                     z-index: 99;
                     width: 100%;

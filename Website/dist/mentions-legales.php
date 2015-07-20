@@ -16,7 +16,7 @@
             <!-- INCLUDE NAV BAR -->
             <?php include('includes/nav.php'); ?>
         </section>
-        <section class="mentionsContainer">
+        <section class="mentionsContainer underNav">
             <section class="row">
                 <h2>Mentions légales</h2>
                 <div class="large-6  medium-6 small-12 columns leftMentions">
