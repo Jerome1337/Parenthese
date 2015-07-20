@@ -59,20 +59,20 @@ body {
 button{ 
     border:none;
     text-transform: uppercase;
-    background-color: $yellow;
+    background-color: $yellow !important;
     color: $grey !important;
     transition: ease-in-out all 0.5s;
     font-family: $RALSB;
     border-radius: 4px;
     &:hover{
-        background-color: $grey;
+        background-color: $grey !important;
         color: $yellow !important;
         a{
             color: $yellow;
         }
     }
     &:active{
-        background-color: lighten($grey, 20%);
+        background-color: lighten($grey, 20%) !important;
         color: $white !important;
         a{
             color: $white;
@@ -220,6 +220,9 @@ fieldset{
 }
 
 @media screen and (max-width: 1050px) {
+    .navBar{
+        transition: ease-in-out all 0s;
+    }
     .transparentNav{
         background-color: $grey;
             .top-bar-section{ 
@@ -380,37 +383,41 @@ label{
 }
 
 .forms{
-    .fieldContainer{
-        margin-bottom: 10px !important;
-        .labelContainer{
-            label{
-                padding: 15px 0;
+    fieldset{
+        margin-bottom: 80px;
+        .fieldContainer{
+            margin-bottom: 10px !important;
+            .labelContainer{
+                label{
+                    padding: 15px 0;
+                }
             }
-        }
-        .champContainer{
-            float: left !important;
-            input{
-                padding: 0 10px;
-                border-radius: 6px;
-                border: none;
-                height: 45px;
-                font-family: $RALL;
-            }
-            textarea{
-                padding: 10px 10px;
-                border-radius: 6px;
-                border: none;
-                font-family: $RALL;
-            }
-            .emptyField{
-                border: rgba(255, 0, 0, 0.5) 1px solid;
-                box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.2);
+            .champContainer{
+                float: left !important;
+                input{
+                    padding: 0 10px;
+                    border-radius: 6px;
+                    border: none;
+                    height: 45px;
+                    font-family: $RALL;
+                }
+                textarea{
+                    padding: 10px 10px;
+                    border-radius: 6px;
+                    border: none;
+                    font-family: $RALL;
+                }
+                .emptyField{
+                    border: rgba(255, 0, 0, 0.5) 1px solid;
+                    box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.2);
+                }
             }
         }
     }
     .formSubmit{
         width: 200px;
-        margin: 80px 0 0 265px;
+        margin: auto;
+        display: block;
     }
     .obg{
         text-align: right;
@@ -430,18 +437,7 @@ label{
                 }
             }
         }
-        .formSubmit{
-            margin-left: 1.25rem;
-        }
     }
-}
-
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
-    .forms{
-        .formSubmit{
-            margin-left: 192px;
-        }
-    } 
 }
 
 // HOME
@@ -454,7 +450,7 @@ label{
         height: 0;
         overflow: hidden;
         #videosOverlay{
-            background: url(http://lorempixel.com/400/300) no-repeat center;
+            background: url(../img/home/thumbnail-video.jpg) no-repeat center;
             background-size: cover;
             position: absolute;
             top: 0; 
@@ -510,7 +506,7 @@ label{
 }
 .mobileContent{
     padding: 100px 0;
-    background: url(http://lorempixel.com/400/300) no-repeat center;
+    background: url(../img/home/thumbnail-video.jpg) no-repeat center;
     background-size: cover;
     text-align: center;
     h2{
@@ -521,7 +517,7 @@ label{
     }
 }
 .explainContainer{
-    background: url('../img/home/explain-bg.jpg')no-repeat center;
+    background: url(../img/home/explain-bg.jpg)no-repeat center;
     background-size: cover;
     padding: 100px 0;
     .explication{
@@ -1159,15 +1155,18 @@ label{
 }
 
 .referencesPageContainer{
-    padding-top: 50px;
+    padding: 50px 0;
+    background-color: $whitegrey;
     h2{
         text-align: center;
-        color: $black;
+        color: $grey;
         font-family: $RALSB;
+        margin-bottom: 80px;
     }
     h3{
-        color: $black;
+        color: $grey;
         text-align: center;
+        margin-bottom: 30px;
     }
     .refContainer{
         background-color: #E1E1E1;
@@ -1177,18 +1176,21 @@ label{
         .texte{
             padding: 40px;
             font-family: $RALSB;
-            color: $black;
+            color: $grey;
         }
         p{
             font-family: $RALSB;
         }
     }
-    .row{
+    .linkContainer{
         div{
-            // padding: 0;
             p{
-                margin-right: 10px;
-                margin-top: 10px;
+                margin: 25px 10px 40px;
+                padding: 10px;
+            }
+            button{
+                display: block;
+                margin: auto;
             }
         }
     }
@@ -1430,21 +1432,106 @@ label{
             font-size: 1.8em;
             margin-bottom: 110px;
         }
+        .ced{
+            background: url(../img/artists/Ligne1Photo1.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne1Photo1-j.png)no-repeat center;
+            }
+        }
+        .thug{
+            background: url(../img/artists/Ligne1Photo2.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne1Photo2-j.png)no-repeat center;
+            }
+        }
+        .stonz{
+            background: url(../img/artists/Ligne1Photo3.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne1Photo3-j.png)no-repeat center;
+            }
+        }
+        .idol{
+            background: url(../img/artists/Ligne1Photo4.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne1Photo4-j.png)no-repeat center;
+            }
+        }
+        .akjn{
+            background: url(../img/artists/Ligne2Photo1.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne2Photo1-j.png)no-repeat center;
+            }
+        }
+        .trecy{
+            background: url(../img/artists/Ligne2Photo2.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne2Photo2-j.png)no-repeat center;
+            }
+        }
+        .crom{
+            background: url(../img/artists/Ligne2Photo3.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne2Photo3-j.png)no-repeat center;
+            }
+        }
+        .kurz{
+            background: url(../img/artists/Ligne2Photo4.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne2Photo4-j.png)no-repeat center;
+            }
+        }
+        .slk{
+            background: url(../img/artists/Ligne3Photo1.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne3Photo1-j.png)no-repeat center;
+            }
+        }
+        .zevv{
+            background: url(../img/artists/Ligne3Photo2.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne3Photo2-j.png)no-repeat center;
+            }
+        }
+        .dooh{
+            background: url(../img/artists/Ligne3Photo3.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne3Photo3-j.png)no-repeat center;
+            }
+        }
+        .nico{
+            background: url(../img/artists/Ligne3Photo4.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne3Photo4-j.png)no-repeat center;
+            }
+        }
+        .artyom{
+            background: url(../img/artists/Ligne4Photo1.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne4Photo1-j.png)no-repeat center;
+            }
+        }
+        .larca{
+            background: url(../img/artists/Ligne4Photo2.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne4Photo2-j.png)no-repeat center;
+            }
+        }
+        .lenzy{
+            background: url(../img/artists/Ligne4Photo3.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne4Photo3-j.png)no-repeat center;
+            }
+        }
+        .polls{
+            background: url(../img/artists/Ligne4Photo4.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne4Photo4-j.png)no-repeat center;
+            }
+        }
         .artistPictures{
-            .hoverImage{
-                display: block;
-                top: 0;
-                left: 0;
-                margin-top: -220px;
-                visibility: hidden;
-                opacity: 0;
-                transition: ease-in-out all 0.5s;
-            }
-            .artistsImages{
-                display: block;
-                top: 0;
-                left: 0;
-            }
+            transition: ease-in-out all 0.5s;
+            height: 230px;
+            background-size: 90%;
             .artistName{
                 position: absolute;
                 top: 0;
@@ -1458,20 +1545,19 @@ label{
                 font-size: 1.15em;
                 opacity: 0;
                 transition: ease-in-out all 0.5s;
-                padding-top: 90px;
+                padding-top: 100px;
                 font-family: $RALSB;
             }
             &:hover{
+                height: 230px;
+                background-size: 90%;
                 .artistName{
                     z-index: 99;
                     width: 100%;
                     opacity: 1;
                     visibility: visible;
                 }
-                .hoverImage{
-                    visibility: visible;
-                    opacity: 1;
-                }
+
             }
         }
     }
@@ -1513,6 +1599,39 @@ label{
                     .textArt{
                         width: 100%;
                     }
+                }
+            }
+        }
+        .artistWrap{
+            .artistPictures{
+                height: 430px;
+                background-size: 75%;
+                .artistName{
+                    padding-top: 200px;
+                    font-size: 1.5em;
+                }
+                &:hover{
+                    height: 430px;
+                    background-size: 75%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .artistContainer{
+        .artistWrap{
+            .artistPictures{
+                height: 430px;
+                background-size: 75%;
+                .artistName{
+                    padding-top: 200px;
+                    font-size: 1.5em;
+                }
+                &:hover{
+                    height: 430px;
+                    background-size: 75%;
                 }
             }
         }

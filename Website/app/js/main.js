@@ -16,7 +16,7 @@ if (!isMobile()) {
         player1 = new YT.Player('player1', {  
             height: '1280',  
             width: '720',
-            videoId: 'RAzzv6Ks9nc',
+            videoId: 'kgq5pAuK-BY',
             playerVars: {
                 "rel": 0,
                 "showinfo": 0,
@@ -39,7 +39,7 @@ if (!isMobile()) {
         player2 = new YT.Player('player2', {  
             height: '1280',  
             width: '720',
-            videoId: 'RAzzv6Ks9nc',
+            videoId: 'QWE_xGU2U7c',
             playerVars: {
                 "rel": 0,
                 "showinfo": 0,
@@ -67,6 +67,7 @@ if (!isMobile()) {
     function onPlayer1Ready(event){
         player1Ready = true;
         preloading1 = true;       // Flag the player 1 preloading
+        player1.setPlaybackQuality('hd720'); 
         player1.mute();           // Mute the player 1
         // $( "#player1" ).hide();   // Hide it
         player1.seekTo(1);        // Start the preloading and wait a state change event
@@ -93,6 +94,7 @@ if (!isMobile()) {
 
                 player2Ready = true;
                 preloading2 = true;             // Flag for foreground video preloading
+                player1.setPlaybackQuality('hd720'); 
                 player2.mute();
                 //$( "#player2" ).hide();
                 player2.seekTo(1);              // Start buffering and wait the event
@@ -173,7 +175,8 @@ if (!isMobile()) {
                 player1.pauseVideo();
         }
         else if (event.data == YT.PlayerState.ENDED ) {
-            player1.stopVideo();
+            player1.playVideo();
+            player2.playVideo();
         }
     }
 

@@ -44,20 +44,20 @@
                 <div class="large-6 medium-6 small-12 columns artistBlock">
                     <h3>Vous etes un artiste</h3>
                     <p class="iconsDevis"></p>
-                    <p class="txtWrap">Vous êtes un graffeur et vous souhaitez gagner de l'argent ? Vous souhaitez augmenter votre notoriété ? Enfin vous avez envie de vivre de votre art ? Ne perdez pas de temps, rejoignez-nous !</p>
+                    <p class="txtWrap">Le milieu du street art est très élitiste et en pleine expansion. Devenez l’un des plus célèbre graffeur et venez conquérir de nouveaux horizons.</p>
                     <button><a href="artistes.php" title="Lien vers la page artistes">INSCRIVEZ-VOUS</a></button>
                 </div>
                 <div class="rlarge-6 medium-6 small-12 columns entrepriseBlock">
                     <h3>Vous etes une entreprise</h3>
                     <p class="iconsDevis"></p>
-                    <p class="txtWrap">Vous êtes une entreprise et vous avez un projet artistique ? Vous ne savez par où commencer ? Vous n'avez pas d'idées précises ? Décrivez-nous votre projet, nous pouvons vous aider !</p>
+                    <p class="txtWrap">Dans ces temps où la concurrence est de plus en plus rude, venez moderniser votre image grâce à des artistes venus d'un nouveau monde.</p>
                     <button><a href="entreprises.php" title="Lien vers la page entreprises">DEMANDER UN<br>DEVIS</a></button>
                 </div>
             </div>
         </section>
         <section class="resultatContainer">
             <div class="row fullWidth">
-                <h3>Nos résultats</h3>
+                <h3>Nos références</h3>
                 <section>
                     <div class="large-4 medium-6 small-12 columns imgWrap">
                         <a href="reference/reference-01.php">
@@ -94,7 +94,7 @@
         <section class="descContainer">
             <section class="row">
                 <div class="large-6 medium-6 small-12 columns temoignagePart">
-                    <h3>LES ARTISTES ONT LA PAROLES</h3>
+                    <h3>LES ARTISTES ONT LA PAROLE</h3>
                     <div class="row temoignageLeft">
                         <img class="large-4 medium-12 small-12 columns leftPic" src="img/home/img-01.jpg" alt="">
                         <div class="large-8 medium-12 small-12 columns temoignagesText">

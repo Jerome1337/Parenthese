@@ -1,4 +1,4 @@
-<!doctype html>
+12<!doctype html>
 <html lang="fr-FR" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
     <!-- INCLUDE DB CONNECTION + HEAD -->
     <?php include('../includes/dbconnect.php');
@@ -24,24 +24,24 @@
                 </div>
             </section>
             <section class="row refContainer">
-                <div class="large-6 medium-6 small-12 columns">
+                <div class="large-7 medium-12 small-12 columns">
                     <img src="../img/references/reference-09.jpg" alt="reference 09">            
                 </div>
-                <div class="large-6 medium-6 small-12 columns">
+                <div class="large-5 medium-12 small-12 columns">
                     <div class="texte">
                         <h3>La blessure</h3>
                         <p>Créer pour la WWF suite à l’extinction du dernier rhinocéros blanc, le graff est actuellement exposé dans le hall de l’association.</p>
                     </div>
                 </div>
             </section>
-            <section class="row">
+            <section class="row linkContainer">
                 <div class="large-4 medium-4 small-12 columns">
                     <p>Vous êtes un artiste, et vous êtes rempli de talents. Vous souhaitez vivre de votre art et gagner en notorité ? Bicravart peut vous aider.</p>
-                    <a href="http://www.bicravart.com/artistes"><button type="submit" class="formSubmit">INSCRIPTION</button></a>
+                    <button><a href="http://www.bicravart.com/artistes">INSCRIPTION</a></button>
                 </div>
                 <div class="large-4 medium-4 small-12 columns">
                     <p>Vous êtes une entreprise et vous souhaitez bénéfier de nos plus grand artistes pour vos projets ? <br>Estimer votre projet :</p>
-                    <a href="http://www.bicravart.com/entreprises"><button type="submit" class="formSubmit">DEMANDER UN DEVIS</button></a>
+                    <button><a href="http://www.bicravart.com/entreprises">DEMANDER UN DEVIS</a></button>
                 </div>
                 <div class="large-4 medium-4 small-12 columns">
                 </div>

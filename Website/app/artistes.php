@@ -51,110 +51,78 @@
                 <section class="row">
                     <h2>Ils travaillent avec nous !</h2>
                     <section>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne1Photo1.png" alt="Ligne 1 Photo 1" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Cédric</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures ced">
+                            <p class="artistName">Ced</p>
                         </div>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne1Photo2.png" alt="Ligne 1 Photo 2" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Lil Thug</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures thug">
+                            <p class="artistName">Young Thug</p>
                         </div>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne1Photo3.png" alt="Ligne 1 Photo 3" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Fouiny Babe</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures stonz">
+                            <p class="artistName">Stonz</p>
                         </div>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne1Photo4.png" alt="Ligne 1 Photo 4" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Marine</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures idol">
+                            <p class="artistName">Idol</p>
                         </div>
                     </section>
                     <section>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne2Photo1.png" alt="Ligne 2 Photo 1" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Jean-Jerome</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures akjn">
+                            <p class="artistName">akjn</p>
                         </div>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne2Photo2.png" alt="Ligne 2 Photo 2" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
+                        <div class="large-3 medium-6 small-12 columns artistPictures trecy">
                             <p class="artistName">Trecy</p>
                         </div>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne2Photo3.png" alt="Ligne 2 Photo 3" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Jack</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures crom">
+                            <p class="artistName">Crôm</p>
                         </div>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne2Photo4.png" alt="Ligne 2 Photo 4" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Pierre-Cyril</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures kurz">
+                            <p class="artistName">Kurz</p>
                         </div>
                     </section>
                     <section>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne3Photo1.png" alt="Ligne 3 Photo 1" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Gordon Ramsey</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures slk">
+                            <p class="artistName">Slk</p>
                         </div>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne3Photo2.png" alt="Ligne 3 Photo 2" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Igor</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures zevv">
+                            <p class="artistName">Zevv</p>
                         </div>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne3Photo3.png" alt="Ligne 3 Photo 3" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Matthieu</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures dooh">
+                            <p class="artistName">Dooh</p>
                         </div>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne3Photo4.png" alt="Ligne 3 Photo 4" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
+                        <div class="large-3 medium-6 small-12 columns artistPictures nico">
                             <p class="artistName">Nico</p>
                         </div>
                     </section>
                     <section>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne4Photo1.png" alt="Ligne 4 Photo 1" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
+                        <div class="large-3 medium-6 small-12 columns artistPictures artyom">
                             <p class="artistName">Artyom</p>
                         </div>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne4Photo2.png" alt="Ligne 4 Photo 2" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Alex</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures larca">
+                            <p class="artistName">Larca</p>
                         </div>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne4Photo3.png" alt="Ligne 4 Photo 3" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">Steph</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures lenzy">
+                            <p class="artistName">Lenzy</p>
                         </div>
-                        <div class="large-3 medium-6 small-12 columns artistPictures">
-                            <img src="img/artists/Ligne4Photo4.png" alt="Ligne 4 Photo 4" class="artistsImages">
-                            <img src="img/artists/hover-photos.png" alt="tetet" class="hoverImage">
-                            <p class="artistName">John</p>
+                        <div class="large-3 medium-6 small-12 columns artistPictures polls">
+                            <p class="artistName">Polls</p>
                         </div>
                     </section>
                 </section>
             </section>
             <section class="artistForm">
-                <section class="row fullWidth">
+                <section class="row">
                     <h2>Devenez un artiste</h2>
                     <h3>Pour participer à de grand projets, remplissez le formulaire.</h3>
-                    <div class="large-8 medium-8 small-12 columns small-centered contactPart">
+                    <div class="large-12 medium-12 small-12 columns contactPart">
                         <form method="post" id="formGraffeur" class="forms">
                             <fieldset>
                                 <legend>Formulaire d'envoie de devis de Bicravart</legend>
                                 <div class="row">
-                                    <div class="small-12 columns">
+                                    <div class="small-12 medium-8 large-8 small-centered columns">
                                         <div class="row fieldContainer">
                                             <div class="small-12 medium-4 large-3 columns labelContainer">
                                                 <label for="right-label" class="right inline">Prénom ou Pseudo*</label>
                                             </div>
-                                            <div class="small-12 medium-8 large-7 columns champContainer">
+                                            <div class="small-12 medium-8 large-9 columns champContainer">
                                                 <input type="text" id="right-label" name="name" class="required graffeurChamp formName">
                                             </div>
                                         </div>
@@ -162,7 +130,7 @@
                                             <div class="small-12 medium-4 large-3 columns labelContainer">
                                                 <label for="right-label" class="right inline">Age</label>
                                             </div>
-                                            <div class="small-12 medium-8 large-7 columns champContainer">
+                                            <div class="small-12 medium-8 large-9 columns champContainer">
                                                 <input type="number" id="right-label" name="age" class="required formAge">
                                             </div>
                                         </div>
@@ -170,7 +138,7 @@
                                             <div class="small-12 medium-4 large-3 columns labelContainer">
                                                 <label for="right-label" class="right inline">Téléphone*</label>
                                             </div>
-                                            <div class="small-12 medium-8 large-7 columns champContainer">
+                                            <div class="small-12 medium-8 large-9 columns champContainer">
                                                 <input type="tel" name="tel" id="right-label" class="required graffeurChamp telInput formTel">
                                             </div>
                                         </div>
@@ -178,7 +146,7 @@
                                             <div class="small-12 medium-4 large-3 columns labelContainer">
                                                 <label for="right-label" class="right inline">E-mail*</label>
                                             </div>
-                                            <div class="small-12 medium-8 large-7 columns champContainer">
+                                            <div class="small-12 medium-8 large-9 columns champContainer">
                                                 <input type="email" id="right-label" name="email" class="required graffeurChamp formEmail">
                                             </div>
                                         </div>
@@ -186,7 +154,7 @@
                                             <div class="small-12 medium-4 large-3 columns labelContainer">
                                                 <label for="right-label" class="right inline">Site Internet</label>
                                             </div>
-                                            <div class="small-12 medium-8 large-7 columns champContainer">
+                                            <div class="small-12 medium-8 large-9 columns champContainer">
                                                 <input type="url" name="website" id="right-label" value="http://" class="required formWebsite">
                                             </div>
                                         </div>
@@ -194,15 +162,15 @@
                                             <div class="small-12 medium-4 large-3 columns labelContainer">
                                                 <label for="right-label" class="right inline">Compétences</label>
                                             </div>
-                                            <div class="small-12 medium-8 large-7 columns champContainer">
+                                            <div class="small-12 medium-8 large-9 columns champContainer">
                                                 <input type="text" name="competences" id="right-label" class="required formComp">
                                             </div>
                                         </div>
                                         <div class="row fieldContainer">
                                             <div class="small-12 medium-4 large-3 columns labelContainer">
-                                                <label for="right-label" class="right inline">Description du projet</label>
+                                                <label for="right-label" class="right inline">Taux horaire</label>
                                             </div>
-                                            <div class="small-12 medium-8 large-7 columns champContainer">
+                                            <div class="small-12 medium-8 large-9 columns champContainer">
                                                 <input type="number" name="sal" id="right-label" class="required formSal">
                                             </div>
                                         </div>
