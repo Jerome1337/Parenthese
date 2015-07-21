@@ -46,14 +46,13 @@
                     <h3>Vous etes un artiste</h3>
                     <p class="iconsDevis"></p>
                     <p class="txtWrap">Le milieu du street art est très élitiste et en pleine expansion. Devenez l’un des plus célèbre graffeur et venez conquérir de nouveaux horizons.</p>
-                    <button><a href="artistes.php" title="Lien vers la page artistes">INSCRIVEZ-VOUS</a></button>
+                    <a href="artistes.php" title="Lien vers la page artistes"><button>INSCRIVEZ-VOUS</button></a>
                 </div>
                 <div class="rlarge-6 medium-6 small-12 columns entrepriseBlock">
                     <h3>Vous etes une entreprise</h3>
                     <p class="iconsDevis"></p>
                     <p class="txtWrap">Dans ces temps où la concurrence est de plus en plus rude, venez moderniser votre image grâce à des artistes venus d'un nouveau monde.</p>
-                    <button><a href="entreprises.php" title="Lien vers la page entreprises">DEMANDER UN<br>DEVIS</a></button>
-                </div>
+                    <a href="entreprises.php" title="Lien vers la page entreprises"><button>DEMANDER UN<br>DEVIS</button></a>                </div>
             </div>
         </section>
         <section class="resultatContainer">
@@ -83,13 +82,13 @@
                     </div>
                 </section>
             </div>
-            <button><a href="references.php" title="Lien vers la page références">DECOUVREZ NOS REFERENCES</a></button>
+            <a href="references.php" title="Lien vers la page références"><button>DECOUVREZ NOS REFERENCES</button></a>
         </section>
         <section class="feedContainer">
             <section class="row fullWidth">
                 <h3>Qui sommes-nous ?</h3>
-                <p>Des artistes aux entreprises, Bicravart mise sur son équipe d'experts<br> pour offir le meilleur service qu'il soit, pour un accompagnement sur<br> le long et court terme. Avec Bicrav'art, monnayez votre art.</p>
-                <button><a href="about.php" title="Lien vers la page à propos">DECOUVREZ L'AGENCE</a></button>
+                <p>Des artistes aux entreprises, Bicravart mise sur son équipe d'experts<br> pour offrir le meilleur service qu'il soit, pour un accompagnement sur<br> le long et court terme. Avec Bicrav'art, monnayez votre art.</p>
+                <a href="about.php" title="Lien vers la page à propos"><button>DECOUVREZ L'AGENCE</button></a>
             </section>
         </section>
         <section class="descContainer">
