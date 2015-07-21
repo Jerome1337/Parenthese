@@ -9,7 +9,7 @@
     $modalMessage = "Merci, votre message a bien été envoyé.";
 
     $path = "";
-
+    
     include('includes/head.php');
     ?>
     <body>

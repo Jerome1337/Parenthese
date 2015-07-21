@@ -9,6 +9,7 @@
     $modalMessage = "Merci, votre demande de devis a bien été prise en compte.";
     
     $path = "";
+    $form = "entreprises";
 
     include('includes/head.php');
     ?>
@@ -25,8 +26,8 @@
                 <section class="row">
                     <h3>Pourquoi nous faire confiance ?</h3>
                     <div class="large-6 medium-6 small-12 columns leftText">
-                        <h4>Des artistes de qualités</h4>
-                        <p>Nos artistes sont minutieusement selectionné par nos soins. Nous plaçons les artistes en fonction de vos projets. Chaque projet étant unique, nous mettons un point d'honneur à vous offrir ce qu'il y'a de mieux.</p>
+                        <h4>Des artistes de qualité</h4>
+                        <p>Nos artistes sont minutieusement selectionnés par nos soins. Nous plaçons les artistes en fonction de vos projets. Chaque projet étant unique, nous mettons un point d'honneur à vous offrir ce qu'il y'a de mieux.</p>
                     </div>
                     <div class="large-6 medium-6 small-12 columns hide-for-small-only pictoWrap">
                         <p class="pictos"></p>
@@ -40,7 +41,7 @@
                     </div>
                     <div class="large-6 medium-6 small-12 columns rightText">
                         <h4>Des experts à votre écoute</h4>
-                        <p>Nos agents sont des experts reconnus dans le monde de l'art. Avec eux, vos projets deviennent réalités.Chaque projet est géré par un expert qui vous accompagne tout au long de votre projet.</p>
+                        <p>Nos agents sont des experts reconnus dans le monde de l'art. Avec eux, vos projets deviennent réalité. Chaque projet est géré par un expert qui vous accompagne tout au long de votre projet.</p>
                     </div>
                 </section>
             </section>

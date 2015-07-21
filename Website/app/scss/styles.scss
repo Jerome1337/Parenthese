@@ -384,7 +384,7 @@ label{
 
 .forms{
     fieldset{
-        margin-bottom: 80px;
+        margin-bottom: 20px;
         .fieldContainer{
             margin-bottom: 10px !important;
             .labelContainer{
@@ -520,12 +520,20 @@ label{
     background: url(../img/home/explain-bg.jpg)no-repeat center;
     background-size: cover;
     padding: 100px 0;
+    .baselineText{
+        vertical-align: middle;
+        color: $white;
+        font-size: 1.8em;
+        text-align: center;
+        font-family: $RALSB;
+    }
     .explication{
         vertical-align: middle;
         color: $white;
         font-size: 1.5em;
         text-align: center;
         font-family: $RALR;
+        margin: 0 20px;
     }
 }
 .devisContainer{
@@ -594,6 +602,7 @@ label{
             font-family: $RALL;
             color: $grey;
             margin: 90px 0 110px;
+
         }
         button{
             margin: auto;
@@ -1187,6 +1196,7 @@ label{
             p{
                 margin: 25px 10px 40px;
                 padding: 10px;
+                text-align: center;
             }
             button{
                 display: block;

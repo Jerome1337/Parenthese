@@ -3,6 +3,7 @@
     <meta name="description" content="Bicravart est un système permettant la mise en relation des graffeurs et clients.">
     <meta name="keywords" content="bicravart, bricrav'art, graffeur, galerie, bicrave, art, graff, decoration, agence, artiste, artistes">
     <meta name="viewport" content="width=device-width, initial-scale=yes">
+    <link rel="author" href="humans.txt">
     <meta name="HandheldFriendly" content="true">
     <meta property="og:title" content="Bicrav'Art">
     <meta property="og:site_name" content="Bicravart">

@@ -12,7 +12,7 @@
 
     include('includes/head.php');
     ?>
-    <body>
+    <body class="transitionNav">
         <section class="row fullWidth">
             <!-- INCLUDE NAV BAR -->
             <?php include('includes/nav.php'); ?>
@@ -25,7 +25,7 @@
                 <div class="large-12 columns baseline">
                     <h2><img src="img/home/title-home.png" alt="Image du titre de la page d'accueil"></h2>
                     <p id="interactivKey">Appuyez sur <span class="yellowZ">N</span><br>pour passer en mode nuit.</p>
-                    <img src="img/home/souris.png" alt="souris">
+                    <img src="img/home/souris.png" alt="souris" id="mouseIcon">
                 </div>
             </section>
         </section>
@@ -36,7 +36,8 @@
         </section>
         <section class="explainContainer">
             <div class="row fullWidth">
-                <p class="explication">Bicrav’Art est un service de mise en relation entre les graffeurs et les<br>entreprises pour des projets de graffes dans differents environements.</p>
+                <p class="baselineText">"Monnayez votre art, tout en gardant votre anonymat"</p>
+                <p class="explication">Bicrav’Art est un service de mise en relation entre les graffeurs et les<br>entreprises pour des projets de graffes dans differents environnements.</p>
             </div>
         </section>
         <section class="devisContainer">
@@ -87,7 +88,7 @@
         <section class="feedContainer">
             <section class="row fullWidth">
                 <h3>Qui sommes-nous ?</h3>
-                <p>Des artistes aux entreprises, Bicravart mise sur son équipe d'experts<br> pour offire le meilleur service qu'il soit, pour un accompagnement sur<br> le long et court terme. Avec Bicrav'art, monnayez votre art.</p>
+                <p>Des artistes aux entreprises, Bicravart mise sur son équipe d'experts<br> pour offir le meilleur service qu'il soit, pour un accompagnement sur<br> le long et court terme. Avec Bicrav'art, monnayez votre art.</p>
                 <button><a href="about.php" title="Lien vers la page à propos">DECOUVREZ L'AGENCE</a></button>
             </section>
         </section>
@@ -128,7 +129,7 @@
                     </div>
                     <div class="row temoignageRight">
                         <div class="large-8 medium-12 small-12 columns temoignagesText">
-                            <p class="phrase">"Des expert disponible et à notre écoute"</p>
+                            <p class="phrase">"Des experts disponibles et à notre écoute"</p>
                             <p class="from">SNCF</p>
                         </div>
                         <img class="large-4 medium-12 small-12 columns rightPic" src="img/home/img-05.jpg" alt="">

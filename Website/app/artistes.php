@@ -9,6 +9,7 @@
     $modalMessage = "Merci, votre inscription à bien été prise en compte.";
 
     $path = "";
+    $form = "artistes";
 
     include('includes/head.php');
     ?>
@@ -41,7 +42,7 @@
                         <div class="backgroundPa"></div>
                         <div class="textArt">
                             <h3>Changez de vie</h3>
-                            <p>La vie d'artiste est a porté<br>de bras. Il ne tiens qu'à<br>vous vivre de votre passion.</p>
+                            <p>La vie d'artiste est à portée<br>de bras. Il ne tient qu'à<br>vous vivre de votre passion.</p>
                         </div>
                     </div>
                     <button class="scrollTo">INSCRIVEZ-VOUS</button>
@@ -55,7 +56,7 @@
                             <p class="artistName">Ced</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures thug">
-                            <p class="artistName">Young Thug</p>
+                            <p class="artistName">Ocer</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures stonz">
                             <p class="artistName">Stonz</p>
@@ -111,7 +112,7 @@
             <section class="artistForm">
                 <section class="row">
                     <h2>Devenez un artiste</h2>
-                    <h3>Pour participer à de grand projets, remplissez le formulaire.</h3>
+                    <h3>Pour participer à de grands projets, remplissez le formulaire.</h3>
                     <div class="large-12 medium-12 small-12 columns contactPart">
                         <form method="post" id="formGraffeur" class="forms">
                             <fieldset>
@@ -155,7 +156,7 @@
                                                 <label for="right-label" class="right inline">Site Internet</label>
                                             </div>
                                             <div class="small-12 medium-8 large-9 columns champContainer">
-                                                <input type="url" name="website" id="right-label" value="http://" class="required formWebsite">
+                                                <input type="text" name="website" id="right-label" value="http://" class="required formWebsite">
                                             </div>
                                         </div>
                                         <div class="row fieldContainer">

@@ -4,6 +4,16 @@ function isMobile() {
 return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
+if (isMobile()) {
+    $('#interactivKey, #mouseIcon').hide();
+
+    $('.transparentNav').css({"background-color":"#2c2c2c"});
+    $('.top-bar-section').css({"background-color":"#2c2c2c"});
+    $('.top-bar-section ul').css({"background-color":"#2c2c2c"});
+    $('.top-bar-section ul li').css({"background-color":"#2c2c2c"});
+    $('.top-bar-section ul li a').css({"background-color":"#2c2c2c"});
+}
+
 if (!isMobile()) {
     // YOUTUBE API
     var tag = document.createElement('script');  
@@ -67,7 +77,7 @@ if (!isMobile()) {
     function onPlayer1Ready(event){
         player1Ready = true;
         preloading1 = true;       // Flag the player 1 preloading
-        player1.setPlaybackQuality('hd720'); 
+        // player1.setPlaybackQuality('hd720'); 
         player1.mute();           // Mute the player 1
         // $( "#player1" ).hide();   // Hide it
         player1.seekTo(1);        // Start the preloading and wait a state change event
@@ -94,7 +104,7 @@ if (!isMobile()) {
 
                 player2Ready = true;
                 preloading2 = true;             // Flag for foreground video preloading
-                player1.setPlaybackQuality('hd720'); 
+                // player1.setPlaybackQuality('hd720'); 
                 player2.mute();
                 //$( "#player2" ).hide();
                 player2.seekTo(1);              // Start buffering and wait the event
@@ -151,7 +161,7 @@ if (!isMobile()) {
                     player2.playVideo();
                     videosPlaying = true;
                     $('#videosOverlay').hide();
-                    $('#interactivKey').show();
+                    $('.baseline').hide();
                     console.log('PLAYER 2 PLAYING');
                 });
             }
@@ -185,11 +195,11 @@ if (!isMobile()) {
         // INTERACTIVE VIDEO 
         $(document).on('keydown', function(e) {
             if(e.keyCode == 78) {
-                $('#player2, .baseline').hide();
+                $('#player2').hide();
             }
         }).on('keyup', function(e){
             if(e.keyCode == 78) {
-                $('#player2, .baseline').show();
+                $('#player2').show();
             }
         });
 
@@ -205,60 +215,31 @@ if (!isMobile()) {
             }
         });
 
-        var $w = $(window).scroll(function(){
-            if ( $w.scrollTop() > $(".explainContainer").offset().top ) {   
-                $('.transparentNav').css({"background-color":"#2c2c2c"});
-                $('.top-bar-section').css({"background-color":"#2c2c2c"});
-                $('.top-bar-section ul').css({"background-color":"#2c2c2c"});
-                $('.top-bar-section ul li').css({"background-color":"#2c2c2c"});
-                $('.top-bar-section ul li a').css({"background-color":"#2c2c2c"});
-            } else {
-                $('.transparentNav').css({"background-color":"transparent"});
-                $('.top-bar-section').css({"background-color":"transparent"});
-                $('.top-bar-section ul').css({"background-color":"transparent"});
-                $('.top-bar-section ul li').css({"background-color":"transparent"});
-                $('.top-bar-section ul li a').css({"background-color":"transparent"});
-            }
-        });
+        if ($('body.transitionNav').length > 0)
+        {
+            var nav = $(".explainContainer");
+            var $w = $(window).scroll(function(){
+                if ( $w.scrollTop() > nav.offset().top ) {   
+                    $('.transparentNav').css({"background-color":"#2c2c2c"});
+                    $('.top-bar-section').css({"background-color":"#2c2c2c"});
+                    $('.top-bar-section ul').css({"background-color":"#2c2c2c"});
+                    $('.top-bar-section ul li').css({"background-color":"#2c2c2c"});
+                    $('.top-bar-section ul li a').css({"background-color":"#2c2c2c"});
+                } else {
+                    $('.transparentNav').css({"background-color":"transparent"});
+                    $('.top-bar-section').css({"background-color":"transparent"});
+                    $('.top-bar-section ul').css({"background-color":"transparent"});
+                    $('.top-bar-section ul li').css({"background-color":"transparent"});
+                    $('.top-bar-section ul li a').css({"background-color":"transparent"});
+                }
+            });
+        }
     });
 }
 
 $(document).ready(function() {
 
-    $('#interactivKey').hide();
-
-    //CONTACT FORM ACTION
-    $('#formContact').submit(function(e) {
-        e.preventDefault();
-        var formData = {
-            'action' : 'contact',
-            'name' : $('#formName').val(),
-            'email' : $("#formEmail").val(),
-            'tel' : $("#formTel").val(),
-            'subject' : $("#formSubject").val(),
-            'message' : $("#formMessage").val()
-        };
-
-        // console.log(formData);
-
-        $.ajax({
-            url: "includes/functions",
-            type: "POST",
-            data: formData,
-            dataType: 'json',
-            encode: true
-        })
-        .done(function(data){
-            // console.log(formData);
-            // console.log(data);
-
-            if(data.success){
-                // console.log('EMAIL SEND');
-            }else{
-                // console.log('EMAIL NOT SEND');
-            }
-        });
-    });
+    // $('#interactivKey').hide();
 
     //ADD GRAFFEUR ACTION
     $('#formGraffeur').submit(function(event){
@@ -282,10 +263,10 @@ $(document).ready(function() {
         }
         event.preventDefault();
     });
-    $('#sendForm').click(function(event){
+    $('.sendFormartists').click(function(event){
         $(this).data('clicked', true);
         
-        if($('#sendForm').data('clicked')){
+        if($('.sendFormartists').data('clicked')){
             var formData = {
                 'action' : 'graffeur',
                 'name' : $('.formName').val(),
@@ -345,10 +326,10 @@ $(document).ready(function() {
         }
         event.preventDefault();
     });
-    $('#sendForm').click(function(event){
+    $('.sendFormentreprises').click(function(event){
         $(this).data('clicked', true);
         
-        if($('#sendForm').data('clicked')){
+        if($('.sendFormentreprises').data('clicked')){
             var formData = {
                 'action' : 'devis',
                 'name' : $('.formName').val(),
@@ -435,26 +416,27 @@ $(document).ready(function() {
         var isFormValid = true;
         $(".entrepriseChamp").each(function(){
             if ($.trim($(this).val()).length == 0){
-                console.log('formulaire non valide');
+                // console.log('formulaire non valide');
                 $(this).addClass('emptyField');
                 isFormValid = false;        
             }
             else{
-                console.log('formulaire valide');
+                // console.log('formulaire valide');
+                $('#sendForm').removeClass('sendFormcontacta');
             }
         });
         if(!isFormValid){
-            console.log('tg');
+            // console.log('tg');
         }
         else{
             $('#formConfirm').foundation('reveal', 'open');
         }
         event.preventDefault();
     });
-    $('#sendForm').click(function(event){
+    $('.sendFormcontacte').click(function(event){
         $(this).data('clicked', true);
         
-        if($('#sendForm').data('clicked')){
+        if($('.sendFormcontacte').data('clicked')){
             var formData = {
                 'action' : 'contactEntreprise',
                 'name' : $('.formEntrepriseName').val(),
@@ -481,6 +463,7 @@ $(document).ready(function() {
                     // console.log('EMAIL NOT SEND');
                 }
                 $('.formEntrepriseName, .formEntrepriseEmail, .formEntrepriseTel, .formEntrepriseMessage').val('');
+                $('#sendForm').addClass('sendFormcontacta');
             });
         }else{
             // console.log('essaie encore bitch');
@@ -500,6 +483,7 @@ $(document).ready(function() {
             }
             else{
                 // console.log('formulaire valide');
+                $('#sendForm').removeClass('sendFormcontacte');
             }
         });
         if(!isFormValid){
@@ -510,10 +494,10 @@ $(document).ready(function() {
         }
         event.preventDefault();
     });
-    $('#sendForm').click(function(event){
+    $('.sendFormcontacta').click(function(event){
         $(this).data('clicked', true);
         
-        if($('#sendForm').data('clicked')){
+        if($('.sendFormcontacta').data('clicked')){
             var formData = {
                 'action' : 'contactArtist',
                 'name' : $('.formArtistName').val(),
@@ -539,6 +523,8 @@ $(document).ready(function() {
                     // console.log('EMAIL NOT SEND');
                 }
             $('.formArtistName, .formArtistEmail, .formArtistTel, .formArtistMessage').val('');
+            $('#sendForm').addClass('sendFormcontacte');
+
             });
         }else{
             // console.log('essaie encore bitch');
@@ -546,7 +532,7 @@ $(document).ready(function() {
         event.preventDefault();
     });
     
-    $('#endForm').click(function(){
+    $('#endForm, #changeForm').click(function(){
         $(this).foundation('reveal', 'close');
     });
 
