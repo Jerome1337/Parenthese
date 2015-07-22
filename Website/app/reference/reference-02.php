@@ -30,7 +30,7 @@
                 <div class="large-5 medium-12 small-12 columns">
                     <div class="texte">
                         <h3>Habillage de facade</h3>
-                        <p>Le batiment du centre sportif de Sevran à été habillé par plusieurs de nos artistes. Cette oeuvre a été réalisé en 3 jours, et près de 500 bombes de peintures ont été nécéssaire.</p>
+                        <p>Le batiment du centre sportif de Sevran a été habillé par plusieurs de nos artistes. Cette oeuvre a été réalisée en 3 jours, et près de 500 bombes de peintures ont été nécessaires.</p>
                     </div>
                 </div>
             </section>
@@ -40,7 +40,7 @@
                     <button><a href="http://www.bicravart.com/artistes">INSCRIPTION</a></button>
                 </div>
                 <div class="large-6 medium-6 small-12 columns">
-                    <p>Vous êtes une entreprise et vous souhaitez bénéfier de nos plus grand artistes pour vos projets ? <br>Estimer votre projet :</p>
+                    <p>Vous êtes une entreprise et vous souhaitez bénéfier de nos plus grand artistes pour vos projets ? <br>Estimez votre projet.</p>
                     <button><a href="http://www.bicravart.com/entreprises">DEMANDER UN DEVIS</a></button>
                 </div>
             </section>

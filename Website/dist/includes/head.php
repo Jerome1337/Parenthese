@@ -3,6 +3,7 @@
     <meta name="description" content="Bicravart est un système permettant la mise en relation des graffeurs et clients.">
     <meta name="keywords" content="bicravart, bricrav'art, graffeur, galerie, bicrave, art, graff, decoration, agence, artiste, artistes">
     <meta name="viewport" content="width=device-width, initial-scale=yes">
+    <link rel="author" href="humans.txt">
     <meta name="HandheldFriendly" content="true">
     <meta property="og:title" content="Bicrav'Art">
     <meta property="og:site_name" content="Bicravart">
@@ -28,7 +29,7 @@
     <link rel="icon" type="image/png" href="<?php echo ($path == "../" ? "../" : "")?>img/favicons/android-chrome-192x192.png" sizes="192x192">
     <link rel="icon" type="image/png" href="<?php echo ($path == "../" ? "../" : "")?>img/favicons/favicon-16x16.png" sizes="16x16">
     <link rel="manifest" href="<?php echo ($path == "../" ? "../" : "")?>img/favicons/manifest.json">
-    <link rel="shortcut icon" href="img/favicons/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo ($path == "../" ? "../" : "")?>img/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?php echo ($path == "../" ? "../" : "")?>img/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="<?php echo ($path == "../" ? "../" : "")?>img/favicons/browserconfig.xml">

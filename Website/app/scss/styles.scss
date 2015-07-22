@@ -305,7 +305,7 @@ footer{
             display: inline-block;
             border-radius: 50%;
             margin-top: 15px;
-            background-color: #246087;
+            background-color: #3f729b;
             transition: ease-in-out all .5s;
             .instagramLink{
                 color: $white;
@@ -747,7 +747,6 @@ label{
             p{
                 text-align: center;
                 font-family: "social";
-                font-size: 5em;
                 color: $yellow;
                 transition: ease-in-out all 0.5s;
                 cursor: pointer;
@@ -763,6 +762,8 @@ label{
         }
         .artistPart{
             p{
+                font-size: 4em;
+                margin-top: 21px;
                 &::before{
                     content: '\e003';
                 }
@@ -772,6 +773,7 @@ label{
             border-left: 2px $grey solid;
             border-right: 2px $grey solid;
             p{
+                font-size: 5em;
                 &::before{
                     content:'\e004';
                 }
@@ -779,6 +781,8 @@ label{
         }
         .coordoneesPart{
             p{
+                font-size: 6.2em;
+                margin-top: -11px;
                 &::before{
                     content: '\e005';
                 }
@@ -798,7 +802,7 @@ label{
         }
         .coordoneesSec{
             .infos{
-                // margin: 30px 0;
+                margin-bottom: 50px;
                 p{
                     text-align: center;
                     color: $grey;
@@ -822,6 +826,27 @@ label{
                     height: 300px;
                     width: 100%;
                 }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 40em) { 
+    .referencesContainer{
+        .referencesImages{
+            padding-bottom: 0;
+            section{
+                .imgWrap{
+                    a{
+                        .plusIcon{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                        .referenceDesc{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }   
             }
         }
     }
@@ -862,12 +887,13 @@ label{
     }
 }
 
+// ABOUT
 .aboutContainer{
     padding: 40px 0;
     background: url(../img/about/apropos_img.jpg) no-repeat fixed;
     background-size: cover;
     .pictopropos{
-        width: 250px;
+        width: 200px;
         margin: auto;
         display: block;
     }
@@ -910,6 +936,7 @@ label{
             transition: ease-in-out all 0.5s;
             background: url(../img/about/portrait-01.png)no-repeat center;
             height: 154px;
+            margin-bottom: 30px;
             &:hover{
                 background: url(../img/about/portrait-01-j.png)no-repeat center;
                 .Name{
@@ -924,6 +951,7 @@ label{
             transition: ease-in-out all 0.5s;
             background: url(../img/about/portrait-02.png)no-repeat center;
             height: 154px;
+            margin-bottom: 30px;
             &:hover{
                 background: url(../img/about/portrait-02-j.png)no-repeat center;
                 .Name{
@@ -938,6 +966,7 @@ label{
             transition: ease-in-out all 0.5s;
             background: url(../img/about/portrait-03.png)no-repeat center;
             height: 154px;
+            margin-bottom: 30px;
             &:hover{
                 background: url(../img/about/portrait-03-j.png)no-repeat center;
                 .Name{
@@ -952,6 +981,7 @@ label{
             transition: ease-in-out all 0.5s;
             background: url(../img/about/portrait-04.png)no-repeat center;
             height: 154px;
+            margin-bottom: 30px;
             &:hover{
                 background: url(../img/about/portrait-04-j.png)no-repeat center;
                 .Name{
@@ -1048,6 +1078,44 @@ label{
         }
     }
 }
+@media only screen and (max-width: 40em) { 
+    .contentAbout{
+        .photosContainer{
+            .Hadrien, .Jerome, .Lisa, .Elvis, .Laura, .Stephane, .Pascal, .Marie{
+                .Name{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .Hadrien{
+                background: url(../img/about/portrait-01-j.png)no-repeat center;
+            }
+            .Laura{
+                background: url(../img/about/portrait-02-j.png)no-repeat center;
+            }
+            .Marie{
+                background: url(../img/about/portrait-03-j.png)no-repeat center;
+            }
+            .Stephane{
+                background: url(../img/about/portrait-04-j.png)no-repeat center;
+            }
+            .Lisa{
+                background: url(../img/about/portrait-05-j.png)no-repeat center;
+            }
+            .Pascal{
+                background: url(../img/about/portrait-06-j.png)no-repeat center;
+            }
+            .Elvis{
+                background: url(../img/about/portrait-07-j.png)no-repeat center;
+            }
+            .Jerome{
+                background: url(../img/about/portrait-08-j.png)no-repeat center;
+            }
+        }
+    }  
+}
+
+
 // MENTIONS LEGALES
 .mentionsContainer{
     padding: 100px 0;
@@ -1145,14 +1213,14 @@ label{
                     }
                     .plusIcon{
                         position: absolute;
-                        top: 0;
+                        top: 65px;
                         bottom: 0;
                         left: 0;
                         right: 0;
                         text-align: center;
                         margin: 0;
                         background: url(../img/references/plus.png) no-repeat center;
-                        background-size: 25px;
+                        background-size: 35px;
                         visibility: hidden;
                         opacity: 0;
                         transition: ease-in-out all 0.5s;
@@ -1205,6 +1273,29 @@ label{
         }
     }
 }
+
+@media only screen and (max-width: 40em) { 
+    .referencesContainer{
+        .referencesImages{
+            padding-bottom: 0;
+            section{
+                .imgWrap{
+                    a{
+                        .plusIcon{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                        .referenceDesc{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}
+
 
 // ENTREPRISE
 .entrepriseContainer{
@@ -1619,11 +1710,77 @@ label{
                 .artistName{
                     padding-top: 200px;
                     font-size: 1.5em;
+                    visibility: visible;
+                    opacity: 1;
                 }
                 &:hover{
                     height: 430px;
                     background-size: 75%;
                 }
+            }
+            .ced{
+                background: url(../img/artists/Ligne1Photo1-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .thug{
+                background: url(../img/artists/Ligne1Photo2-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .stonz{
+                background: url(../img/artists/Ligne1Photo3-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .idol{
+                background: url(../img/artists/Ligne1Photo4-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .akjn{
+                background: url(../img/artists/Ligne2Photo1-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .trecy{
+                background: url(../img/artists/Ligne2Photo2-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .crom{
+                background: url(../img/artists/Ligne2Photo3-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .kurz{
+                background: url(../img/artists/Ligne2Photo4-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .slk{
+                background: url(../img/artists/Ligne3Photo1-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .zevv{
+                background: url(../img/artists/Ligne3Photo2-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .dooh{
+                background: url(../img/artists/Ligne3Photo3-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .nico{
+                background: url(../img/artists/Ligne3Photo4-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .artyom{
+                background: url(../img/artists/Ligne4Photo1-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .larca{
+                background: url(../img/artists/Ligne4Photo2-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .lenzy{
+                background: url(../img/artists/Ligne4Photo3-j.png)no-repeat center;
+                background-size: 75%;
+            }
+            .polls{
+                background: url(../img/artists/Ligne4Photo4-j.png)no-repeat center;
+                background-size: 75%;
             }
         }
     }

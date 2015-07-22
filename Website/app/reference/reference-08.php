@@ -30,7 +30,7 @@
                 <div class="large-5 medium-12 small-12 columns">
                     <div class="texte">
                         <h3>Autoportrait</h3>
-                        <p>A l'occasion de l’anniversaire du doyen de la ville de Torcy, la mairie à commander un portrait de de cet homme. L’oeuvre couvre actuellement le mur de la mairie.</p>
+                        <p>A l'occasion de l’anniversaire du doyen de la ville de Torcy, la mairie à commander un portrait de cet homme. L’oeuvre couvre actuellement le mur de la mairie.</p>
                     </div>
                 </div>
             </section>
@@ -40,7 +40,7 @@
                     <button><a href="http://www.bicravart.com/artistes">INSCRIPTION</a></button>
                 </div>
                 <div class="large-6 medium-6 small-12 columns">
-                    <p>Vous êtes une entreprise et vous souhaitez bénéfier de nos plus grand artistes pour vos projets ? <br>Estimer votre projet :</p>
+                    <p>Vous êtes une entreprise et vous souhaitez bénéfier de nos plus grand artistes pour vos projets ? <br>Estimez votre projet.</p>
                     <button><a href="http://www.bicravart.com/entreprises">DEMANDER UN DEVIS</a></button>
                 </div>
             </section>

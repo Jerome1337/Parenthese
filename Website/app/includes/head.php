@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" href="<?php echo ($path == "../" ? "../" : "")?>img/favicons/android-chrome-192x192.png" sizes="192x192">
     <link rel="icon" type="image/png" href="<?php echo ($path == "../" ? "../" : "")?>img/favicons/favicon-16x16.png" sizes="16x16">
     <link rel="manifest" href="<?php echo ($path == "../" ? "../" : "")?>img/favicons/manifest.json">
-    <link rel="shortcut icon" href="img/favicons/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo ($path == "../" ? "../" : "")?>img/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?php echo ($path == "../" ? "../" : "")?>img/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="<?php echo ($path == "../" ? "../" : "")?>img/favicons/browserconfig.xml">

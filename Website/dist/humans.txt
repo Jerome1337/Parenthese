@@ -1,8 +1,38 @@
 /* Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA */
 /* zurb.com */
-/* humanstxt.org */
+
+/* TEAM */
+  Title: Jérôme Pogeant
+  Site: http://www.jeromepogeant.com
+  Location: France, Lagny sur marne
+
+  Title: Elvis Perazic
+  Location: France
+
+  Title: Hadrien Briandon
+  Location: France
+
+  Title: Pascal Mejard
+  Location: France
+
+  Title: Laura Bellaïche
+  Location: France
+
+  Title: Marie Poprawa
+  Location: France
+
+  Title: Stéphane Phouybanhdyt
+  Location: France
+
+  Title: Lisa Beuzelin
+  Location: France
 
 /* SITE */
-  Standards: HTML5, CSS3
-  Components: jQuery, Orbit, Reveal
-  Software: Sublime, Git, Sass
+  Last Update: 2015/07/21
+  Standard: HTML5, CSS3, JAVASCRIPT, PHP
+  Components: Modernizr, Sass, Jquery, Git, Foundation5, Gulp
+  Software: Subilme Text 3
+
+/* THANKS */
+  Name: Jérôme Pogeant, Elvis Perazic
+

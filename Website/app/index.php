@@ -37,7 +37,7 @@
         <section class="explainContainer">
             <div class="row fullWidth">
                 <p class="baselineText">"Monnayez votre art, tout en gardant votre anonymat"</p>
-                <p class="explication">Bicrav’Art est un service de mise en relation entre les graffeurs et les<br>entreprises pour des projets de graffes dans differents environnements.</p>
+                <p class="explication">Bicravart est un service de mise en relation entre les graffeurs et les<br>entreprises pour des projets de graffes dans differents environnements.</p>
             </div>
         </section>
         <section class="devisContainer">
@@ -45,14 +45,15 @@
                 <div class="large-6 medium-6 small-12 columns artistBlock">
                     <h3>Vous etes un artiste</h3>
                     <p class="iconsDevis"></p>
-                    <p class="txtWrap">Le milieu du street art est très élitiste et en pleine expansion. Devenez l’un des plus célèbre graffeur et venez conquérir de nouveaux horizons.</p>
+                    <p class="txtWrap">Le milieu du street art est très élitiste et en pleine expansion. Devenez l’un des plus célèbres graffeurs et venez conquérir de nouveaux horizons.</p>
                     <a href="artistes.php" title="Lien vers la page artistes"><button>INSCRIVEZ-VOUS</button></a>
                 </div>
                 <div class="rlarge-6 medium-6 small-12 columns entrepriseBlock">
                     <h3>Vous etes une entreprise</h3>
                     <p class="iconsDevis"></p>
                     <p class="txtWrap">Dans ces temps où la concurrence est de plus en plus rude, venez moderniser votre image grâce à des artistes venus d'un nouveau monde.</p>
-                    <a href="entreprises.php" title="Lien vers la page entreprises"><button>DEMANDER UN<br>DEVIS</button></a>                </div>
+                    <a href="entreprises.php" title="Lien vers la page entreprises"><button>DEMANDER UN<br>DEVIS</button></a>                
+                </div>
             </div>
         </section>
         <section class="resultatContainer">
@@ -135,7 +136,7 @@
                     </div>
                     <div class="row temoignageRight">
                         <div class="large-8 medium-12 small-12 columns temoignagesText">
-                            <p class="phrase">"Très satisfait du travail fournit par les artistes."</p>
+                            <p class="phrase">"Très satisfait du travail fourni par les artistes."</p>
                             <p class="from">Marie de Chessy</p>
                         </div>
                         <img class="large-4 medium-12 small-12 columns rightPic" src="img/home/img-06.jpg" alt="">

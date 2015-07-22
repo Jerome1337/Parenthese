@@ -49,7 +49,7 @@
                 <section class="row">
                     <div class="large-6 medium-6 small-12 columns leftText">
                         <h4>Des prestations adaptées</h4>
-                        <p>Chaque projet étant unique, nous adptons notre offre à votre demande. Nous pouvons réaliser de grand projet comme de petit projet.</p>
+                        <p>Chaque projet étant unique, nous adaptons notre offre à votre demande. Nous pouvons réaliser de grand projet comme de petit projet.</p>
                     </div>
                     <div class="large-6 medium-6 small-12 columns hide-for-small-only pictoWrap">
                         <p class="pictos"></p>
@@ -59,7 +59,7 @@
             <section class="formWrap">
                 <section class="row">
                     <h2>Votre projet nous intéresse</h2>
-                    <p id="decrivez">Décrivez votre projet pour que nous puissions vous trouvez le meilleur graffeur.</p>
+                    <p id="decrivez">Décrivez-nous votre projet pour que nous puissions vous trouvez le meilleur graffeur.</p>
                     <div class="small-12 columns contactPart">
                         <form method="post" id="formDevis" class="forms">
                             <fieldset>

@@ -30,7 +30,7 @@
                 <div class="large-5 medium-12 small-12 columns">
                     <div class="texte">
                         <h3>La blessure</h3>
-                        <p>Créer pour la WWF suite à l’extinction du dernier rhinocéros blanc, le graff est actuellement exposé dans le hall de l’association.</p>
+                        <p>Créé pour la WWF suite à l’extinction du dernier rhinocéros blanc, le graff est actuellement exposé dans le hall de l’association.</p>
                     </div>
                 </div>
             </section>
@@ -40,7 +40,7 @@
                     <button><a href="http://www.bicravart.com/artistes">INSCRIPTION</a></button>
                 </div>
                 <div class="large-6 medium-6 small-12 columns">
-                    <p>Vous êtes une entreprise et vous souhaitez bénéfier de nos plus grand artistes pour vos projets ? <br>Estimer votre projet :</p>
+                    <p>Vous êtes une entreprise et vous souhaitez bénéfier de nos plus grand artistes pour vos projets ? <br>Estimez votre projet.</p>
                     <button><a href="http://www.bicravart.com/entreprises">DEMANDER UN DEVIS</a></button>
                 </div>
             </section>

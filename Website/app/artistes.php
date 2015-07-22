@@ -28,7 +28,7 @@
                         <div class="backgroundPa"></div>
                         <div class="textArt">
                             <h3>Monnayez votre art</h3>
-                            <p>Votre talent et votre<br>créativité mérite salaire.<br>Les futurs contrats vous attendent.</p>
+                            <p>Votre talent et votre<br>créativité méritent salaire.<br>Les futurs contrats vous attendent.</p>
                         </div>
                     </div>
                     <div class="large-4 medium-4 small-12 columns part2">
@@ -42,7 +42,7 @@
                         <div class="backgroundPa"></div>
                         <div class="textArt">
                             <h3>Changez de vie</h3>
-                            <p>La vie d'artiste est à portée<br>de bras. Il ne tient qu'à<br>vous vivre de votre passion.</p>
+                            <p>La vie d'artiste est à portée<br>de bras. Il ne tient qu'à<br>vous de vivre de votre passion.</p>
                         </div>
                     </div>
                     <button class="scrollTo">INSCRIVEZ-VOUS</button>

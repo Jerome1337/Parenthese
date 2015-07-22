@@ -30,7 +30,7 @@
                 <div class="large-5 medium-12 small-12 columns">
                     <div class="texte">
                         <h3>Big Daddy</h3>
-                        <p>Pour honorer la mémoire de leur directeur, décédé d’un accident de voiture, les employés ont demandé à ce que leur locaux soit décorer à l’image de leur directeur.</p>
+                        <p>Pour honorer la mémoire de leur directeur, décédé lors d’un accident de voiture, les employés ont demandé à ce que leurs locaux soientt décorés à l’image de leur directeur.</p>
                     </div>
                 </div>
             </section>
@@ -40,7 +40,7 @@
                     <button><a href="http://www.bicravart.com/artistes">INSCRIPTION</a></button>
                 </div>
                 <div class="large-6 medium-6 small-12 columns">
-                    <p>Vous êtes une entreprise et vous souhaitez bénéfier de nos plus grand artistes pour vos projets ? <br>Estimer votre projet :</p>
+                    <p>Vous êtes une entreprise et vous souhaitez bénéfier de nos plus grand artistes pour vos projets ? <br>Estimez votre projet.</p>
                     <button><a href="http://www.bicravart.com/entreprises">DEMANDER UN DEVIS</a></button>
                 </div>
             </section>

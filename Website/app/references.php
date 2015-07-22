@@ -50,7 +50,7 @@
                     <div class="large-4 medium-6 small-12 columns imgWrap">
                         <a href="reference/reference-04.php" title="Lien faire la page référence 04">
                             <img src="img/references/reference-04.jpg" alt="Image référence 04">
-                            <p class="referenceDesc">Prestations en live au Paris Manga & Sci-Fi Show</p>
+                            <p class="referenceDesc">Prestations en live au<br>Paris Manga &amp; Sci-Fi Show</p>
                             <span class="plusIcon"></span>
                         </a>
                     </div>
