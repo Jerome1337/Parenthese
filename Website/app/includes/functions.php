@@ -24,30 +24,18 @@
 	function addGraffeur(){
 		$data = array();
 		if (!empty($_POST['name'])
-			&& !empty($_POST['age'])
 			&& !empty($_POST['tel'])
 			&& !empty($_POST['email'])
-			&& !empty($_POST['website'])
-			&& !empty($_POST['competences'])
-			&& !empty($_POST['salaire'])
 			)
 		{
 
-			$name = mysql_real_escape_string($_POST['name']);
-			$age = mysql_real_escape_string($_POST['age']);
-			$tel = mysql_real_escape_string($_POST['tel']);
-			$email = mysql_real_escape_string($_POST['email']);
-			$website = mysql_real_escape_string($_POST['website']);
-			$competences = mysql_real_escape_string($_POST['competences']);
-			$salaire = mysql_real_escape_string($_POST['salaire']);
-
-			$name = addcslashes($name, '%_');
-			$age = addcslashes($age, '%_');
-			$tel = addcslashes($tel, '%_');
-			$email = addcslashes($email, '%_');
-			$website = addcslashes($website, '%_');
-			$competences = addcslashes($competences, '%_');
-			$salaire = addcslashes($salaire, '%_');
+			$name = html_escape($_POST['name']);
+			$age = html_escape($_POST['age']);
+			$tel = html_escape($_POST['tel']);
+			$email = html_escape($_POST['email']);
+			$website = html_escape($_POST['website']);
+			$competences = html_escape($_POST['competences']);
+			$salaire = html_escape($_POST['salaire']);
 
 			$bdd = connect();
 
@@ -118,17 +106,11 @@
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
 			$result = curl_exec($ch);
 
-			$name = mysql_real_escape_string($_POST['name']);
-			$email = mysql_real_escape_string($_POST['email']);
-			$dateproj = mysql_real_escape_string($_POST['date']);
-			$lieu = mysql_real_escape_string($_POST['lieu']);
-			$description = mysql_real_escape_string($_POST['desc']);
-
-			$name = addcslashes($name, '%_');
-			$email = addcslashes($email, '%_');
-			$dateproj = addcslashes($dateproj, '%_');
-			$lieu = addcslashes($lieu, '%_');
-			$description = addcslashes($description, '%_');
+			$name = html_escape($_POST['name']);
+			$email = html_escape($_POST['email']);
+			$dateproj = html_escape($_POST['date']);
+			$lieu = html_escape($_POST['lieu']);
+			$description = html_escape($_POST['desc']);
 
 			$bdd = connect();
 
@@ -198,19 +180,14 @@
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
 			$result = curl_exec($ch);
 
-			$name = mysql_real_escape_string($_POST['name']);
-			$email = mysql_real_escape_string($_POST['email']);
-			$tel = mysql_real_escape_string($_POST['tel']);
-			$message = mysql_real_escape_string($_POST['message']);
-
-			$name = addcslashes($name, '%_');
-			$email = addcslashes($email, '%_');
-			$tel = addcslashes($tel, '%_');
-			$message = addcslashes($message, '%_');
+			$name = html_escape($_POST['name']);
+			$email = html_escape($_POST['email']);
+			$tel = html_escape($_POST['tel']);
+			$message = html_escape($_POST['message']);
 
 			$bdd = connect();
 
-			$req = $bdd->prepare('INSERT INTO contactArtist (name, email, tel, message) VALUES (:name, :email, :tel, :message)');
+			$req = $bdd->prepare('INSERT INTO contactartist (name, email, tel, message) VALUES (:name, :email, :tel, :message)');
 			$req->execute(array(
 				'name' => $name,
 				'email' => $email,
@@ -276,19 +253,14 @@
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
 			$result = curl_exec($ch);
 
-			$name = mysql_real_escape_string($_POST['name']);
-			$email = mysql_real_escape_string($_POST['email']);
-			$tel = mysql_real_escape_string($_POST['tel']);
-			$message = mysql_real_escape_string($_POST['message']);
-
-			$name = addcslashes($name, '%_');
-			$email = addcslashes($email, '%_');
-			$tel = addcslashes($tel, '%_');
-			$message = addcslashes($message, '%_');
+			$name = html_escape($_POST['name']);
+			$email = html_escape($_POST['email']);
+			$tel = html_escape($_POST['tel']);
+			$message = html_escape($_POST['message']);
 
 			$bdd = connect();
 
-			$req = $bdd->prepare('INSERT INTO contactEntreprise (name, email, tel, message) VALUES (:name, :email, :tel, :message)');
+			$req = $bdd->prepare('INSERT INTO contactentreprise (name, email, tel, message) VALUES (:name, :email, :tel, :message)');
 			$req->execute(array(
 				'name' => $name,
 				'email' => $email,
@@ -302,3 +274,8 @@
 		}
 		echo json_encode($data);
 	}
+
+	function html_escape($html_escape) {
+	        $html_escape =  htmlspecialchars($html_escape, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+	        return $html_escape;
+	    }

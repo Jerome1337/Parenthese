@@ -40,6 +40,7 @@ $grey: #2C2C2C;
 $yellow: #F7B232;
 $white: #fff;
 $lightgrey: #e1e1e1;
+$whitegrey: #f6f6f6;
 $RALSB: 'Raleway-semibold', Helvetica, sans-serif;
 $RALR: 'Raleway-reg', Helvetica, sans-serif;
 $RALL: 'Raleway-light', Helvetica, sans-serif;
@@ -59,17 +60,34 @@ button{
     border:none;
     text-transform: uppercase;
     background-color: $yellow;
-    color: $grey;
+    color: $grey !important;
     transition: ease-in-out all 0.5s;
     font-family: $RALSB;
     border-radius: 4px;
     &:hover{
         background-color: $grey;
-        color: $yellow;
+        color: $yellow !important;
+        a{
+            color: $yellow;
+        }
     }
     &:active{
         background-color: lighten($grey, 20%);
-        color: $white;
+        color: $white !important;
+        a{
+            color: $white;
+        }
+    }
+    &:visited{
+        background-color: lighten($grey, 20%) !important;
+        color: $white !important;
+        a{
+            color: $white !important;
+        }
+    }
+    a{
+        font-family: $RALSB;
+        color: $grey 
     }
 }
 
@@ -120,6 +138,7 @@ fieldset{
 }
 
 .navBar {
+    transition: ease-in-out all 0.3s;
     margin-left: auto;
     margin-right: auto;
     max-width: initial;
@@ -131,6 +150,7 @@ fieldset{
     position: fixed;
     width: 100%;
     display: block;
+    transform: translateZ(0);
     .title-area{
         .name{
             width: 200px;
@@ -183,8 +203,37 @@ fieldset{
         }
     }
 }
+.transparentNav{
+    background-color: transparent;
+    .top-bar-section{ 
+        background-color: transparent !important;
+        ul{
+            background-color: transparent !important;
+            li{
+                background-color: transparent !important;
+                a{
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1050px) {
-    .top-bar {
+    .transparentNav{
+        background-color: $grey;
+            .top-bar-section{ 
+                background-color: $grey !important;
+                ul{
+                    background-color: $grey !important;
+                    li{
+                        background-color: $grey !important;
+                        a{
+                            background-color: $grey !important;
+                        }
+                    }
+                }
+            }
         .toggle-topbar.menu-icon{
             a{
                 span{
@@ -367,7 +416,7 @@ label{
         text-align: right;
         color: $grey;
         font-family: $RALL;
-        margin: 20px 15px 0 0;
+        margin: 40px 15px 0 0;
     }
 }
 
@@ -396,20 +445,31 @@ label{
 }
 
 // HOME
-.fullWidth {
+.videoHeight {
     // BACKGROUND VIDEO
     .js-video{
         position: relative;
         padding-bottom: 56.25%;
-        // padding-top: 30px;
-        // height: 0;
+        padding-top: 25px;
+        height: 0;
         overflow: hidden;
+        #videosOverlay{
+            background: url(http://lorempixel.com/400/300) no-repeat center;
+            background-size: cover;
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            border: none;
+        }
         .youtube-player{
             position: absolute;
             top: 0; 
             left: 0;
             width: 100%;
-            height: 80%;
+            height: 100%;
             z-index: -10;
             border: none;
         }
@@ -417,33 +477,25 @@ label{
             z-index: -5;
         }
         .baseline{
-            // position: absolute;
-            // top: 0;
-            // bottom: 0;
-            // left: 0;
-            // right: 0;
-            // display: flex; /* add */
-            // justify-content: center; /* add to align horizontal */
-            // align-items: center;
-            // width: 100%;
             h2{
-                color: $white;
-                // font-size: 2em;
-                text-align: center;
-                z-index: 10;
-                margin-top: 10%;
-                font-family: $RALR;
+                padding-top: 35px;
+                padding-bottom: 50px;
+                img{
+                    width: 400px;
+                    padding: 0;
+                }
             }
 
             .yellowZ{
                 color: #F7B232;
-                font-family: $RALR;
+                font-family: $RALSB;
             }
 
             p{
-                color: $white;
-                font-family: $RALR;
+                color: $grey;
+                font-family: $RALSB;
                 text-align: center;
+                font-size: 1.4em;
             }
         }
         img{
@@ -451,139 +503,169 @@ label{
             display: block;
             margin-right: auto;
             margin-left: auto;
+            width: 40px;
+            margin-top: 60px;
         }
     }
 }
-.container{
-    background: url('../img/fond-losange.jpg')no-repeat;
+.mobileContent{
+    padding: 300px 0;
+    background: url(http://lorempixel.com/400/300) no-repeat center;
     background-size: cover;
-    padding-bottom: 100px;
-    .presentation{
+    text-align: center;
+    h2{
+        img{
+            width: 80%;
+            padding: 0;
+        }
+    }
+}
+.explainContainer{
+    background: url('../img/home/explain-bg.jpg')no-repeat center;
+    background-size: cover;
+    padding: 100px 0;
+    .explication{
         vertical-align: middle;
         color: $white;
         font-size: 1.5em;
         text-align: center;
-        z-index: 10;
-        margin-top: 10%;
         font-family: $RALR;
     }
 }
 .devisContainer{
-    //height: 317px;
-    //background: url('../img/fond-graffeur-entreprise.jpg')no-repeat;
-    background-color: #E1E1E1;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    .left{
-        float: left;
-        height: 100%;
-        font-family: $RALR;
-        text-align: center;
-        p{
-            font-size: 1.2em;
-            text-align: left;
-        }
-        img{
-            padding-bottom: 40px;
-            width: 100px;
-        }
-    }
-    .right{
-        float: right;
-        height: 100%;
-        font-family: $RALR;
-        text-align: center;
-        p{
-            font-size: 1.2em;
-            text-align: right;
-        }
-        img{
-            padding-bottom: 40px;
-            width: 100px;
-        }
-    }
-
-    div{
-        text-align: center;
-        button{
-            background-color: $yellow;
-            color: black;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
+    background-color: $lightgrey;
+    .artistBlock, .entrepriseBlock{
+        padding: 100px 0;
+        h3{
             text-align: center;
-            font-family: $RALSB;
-            &:hover{
-                color: $yellow;
-                background-color: black;
+            font-size: 1.3em;
+            font-family: $RALL;
+            color: $grey;
+            text-transform: uppercase;
+        }
+        .iconsDevis{
+            margin: 20px;
+            font-family: 'social';
+            text-align: center;
+            font-size: 6em;
+        }
+        .txtWrap{
+            text-align: center;
+            font-family: $RALR;
+            font-size: 1.1em;
+            width: 70%;
+            display: block;
+            margin: auto;
+        }
+        button{
+            margin-top: 50px;
+        }
+    }
+    .artistBlock{
+        .iconsDevis{
+            &:before{
+                content:'\e003';
             }
         }
-        p{
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            font-family: $RALSB;
+    }
+    .entrepriseBlock{
+        border-left: solid #fff 5px;
+        .iconsDevis{
+            &:before{
+                content:'\e004';
+            }
         }
-    }  
+    }
+    button{
+        display: block;
+        margin : auto;
+    }
 }
 .feedContainer{
-    background: #E1E1E1;
-    padding-top: 400px;
-    padding-bottom: 400px;  
+    background: $lightgrey;
+    padding: 100px 0; 
     font-family: $RALR;
-    h3, p, a{
-        text-align: center;
-        display: block;
-        margin : auto;
-        font-family: $RALSB;
-        color: $black;
-        width: 51%;
-    }
-    button{
-        text-align: center;
-        background-color: $yellow;
-        color: black;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        font-family: $RALR;
-        &:hover{
-            color: $yellow;
-            background-color: black;
+    section{
+        h3{
+            text-align: center;
+            font-size: 1.8em;
+            font-family: $RALSB;
+            color: $grey;
         }
-    } 
+        p{
+            text-align: center;
+            font-size: 1.2em;
+            font-family: $RALL;
+            color: $grey;
+            margin: 90px 0 110px;
+        }
+        button{
+            margin: auto;
+            display: block;
+        }
+    }
 }
 .resultatContainer{
-    background: url('../img/fond-nos-resultats.jpg')no-repeat;
-    background-size: cover!important;
-    padding-top: 400px;
-    padding-bottom: 400px;
-    .leftImg, .centerImg, .rightImg{
-        padding: 0;
-        .orange{
-            background: orange;
-            opacity: 0;
+    background: url(../img/home/noref-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 100px 0;
+    div{
+        margin-bottom: 120px;
+        h3{
+            text-align: center;
+            font-size: 1.8em;
+            font-family: $RALSB;
+            color: $grey;
         }
-        
-        &:hover .orange{
-            opacity:0.7;
+        section{
+            margin-top: 100px;
+            .imgWrap{
+                margin: 0;
+                padding: 0;
+                a{
+                    .referenceDesc{
+                        position: absolute;
+                        top: 0;
+                        bottom: -1px;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        margin: 0;
+                        background: rgba($yellow, 0.6);
+                        color: $grey;
+                        visibility: hidden;
+                        font-size: 1.15em;
+                        opacity: 0;
+                        transition: ease-in-out all 0.5s;
+                        padding-top: 115px;
+                    }
+                    &:hover{
+                        .referenceDesc, .plusIcon{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    .plusIcon{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        margin: 0;
+                        background: url(../img/references/plus.png) no-repeat center;
+                        background-size: 25px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: ease-in-out all 0.5s;
+                    }
+                }   
+            }
         }
     }
-
     button{
-        background-color: $yellow;
-        color: black;
-        text-align: center;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
         display: block;
         margin : auto;
-        font-family: $RALSB;
-        &:hover{
-            color: $yellow;
-            background-color: black;
-        }
     }
     p{
         font-family: $RALSB;
@@ -592,23 +674,39 @@ label{
     }
 }
 .descContainer{
-    background: url('../img/fond-qui-sommes-nous.jpg');
-    background-size: cover!important;
-    padding-top: 400px;
-    padding-bottom: 400px;
-    div{
-        text-align: center;
-    }
-    a, h3{
-        font-family: $RALSB;
-        text-align: center;
-        margin: 0;
-        color: $white;
-        font-size: 1.2em;
-    }
-    .whoAre{
-        .descPart{
-            text-align: center;
+    background: url('../img/home/temoignage-bg.jpg') no-repeat center;
+    background-size: cover;
+    padding: 100px 0;
+    section{
+        .temoignagePart{
+            h3{
+               text-align: center;
+               font-size: 1.3em;
+               font-family: $RALSB;
+               color: $grey;
+               height: 50px;
+            }
+            .temoignageLeft, .temoignageRight{
+                margin: 50px 0 100px;
+                background-color: $lightgrey;
+                .leftPic, .rightPic{
+                    padding: 0;
+                }
+                .temoignagesText{
+                    padding: 30px;
+                    .phrase, .from{
+                        color: $grey;
+                        font-family: $RALL;
+                        font-size: 1.1em;
+                    }
+                    .phrase{
+                        text-align: center;
+                    }
+                    .from{
+                        text-align: right;
+                    }
+                }
+            }
         }
     }
 }
@@ -617,132 +715,6 @@ label{
 .contactContainer{
     background-color: $lightgrey;
     font-family: $RALSB;
-<<<<<<< HEAD
-    // .text-left{
-    //     text-align: left;
-    // }
-    // .text-right{
-    //     text-align: right;
-    // }
-
-    // .fond{
-    //     background: url('../img/VisuMain.jpg');
-    //     height: 100%;
-    //     margin: 0;
-    // }
-    // h2, h3{
-    //     color: $black;
-    // }
-    // button{
-    //     text-align: center;
-    //     margin: 0;
-    //     background-color: $yellow;
-    //     color: black;
-    //     text-align: center;
-    //     -webkit-border-radius: 3px;
-    //     -moz-border-radius: 3px;
-    //     border-radius: 3px;
-    //     display: block;
-    //     margin : auto;
-    //     font-family: $RALSB;
-    //     &:hover{
-    //         color: $yellow;
-    //         background-color: black;
-    //     }
-    // }
-    // img{
-    //     width: 100px;
-    //     display: inline-block;
-    //     padding-top: 20px;
-    // }
-    // .reglage{
-    //     padding-top: 14px;
-    //     width: 100px;
-    //     display: inline-block;
-    // }
-=======
-    // .part1{
-    //     background: url('../img/IMGHearder.png');
-    // }
-    section{
-        div{
-            padding:0;
-        }
-    }
-    .text-left{
-        text-align: left;
-    }
-    .text-right{
-        text-align: right;
-    }
-
-    .fond{
-        background: url('../img/VisuMain.jpg');
-        height: 100%;
-        margin: 0;
-    }
-    h2, h3{
-        color: $black;
-    }
-    button{
-        text-align: center;
-        margin: 0;
-        background-color: $yellow;
-        color: black;
-        text-align: center;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        display: block;
-        margin : auto;
-        font-family: $RALSB;
-        &:hover{
-            color: $yellow;
-            background-color: black;
-        }
-    }
-    img{
-        display: inline-block;
-        padding-top: 20px;
-    }
-    .reglage{
-        padding-top: 14px;
-        width: 100px;
-        display: inline-block;
-    }
->>>>>>> 74d371fca8e15e29da12817636addf674f25a15d
-    // .pictos{
-    //     text-align: center;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     -webkit-border-radius: 50%;
-    //     border-radius: 50%;
-    //     background-color: $yellow;
-    //     width: 150px;
-    //     height: 150px;
-<<<<<<< HEAD
-    //     &:hover{
-    //         background-color: $white;
-    //     }
-=======
->>>>>>> 74d371fca8e15e29da12817636addf674f25a15d
-    // }
-    // .pictos2{
-    //     text-align: center;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     -webkit-border-radius: 50%;
-    //     border-radius: 50%;
-    //     background-color: $yellow;
-    //     width: 150px;
-    //     height: 150px;
-<<<<<<< HEAD
-    //     &:hover{
-    //         background-color: $white;
-    //     }
-=======
->>>>>>> 74d371fca8e15e29da12817636addf674f25a15d
-    // }
     .titleContainer{
         padding: 40px 0;
         background: url(../img/contact_bg.jpg)no-repeat fixed;
@@ -886,10 +858,29 @@ label{
 }
 
 .aboutContainer{
-    padding: 100px 0;
-    background: url('../img/faq_bg.jpg') no-repeat center fixed;
+    // padding: 100px 0;
+    // background: url('../img/faq_bg.jpg') no-repeat center fixed;
     background-size: cover;
     min-height: 100%;
+    .pictopropos{
+        width: 250px;
+    }
+    .titleContainer
+    {
+        background: url("../img/apropos_img.jpg") no-repeat fixed;
+        min-height: 100%;
+    }
+    .photosContainer
+    {
+        background: url("../img/IMG.jpg") no-repeat center fixed;
+        background-size: cover;
+        min-height: 100%;
+        padding: 50px 0 70px; 
+    }
+    div{
+        padding: 0;
+        margin-top: 45px;
+    }
     h3{
         color: $grey;
         font-family: $RALSB;
@@ -1030,16 +1021,372 @@ label{
     }
 }
 
+<<<<<<< HEAD
+.referencesPageContainer{
+=======
+.referencesPageContainer
+{
+    button{
+        &:hover{
+            color: #F7B232;
+        }
+    }
+>>>>>>> 2ae9948a921f25325e5d97da8a6148ac362ebe07
+    padding-top: 50px;
+    h2{
+        text-align: center;
+        color: $black;
+        font-family: $RALSB;
+    }
+    h3{
+        color: $black;
+        text-align: center;
+    }
+    .refContainer{
+        background-color: #E1E1E1;
+        div{
+            padding:0;
+        }
+        .texte{
+            padding: 40px;
+            font-family: $RALSB;
+            color: $black;
+        }
+        p{
+            font-family: $RALSB;
+        }
+    }
+    .row{
+        div{
+            // padding: 0;
+            p{
+                margin-right: 10px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
 // ENTREPRISE
 .entrepriseContainer{
-    background-color: $lightgrey; 
+    background-color: $lightgrey;
     .titleContainer{
-        padding: 40px 0;
+        padding: 100px 0;
+        background: url(../img/entreprises/entreprise_bg.jpg)no-repeat center fixed;
+        background-size: cover;
+        min-height: 100%;
+        padding: 120px 0;
         text-align: center;
         h2{
             img{
-                width: 180px;
+                width: 400px;
                 padding: 0;
+            }
+        }
+    }
+    .firstContainer, .thirdContainer{
+        .leftText{
+            h4, p{
+                text-align: right;
+                color: $grey;
+                font-size: 1.1em;
+            }
+            h4{
+                font-family: $RALSB;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+            p{
+                font-family: $RALR;
+            }
+        }
+        .pictoWrap{
+            p{
+                font-family: 'social';
+                font-size: 8em;
+                margin: 25px 0 0 50px;
+            }
+        }
+    }
+    .firstContainer{
+        background-color: $whitegrey;
+        padding: 100px 0;
+        h3{
+            color: $grey;
+            text-align: center;
+            font-family: $RALSB;
+            font-size: 1.8em;
+            margin-bottom: 110px;
+        }
+        .pictoWrap{
+            p{
+                background: url(../img/entreprises/rond-01.png) no-repeat;
+                background-size: 140px;
+                &::before{
+                    content: '\e007';
+                    vertical-align: top;
+                    margin-left: 6px;
+                    line-height: 155px;
+                }
+            }
+        }
+    }
+    .secondContainer{
+        padding: 100px 0;
+        background: url(../img/entreprises/des-experts.jpg)no-repeat center fixed;
+        background-size: cover;
+        min-height: 100%;
+        .rightText{
+            h4, p{
+                text-align: left;
+                color: $grey;
+                font-size: 1.1em;
+            }
+            h4{
+                font-family: $RALSB;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+            p{
+                font-family: $RALR;
+            }
+        }
+        .pictoWrap{
+            p{
+                background-color: $whitegrey;
+                border-radius: 50%;
+                width: 140px;
+                height: 140px;
+                font-family: 'social';
+                font-size: 8em;
+                margin: 25px 0 0 290px;
+                &::before{
+                    content: '\e008';
+                    vertical-align: top;
+                    margin-left: 5px;
+                    line-height: 160px;
+                }
+            }
+        }
+    }
+    .thirdContainer{
+        background-color: $whitegrey;
+        padding: 100px 0;
+        .pictoWrap{
+            p{
+                background: url(../img/entreprises/rond-03.png) no-repeat;
+                background-size: 140px;
+                &::before{
+                    content: '\e006';
+                    vertical-align: top;
+                    margin-left: 4px;
+                    line-height: 150px;
+                }
+            }
+        }
+    }
+    .formWrap{
+        padding: 100px 0;
+        background-color: $lightgrey;
+        h2{
+            font-family: $RALSB;
+            font-size: 1.8em;
+            color: $grey;
+            text-align: center;
+        }
+        #decrivez{
+            font-family: $RALR;
+            font-size: 1.2em;
+            color: $grey;
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+    }
+}
+
+// ARTISTS
+.artistContainer{
+    background-color: $whitegrey;
+    .coinWrap{
+        background: url(../img/artists/header-bg.png) no-repeat center fixed;
+        background-size: cover;
+        min-height: 100%;
+        padding: 50px 0 70px;
+        .titleContainer{
+            // padding: 120px 0;
+            text-align: center;
+            h2{
+                img{
+                    width: 250px;
+                    padding: 0;
+                }
+            }
+        }
+        .explications{
+            overflow: hidden;
+            .part1{
+                .backgroundPa{
+                    margin-left: -100px;
+                }
+            }
+            .part2{
+                .textArt{
+                    margin: 0 0 0 15px;
+                }
+            }
+            .part3{
+                .backgroundPa{
+                    margin-right: -100px;
+                }
+                .textArt{
+                    margin: 0 0 0 40px;
+                }
+            }
+            .part1, .part2, .part3{
+                margin: 50px 0 110px;
+                .backgroundPa{
+                    background: $lightgrey;
+                    -webkit-transform: skew(-25deg);
+                    -moz-transform: skew(-25deg);
+                    -o-transform: skew(-25deg);
+                    tranform: skew(-25deg);
+                    padding: 100px;
+                }
+                .textArt{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    color: $grey;
+                    width: 90%;
+                    padding-top: 35px;
+                    h3{
+                        font-size: 1.2em;
+                        font-family: $RALSB;
+                        color: $grey;
+                    }
+                    p{
+                        
+                    }
+                }
+            }
+            .scrollTo{
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+    .artistForm{
+        background: url(../img/artists/form-bg.png) no-repeat center fixed;
+        padding: 100px 0;
+        h2, h3{
+            text-align: center;
+            color: $grey;
+            font-family: $RALSB;
+        }
+        h2{
+            font-size: 1.8em;
+        }
+        h3{
+            font-size: 1.3em;
+            margin: 25px 0 65px;
+        }
+    }
+    .artistWrap{
+        margin: 80px 0;
+        h2{
+            text-align: center;
+            color: $grey;
+            font-family: $RALSB;
+            font-size: 1.8em;
+            margin-bottom: 110px;
+        }
+        .artistPictures{
+            .hoverImage{
+                display: block;
+                top: 0;
+                left: 0;
+                margin-top: -220px;
+                visibility: hidden;
+                opacity: 0;
+                transition: ease-in-out all 0.5s;
+            }
+            .artistsImages{
+                display: block;
+                top: 0;
+                left: 0;
+            }
+            .artistName{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                margin: 0;
+                color: $grey;
+                visibility: hidden;
+                font-size: 1.15em;
+                opacity: 0;
+                transition: ease-in-out all 0.5s;
+                padding-top: 90px;
+                font-family: $RALSB;
+            }
+            &:hover{
+                .artistName{
+                    z-index: 99;
+                    width: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .hoverImage{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 40em) { 
+    .artistContainer{
+        .coinWrap{
+            .explications{
+                .part1{
+                    margin: 50px 0 0;
+                    .backgroundPa{
+                        margin-left: 0;
+                    }
+                }
+                .part2{
+                    margin: 25px 0;
+                    .textArt{
+                        margin:0;
+                    }
+                }
+                .part3{
+                    margin: 0 0 70px;
+                    .backgroundPa{
+                        margin-right: 0;
+                    }
+                    .textArt{
+                        margin:0;
+                    }
+                }
+                .part1, .part2, .part3{
+                    padding: 0;
+                    .backgroundPa{
+                        -webkit-transform: skew(0deg);
+                        -moz-transform: skew(0deg);
+                        -o-transform: skew(0deg);
+                        tranform: skew(0deg);
+                    }
+                    .textArt{
+                        width: 100%;
+                    }
+                }
             }
         }
     }

@@ -59,22 +59,35 @@ body {
 button{ 
     border:none;
     text-transform: uppercase;
-    background-color: $yellow;
+    background-color: $yellow !important;
     color: $grey !important;
     transition: ease-in-out all 0.5s;
     font-family: $RALSB;
     border-radius: 4px;
     &:hover{
-        background-color: $grey;
-        color: $yellow;
+        background-color: $grey !important;
+        color: $yellow !important;
+        a{
+            color: $yellow;
+        }
     }
     &:active{
-        background-color: lighten($grey, 20%);
-        color: $white;
+        background-color: lighten($grey, 20%) !important;
+        color: $white !important;
+        a{
+            color: $white;
+        }
     }
     &:visited{
         background-color: lighten($grey, 20%) !important;
         color: $white !important;
+        a{
+            color: $white !important;
+        }
+    }
+    a{
+        font-family: $RALSB;
+        color: $grey 
     }
 }
 
@@ -125,6 +138,7 @@ fieldset{
 }
 
 .navBar {
+    transition: ease-in-out all 0.3s;
     margin-left: auto;
     margin-right: auto;
     max-width: initial;
@@ -136,6 +150,7 @@ fieldset{
     position: fixed;
     width: 100%;
     display: block;
+    transform: translateZ(0);
     .title-area{
         .name{
             width: 200px;
@@ -188,8 +203,40 @@ fieldset{
         }
     }
 }
+.transparentNav{
+    background-color: transparent;
+    .top-bar-section{ 
+        background-color: transparent !important;
+        ul{
+            background-color: transparent !important;
+            li{
+                background-color: transparent !important;
+                a{
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1050px) {
-    .top-bar {
+    .navBar{
+        transition: ease-in-out all 0s;
+    }
+    .transparentNav{
+        background-color: $grey;
+            .top-bar-section{ 
+                background-color: $grey !important;
+                ul{
+                    background-color: $grey !important;
+                    li{
+                        background-color: $grey !important;
+                        a{
+                            background-color: $grey !important;
+                        }
+                    }
+                }
+            }
         .toggle-topbar.menu-icon{
             a{
                 span{
@@ -336,37 +383,41 @@ label{
 }
 
 .forms{
-    .fieldContainer{
-        margin-bottom: 10px !important;
-        .labelContainer{
-            label{
-                padding: 15px 0;
+    fieldset{
+        margin-bottom: 20px;
+        .fieldContainer{
+            margin-bottom: 10px !important;
+            .labelContainer{
+                label{
+                    padding: 15px 0;
+                }
             }
-        }
-        .champContainer{
-            float: left !important;
-            input{
-                padding: 0 10px;
-                border-radius: 6px;
-                border: none;
-                height: 45px;
-                font-family: $RALL;
-            }
-            textarea{
-                padding: 10px 10px;
-                border-radius: 6px;
-                border: none;
-                font-family: $RALL;
-            }
-            .emptyField{
-                border: rgba(255, 0, 0, 0.5) 1px solid;
-                box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.2);
+            .champContainer{
+                float: left !important;
+                input{
+                    padding: 0 10px;
+                    border-radius: 6px;
+                    border: none;
+                    height: 45px;
+                    font-family: $RALL;
+                }
+                textarea{
+                    padding: 10px 10px;
+                    border-radius: 6px;
+                    border: none;
+                    font-family: $RALL;
+                }
+                .emptyField{
+                    border: rgba(255, 0, 0, 0.5) 1px solid;
+                    box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.2);
+                }
             }
         }
     }
     .formSubmit{
         width: 200px;
-        margin: 80px 0 0 265px;
+        margin: auto;
+        display: block;
     }
     .obg{
         text-align: right;
@@ -386,22 +437,11 @@ label{
                 }
             }
         }
-        .formSubmit{
-            margin-left: 1.25rem;
-        }
     }
 }
 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
-    .forms{
-        .formSubmit{
-            margin-left: 192px;
-        }
-    } 
-}
-
 // HOME
-.fullWidth {
+.videoHeight {
     // BACKGROUND VIDEO
     .js-video{
         position: relative;
@@ -409,6 +449,17 @@ label{
         padding-top: 25px;
         height: 0;
         overflow: hidden;
+        #videosOverlay{
+            background: url(../img/home/thumbnail-video.jpg) no-repeat center;
+            background-size: cover;
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            border: none;
+        }
         .youtube-player{
             position: absolute;
             top: 0; 
@@ -422,33 +473,25 @@ label{
             z-index: -5;
         }
         .baseline{
-            // position: absolute;
-            // top: 0;
-            // bottom: 0;
-            // left: 0;
-            // right: 0;
-            // display: flex; /* add */
-            // justify-content: center; /* add to align horizontal */
-            // align-items: center;
-            // width: 100%;
             h2{
-                color: $white;
-                // font-size: 2em;
-                text-align: center;
-                z-index: 10;
-                margin-top: 10%;
-                font-family: $RALR;
+                padding-top: 35px;
+                padding-bottom: 50px;
+                img{
+                    width: 400px;
+                    padding: 0;
+                }
             }
 
             .yellowZ{
                 color: #F7B232;
-                font-family: $RALR;
+                font-family: $RALSB;
             }
 
             p{
-                color: $white;
-                font-family: $RALR;
+                color: $grey;
+                font-family: $RALSB;
                 text-align: center;
+                font-size: 1.4em;
             }
         }
         img{
@@ -456,19 +499,41 @@ label{
             display: block;
             margin-right: auto;
             margin-left: auto;
+            width: 40px;
+            margin-top: 60px;
+        }
+    }
+}
+.mobileContent{
+    padding: 100px 0;
+    background: url(../img/home/thumbnail-video.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    h2{
+        img{
+            width: 80%;
+            padding: 0;
         }
     }
 }
 .explainContainer{
-    background: url('../img/home/explain-bg.jpg')no-repeat center;
+    background: url(../img/home/explain-bg.jpg)no-repeat center;
     background-size: cover;
     padding: 100px 0;
+    .baselineText{
+        vertical-align: middle;
+        color: $white;
+        font-size: 1.8em;
+        text-align: center;
+        font-family: $RALSB;
+    }
     .explication{
         vertical-align: middle;
         color: $white;
         font-size: 1.5em;
         text-align: center;
         font-family: $RALR;
+        margin: 0 20px;
     }
 }
 .devisContainer{
@@ -537,19 +602,16 @@ label{
             font-family: $RALL;
             color: $grey;
             margin: 90px 0 110px;
+
         }
         button{
             margin: auto;
             display: block;
-            &:hover{
-                color: $yellow;
-                background-color: black;
-            }
         }
     }
 }
 .resultatContainer{
-    background: url('../img/home/noref-bg.jpg') no-repeat center fixed;
+    background: url(../img/home/noref-bg.jpg) no-repeat center;
     background-size: cover;
     padding: 100px 0;
     div{
@@ -617,7 +679,7 @@ label{
     }
 }
 .descContainer{
-    background: url('../img/home/temoignage-bg.jpg') no-repeat center fixed;
+    background: url('../img/home/temoignage-bg.jpg') no-repeat center;
     background-size: cover;
     padding: 100px 0;
     section{
@@ -626,13 +688,28 @@ label{
                text-align: center;
                font-size: 1.3em;
                font-family: $RALSB;
-               color: $grey; 
+               color: $grey;
+               height: 50px;
             }
             .temoignageLeft, .temoignageRight{
                 margin: 50px 0 100px;
                 background-color: $lightgrey;
-                img{
-
+                .leftPic, .rightPic{
+                    padding: 0;
+                }
+                .temoignagesText{
+                    padding: 30px 30px 0;
+                    .phrase, .from{
+                        color: $grey;
+                        font-family: $RALL;
+                        font-size: 1.1em;
+                    }
+                    .phrase{
+                        text-align: center;
+                    }
+                    .from{
+                        text-align: right;
+                    }
                 }
             }
         }
@@ -645,7 +722,7 @@ label{
     font-family: $RALSB;
     .titleContainer{
         padding: 40px 0;
-        background: url(../img/contact_bg.jpg)no-repeat fixed;
+        background: url(../img/contacts/contact_bg.jpg)no-repeat fixed;
         background-size: cover;
         min-height: 100%;
         h2{
@@ -786,24 +863,161 @@ label{
 }
 
 .aboutContainer{
-    // padding: 100px 0;
-    // background: url('../img/faq_bg.jpg') no-repeat center fixed;
+    padding: 40px 0;
+    background: url(../img/about/apropos_img.jpg) no-repeat fixed;
     background-size: cover;
-    min-height: 100%;
     .pictopropos{
         width: 250px;
+        margin: auto;
+        display: block;
     }
-    .titleContainer
-    {
-        background: url("../img/apropos_img.jpg") no-repeat fixed;
-        min-height: 100%;
+}
+.contentAbout{
+    padding-top: 40px;
+    .whoAre{
+        margin: 25px 0 40px;
+        img{
+            margin-bottom: 40px;
+        }
+        .graphique{
+            width: 55px;
+        }
     }
     .photosContainer
     {
-        background: url("../img/IMG.jpg") no-repeat center fixed;
+        background: url(../img/about/IMG.jpg) no-repeat center center fixed;
         background-size: cover;
         min-height: 100%;
-        padding: 50px 0 70px; 
+        padding: 50px 0 70px;
+        margin-top: 30px;
+        .Name{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: 0;
+            color: $grey;
+            visibility: hidden;
+            font-size: 1em;
+            opacity: 0;
+            transition: ease-in-out all 0.5s;
+            padding-top: 45px;
+            font-family: $RALSB;
+        }
+        .Hadrien{
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-01.png)no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url(../img/about/portrait-01-j.png)no-repeat center;
+                .Name{
+                    z-index: 99;
+                    width: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        .Laura{
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-02.png)no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url(../img/about/portrait-02-j.png)no-repeat center;
+                .Name{
+                    z-index: 99;
+                    width: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        .Marie{
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-03.png)no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url(../img/about/portrait-03-j.png)no-repeat center;
+                .Name{
+                    z-index: 99;
+                    width: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        .Stephane{
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-04.png)no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url(../img/about/portrait-04-j.png)no-repeat center;
+                .Name{
+                    z-index: 99;
+                    width: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        .Lisa{
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-05.png)no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url(../img/about/portrait-05-j.png)no-repeat center;
+                .Name{
+                    z-index: 99;
+                    width: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        .Pascal{
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-06.png)no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url(../img/about/portrait-06-j.png)no-repeat center;
+                .Name{
+                    z-index: 99;
+                    width: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        .Elvis{
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-07.png)no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url(../img/about/portrait-07-j.png)no-repeat center;
+                .Name{
+                    z-index: 99;
+                    width: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        .Jerome{
+            transition: ease-in-out all 0.5s;
+            background: url(../img/about/portrait-08.png)no-repeat center;
+            height: 154px;
+            &:hover{
+                background: url(../img/about/portrait-08-j.png)no-repeat center;
+                .Name{
+                    z-index: 99;
+                    width: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
     }
     div{
         padding: 0;
@@ -837,7 +1051,7 @@ label{
 // MENTIONS LEGALES
 .mentionsContainer{
     padding: 100px 0;
-    background: url('../img/faq_bg.jpg') no-repeat center fixed;
+    background: url(../img/faq_bg.jpg) no-repeat center fixed;
     background-size: cover;
     h2{
         color: $grey;
@@ -949,17 +1163,19 @@ label{
     }
 }
 
-.referencesPageContainer
-{
-    padding-top: 50px;
+.referencesPageContainer{
+    padding: 50px 0;
+    background-color: $whitegrey;
     h2{
         text-align: center;
-        color: $black;
+        color: $grey;
         font-family: $RALSB;
+        margin-bottom: 80px;
     }
     h3{
-        color: $black;
+        color: $grey;
         text-align: center;
+        margin-bottom: 30px;
     }
     .refContainer{
         background-color: #E1E1E1;
@@ -969,18 +1185,22 @@ label{
         .texte{
             padding: 40px;
             font-family: $RALSB;
-            color: $black;
+            color: $grey;
         }
         p{
             font-family: $RALSB;
         }
     }
-    .row{
+    .linkContainer{
         div{
-            padding: 0;
             p{
-                margin-right: 10px;
-                margin-top: 10px;
+                margin: 25px 10px 40px;
+                padding: 10px;
+                text-align: center;
+            }
+            button{
+                display: block;
+                margin: auto;
             }
         }
     }
@@ -1127,7 +1347,7 @@ label{
 .artistContainer{
     background-color: $whitegrey;
     .coinWrap{
-        background: url(../img/artists/header-bg.png) no-repeat center fixed;
+        background: url(../img/artists/header-bg.jpg) no-repeat center fixed;
         background-size: cover;
         min-height: 100%;
         padding: 50px 0 70px;
@@ -1198,7 +1418,7 @@ label{
         }
     }
     .artistForm{
-        background: url(../img/artists/form-bg.png) no-repeat center fixed;
+        background: url(../img/artists/form-bg.jpg) no-repeat center fixed;
         padding: 100px 0;
         h2, h3{
             text-align: center;
@@ -1222,12 +1442,132 @@ label{
             font-size: 1.8em;
             margin-bottom: 110px;
         }
-        .artistPictures{
+        .ced{
+            background: url(../img/artists/Ligne1Photo1.png)no-repeat center;
             &:hover{
+                background: url(../img/artists/Ligne1Photo1-j.png)no-repeat center;
+            }
+        }
+        .thug{
+            background: url(../img/artists/Ligne1Photo2.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne1Photo2-j.png)no-repeat center;
+            }
+        }
+        .stonz{
+            background: url(../img/artists/Ligne1Photo3.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne1Photo3-j.png)no-repeat center;
+            }
+        }
+        .idol{
+            background: url(../img/artists/Ligne1Photo4.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne1Photo4-j.png)no-repeat center;
+            }
+        }
+        .akjn{
+            background: url(../img/artists/Ligne2Photo1.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne2Photo1-j.png)no-repeat center;
+            }
+        }
+        .trecy{
+            background: url(../img/artists/Ligne2Photo2.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne2Photo2-j.png)no-repeat center;
+            }
+        }
+        .crom{
+            background: url(../img/artists/Ligne2Photo3.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne2Photo3-j.png)no-repeat center;
+            }
+        }
+        .kurz{
+            background: url(../img/artists/Ligne2Photo4.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne2Photo4-j.png)no-repeat center;
+            }
+        }
+        .slk{
+            background: url(../img/artists/Ligne3Photo1.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne3Photo1-j.png)no-repeat center;
+            }
+        }
+        .zevv{
+            background: url(../img/artists/Ligne3Photo2.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne3Photo2-j.png)no-repeat center;
+            }
+        }
+        .dooh{
+            background: url(../img/artists/Ligne3Photo3.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne3Photo3-j.png)no-repeat center;
+            }
+        }
+        .nico{
+            background: url(../img/artists/Ligne3Photo4.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne3Photo4-j.png)no-repeat center;
+            }
+        }
+        .artyom{
+            background: url(../img/artists/Ligne4Photo1.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne4Photo1-j.png)no-repeat center;
+            }
+        }
+        .larca{
+            background: url(../img/artists/Ligne4Photo2.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne4Photo2-j.png)no-repeat center;
+            }
+        }
+        .lenzy{
+            background: url(../img/artists/Ligne4Photo3.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne4Photo3-j.png)no-repeat center;
+            }
+        }
+        .polls{
+            background: url(../img/artists/Ligne4Photo4.png)no-repeat center;
+            &:hover{
+                background: url(../img/artists/Ligne4Photo4-j.png)no-repeat center;
+            }
+        }
+        .artistPictures{
+            transition: ease-in-out all 0.5s;
+            height: 230px;
+            background-size: 90%;
+            .artistName{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                margin: 0;
+                color: $grey;
+                visibility: hidden;
+                font-size: 1.15em;
+                opacity: 0;
+                transition: ease-in-out all 0.5s;
+                padding-top: 100px;
+                font-family: $RALSB;
+            }
+            &:hover{
+                height: 230px;
+                background-size: 90%;
                 .artistName{
+                    z-index: 99;
+                    width: 100%;
                     opacity: 1;
                     visibility: visible;
                 }
+
             }
         }
     }
@@ -1269,6 +1609,39 @@ label{
                     .textArt{
                         width: 100%;
                     }
+                }
+            }
+        }
+        .artistWrap{
+            .artistPictures{
+                height: 430px;
+                background-size: 75%;
+                .artistName{
+                    padding-top: 200px;
+                    font-size: 1.5em;
+                }
+                &:hover{
+                    height: 430px;
+                    background-size: 75%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .artistContainer{
+        .artistWrap{
+            .artistPictures{
+                height: 430px;
+                background-size: 75%;
+                .artistName{
+                    padding-top: 200px;
+                    font-size: 1.5em;
+                }
+                &:hover{
+                    height: 430px;
+                    background-size: 75%;
                 }
             }
         }

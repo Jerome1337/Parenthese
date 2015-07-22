@@ -28,3 +28,5 @@ Website/dist/css/style.min.css
 Website/app/css/styles.css
 Website/app/css/style.min.css
 Website/app/js/script.min.css
+
+*.js

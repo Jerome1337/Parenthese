@@ -8,6 +8,8 @@
     $page = "faq";
     $pageTitle = "F.A.Q";
 
+    $path = "";
+
     include('includes/head.php');
     ?>
     <body>
@@ -15,7 +17,7 @@
             <!-- INCLUDE NAV BAR -->
             <?php include('includes/nav.php'); ?>
         </section>
-        <section class="faqContainer">
+        <section class="faqContainer underNav">
             <section class="row">
                 <h2>F.A.Q</h2>
                 <div class="large-6  medium-6 small-12 columns leftFaq">
