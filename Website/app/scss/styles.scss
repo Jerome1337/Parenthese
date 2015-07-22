@@ -1246,17 +1246,49 @@ label{
         margin-bottom: 30px;
     }
     .refContainer{
-        background-color: #E1E1E1;
         div{
             padding:0;
         }
-        .texte{
-            padding: 40px;
-            font-family: $RALSB;
-            color: $grey;
+        .arrowLink{
+            margin-top: 150px;
+            p{ 
+                .arrowLink1, .arrowLink2{
+                    display: block;
+                    text-align: center;
+                    font-family: 'social';
+                    font-size: 7em;
+                    color: $yellow;
+                    transition: ease-in-out all 0.5s;
+                    &:hover{
+                        color: $grey;
+                    }
+                }
+                .arrowLink1{
+                    &:before{
+                        content: '\e00A';
+                    }
+                }
+                .arrowLink2{
+                    &:before{
+                        content: '\e009';
+                    }
+                }
+            }
         }
-        p{
-            font-family: $RALSB;
+        .bgColor{
+            background-color: $lightgrey;
+            margin: 0;
+            .row{
+                margin: 0;
+                .texte{
+                    padding: 40px;
+                    font-family: $RALSB;
+                    color: $grey;
+                }
+                p{
+                    font-family: $RALSB;
+                }
+            }
         }
     }
     .linkContainer{

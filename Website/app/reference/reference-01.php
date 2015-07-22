@@ -23,15 +23,25 @@
                     <h2>Fresque Supers Héros</h2>
                 </div>
             </section>
-            <section class="row refContainer">
-                <div class="large-7 medium-12 small-12 columns">
-                    <img src="../img/references/reference-01.jpg" alt="reference 01">            
+            <section class="row fullWidth refContainer">
+                <div class="large-1 medium-12 small-12 columns arrowLink">
+                    <p><a href="reference-09.php" title="Lien vers la référence précedente" class="arrowLink1"></a></p>
                 </div>
-                <div class="large-5 medium-12 small-12 columns">
-                    <div class="texte">
-                        <h3>Fresque Supers Héros</h3>
-                        <p>La maison des jeunes de Sartrouville a fait appel à Bicravart pour habiller le mur de la salle commune qui était plutôt triste et froide auparavent.</p>
+                <div class="bgColor large-10 medium-10 small-10 columns">
+                    <div class="row">
+                        <div class="large-7 medium-12 small-12 columns">
+                            <img src="../img/references/reference-01.jpg" alt="reference 01">            
+                        </div>
+                        <div class="large-5 medium-12 small-12 columns">
+                            <div class="texte">
+                                <h3>Fresque Supers Héros</h3>
+                                <p>La maison des jeunes de Sartrouville a fait appel à Bicravart pour habiller le mur de la salle commune qui était plutôt triste et froide auparavent.</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="large-1 medium-12 small-12 columns arrowLink">
+                    <p><a href="reference-02.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
                 </div>
             </section>
             <section class="row linkContainer">

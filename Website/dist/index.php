@@ -104,14 +104,14 @@
                         </div>
                     </div>
                     <div class="row temoignageLeft">
-                        <img  class="large-4 medium-12 small-12 columns leftPic"src="img/home/img-02.jpg" alt="">
+                        <img  class="large-4 medium-12 small-12 columns leftPic" src="img/home/img-02.jpg" alt="">
                         <div class="large-8 medium-12 small-12 columns temoignagesText">
                             <p class="phrase">"Aujourd'hui je ne vis que de mon art."</p>
                             <p class="from">Pablo P.</p>
                         </div>
                     </div>
                     <div class="row temoignageLeft">
-                        <img  class="large-4 medium-12 small-12 columns leftPic"src="img/home/img-03.jpg" alt="">
+                        <img  class="large-4 medium-12 small-12 columns leftPic" src="img/home/img-03.jpg" alt="">
                         <div class="large-8 medium-12 small-12 columns temoignagesText">
                             <p class="phrase">"Avec Bicrav'art j'ai pu prendre part à de grands projets"</p>
                             <p class="from">Serguey</p>
