@@ -26,7 +26,7 @@ if (!isMobile()) {
         player1 = new YT.Player('player1', {  
             height: '1280',  
             width: '720',
-            videoId: 'kgq5pAuK-BY',
+            videoId: '8C_v4Lzm4Ik',
             playerVars: {
                 "rel": 0,
                 "showinfo": 0,
@@ -39,7 +39,8 @@ if (!isMobile()) {
                 "fs": 0,
                 "showsearch": 0,
                 "enablejsapi": 1,
-                "autoplay": 0
+                "autoplay": 0,
+                "disablekb": 0
             },
             events: {
                 'onReady': onPlayer1Ready,
@@ -49,7 +50,7 @@ if (!isMobile()) {
         player2 = new YT.Player('player2', {  
             height: '1280',  
             width: '720',
-            videoId: 'QWE_xGU2U7c',
+            videoId: 'AUxha1H43-4',
             playerVars: {
                 "rel": 0,
                 "showinfo": 0,
@@ -62,7 +63,8 @@ if (!isMobile()) {
                 "fs": 0,
                 "showsearch": 0,
                 "enablejsapi": 1,
-                "autoplay": 0
+                "autoplay": 0,
+                "disablekb": 0
             },
             events: {  
                 'onReady': onPlayer2Ready,
@@ -81,13 +83,13 @@ if (!isMobile()) {
         player1.mute();           // Mute the player 1
         // $( "#player1" ).hide();   // Hide it
         player1.seekTo(1);        // Start the preloading and wait a state change event
-        console.log('Player1 Ready ' + player1Ready + '');
-        console.log('Player1 LOADING ' + preloading1 + '');
+        // console.log('Player1 Ready ' + player1Ready + '');
+        // console.log('Player1 LOADING ' + preloading1 + '');
     }
 
     function onPlayer2Ready(event) {
         player2Ready = true;      // The foreground video player is not preloaded here
-        console.log('Player2 Ready ' + player2Ready + '');
+        // console.log('Player2 Ready ' + player2Ready + '');
     }
 
     function onPlayer1StateChange(event){
@@ -95,7 +97,7 @@ if (!isMobile()) {
             if(preloading1)
             {
                 // prompt("Background ready");     // For testing
-                console.log('PLAYER 1 LOADED');
+                // console.log('PLAYER 1 LOADED');
                 player1.pauseVideo();           // Pause the video
                 player1.seekTo(0);              // Rewind
                 player1.unMute();           // Comment this after test
@@ -109,18 +111,18 @@ if (!isMobile()) {
                 //$( "#player2" ).hide();
                 player2.seekTo(1);              // Start buffering and wait the event
 
-                console.log('Player2 Ready ' + player2Ready + '');
-                console.log('Player2 LOADING ' + preloading2 + '');
+                // console.log('Player2 Ready ' + player2Ready + '');
+                // console.log('Player2 LOADING ' + preloading2 + '');
             }
             else
                 player2.playVideo();            // If not preloading link the 2 players PLAY events
-                console.log('PLAYER 2 PLAY');
+                // console.log('PLAYER 2 PLAY');
         }
 
         // else if (event.data == YT.PlayerState.PAUSED ) {
         //     if(!preloading1)
         //         player2.pauseVideo();           // If not preloading link the 2 players PAUSE events
-        //         console.log('PLAYER 2 PAUSED');
+                // console.log('PLAYER 2 PAUSED');
 
         // }
         // else if (event.data == YT.PlayerState.BUFFERING ) {
@@ -151,7 +153,7 @@ if (!isMobile()) {
             if(preloading2)
             {
                 // prompt("Foreground ready");
-                console.log('PLAYER 2 LOADED');
+                // console.log('PLAYER 2 LOADED');
                 player2.pauseVideo();           // Pause the video
                 player2.seekTo(0);              // Rewind
                 player2.unMute();               // Unmute
@@ -162,12 +164,12 @@ if (!isMobile()) {
                     videosPlaying = true;
                     $('#videosOverlay').hide();
                     $('.baseline').hide();
-                    console.log('PLAYER 2 PLAYING');
+                    // console.log('PLAYER 2 PLAYING');
                 });
             }
             else
                 player1.playVideo();
-                console.log('PLAYER 1 PLAYING');
+                // console.log('PLAYER 1 PLAYING');
         }
         else if (event.data == YT.PlayerState.PAUSED ) {
             if(/*!preloading1 &&*/ !preloading2)

@@ -1275,6 +1275,9 @@ label{
                 }
             }
         }
+        .link2{
+            display: none;
+        }
         .bgColor{
             background-color: $lightgrey;
             margin: 0;
@@ -1328,6 +1331,32 @@ label{
     }
 }
 
+@media only screen and (max-width: 64em) {
+    .referencesPageContainer{
+        .refContainer{
+            .arrowLink{
+                margin-top: 0;
+                p{ 
+                    .arrowLink1, .arrowLink2{
+                        line-height: 0.5em;
+                    }
+                    .arrowLink1{
+                        text-align: left;
+                    }
+                    .arrowLink2{
+                        text-align: right;
+                    }
+                }
+            }
+            .link2{
+                display: block;
+            }
+            .link3{
+                display: none;
+            }
+        }
+    }
+}
 
 // ENTREPRISE
 .entrepriseContainer{

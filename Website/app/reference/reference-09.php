@@ -23,15 +23,28 @@
                     <h2>La blessure</h2>
                 </div>
             </section>
-            <section class="row refContainer">
-                <div class="large-7 medium-12 small-12 columns">
-                    <img src="../img/references/reference-09.jpg" alt="reference 09">            
+            <section class="row fullWidth refContainer">
+                <div class="large-1 medium-6 small-6 columns arrowLink">
+                    <p><a href="reference-08.php" title="Lien vers la référence précedente" class="arrowLink1"></a></p>
                 </div>
-                <div class="large-5 medium-12 small-12 columns">
-                    <div class="texte">
-                        <h3>La blessure</h3>
-                        <p>Créé pour la WWF suite à l’extinction du dernier rhinocéros blanc, le graff est actuellement exposé dans le hall de l’association.</p>
+                <div class="large-1 medium-6 small-6 columns arrowLink link2">
+                    <p><a href="reference-10.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
+                </div>
+                <div class="bgColor large-10 medium-12 small-12 columns">
+                    <div class="row">
+                        <div class="large-7 medium-12 small-12 columns">
+                            <img src="../img/references/reference-09.jpg" alt="reference 09">
+                        </div>
+                        <div class="large-5 medium-12 small-12 columns">
+                            <div class="texte">
+                                <h3>La blessure</h3>
+                                <p>Créé pour la WWF suite à l’extinction du dernier rhinocéros blanc, le graff est actuellement exposé dans le hall de l’association.</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="large-1 medium-6 small-6 columns arrowLink link3">
+                    <p><a href="reference-10.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
                 </div>
             </section>
             <section class="row linkContainer">

@@ -23,15 +23,28 @@
                     <h2>Habillage de facade</h2>
                 </div>
             </section>
-            <section class="row refContainer">
-                <div class="large-7 medium-12 small-12 columns">
-                    <img src="../img/references/reference-02.jpg" alt="reference 02">            
+            <section class="row fullWidth refContainer">
+                <div class="large-1 medium-6 small-6 columns arrowLink">
+                    <p><a href="reference-01.php" title="Lien vers la référence précedente" class="arrowLink1"></a></p>
                 </div>
-                <div class="large-5 medium-12 small-12 columns">
-                    <div class="texte">
-                        <h3>Habillage de facade</h3>
-                        <p>Le batiment du centre sportif de Sevran a été habillé par plusieurs de nos artistes. Cette oeuvre a été réalisée en 3 jours, et près de 500 bombes de peintures ont été nécessaires.</p>
+                <div class="large-1 medium-6 small-6 columns arrowLink link2">
+                    <p><a href="reference-03.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
+                </div>
+                <div class="bgColor large-10 medium-12 small-12 columns">
+                    <div class="row">
+                        <div class="large-7 medium-12 small-12 columns">
+                            <img src="../img/references/reference-02.jpg" alt="reference 02">            
+                        </div>
+                        <div class="large-5 medium-12 small-12 columns">
+                            <div class="texte">
+                                <h3>Habillage de facade</h3>
+                                <p>Le batiment du centre sportif de Sevran a été habillé par plusieurs de nos artistes. Cette oeuvre a été réalisée en 3 jours, et près de 500 bombes de peintures ont été nécessaires.</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="large-1 medium-6 small-6 columns arrowLink link3">
+                    <p><a href="reference-03.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
                 </div>
             </section>
             <section class="row linkContainer">

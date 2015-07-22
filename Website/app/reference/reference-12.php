@@ -23,15 +23,28 @@
                     <h2>Loves wins</h2>
                 </div>
             </section>
-            <section class="row refContainer">
-                <div class="large-7 medium-12 small-12 columns">
-                    <img src="../img/references/reference-12.jpg" alt="reference 12">            
+            <section class="row fullWidth refContainer">
+                <div class="large-1 medium-6 small-6 columns arrowLink">
+                    <p><a href="reference-11.php" title="Lien vers la référence précedente" class="arrowLink1"></a></p>
                 </div>
-                <div class="large-5 medium-12 small-12 columns">
-                    <div class="texte">
-                        <h3>Loves wins</h3>
-                        <p>Commandé par les fleuristes Fleur Bleu à l’occasion du 14 fevrier, l’oeuvre couvre l’intégralité de la face avant du magasin. Il aura fallu moins de 5h pour réaliser l’oeuvre.</p>
+                <div class="large-1 medium-6 small-6 columns arrowLink link2">
+                    <p><a href="reference-01.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
+                </div>
+                <div class="bgColor large-10 medium-12 small-12 columns">
+                    <div class="row">
+                        <div class="large-7 medium-12 small-12 columns">
+                            <img src="../img/references/reference-12.jpg" alt="reference 12">
+                        </div>
+                        <div class="large-5 medium-12 small-12 columns">
+                            <div class="texte">
+                                <h3>Loves wins</h3>
+                                <p>Commandé par les fleuristes Fleur Bleu à l’occasion du 14 fevrier, l’oeuvre couvre l’intégralité de la face avant du magasin. Il aura fallu moins de 5h pour réaliser l’oeuvre.</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="large-1 medium-6 small-6 columns arrowLink link3">
+                    <p><a href="reference-01.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
                 </div>
             </section>
             <section class="row linkContainer">

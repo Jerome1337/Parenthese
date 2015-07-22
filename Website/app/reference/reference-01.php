@@ -24,10 +24,13 @@
                 </div>
             </section>
             <section class="row fullWidth refContainer">
-                <div class="large-1 medium-12 small-12 columns arrowLink">
-                    <p><a href="reference-09.php" title="Lien vers la référence précedente" class="arrowLink1"></a></p>
+                <div class="large-1 medium-6 small-6 columns arrowLink">
+                    <p><a href="reference-12.php" title="Lien vers la référence précedente" class="arrowLink1"></a></p>
                 </div>
-                <div class="bgColor large-10 medium-10 small-10 columns">
+                <div class="large-1 medium-6 small-6 columns arrowLink link2">
+                    <p><a href="reference-02.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
+                </div>
+                <div class="bgColor large-10 medium-12 small-12 columns">
                     <div class="row">
                         <div class="large-7 medium-12 small-12 columns">
                             <img src="../img/references/reference-01.jpg" alt="reference 01">            
@@ -40,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="large-1 medium-12 small-12 columns arrowLink">
+                <div class="large-1 medium-6 small-6 columns arrowLink link3">
                     <p><a href="reference-02.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
                 </div>
             </section>

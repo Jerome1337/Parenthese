@@ -23,15 +23,28 @@
                     <h2>Le Brésil dans la ville</h2>
                 </div>
             </section>
-            <section class="row refContainer">
-                <div class="large-7 medium-12 small-12 columns">
-                    <img src="../img/references/reference-06.jpg" alt="reference 06">            
+            <section class="row fullWidth refContainer">
+                <div class="large-1 medium-6 small-6 columns arrowLink">
+                    <p><a href="reference-05.php" title="Lien vers la référence précedente" class="arrowLink1"></a></p>
                 </div>
-                <div class="large-5 medium-12 small-12 columns">
-                    <div class="texte">
-                        <h3>Le Brésil dans la ville</h3>
-                        <p>A l’occasion du carnaval de Paris, le maire du 7ème arrondissement à fait entièrement décorer les locaux municipaux d’oeuvre representant le Brésil.</p>
+                <div class="large-1 medium-6 small-6 columns arrowLink link2">
+                    <p><a href="reference-07.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
+                </div>
+                <div class="bgColor large-10 medium-12 small-12 columns">
+                    <div class="row">
+                        <div class="large-7 medium-12 small-12 columns">
+                            <img src="../img/references/reference-06.jpg" alt="reference 06">
+                        </div>
+                        <div class="large-5 medium-12 small-12 columns">
+                            <div class="texte">
+                                <h3>Le Brésil dans la ville</h3>
+                                <p>A l’occasion du carnaval de Paris, le maire du 7ème arrondissement à fait entièrement décorer les locaux municipaux d’oeuvre representant le Brésil.</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="large-1 medium-6 small-6 columns arrowLink link3">
+                    <p><a href="reference-07.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
                 </div>
             </section>
             <section class="row linkContainer">

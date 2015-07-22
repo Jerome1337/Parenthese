@@ -23,15 +23,28 @@
                     <h2>Décoration pour la SPA</h2>
                 </div>
             </section>
-            <section class="row refContainer">
-                <div class="large-7 medium-12 small-12 columns">
-                    <img src="../img/references/reference-05.jpg" alt="reference 05">            
+            <section class="row fullWidth refContainer">
+                <div class="large-1 medium-6 small-6 columns arrowLink">
+                    <p><a href="reference-04.php" title="Lien vers la référence précedente" class="arrowLink1"></a></p>
                 </div>
-                <div class="large-5 medium-12 small-12 columns">
-                    <div class="texte">
-                        <h3>Décoration pour la SPA</h3>
-                        <p>La SPA a fait appel à Bicrav’Art pour décorer les locaux de plusieurs de leurs centres en Ile de France.</p>
+                <div class="large-1 medium-6 small-6 columns arrowLink link2">
+                    <p><a href="reference-06.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
+                </div>
+                <div class="bgColor large-10 medium-12 small-12 columns">
+                    <div class="row">
+                        <div class="large-7 medium-12 small-12 columns">
+                            <img src="../img/references/reference-05.jpg" alt="reference 05">
+                        </div>
+                        <div class="large-5 medium-12 small-12 columns">
+                            <div class="texte">
+                                <h3>Décoration pour la SPA</h3>
+                                <p>La SPA a fait appel à Bicrav’Art pour décorer les locaux de plusieurs de leurs centres en Ile de France.</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="large-1 medium-6 small-6 columns arrowLink link3">
+                    <p><a href="reference-06.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
                 </div>
             </section>
             <section class="row linkContainer">

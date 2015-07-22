@@ -125,7 +125,7 @@
                             <p class="phrase">"Les meilleurs graffeurs sont sur Bicrav'art"</p>
                             <p class="from">Maire de Torcy</p>
                         </div>
-                        <img class="large-4 medium-12 small-12 columns rightPic" src="img/home/img-04.jpg" alt="">
+                        <img class="large-4 medium-12 small-12 columns rightPic" src="img/home/img-04.png" alt="">
                     </div>
                     <div class="row temoignageRight">
                         <div class="large-8 medium-12 small-12 columns temoignagesText">

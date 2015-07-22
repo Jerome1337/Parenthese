@@ -56,7 +56,7 @@
                             <p class="artistName">Ced</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures thug">
-                            <p class="artistName">Ocer</p>
+                            <p class="artistName">Young Thug</p>
                         </div>
                         <div class="large-3 medium-6 small-12 columns artistPictures stonz">
                             <p class="artistName">Stonz</p>

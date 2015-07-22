@@ -20,18 +20,31 @@
         <section class="referencesPageContainer underNav">
             <section class="row fullWidth titleContainer">
                 <div class="large-12 medium-12 small-12 columns">
-                    <h2>Prestations en live au Paris Manga & Sci-Fi Show</h2>
+                    <h2>Prestations en live au Paris Manga &amp; Sci-Fi Show</h2>
                 </div>
             </section>
-            <section class="row refContainer">
-                <div class="large-7 medium-12 small-12 columns">
-                    <img src="../img/references/reference-04.jpg" alt="reference 04">            
+            <section class="row fullWidth refContainer">
+                <div class="large-1 medium-6 small-6 columns arrowLink">
+                    <p><a href="reference-03.php" title="Lien vers la référence précedente" class="arrowLink1"></a></p>
                 </div>
-                <div class="large-5 medium-12 small-12 columns">
-                    <div class="texte">
-                        <h3>Prestations en live au Paris Manga & Sci-Fi Show</h3>
-                        <p>Une équipe de 5 artistes de Bicravart ont tenu un stand de prestations en live durant le Paris Manga & Sci-Fi Show qui s’est tenu les 3 et 4 novembres 2014 à Portes de la Villette.</p>
+                <div class="large-1 medium-6 small-6 columns arrowLink link2">
+                    <p><a href="reference-05.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
+                </div>
+                <div class="bgColor large-10 medium-12 small-12 columns">
+                    <div class="row">
+                        <div class="large-7 medium-12 small-12 columns">
+                            <img src="../img/references/reference-04.jpg" alt="reference 04">
+                        </div>
+                        <div class="large-5 medium-12 small-12 columns">
+                            <div class="texte">
+                                <h3>Prestations en live au Paris Manga &amp; Sci-Fi Show</h3>
+                                <p>Une équipe de 5 artistes de Bicravart ont tenu un stand de prestations en live durant le Paris Manga & Sci-Fi Show qui s’est tenu les 3 et 4 novembres 2014 à Portes de la Villette.</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="large-1 medium-6 small-6 columns arrowLink link3">
+                    <p><a href="reference-05.php" title="Lien vers la référence suivante" class="arrowLink2"></a></p>
                 </div>
             </section>
             <section class="row linkContainer">
