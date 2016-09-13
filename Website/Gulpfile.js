@@ -19,7 +19,7 @@ var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
 var reload = browserSync.reload;
-var cmq = require('gulp-combine-media-queries');
+var gcmq = require('gulp-group-css-media-queries');
 var minifyHTML = require('gulp-minify-html');
 var csso = require('gulp-csso');
 var concatCss = require('gulp-concat-css');
@@ -122,7 +122,7 @@ gulp.task('sass', function() {
         }))
         .pipe(gulp.dest( appTemp + '/css/' ))
         .pipe(gulp.dest( appSrc + '/css/' ))
-        .pipe(cmq({log: true }));
+        .pipe(gcmq());
 });
 
 gulp.task('concat-css', function(){
@@ -193,12 +193,7 @@ gulp.task('clean', del.bind(null, [
 gulp.task('serve', ['build'], function() {
     browserSync({
         notify: false,
-        // Run as an https by uncommenting 'https: true'
-        // Note: this uses an unsigned certificate which on first access
-        //       will present a certificate warning in the browser.
-        // https: true,
         proxy: "http://bicravart:8888/"
-        //server: [ appTemp, appSrc]
     });
     gulp.watch( appSrc + '/**/*.php', reload);
     gulp.watch( appSrc + '/**/*.html', reload);
